@@ -116,7 +116,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="leetcode_1108.cpp" />
+    <ClCompile Include="leetcode.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="leetcode_1108.h" />
