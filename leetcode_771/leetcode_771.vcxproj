@@ -20,10 +20,9 @@
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>15.0</VCProjectVersion>
-    <ProjectGuid>{3081AE57-6A52-4AB3-B791-791FFBD36A59}</ProjectGuid>
-    <RootNamespace>leetcodecpp</RootNamespace>
+    <ProjectGuid>{1C8A7CA8-5C32-4491-ADF5-BD097D40CD4E}</ProjectGuid>
+    <RootNamespace>leetcode771</RootNamespace>
     <WindowsTargetPlatformVersion>10.0.17763.0</WindowsTargetPlatformVersion>
-    <ProjectName>leetcode_1108</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
@@ -116,7 +115,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="leetcode_1108.cpp" />
+    <ClCompile Include="..\leetcode_cpp\771.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
