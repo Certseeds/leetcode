@@ -3,13 +3,15 @@
 #include <iostream>
 #include "leetcode_1108.h"
 #include "leetcode_771.h"
+#include "leetcode_938.h"
 using namespace std;
 void main_1108();
 void main_771();
-string defangIPaddr(string address);
+void main_938();
 int main() {
-	main_1108();
-	main_771();
+	//main_1108();
+	//main_771();
+	main_938();
 }
 void main_1108() {
 	string  temp = "1.1.1.1";
@@ -31,8 +33,20 @@ void main_771() {
 	cin >> j;
 	cin >> s;
 	Solution771 sol771 = Solution771();
-	cout << sol771
-		.numJewelsInStones(j, s);
+	cout << sol771.numJewelsInStones(j, s);
+	cin.get();
+	cin.get();
+}
+void main_938() {
+	TreeNode * root = new TreeNode(10);
+	root->left = new TreeNode(5);
+	root->right = new TreeNode(15);
+	root->left->left = new TreeNode(3);
+	root->left->right = new TreeNode(7);
+	root->right->left = nullptr;
+	root->right->right= new TreeNode(18);
+	Solution938 sol938;
+	cout << sol938.rangeSumBST(root, 7, 15) << endl;
 	cin.get();
 	cin.get();
 }
