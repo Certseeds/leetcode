@@ -4,14 +4,19 @@
 #include "leetcode_1108.h"
 #include "leetcode_771.h"
 #include "leetcode_938.h"
+#include "leetcode_709.h"
 using namespace std;
 void main_1108();
 void main_771();
 void main_938();
+void main_709();
 int main() {
 	//main_1108();
 	//main_771();
-	main_938();
+	//main_938();
+	main_709();
+	cin.get();
+	cin.get();
 }
 void main_1108() {
 	string  temp = "1.1.1.1";
@@ -47,6 +52,13 @@ void main_938() {
 	root->right->right= new TreeNode(18);
 	Solution938 sol938;
 	cout << sol938.rangeSumBST(root, 7, 15) << endl;
+	cout << (int)'A' << " " << (int)'a' << endl;
 	cin.get();
 	cin.get();
+
+}
+void main_709() {
+	Solution709 sol709;
+	string hello = "HEllo";
+	cout << sol709.toLowerCase(hello) << endl;
 }

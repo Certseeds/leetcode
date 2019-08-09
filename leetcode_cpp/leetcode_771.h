@@ -1,5 +1,5 @@
-#ifndef leetcode_771_H
-#define leetcode_771_H
+#ifndef _LEETCODE_771_H
+#define _LEETCODE_771_H
 #include <string>
 #include <fstream>
 #include <iostream>

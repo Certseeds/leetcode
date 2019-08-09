@@ -1,6 +1,6 @@
 #pragma once
-#ifndef LEETCODE_938_H
-#define LEETCODE_938_H
+#ifndef _LEETCODE_938_H
+#define _LEETCODE_938_H
 
 using namespace std;
 struct TreeNode {

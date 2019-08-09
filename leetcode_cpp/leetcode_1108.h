@@ -1,6 +1,6 @@
 #pragma once
-#ifndef leetcode_1108_H_
-#define leetcode_1108_H_
+#ifndef _LEETCODE_1108_H_
+#define _LEETCODE_1108_H_
 #include <string>
 #include <fstream>
 #include <iostream>
