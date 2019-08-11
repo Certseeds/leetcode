@@ -6,19 +6,21 @@
 #include "leetcode_938.h"
 #include "leetcode_709.h"
 #include "leetcode_1021.h"
+#include "leetcode_804.h"
 using namespace std;
 void main_1108();
 void main_771();
 void main_938();
 void main_709();
 void main_1021();
+void main_804();
 int main() {
 	//main_1108();
 	//main_771();
 	//main_938();
 	//main_709();
-	main_1021();
-
+	//main_1021();
+	main_804();
 	cin.get();
 	cin.get();
 	
@@ -73,4 +75,9 @@ void main_1021() {
 	string s = "(()())(())(()(()))";
 	cout << sol1021.removeOuterParentheses(s);
 
+}
+void main_804() {
+	Solution804 sol804;
+	vector<string> words = {"gin", "zen", "gig", "msg"};
+	cout << sol804.uniqueMorseRepresentations(words);
 }

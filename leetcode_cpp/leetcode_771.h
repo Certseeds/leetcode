@@ -1,3 +1,4 @@
+#pragma once
 #ifndef _LEETCODE_771_H
 #define _LEETCODE_771_H
 #include <string>
