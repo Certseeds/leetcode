@@ -5,18 +5,24 @@
 #include "leetcode_771.h"
 #include "leetcode_938.h"
 #include "leetcode_709.h"
+#include "leetcode_1021.h"
 using namespace std;
 void main_1108();
 void main_771();
 void main_938();
 void main_709();
+void main_1021();
 int main() {
 	//main_1108();
 	//main_771();
 	//main_938();
-	main_709();
+	//main_709();
+	main_1021();
+
 	cin.get();
 	cin.get();
+	
+return 0;
 }
 void main_1108() {
 	string  temp = "1.1.1.1";
@@ -61,4 +67,10 @@ void main_709() {
 	Solution709 sol709;
 	string hello = "HEllo";
 	cout << sol709.toLowerCase(hello) << endl;
+}
+void main_1021() {
+	Solution1021 sol1021;
+	string s = "(()())(())(()(()))";
+	cout << sol1021.removeOuterParentheses(s);
+
 }
