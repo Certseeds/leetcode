@@ -1,8 +1,6 @@
 #pragma once
 #ifndef _LEETCODE_832_H
 #define _LEETCODE_832_H
-#include <string>
-#include<unordered_map>
 #include <array>
 using namespace std; 
 class Solution832 {

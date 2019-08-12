@@ -8,6 +8,7 @@
 #include "leetcode_1021.h"
 #include "leetcode_804.h"
 #include "leetcode_832.h"
+#include "leetcode_905.h"
 using namespace std;
 void main_1108();
 void main_771();
@@ -16,6 +17,7 @@ void main_709();
 void main_1021();
 void main_804();
 void main_832();
+void main_905();
 int main() {
 	//main_1108();
 	//main_771();
@@ -23,7 +25,8 @@ int main() {
 	//main_709();
 	//main_1021();
 	//main_804();
-	main_832();
+	//main_832();
+	main_905();
 	cin.get();
 	cin.get();
 	
@@ -96,6 +99,21 @@ void main_832() {
 			cout << matrixs[i][j] << " ";
 		}
 		cout << endl;
+	}
+
+}
+void main_905() {
+	Solution905 sol905;
+	vector<int> parity = { 3,1,2,4 };
+	for (int i = 0; i < parity.size(); i++)
+	{
+		cout << parity[i] << " ";
+	}
+	sol905.sortArrayByParity(parity);
+	cout << "?" << endl;
+	for (int i = 0; i < parity.size(); i++)
+	{
+		cout << parity[i] << " ";
 	}
 
 }
