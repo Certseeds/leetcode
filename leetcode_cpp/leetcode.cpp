@@ -7,6 +7,7 @@
 #include "leetcode_709.h"
 #include "leetcode_1021.h"
 #include "leetcode_804.h"
+#include "leetcode_832.h"
 using namespace std;
 void main_1108();
 void main_771();
@@ -14,13 +15,15 @@ void main_938();
 void main_709();
 void main_1021();
 void main_804();
+void main_832();
 int main() {
 	//main_1108();
 	//main_771();
 	//main_938();
 	//main_709();
 	//main_1021();
-	main_804();
+	//main_804();
+	main_832();
 	cin.get();
 	cin.get();
 	
@@ -80,4 +83,19 @@ void main_804() {
 	Solution804 sol804;
 	vector<string> words = {"gin", "zen", "gig", "msg"};
 	cout << sol804.uniqueMorseRepresentations(words);
+}
+void main_832() {
+	Solution832 sol832;
+	vector<vector<int>> matrixs = { {1, 1, 0 }, { 1, 0, 1 }, { 0, 0, 0 }};
+	sol832.flipAndInvertImage_1(matrixs);
+	sol832.flipAndInvertImage_2(matrixs);
+	for (int i = 0; i < matrixs.size(); i++)
+	{
+		for (int j = 0; j < matrixs[0].size(); j++)
+		{
+			cout << matrixs[i][j] << " ";
+		}
+		cout << endl;
+	}
+
 }
