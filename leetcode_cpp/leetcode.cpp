@@ -11,6 +11,7 @@
 #include "leetcode_905.h"
 #include "leetcode_977.h"
 #include "leetcode_657.h"
+#include "leetcode_728.h"
 using namespace std;
 void main_1108();
 void main_771();
@@ -22,6 +23,7 @@ void main_832();
 void main_905();
 void main_977(); 
 void main_657();
+void main_728();
 int main() {
 	//main_1108();
 	//main_771();
@@ -32,7 +34,8 @@ int main() {
 	//main_832();
 	//main_905();
 	//main_977();
-	main_657();
+	//main_657();
+	main_728();
 	cin.get();
 	cin.get();
 	
@@ -137,4 +140,12 @@ void main_657() {
 	string str657 = "UD";
 	cout << sol657.judgeCircle(str657);
 
+}
+void main_728() {
+	Solution728 sol728;
+	vector<int> selfdivides = sol728.selfDividingNumbers(1, 22);
+	for (size_t i = 0; i < selfdivides.size(); i++)
+	{
+		cout << selfdivides[i] << endl;
+	}
 }
