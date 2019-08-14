@@ -12,6 +12,7 @@
 #include "leetcode_977.h"
 #include "leetcode_657.h"
 #include "leetcode_728.h"
+#include "leetcode_617.h"
 using namespace std;
 void main_1108();
 void main_771();
@@ -24,6 +25,7 @@ void main_905();
 void main_977(); 
 void main_657();
 void main_728();
+void main_617();
 int main() {
 	//main_1108();
 	//main_771();
@@ -35,7 +37,8 @@ int main() {
 	//main_905();
 	//main_977();
 	//main_657();
-	main_728();
+	//main_728();
+	main_617();
 	cin.get();
 	cin.get();
 	
@@ -148,4 +151,37 @@ void main_728() {
 	{
 		cout << selfdivides[i] << endl;
 	}
+}
+void main_617() {
+	Solution617 sol617;
+	Solution617::TreeNode617 * x1 = new Solution617::TreeNode617(1);
+	Solution617::TreeNode617 * x2 = new Solution617::TreeNode617(2);
+	Solution617::TreeNode617 * x3 = new Solution617::TreeNode617(3);
+	Solution617::TreeNode617 * x4 = new Solution617::TreeNode617(5);
+	Solution617::TreeNode617 * y1 = new Solution617::TreeNode617(2);
+	Solution617::TreeNode617 * y2 = new Solution617::TreeNode617(1);
+	Solution617::TreeNode617 * y3 = new Solution617::TreeNode617(3);
+	Solution617::TreeNode617 * y4 = new Solution617::TreeNode617(4);
+	Solution617::TreeNode617 * y5 = new Solution617::TreeNode617(7);
+	x1->left = x3;
+	x1->right = x2;
+	x3->left = x4;
+
+	y1->left = y2;
+	y1->right = y3;
+	y2->right = y4;
+	y3->right = y5;
+
+	Solution617::TreeNode617 * sum = new Solution617::TreeNode617(0);
+	sum = sol617.mergeTrees(x1, y1);
+	cout << sum->val << endl;
+	cout << sum->left->val << endl;
+	cout << sum->right->val << endl;
+	cout << sum->left->left->val << endl;
+	cout << sum->left->right->val << endl;
+	cout << sum->right->right->val << endl;
+
+
+
+
 }
