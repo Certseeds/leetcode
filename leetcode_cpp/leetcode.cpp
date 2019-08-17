@@ -15,6 +15,7 @@
 #include "leetcode_617.h"
 #include "leetcode_461.h"
 #include "leetcode_852.h"
+#include "leetcode_942.h"
 using namespace std;
 void main_1108();
 void main_771();
@@ -30,6 +31,7 @@ void main_728();
 void main_617();
 void main_461();
 void main_852();
+void main_942();
 int main() {
 	//main_1108();
 	//main_771();
@@ -44,7 +46,8 @@ int main() {
 	//main_728();
 	//main_617();
 	//main_461();
-	main_852();
+	//main_852();
+	main_942();
 	cin.get();
 	cin.get();
 	
@@ -200,4 +203,15 @@ void main_852() {
 	vector <int> vec852 = { 0,2,1,0 };
 	cout << sol852.peakIndexInMountainArray(vec852) << endl;
 	cout << "finish 852" << endl;
+}
+void main_942() {
+	Solution942 sol942;
+	cout << (int)('I') << endl;
+	string str942 = "DDI";
+	vector <int> temp942 = sol942.diStringMatch(str942);
+	for (int i = 0; i < temp942.size(); i++)
+	{
+		cout << temp942[i] << endl;
+	}
+	cout << "finish 942" << endl;
 }
