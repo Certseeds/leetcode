@@ -13,6 +13,7 @@
 #include "leetcode_657.h"
 #include "leetcode_728.h"
 #include "leetcode_617.h"
+#include "leetcode_461.h"
 using namespace std;
 void main_1108();
 void main_771();
@@ -26,6 +27,7 @@ void main_977();
 void main_657();
 void main_728();
 void main_617();
+void main_461();
 int main() {
 	//main_1108();
 	//main_771();
@@ -38,7 +40,8 @@ int main() {
 	//main_977();
 	//main_657();
 	//main_728();
-	main_617();
+	//main_617();
+	main_461();
 	cin.get();
 	cin.get();
 	
@@ -184,4 +187,8 @@ void main_617() {
 
 
 
+}
+void main_461() {
+	Solution461 sol461;
+	cout << sol461.hammingDistance(1, 4) << endl;
 }
