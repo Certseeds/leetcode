@@ -14,6 +14,7 @@
 #include "leetcode_728.h"
 #include "leetcode_617.h"
 #include "leetcode_461.h"
+#include "leetcode_852.h"
 using namespace std;
 void main_1108();
 void main_771();
@@ -28,6 +29,7 @@ void main_657();
 void main_728();
 void main_617();
 void main_461();
+void main_852();
 int main() {
 	//main_1108();
 	//main_771();
@@ -41,7 +43,8 @@ int main() {
 	//main_657();
 	//main_728();
 	//main_617();
-	main_461();
+	//main_461();
+	main_852();
 	cin.get();
 	cin.get();
 	
@@ -191,4 +194,10 @@ void main_617() {
 void main_461() {
 	Solution461 sol461;
 	cout << sol461.hammingDistance(1, 4) << endl;
+}
+void main_852() {
+	Solution852 sol852;
+	vector <int> vec852 = { 0,2,1,0 };
+	cout << sol852.peakIndexInMountainArray(vec852) << endl;
+	cout << "finish 852" << endl;
 }
