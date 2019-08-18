@@ -16,8 +16,8 @@
 #include "leetcode_461.h"
 #include "leetcode_852.h"
 #include "leetcode_942.h"
-
 #include "leetcode_929.h"
+#include "leetcode_922.h"
 using namespace std;
 void main_1108();
 void main_771();
@@ -35,6 +35,7 @@ void main_461();
 void main_852();
 void main_942();
 void main_929();
+void main_922();
 int main() {
 	//main_1108();
 	//main_771();
@@ -51,7 +52,8 @@ int main() {
 	//main_461();
 	//main_852();
 	//main_942();
-	main_929();
+	//main_929();
+	main_922();
 	cin.get();
 	cin.get();
 	
@@ -229,4 +231,16 @@ void main_929() {
 "fzk@ownxv.fvxas.com",
 "fzk@ownxv.fvxas.com" };
 	cout << sol929.numUniqueEmails(emails) << endl;
+}
+void main_922() {
+
+	cout << "922 begin" << endl;
+	Solution922 sol922;
+	vector<int> vec922 = { 4,2,5,7 };
+	sol922.sortArrayByParityII(vec922);
+	for ( int i = 0; i < vec922.size(); i++)
+	{
+		cout << vec922[i] << endl;
+	}
+	cout << "922 finish" << endl;
 }
