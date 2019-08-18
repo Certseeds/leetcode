@@ -15,7 +15,7 @@ public:
        TreeNode700(int x) : val(x), left(NULL), right(NULL) {}
  };
  
-	TreeNode700* searchBST(TreeNode700* root, int val) {
+	TreeNode700* searchBST(TreeNode700* root, int val) {// use a cycle it's more faster
 		if (root == nullptr)
 		{
 			return nullptr;
