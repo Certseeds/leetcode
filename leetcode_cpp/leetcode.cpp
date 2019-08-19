@@ -19,6 +19,7 @@
 #include "leetcode_929.h"
 #include "leetcode_922.h"
 #include "leetcode_965.h"
+#include "leetcode_509.h"
 using namespace std;
 void main_1108();
 void main_771();
@@ -38,7 +39,7 @@ void main_942();
 void main_929();
 void main_922();
 void main_965();
-
+void main_509();
 int main() {
 	//main_1108();
 	//main_771();
@@ -57,7 +58,8 @@ int main() {
 	//main_942();
 	//main_929();
 	//main_922();
-	main_965();
+	//main_965();
+	main_509();
 	cin.get();
 	cin.get();
 	
@@ -262,5 +264,18 @@ void main_965() {
 	(x2.right) = &x5;
 	cout << (bool)sol965.isUnivalTree(&x1) << endl ;
 	cout << "965 finish" << endl;
+	
 
+}
+void main_509() {
+	int a = 0;
+	int b = 1;
+	int temp;
+	for (int i = 0; i < 30; i++)
+	{
+		temp = a;
+		a = b;
+		b = temp + a;
+		cout << a << endl;
+	}
 }
