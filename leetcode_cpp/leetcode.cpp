@@ -20,6 +20,7 @@
 #include "leetcode_922.h"
 #include "leetcode_965.h"
 #include "leetcode_509.h"
+#include "leetcode_1122.h"
 using namespace std;
 void main_1108();
 void main_771();
@@ -40,6 +41,7 @@ void main_929();
 void main_922();
 void main_965();
 void main_509();
+void main_1122();
 int main() {
 	//main_1108();
 	//main_771();
@@ -59,7 +61,8 @@ int main() {
 	//main_929();
 	//main_922();
 	//main_965();
-	main_509();
+	//main_509();
+	main_1122();
 	cin.get();
 	cin.get();
 	
@@ -277,5 +280,15 @@ void main_509() {
 		a = b;
 		b = temp + a;
 		cout << a << endl;
+	}
+}
+void main_1122() {
+	Solution1122 sol1122;
+	vector<int> arr1 = { 2,3,1,3,2,4,6,7,9,2,19 };
+	vector <int> arr2 = { 2,1,4,3,9,6 };
+	vector <int> arr3 = sol1122.relativeSortArray(arr1,arr2);
+	for ( int i = 0; i < arr3.size(); i++)
+	{
+		cout << arr3[i] << endl;
 	}
 }
