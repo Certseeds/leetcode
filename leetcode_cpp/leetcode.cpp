@@ -18,6 +18,7 @@
 #include "leetcode_942.h"
 #include "leetcode_929.h"
 #include "leetcode_922.h"
+#include "leetcode_965.h"
 using namespace std;
 void main_1108();
 void main_771();
@@ -36,6 +37,8 @@ void main_852();
 void main_942();
 void main_929();
 void main_922();
+void main_965();
+
 int main() {
 	//main_1108();
 	//main_771();
@@ -53,7 +56,8 @@ int main() {
 	//main_852();
 	//main_942();
 	//main_929();
-	main_922();
+	//main_922();
+	main_965();
 	cin.get();
 	cin.get();
 	
@@ -237,10 +241,26 @@ void main_922() {
 	cout << "922 begin" << endl;
 	Solution922 sol922;
 	vector<int> vec922 = { 4,2,5,7 };
-	sol922.sortArrayByParityII(vec922);
+	sol922.sortArrayByParityII_2(vec922);
 	for ( int i = 0; i < vec922.size(); i++)
 	{
 		cout << vec922[i] << endl;
 	}
 	cout << "922 finish" << endl;
+}
+void main_965() {
+	cout << "965 begin" << endl;
+	Solution965 sol965;
+	Solution965::TreeNode965  x1 = Solution965::TreeNode965(2);
+	Solution965::TreeNode965  x2 = Solution965::TreeNode965(2);
+	Solution965::TreeNode965  x3 = Solution965::TreeNode965(2);
+	Solution965::TreeNode965  x4 = Solution965::TreeNode965(5);
+	Solution965::TreeNode965  x5 = Solution965::TreeNode965(2);
+	(x1.left) = &x2;
+	(x1.right) = &x3;
+	(x2.left) = &x4;
+	(x2.right) = &x5;
+	cout << (bool)sol965.isUnivalTree(&x1) << endl ;
+	cout << "965 finish" << endl;
+
 }
