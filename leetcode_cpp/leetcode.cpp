@@ -21,6 +21,7 @@
 #include "leetcode_965.h"
 #include "leetcode_509.h"
 #include "leetcode_1122.h"
+#include "leetcode_1160.h"
 using namespace std;
 void main_1108();
 void main_771();
@@ -42,6 +43,7 @@ void main_922();
 void main_965();
 void main_509();
 void main_1122();
+void main_1160();
 int main() {
 	//main_1108();
 	//main_771();
@@ -62,7 +64,8 @@ int main() {
 	//main_922();
 	//main_965();
 	//main_509();
-	main_1122();
+	//main_1122();
+	main_1160();
 	cin.get();
 	cin.get();
 	
@@ -291,4 +294,19 @@ void main_1122() {
 	{
 		cout << arr3[i] << endl;
 	}
+}
+void main_1160() {
+	Solution1160 sol1160;
+	vector<string> words;
+	cout << 1 << endl;
+	words.push_back("hello");
+	cout << 2 << endl;
+	words.push_back("world");
+	cout << 3 << endl;
+	words.push_back("leetcode");
+	cout << 4 << endl;
+	string chars = "welldonehoneyr";
+	cout << 6 << endl;
+	cout << sol1160.countCharacters(words,chars);
+	//printf("%s","fuck");
 }
