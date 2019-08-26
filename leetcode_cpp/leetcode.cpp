@@ -24,8 +24,8 @@
 #include "leetcode_1160.h"
 #include "leetcode_944.h"
 #include "leetcode_961.h"
-
 #include "leetcode_811.h"
+#include "leetcode_559.h"
 using namespace std;
 void main_1108();
 void main_771();
@@ -51,6 +51,7 @@ void main_1160();
 void main_944();
 void main_961();
 void main_811();
+void main_559();
 int main() {
 	//main_1108();
 	//main_771();
@@ -75,7 +76,8 @@ int main() {
 	//main_1160();
 	//main_944();
 	//main_961();
-	main_811();
+    //main_811();
+	main_559();
 	cin.get();
 	cin.get();
 	
@@ -350,4 +352,26 @@ void main_811() {
 	{
 		cout << vec3[i] << endl;
 	}
+}
+void main_559(){
+	Solution559 sol559;
+	Node559 * one = new Node559();
+	Node559 * two = new Node559();
+	Node559 * three = new Node559();
+	Node559 * four =  new Node559();
+	Node559 * five = new Node559();
+	Node559 * six = new Node559();
+	one->val = 1;
+	two->val = 2;
+	three->val = 3;
+	four->val = 4;
+	five->val = 5;
+	six->val = 6;
+	one->children.push_back(three);
+	one->children.push_back(two);
+	one->children.push_back(four);
+	three->children.push_back(five);
+	three->children.push_back(six);
+	cout << sol559.maxDepth(one) << endl;
+
 }
