@@ -22,6 +22,7 @@
 #include "leetcode_509.h"
 #include "leetcode_1122.h"
 #include "leetcode_1160.h"
+#include "leetcode_944.h"
 using namespace std;
 void main_1108();
 void main_771();
@@ -44,6 +45,7 @@ void main_965();
 void main_509();
 void main_1122();
 void main_1160();
+void main_944();
 int main() {
 	//main_1108();
 	//main_771();
@@ -65,7 +67,8 @@ int main() {
 	//main_965();
 	//main_509();
 	//main_1122();
-	main_1160();
+	//main_1160();
+	main_944();
 	cin.get();
 	cin.get();
 	
@@ -309,4 +312,10 @@ void main_1160() {
 	cout << 6 << endl;
 	cout << sol1160.countCharacters(words,chars);
 	//printf("%s","fuck");
+}
+void main_944() {
+	Solution944 sol944;
+	vector<string> array2 = { "rrjk","furt","guzm"};
+	cout << sol944.minDeletionSize(array2);
+
 }
