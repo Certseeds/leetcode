@@ -26,6 +26,8 @@
 #include "leetcode_961.h"
 #include "leetcode_811.h"
 #include "leetcode_559.h"
+#include "leetcode_999.h"
+
 using namespace std;
 void main_1108();
 void main_771();
@@ -52,6 +54,7 @@ void main_944();
 void main_961();
 void main_811();
 void main_559();
+void main_999();
 int main() {
 	//main_1108();
 	//main_771();
@@ -77,7 +80,8 @@ int main() {
 	//main_944();
 	//main_961();
     //main_811();
-	main_559();
+	//main_559();
+	main_999();
 	cin.get();
 	cin.get();
 	
@@ -375,3 +379,29 @@ void main_559(){
 	cout << sol559.maxDepth(one) << endl;
 
 }
+void main_999() {
+	Solution999 sol999;
+	vector<vector<char>> vecvec = {
+		{'.', '.', '.', '.', '.', '.', '.', '.'},
+		{'.', '.', '.', 'p', '.', '.', '.', '.'},
+		{'.', '.', '.', 'R', '.', '.', '.', 'p'},
+		{'.', '.', '.', '.', '.', '.', '.', '.'},
+		{'.', '.', '.', '.', '.', '.', '.', '.'},
+		{'.', '.', '.', 'p', '.', '.', '.', '.'},
+		{'.', '.', '.', '.', '.', '.', '.', '.'},
+		{'.', '.', '.', '.', '.', '.', '.', '.'} 
+	};
+	vector<vector<char>> vecvec2 = { 
+		{'.', '.', '.', '.', '.', '.', '.', '.'},
+		{'.', 'p', 'p', 'p', 'p', 'p', '.', '.'},
+		{'.', 'p', 'p', 'B', 'p', 'p', '.', '.'},
+		{'.', 'p', 'B', 'R', 'B', 'p', '.', '.'},
+	    {'.', 'p', 'p', 'B', 'p', 'p', '.', '.'},
+		{'.', 'p', 'p', 'p', 'p', 'p', '.', '.'},
+		{'.', '.', '.', '.', '.', '.', '.', '.'},
+		{'.', '.', '.', '.', '.', '.', '.', '.'} }
+	;
+	cout << sol999.numRookCaptures(vecvec) << endl;
+	cout << sol999.numRookCaptures(vecvec2) << endl;
+}
+

@@ -150,6 +150,7 @@
     <ClInclude Include="leetcode_961.h" />
     <ClInclude Include="leetcode_965.h" />
     <ClInclude Include="leetcode_977.h" />
+    <ClInclude Include="leetcode_999.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
