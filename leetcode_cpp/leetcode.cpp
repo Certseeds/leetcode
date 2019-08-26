@@ -23,6 +23,9 @@
 #include "leetcode_1122.h"
 #include "leetcode_1160.h"
 #include "leetcode_944.h"
+#include "leetcode_961.h"
+
+#include "leetcode_811.h"
 using namespace std;
 void main_1108();
 void main_771();
@@ -46,6 +49,8 @@ void main_509();
 void main_1122();
 void main_1160();
 void main_944();
+void main_961();
+void main_811();
 int main() {
 	//main_1108();
 	//main_771();
@@ -68,7 +73,9 @@ int main() {
 	//main_509();
 	//main_1122();
 	//main_1160();
-	main_944();
+	//main_944();
+	//main_961();
+	main_811();
 	cin.get();
 	cin.get();
 	
@@ -318,4 +325,29 @@ void main_944() {
 	vector<string> array2 = { "rrjk","furt","guzm"};
 	cout << sol944.minDeletionSize(array2);
 
+}
+void main_961() {
+	Solution961 sol961;
+	vector<int> A = { 5,1,5,2,5,3,5,4 };
+	cout << sol961.repeatedNTimes(A) << endl;
+
+}
+void main_811() {
+	Solution811 sol811;
+	string str1 = "9001 www.baidu.com";
+	cout << str1.find(" ") << endl;
+	cout << std::stoi(str1.substr(0, str1.find(" "))) << endl;
+	string str2 = "www.microsoft.com.cn";
+	vector<string> vec2 = sol811.getDomains(str1);
+	for (int i = 0; i < vec2.size(); i++)
+	{
+		cout << vec2[i] << endl;
+	}
+	cout << "?" << endl;
+	vector<string> vec = {"900 google.mail.com", "50 yahoo.com", "1 intel.mail.com", "5 wiki.org" };
+	vector<string> vec3 = sol811.subdomainVisits(vec);
+	for (int i = 0; i < vec3.size(); i++)
+	{
+		cout << vec3[i] << endl;
+	}
 }
