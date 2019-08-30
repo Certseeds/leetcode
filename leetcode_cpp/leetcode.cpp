@@ -27,7 +27,7 @@
 #include "leetcode_811.h"
 #include "leetcode_559.h"
 #include "leetcode_999.h"
-
+#include "leetcode_897.h"
 using namespace std;
 void main_1108();
 void main_771();
@@ -55,6 +55,7 @@ void main_961();
 void main_811();
 void main_559();
 void main_999();
+void main_897();
 int main() {
 	//main_1108();
 	//main_771();
@@ -81,7 +82,8 @@ int main() {
 	//main_961();
     //main_811();
 	//main_559();
-	main_999();
+	//main_999();
+	main_897();
 	cin.get();
 	cin.get();
 	
@@ -405,3 +407,27 @@ void main_999() {
 	cout << sol999.numRookCaptures(vecvec2) << endl;
 }
 
+void main_897() {
+	TreeNode897 * one = new TreeNode897(1);
+	TreeNode897 * two = new TreeNode897(2);
+	TreeNode897 * three = new TreeNode897(3);
+	TreeNode897 * four = new TreeNode897(4);
+	TreeNode897 * five = new TreeNode897(5);
+	TreeNode897 * six = new TreeNode897(6);
+	TreeNode897 * seven = new TreeNode897(7);
+	TreeNode897 * eight = new TreeNode897(8);
+	TreeNode897 * nine = new TreeNode897(9);
+	TreeNode897 * ten = new TreeNode897(10);
+	five->left = three;
+	five->right = six;
+	three->left = two;
+	three->right = four;
+	six->right = eight;
+	two -> left = one;
+	eight->left = seven;
+	eight->right = nine;
+	Solution897 sol897;
+	TreeNode897 * outputs = sol897.increasingBST(five);
+	cout << outputs->val << " " << outputs->right->val << endl;
+
+}
