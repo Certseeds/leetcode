@@ -28,6 +28,7 @@
 #include "leetcode_559.h"
 #include "leetcode_999.h"
 #include "leetcode_897.h"
+#include "leetcode_1002.h"
 using namespace std;
 void main_1108();
 void main_771();
@@ -56,6 +57,7 @@ void main_811();
 void main_559();
 void main_999();
 void main_897();
+void main_1002();
 int main() {
 	//main_1108();
 	//main_771();
@@ -83,7 +85,8 @@ int main() {
     //main_811();
 	//main_559();
 	//main_999();
-	main_897();
+	//main_897();
+	main_1002();
 	cin.get();
 	cin.get();
 	
@@ -381,6 +384,7 @@ void main_559(){
 	cout << sol559.maxDepth(one) << endl;
 
 }
+void main_1002();
 void main_999() {
 	Solution999 sol999;
 	vector<vector<char>> vecvec = {
@@ -430,4 +434,17 @@ void main_897() {
 	TreeNode897 * outputs = sol897.increasingBST(five);
 	cout << outputs->val << " " << outputs->right->val << endl;
 
+}
+void main_1002() {
+	Solution1002 sol1002;
+	vector<string> vec = {"bella","label","roller" };
+	vector<string> vec2 = sol1002.commonChars(vec);
+	for ( int i = 0; i < vec2.size(); i++)
+	{
+		cout << vec2[i] << endl;
+	}
+	int x = 3;
+	string str= "";
+	str += to_string(char('a' + 3));
+	cout << str;
 }
