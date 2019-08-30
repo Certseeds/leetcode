@@ -140,6 +140,7 @@
     <ClInclude Include="leetcode_811.h" />
     <ClInclude Include="leetcode_832.h" />
     <ClInclude Include="leetcode_852.h" />
+    <ClInclude Include="leetcode_883.h" />
     <ClInclude Include="leetcode_905.h" />
     <ClInclude Include="leetcode_922.h" />
     <ClInclude Include="leetcode_929.h" />
