@@ -43,7 +43,17 @@ public:
 		//cout << (m - n2) << " " << (n - m2) << endl;
 		return (n - n2)*m2 + (m - m2)*n2;
 	}
-
+	void test() {
+		vector<vector<int>> indices1 = { {0,1},{1,1} };
+		vector<vector<int>> indices2 = { {1,1},{0,0} };
+		vector<vector<int>> indices3 = { {40, 5} };
+		cout << oddCells(2, 3, indices1) << endl;
+		cout << oddCells(2, 2, indices2) << endl;
+		cout << oddCells(48, 37, indices3) << endl;
+		assert(oddCells(2, 3, indices1) == 6);
+		assert(oddCells(2, 2, indices2) == 0);
+		assert(oddCells(48, 37, indices3) == 83);
+	}
 };
 
 #endif
