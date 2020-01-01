@@ -32,6 +32,7 @@
 #include "leetcode_1002.h"
 #include "leetcode_1295.h"
 #include "leetcode_1281.h"
+#include "leetcode_1290.h"
 using namespace std;
 void main_1108();
 void main_771();
@@ -63,6 +64,7 @@ void main_897();
 void main_1002();
 void main_1295();
 void main_1281();
+void main_1290();
 int main() {
 	//main_1108();
 	//main_771();
@@ -93,7 +95,8 @@ int main() {
 	//main_897();
 	//main_1002();
 	//main_1295();
-	main_1281();
+	//main_1281();
+	main_1290();
 	cout << "main end"<<endl;
 	cin.get();
 	cin.get();
@@ -468,4 +471,13 @@ void main_1281() {
 	int num2 = 4421;
 	assert(sol1281.subtractProductAndSum(num1) == 15);
 	assert(sol1281.subtractProductAndSum(num2) == 21);
+}
+void main_1290() {
+	Solution1290 sol1290;
+	ListNode  node1 = ListNode(1);
+	ListNode  node2 = ListNode(0);
+	ListNode  node3 = ListNode(1);
+	node1.next = &node2;
+	node2.next = &node3;
+	cout << sol1290.getDecimalValue(&node1) << endl;
 }
