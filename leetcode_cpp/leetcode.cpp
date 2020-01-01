@@ -34,6 +34,7 @@
 #include "leetcode_1281.h"
 #include "leetcode_1290.h"
 #include "leetcode_1221.h"
+#include "leetcode_1266.h"
 using namespace std;
 void main_1108();
 void main_771();
@@ -67,6 +68,7 @@ void main_1295();
 void main_1281();
 void main_1290();
 void main_1221();
+void main_1266();
 int main() {
 	//main_1108();
 	//main_771();
@@ -99,7 +101,8 @@ int main() {
 	//main_1295();
 	//main_1281();
 	//main_1290();
-	main_1221();
+	//main_1221();
+	main_1266();
 	cout << "main end"<<endl;
 	cin.get();
 	cin.get();
@@ -494,5 +497,19 @@ void main_1221() {
 	cout << sol1221.balancedStringSplit(str2) << endl;
 	cout << sol1221.balancedStringSplit(str3) << endl;
 	cout << sol1221.balancedStringSplit(str4) << endl;
-
+	assert(sol1221.balancedStringSplit(str1) == 4);
+	assert(sol1221.balancedStringSplit(str2) == 3);
+	assert(sol1221.balancedStringSplit(str3) == 1);
+	assert(sol1221.balancedStringSplit(str4) == 2);
 }
+void main_1266() {
+	Solution1266 sol1266;
+	vector<vector<int>> nums1 = { {1,1},{3,4},{-1,0} };
+	vector<vector<int>> nums2 = { {3, 2},{-2, 2} };
+	cout << sol1266.minTimeToVisitAllPoints(nums1) << endl;
+	cout << sol1266.minTimeToVisitAllPoints(nums2) << endl;
+	assert(sol1266.minTimeToVisitAllPoints(nums1) == 7);
+	assert(sol1266.minTimeToVisitAllPoints(nums2) == 5);
+
+
+};
