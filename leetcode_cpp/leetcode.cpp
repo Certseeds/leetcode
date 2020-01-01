@@ -1,6 +1,7 @@
 #include <string>
 #include <fstream>
 #include <iostream>
+#include "assert.h"
 #include "leetcode_1108.h"
 #include "leetcode_771.h"
 #include "leetcode_938.h"
@@ -30,6 +31,7 @@
 #include "leetcode_897.h"
 #include "leetcode_1002.h"
 #include "leetcode_1295.h"
+#include "leetcode_1281.h"
 using namespace std;
 void main_1108();
 void main_771();
@@ -60,6 +62,7 @@ void main_999();
 void main_897();
 void main_1002();
 void main_1295();
+void main_1281();
 int main() {
 	//main_1108();
 	//main_771();
@@ -89,7 +92,8 @@ int main() {
 	//main_999();
 	//main_897();
 	//main_1002();
-	main_1295();
+	//main_1295();
+	main_1281();
 	cout << "main end"<<endl;
 	cin.get();
 	cin.get();
@@ -457,5 +461,11 @@ void main_1295() {
 	vector <int> nums2 = { 555, 901, 482, 1771 };
 	cout << sol1295.findNumbers(nums1) << endl;
 	cout << sol1295.findNumbers(nums2) << endl;
-
+}
+void main_1281() {
+	Solution1281 sol1281;
+	int num1 = 234;
+	int num2 = 4421;
+	assert(sol1281.subtractProductAndSum(num1) == 15);
+	assert(sol1281.subtractProductAndSum(num2) == 21);
 }
