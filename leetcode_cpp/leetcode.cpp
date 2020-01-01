@@ -33,6 +33,7 @@
 #include "leetcode_1295.h"
 #include "leetcode_1281.h"
 #include "leetcode_1290.h"
+#include "leetcode_1221.h"
 using namespace std;
 void main_1108();
 void main_771();
@@ -65,6 +66,7 @@ void main_1002();
 void main_1295();
 void main_1281();
 void main_1290();
+void main_1221();
 int main() {
 	//main_1108();
 	//main_771();
@@ -96,7 +98,8 @@ int main() {
 	//main_1002();
 	//main_1295();
 	//main_1281();
-	main_1290();
+	//main_1290();
+	main_1221();
 	cout << "main end"<<endl;
 	cin.get();
 	cin.get();
@@ -480,4 +483,16 @@ void main_1290() {
 	node1.next = &node2;
 	node2.next = &node3;
 	cout << sol1290.getDecimalValue(&node1) << endl;
+}
+void main_1221() {
+	Solution1221 sol1221;
+	string str1 = "RLRRLLRLRL";
+	string str2 = "RLLLLRRRLR";
+	string str3 = "LLLLRRRR";
+	string str4 = "RLRRRLLRLL";
+	cout << sol1221.balancedStringSplit(str1) <<endl;
+	cout << sol1221.balancedStringSplit(str2) << endl;
+	cout << sol1221.balancedStringSplit(str3) << endl;
+	cout << sol1221.balancedStringSplit(str4) << endl;
+
 }
