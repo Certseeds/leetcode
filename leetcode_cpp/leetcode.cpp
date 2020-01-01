@@ -35,6 +35,7 @@
 #include "leetcode_1290.h"
 #include "leetcode_1221.h"
 #include "leetcode_1266.h"
+#include "leetcode_1252.h"
 using namespace std;
 void main_1108();
 void main_771();
@@ -69,6 +70,7 @@ void main_1281();
 void main_1290();
 void main_1221();
 void main_1266();
+void main_1252();
 int main() {
 	//main_1108();
 	//main_771();
@@ -102,7 +104,9 @@ int main() {
 	//main_1281();
 	//main_1290();
 	//main_1221();
-	main_1266();
+	//main_1266();
+	cout << "main begin" << endl;
+	main_1252();
 	cout << "main end"<<endl;
 	cin.get();
 	cin.get();
@@ -512,4 +516,17 @@ void main_1266() {
 	assert(sol1266.minTimeToVisitAllPoints(nums2) == 5);
 
 
-};
+}
+void main_1252() {
+	Solution1252 sol1252;
+	vector<vector<int>> indices1 = { {0,1},{1,1} };
+	vector<vector<int>> indices2 = { {1,1},{0,0} };
+	vector<vector<int>> indices3 = { {40, 5} };
+	cout << sol1252.oddCells(2, 3, indices1)<<endl;
+	cout << sol1252.oddCells(2, 2, indices2)<<endl;
+	cout << sol1252.oddCells(48, 37, indices3) << endl;
+	assert(sol1252.oddCells(2, 3, indices1) == 6);
+	assert(sol1252.oddCells(2, 2, indices2) == 0);
+	assert(sol1252.oddCells(48, 37, indices3) == 83);
+
+}
