@@ -29,6 +29,7 @@
 #include "leetcode_999.h"
 #include "leetcode_897.h"
 #include "leetcode_1002.h"
+#include "leetcode_1295.h"
 using namespace std;
 void main_1108();
 void main_771();
@@ -58,6 +59,7 @@ void main_559();
 void main_999();
 void main_897();
 void main_1002();
+void main_1295();
 int main() {
 	//main_1108();
 	//main_771();
@@ -86,7 +88,9 @@ int main() {
 	//main_559();
 	//main_999();
 	//main_897();
-	main_1002();
+	//main_1002();
+	main_1295();
+	cout << "main end"<<endl;
 	cin.get();
 	cin.get();
 	
@@ -410,7 +414,6 @@ void main_999() {
 	cout << sol999.numRookCaptures(vecvec) << endl;
 	cout << sol999.numRookCaptures(vecvec2) << endl;
 }
-
 void main_897() {
 	TreeNode897 * one = new TreeNode897(1);
 	TreeNode897 * two = new TreeNode897(2);
@@ -447,4 +450,12 @@ void main_1002() {
 	string str= "";
 	str += to_string(char('a' + 3));
 	cout << str;
+}
+void main_1295() {
+	Solution1295 sol1295;
+	vector <int> nums1 = { 12, 345, 2, 6, 7896 };
+	vector <int> nums2 = { 555, 901, 482, 1771 };
+	cout << sol1295.findNumbers(nums1) << endl;
+	cout << sol1295.findNumbers(nums2) << endl;
+
 }
