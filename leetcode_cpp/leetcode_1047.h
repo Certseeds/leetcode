@@ -50,9 +50,9 @@ public:
 	}
 	void test() {
 		string abbaca = "abbaca";
-		cout << removeDuplicates2(abbaca) << endl;
+		cout << removeDuplicates3(abbaca) << endl;
 		string a8 = "aaaaaaaa";
-		cout << removeDuplicates2(a8) << endl;
+		cout << removeDuplicates3(a8) << endl;
 	}
 };
 
