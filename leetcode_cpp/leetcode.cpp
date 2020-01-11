@@ -39,6 +39,7 @@
 #include "leetcode_1299.h"
 #include "leetcode_1207.h"
 #include "leetcode_1237.h"
+#include "leetcode_1200.h"
 using namespace std;
 void main_1108();
 void main_771();
@@ -77,6 +78,7 @@ void main_1252();
 void main_1299();
 void main_1207();
 void main_1237();
+void main_1200();
 int main() {
 	//main_1108();
 	//main_771();
@@ -114,7 +116,9 @@ int main() {
 	cout << "main begin" << endl;
 	//main_1252();
 	//main_1299();
-	main_1237();
+	//ain_1237();
+
+	main_1200();
 	cout << "main end"<<endl;
 	cin.get();
 	cin.get();
@@ -122,6 +126,11 @@ int main() {
 return 0;
 }
 
+void main_1200() {
+
+	Solution1200 sol1200;
+	sol1200.test();
+}
 void main_1237() {
 	Solution1237 sol1237;
 	sol1237.test();
