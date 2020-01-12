@@ -1,24 +1,20 @@
 #pragma once
-#ifndef _LEETCODE_1022_H
-#define _LEETCODE_1022_H
+#ifndef _LEETCODE_104_H
+#define _LEETCODE_104_H
 #include <stack>
 #include "TreeNode.h"
 using namespace std;
-/*
-Given a binary tree, each node has value 0 or 1.  
-Each root-to-leaf path represents a binary number starting with the most significant bit. 
-For example, if the path is 0 -> 1 -> 1 -> 0 -> 1, 
-then this could represent 01101 in binary, which is 13.
-For all leaves in the tree, 
-consider the numbers represented by the path from the root to that leaf.
-hese numbers.
+/*Given a binary tree, find its maximum depth.
+The maximum depth is the number of nodes along the longest path from the root node down to the farthest leaf node.
+Note: A leaf is a node with no children.
 */
-class Solution1022 {
+class Solution104 {
 public:
-	int sumRootToLeaf(TreeNode* root) {
+	int maxDepth(TreeNode* root) {
 		if (root == nullptr) {
 			return 0;
 		}
+		root->val = 1;
 		int willreturn = 0;
 		stack<TreeNode*> tree;
 		tree.push(root);
@@ -26,22 +22,22 @@ public:
 			TreeNode* begin = tree.top();
 			tree.pop();
 			if (begin->left == nullptr && begin->right == nullptr) {
-				willreturn += begin->val;
+				willreturn = max(willreturn, begin->val);
 				continue;
 			}
 			if (begin->left != nullptr) {
-				begin->left->val += begin->val << 1;
+				begin->left->val = begin->val + 1;
 				tree.push(begin->left);
 			}
 			if (begin->right != nullptr) {
-				begin->right->val += begin->val << 1;
+				begin->right->val = begin->val + 1;
 				tree.push(begin->right);
 			}
 		}
 		return willreturn;
 	}
 	void test() {
-		vector<TreeNode*> tree; 
+		vector<TreeNode*> tree;
 		for (int i = 1; i <= 7; i++) {
 			TreeNode* temp = new TreeNode(i % 2);
 			tree.push_back(temp);
@@ -52,7 +48,7 @@ public:
 		tree[1]->right = tree[4];
 		tree[2]->left = tree[5];
 		tree[2]->right = tree[6];
-		cout << sumRootToLeaf(tree[0]) << endl;
+		cout << maxDepth(tree[0]) << endl;
 		for (int i = 0; i < 7; i++) {
 			delete tree[i];
 		}

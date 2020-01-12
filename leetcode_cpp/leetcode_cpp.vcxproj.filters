@@ -198,6 +198,12 @@
     <ClInclude Include="TreeNode.h">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="leetcode_104.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="leetcode_500.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="leetcode.cpp">
