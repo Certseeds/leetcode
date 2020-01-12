@@ -46,6 +46,7 @@
 #include "leetcode_893.h"
 #include "leetcode_1030.h"
 #include "leetcode_1185.h"
+#include "leetcode_806.h"
 using namespace std;
 void main_1108();
 void main_771();
@@ -91,6 +92,7 @@ void main_872();
 void main_893();
 void main_1030();
 void main_1185();
+void main_806();
 int main() {
 	//main_1108();
 	//main_771();
@@ -135,13 +137,18 @@ int main() {
 	//main_872();
 	//main_893();
 	//main_1030();
-	main_1185();
+	//main_1185();
+	main_806();
 	cout << "main end"<<endl;
 	cin.get();
 	cin.get();
 	
 return 0;
-}void main_1185() {
+}void main_806() {
+	Solution806 sol806;
+	sol806.test();
+}
+void main_1185() {
 	Solution1185 sol1185;
 	sol1185.test();
 }
@@ -200,13 +207,13 @@ void main_771() {
 	cin.get();
 }
 void main_938() {
-	TreeNode * root = new TreeNode(10);
-	root->left = new TreeNode(5);
-	root->right = new TreeNode(15);
-	root->left->left = new TreeNode(3);
-	root->left->right = new TreeNode(7);
+	TreeNode938 * root = new TreeNode938(10);
+	root->left = new TreeNode938(5);
+	root->right = new TreeNode938(15);
+	root->left->left = new TreeNode938(3);
+	root->left->right = new TreeNode938(7);
 	root->right->left = nullptr;
-	root->right->right= new TreeNode(18);
+	root->right->right= new TreeNode938(18);
 	Solution938 sol938;
 	cout << sol938.rangeSumBST(root, 7, 15) << endl;
 	cout << (int)'A' << " " << (int)'a' << endl;

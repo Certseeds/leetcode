@@ -5,11 +5,16 @@
 #include <algorithm>
 #include <stack>
 using namespace std;
-
+struct TreeNode872 {
+	int val;
+	TreeNode872 *left;
+	TreeNode872 *right;
+	TreeNode872(int x) : val(x), left(nullptr), right(nullptr) {}
+};
 
 class Solution872 {
 public:
-	bool leafSimilar(TreeNode* root1, TreeNode* root2) {
+	bool leafSimilar(TreeNode872* root1, TreeNode872* root2) {
 		if (root1 == nullptr && root2 == nullptr) {
 			return true;
 		}
@@ -28,13 +33,13 @@ public:
 		}
 		return true;
 	}
-	vector<int> getNode(TreeNode* root) {
+	vector<int> getNode(TreeNode872* root) {
 		vector<int> willreturn;
-		stack<TreeNode*> ques;
+		stack<TreeNode872*> ques;
 		ques.push(root);
 		while (!ques.empty()) {
 			
-			TreeNode* rootnode = ques.top();
+			TreeNode872* rootnode = ques.top();
 			ques.pop();
 			//cout << rootnode->val << "?" << endl;
 			if (rootnode->left != nullptr) {
@@ -51,11 +56,11 @@ public:
 	}
 	void test() {
 		cout << "test begin" << endl;
-		vector<TreeNode*> arr1; 
-		vector<TreeNode*> arr2;
+		vector<TreeNode872*> arr1;
+		vector<TreeNode872*> arr2;
 		for (int i = 0; i < 10; i++) {
-			TreeNode* temp = new TreeNode(i);
-			TreeNode* temp2 = new TreeNode(i);
+			TreeNode872* temp = new TreeNode872(i);
+			TreeNode872* temp2 = new TreeNode872(i);
 			arr1.push_back(temp);
 			arr2.push_back(temp2);
 		}
@@ -89,12 +94,13 @@ public:
 		for (int i = 0; i < val1.size(); i++) {
 			judge = judge & (val1[i] == val2[i]);
 		}
-		cout << ((judge == 1)?"true":"false") << endl;
+		cout << ((judge == 1) ? "true" : "false") << endl;
 		for (int i = 0; i < 10; i++) {
 			delete arr1[i];
 			delete arr2[i];
 		}
 	}
+	
 };
 
 #endif

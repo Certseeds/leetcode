@@ -3,15 +3,15 @@
 #define _LEETCODE_938_H
 
 using namespace std;
-struct TreeNode {
+struct TreeNode938 {
 	int val;
-	TreeNode *left;
-	TreeNode *right;
-	TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}
+	TreeNode938 *left;
+	TreeNode938 *right;
+	TreeNode938(int x) : val(x), left(nullptr), right(nullptr) {}
 };
 class Solution938 {
 public:
-	int rangeSumBST(TreeNode* root, int L, int R) {
+	int rangeSumBST(TreeNode938* root, int L, int R) {
 		if (root == nullptr)
 			return 0;
 		int willreturn = 0;
