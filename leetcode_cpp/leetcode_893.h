@@ -36,10 +36,20 @@ public:
         return willreturn.size();
 
        
+    }int numSpecialEquivGroups2(vector<string>& A) {
+        set < array<int, 52> >maps;
+        for (int i = 0; i < A.size(); i++) {
+            array<int, 52> nums = { 0 };
+            for (int j = 0; j < A[i].size(); j++) {
+               nums[A[i][j] - 97+ (j % 2) * 26]++;
+            }
+            maps.insert(nums);
+        }
+        return maps.size();
     }
     void test() {
         vector<string> str1 = { "abcd", "cdab", "cbad", "xyzz", "zzxy", "zzyx" };
-       cout << numSpecialEquivGroups(str1) << endl;
+        cout << numSpecialEquivGroups2(str1) << endl;
         cout << (int)str1[0][0] -96 << endl;
     }
 };
