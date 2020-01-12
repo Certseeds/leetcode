@@ -7,7 +7,6 @@
 #include <set>
 using namespace std;
 
-
 class Solution867 {
 public:
 	vector<vector<int>> transpose(vector<vector<int>>& A) {
