@@ -120,6 +120,7 @@
     <ClCompile Include="leetcode_1160.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="leetcode_1008.h" />
     <ClInclude Include="leetcode_1022.h" />
     <ClInclude Include="leetcode_1030.h" />
     <ClInclude Include="leetcode_1038.h" />
