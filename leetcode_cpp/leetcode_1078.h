@@ -1,6 +1,7 @@
 #pragma once
 #ifndef _LEETCODE_1078_H_
 #define _LEETCODE_1078_H_
+#include "TreeNode.h"
 #include <array>
 #include <string>
 #include <vector>
