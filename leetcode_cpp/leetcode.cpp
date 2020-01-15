@@ -1,3 +1,4 @@
+//#pragma GCC optimize(2)
 #include <string>
 #include <fstream>
 #include <iostream>
@@ -61,6 +62,7 @@
 #include "leetcode_701.h"
 #include "leetcode_654.h"
 #include "leetcode_1008.h"
+#include "leetcode_1078.h"
 using namespace std;
 void main_1108();
 void main_771();
@@ -121,6 +123,7 @@ void main_535();
 void main_701();
 void main_654();
 void main_1008();
+void main_1078();
 
 int main() {
 	//main_1108();
@@ -181,12 +184,17 @@ int main() {
 	//main_535();
 	//main_701();
 	//main_654();
-	main_1008();
+	//main_1008();
+	main_1078();
 	cout << "main end"<<endl;
 	cin.get();
 	cin.get();
 	
 return 0;
+}
+void main_1078() {
+	Solution1078 sol1078;
+	sol1078.test();
 }
 void main_1008() {
 	Solution1008 sol1008;
