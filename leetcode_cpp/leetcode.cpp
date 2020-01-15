@@ -63,6 +63,7 @@
 #include "leetcode_654.h"
 #include "leetcode_1008.h"
 #include "leetcode_1078.h"
+#include "leetcode_1305.h"
 using namespace std;
 void main_1108();
 void main_771();
@@ -124,6 +125,7 @@ void main_701();
 void main_654();
 void main_1008();
 void main_1078();
+void main_1305();
 
 int main() {
 	//main_1108();
@@ -185,12 +187,17 @@ int main() {
 	//main_701();
 	//main_654();
 	//main_1008();
-	main_1078();
+	//main_1078();
+	main_1305();
 	cout << "main end"<<endl;
 	cin.get();
 	cin.get();
 	
 return 0;
+}
+void main_1305() {
+	Solution1305 sol1305;
+	sol1305.test();
 }
 void main_1078() {
 	Solution1078 sol1078;
