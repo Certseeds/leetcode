@@ -6,14 +6,12 @@
 #include <algorithm>
 using namespace std;
 /*
-Given a directed, acyclic graph of N nodes.
-Find all possible paths from node 0 to node N-1,
-and return them in any order.
-The graph is given as follows:
-the nodes are 0, 1, ..., graph.length - 1.
-graph[i] is a list of all nodes j for which the edge (i, j) exists.
--->
-find all paths in directed, acyclic graph from A to B.
+We are given the head node root of a binary tree, 
+where additionally every node's value is either a 0 or a 1.
+Return the same tree where every subtree 
+(of the given tree) not containing a 1 has been removed.
+(Recall that the subtree of a node X is X,
+plus every node that is a descendant of X.)
 */
 class Solution814 {
 public:
