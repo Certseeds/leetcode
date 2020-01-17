@@ -3,6 +3,107 @@
 #include <fstream>
 #include <iostream>
 #include "assert.h"
+//1-99 begin
+#include "leetcode_1.h"
+#include "leetcode_2.h"
+#include "leetcode_3.h"
+#include "leetcode_4.h"
+#include "leetcode_5.h"
+#include "leetcode_6.h"
+#include "leetcode_7.h"
+#include "leetcode_8.h"
+#include "leetcode_9.h"
+#include "leetcode_10.h"
+#include "leetcode_11.h"
+#include "leetcode_12.h"
+#include "leetcode_13.h"
+#include "leetcode_14.h"
+#include "leetcode_15.h"
+#include "leetcode_16.h"
+#include "leetcode_17.h"
+#include "leetcode_18.h"
+#include "leetcode_19.h"
+#include "leetcode_20.h"
+#include "leetcode_21.h"
+#include "leetcode_22.h"
+#include "leetcode_23.h"
+#include "leetcode_24.h"
+#include "leetcode_25.h"
+#include "leetcode_26.h"
+#include "leetcode_27.h"
+#include "leetcode_28.h"
+#include "leetcode_29.h"
+#include "leetcode_30.h"
+#include "leetcode_31.h"
+#include "leetcode_32.h"
+#include "leetcode_33.h"
+#include "leetcode_34.h"
+#include "leetcode_35.h"
+#include "leetcode_36.h"
+#include "leetcode_37.h"
+#include "leetcode_38.h"
+#include "leetcode_39.h"
+#include "leetcode_40.h"
+#include "leetcode_41.h"
+#include "leetcode_42.h"
+#include "leetcode_43.h"
+#include "leetcode_44.h"
+#include "leetcode_45.h"
+#include "leetcode_46.h"
+#include "leetcode_47.h"
+#include "leetcode_48.h"
+#include "leetcode_49.h"
+#include "leetcode_50.h"
+#include "leetcode_51.h"
+#include "leetcode_52.h"
+#include "leetcode_53.h"
+#include "leetcode_54.h"
+#include "leetcode_55.h"
+#include "leetcode_56.h"
+#include "leetcode_57.h"
+#include "leetcode_58.h"
+#include "leetcode_59.h"
+#include "leetcode_60.h"
+#include "leetcode_61.h"
+#include "leetcode_62.h"
+#include "leetcode_63.h"
+#include "leetcode_64.h"
+#include "leetcode_65.h"
+#include "leetcode_66.h"
+#include "leetcode_67.h"
+#include "leetcode_68.h"
+#include "leetcode_69.h"
+#include "leetcode_70.h"
+#include "leetcode_71.h"
+#include "leetcode_72.h"
+#include "leetcode_73.h"
+#include "leetcode_74.h"
+#include "leetcode_75.h"
+#include "leetcode_76.h"
+#include "leetcode_77.h"
+#include "leetcode_78.h"
+#include "leetcode_79.h"
+#include "leetcode_80.h"
+#include "leetcode_81.h"
+#include "leetcode_82.h"
+#include "leetcode_83.h"
+#include "leetcode_84.h"
+#include "leetcode_85.h"
+#include "leetcode_86.h"
+#include "leetcode_87.h"
+#include "leetcode_88.h"
+#include "leetcode_89.h"
+#include "leetcode_90.h"
+#include "leetcode_91.h"
+#include "leetcode_92.h"
+#include "leetcode_93.h"
+#include "leetcode_94.h"
+#include "leetcode_95.h"
+#include "leetcode_96.h"
+#include "leetcode_97.h"
+#include "leetcode_98.h"
+#include "leetcode_99.h"
+//1-99 end
 #include "leetcode_1108.h"
 #include "leetcode_771.h"
 #include "leetcode_938.h"
@@ -72,6 +173,8 @@
 #include "leetcode_894.h"
 #include "leetcode_1314.h"
 #include "leetcode_304.h"
+#include "leetcode_307.h"
+#include "leetcode_123.h"
 using namespace std;
 void main_1108();
 void main_771();
@@ -142,8 +245,111 @@ void main_890();
 void main_894();
 void main_1314();
 void main_304();
-
+void main_307();
+void main_123();
+// 1- 99 begin
+void main_1();
+void main_2();
+void main_3();
+void main_4();
+void main_5();
+void main_6();
+void main_7();
+void main_8();
+void main_9();
+void main_10();
+void main_11();
+void main_12();
+void main_13();
+void main_14();
+void main_15();
+void main_16();
+void main_17();
+void main_18();
+void main_19();
+void main_20();
+void main_21();
+void main_22();
+void main_23();
+void main_24();
+void main_25();
+void main_26();
+void main_27();
+void main_28();
+void main_29();
+void main_30();
+void main_31();
+void main_32();
+void main_33();
+void main_34();
+void main_35();
+void main_36();
+void main_37();
+void main_38();
+void main_39();
+void main_40();
+void main_41();
+void main_42();
+void main_43();
+void main_44();
+void main_45();
+void main_46();
+void main_47();
+void main_48();
+void main_49();
+void main_50();
+void main_51();
+void main_52();
+void main_53();
+void main_54();
+void main_55();
+void main_56();
+void main_57();
+void main_58();
+void main_59();
+void main_60();
+void main_61();
+void main_62();
+void main_63();
+void main_64();
+void main_65();
+void main_66();
+void main_67();
+void main_68();
+void main_69();
+void main_70();
+void main_71();
+void main_72();
+void main_73();
+void main_74();
+void main_75();
+void main_76();
+void main_77();
+void main_78();
+void main_79();
+void main_80();
+void main_81();
+void main_82();
+void main_83();
+void main_84();
+void main_85();
+void main_86();
+void main_87();
+void main_88();
+void main_89();
+void main_90();
+void main_91();
+void main_92();
+void main_93();
+void main_94();
+void main_95();
+void main_96();
+void main_97();
+void main_98();
+void main_99();
+//1-99 end
 int main() {
+	
 	//main_1108();
 	//main_771();
 	//main_938();
@@ -212,12 +418,27 @@ int main() {
 	//main_890();
 	//main_894();
 	//main_1314();
-	main_304();
+	//main_304();
+	//main_307();
+	//main_123();
+	main_1();
 	cout << "main end"<<endl;
 	cin.get();
 	cin.get();
 	
 return 0;
+}
+void main_1() {
+	Solution1 sol1;
+	sol1.test();
+}
+void main_123() {
+	Solution123 sol123;
+	sol123.test();
+}
+void main_307() {
+	Solution307 sol307;
+	sol307.test();
 }
 void main_304() {
 	Solution304 sol304;
