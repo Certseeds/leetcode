@@ -319,6 +319,7 @@
     <ClInclude Include="leetcode_97.h" />
     <ClInclude Include="leetcode_977.h" />
     <ClInclude Include="leetcode_98.h" />
+    <ClInclude Include="leetcode_985.h" />
     <ClInclude Include="leetcode_99.h" />
     <ClInclude Include="leetcode_999.h" />
     <ClInclude Include="TreeNode.h" />
