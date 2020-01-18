@@ -181,6 +181,7 @@
 #include "leetcode_1287.h"
 #include "leetcode_1260.h"
 #include "leetcode_566.h"
+#include "leetcode_1089.h"
 using namespace std;
 void main_1108();
 void main_771();
@@ -360,6 +361,7 @@ void main_985();
 void main_1287();
 void main_1260();
 void main_566();
+void main_1089();
 [[maybe_unused]] static auto const fast = [] {return ios_base::sync_with_stdio(false); }();
 int main() {
 	
@@ -440,12 +442,17 @@ int main() {
 	//main_985();
 	//main_1287();
 	//main_1260();
-	main_566();
+	//main_566();
+	main_1089();
 	cout << "main end"<<endl;
 	cin.get();
 	cin.get();
 	
 return 0;
+}
+void main_1089() {
+	Solution1089 sol1089;
+	sol1089.test();
 }
 void main_566() {
 	Solution566 sol566;
