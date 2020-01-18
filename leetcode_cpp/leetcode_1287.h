@@ -13,7 +13,6 @@ it looks like it should be a ergodic question using unordered_map,
 but because it is a sorted array, so it should use 0-n/4,n/4-n/2,n/2-3*n/4,3*n/4-n.
 four part to reaseach it there exist a part all numbers is the same number.
 */
-[[maybe_unused]] static auto const fast = [] {return ios_base::sync_with_stdio(false); }();
 class Solution1287 {
 public:
 	int findSpecialInteger(vector<int>& arr) {

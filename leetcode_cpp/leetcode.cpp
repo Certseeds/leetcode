@@ -1,4 +1,4 @@
-//#pragma GCC optimize(2)
+#pragma GCC optimize(2)
 #include <string>
 #include <fstream>
 #include <iostream>
@@ -179,6 +179,7 @@
 #include "leetcode_766.h"
 #include "leetcode_985.h"
 #include "leetcode_1287.h"
+#include "leetcode_1260.h"
 using namespace std;
 void main_1108();
 void main_771();
@@ -356,7 +357,8 @@ void main_1313();
 void main_766();
 void main_985();
 void main_1287();
-
+void main_1260();
+[[maybe_unused]] static auto const fast = [] {return ios_base::sync_with_stdio(false); }();
 int main() {
 	
 	//main_1108();
@@ -434,13 +436,17 @@ int main() {
 	//main_1313();
 	//main_766();
 	//main_985();
-	main_1287();
-
+	//main_1287();
+	main_1260();
 	cout << "main end"<<endl;
 	cin.get();
 	cin.get();
 	
 return 0;
+}
+void main_1260() {
+	Solution1260 sol1260;
+	sol1260.test();
 }
 void main_1287() {
 	Solution1287 sol1287;
