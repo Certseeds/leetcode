@@ -42,7 +42,6 @@ public:
 		return willreturn;
 	}
 	vector<int> sumEvenAfterQueries2(vector<int>& ints, vector<vector<int>>& queries) {
-		#pragma GCC optimize(2)
 		vector<int> willreturn;
 		if (queries.size() == 0) {
 			return willreturn;
