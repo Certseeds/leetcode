@@ -40,7 +40,7 @@ public:
 		int count = 0;
 		for (auto iter = nums.begin(); iter != nums.end(); iter ++) {
 			if (*iter != 0) {
-				willreturn[count] = 0;
+				willreturn[count] = *iter;
 				count++;
 			}
 		}
