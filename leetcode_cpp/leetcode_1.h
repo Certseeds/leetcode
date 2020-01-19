@@ -27,13 +27,33 @@ public:
         }
         return willreturn;
     }
+    vector<int> twoSum_sorted(vector<int>& nums, int target) {
+        unordered_map<int, int> umaps;
+        vector<int> willreturn;
+        for (int i = 0; i < nums.size(); i++) {
+            if (umaps[target - nums[i]] != 0) {
+                willreturn.push_back(i);
+                willreturn.push_back(umaps[target - nums[i]] - 1);
+                break;
+            }
+            umaps[nums[i]] = i + 1;
+        }
+        return willreturn;
+    }
+    /*
+    if the number is not so big, it's better to use brute force,
+    if number > 50,choose hashmap.
+     */
     void test() {
         vector<int> vec1 = { 2,7,11,15 };
         vector<int> out1 = twoSum(vec1,9);
         for (auto i : out1) {
             cout << i << endl;
         }
-
+        vector<int> out2 = twoSum_sorted(vec1, 9);
+        for (auto i : out2) {
+            cout << i << endl;
+        }
     }
 };
 /*
