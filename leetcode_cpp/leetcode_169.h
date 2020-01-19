@@ -60,8 +60,10 @@ public:
 	void test() {
 		vector<int> vec1 = { 1,0,1,1,0,1 };
 		cout << majorityElement(vec1) << endl;
+		cout << majorityElement2(vec1) << endl;
 		vector<int> vec2 = { 1 };
 		cout << majorityElement(vec2) << endl;
+		cout << majorityElement2(vec2) << endl;
 
 	}
 };
