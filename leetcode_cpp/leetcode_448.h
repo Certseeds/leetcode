@@ -6,8 +6,13 @@
 #include <numeric>
 using namespace std;
 /*
-Given a binary array,
-find the maximum number of consecutive 1s in this array.
+Given an array of integers where 1 ¡Ü a[i] ¡Ü n (n = size of array), 
+some elements appear twice and others appear once.
+
+Find all the elements of [1, n] inclusive that do not appear in this array.
+
+Could you do it without extra space and in O(n) runtime? 
+You may assume the returned list does not count as extra space.
 */
 class Solution448 {
 public:
