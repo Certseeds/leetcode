@@ -197,6 +197,7 @@
 #include "leetcode_661.h"
 #include "leetcode_268.h"
 #include "leetcode_118.h"
+#include "leetcode_121.h"
 using namespace std;
 void main_1108();
 void main_771();
@@ -392,6 +393,7 @@ void main_697();
 void main_661();
 void main_268();
 void main_118();
+void main_121();
 static int faster_streams = []() {
 	std::ios::sync_with_stdio(false);
 	std::cin.tie(nullptr);
@@ -493,12 +495,17 @@ int main() {
 	//main_697();
 	//main_661();
 	//main_268();
-	main_118();
+	//main_118();
+	main_121();
 	cout << "main end"<<endl;
 	cin.get();
 	cin.get();
 	
 return 0;
+}
+void main_121() {
+	Solution121 sol121;
+	sol121.test();
 }
 void main_118() {
 	Solution118 sol118;
