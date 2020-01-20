@@ -15,7 +15,6 @@ public:
     inline vector<vector<int>> generate(int numRows) {
         vector<vector< int>> willreturn;
         vector<int> temp = {};
-        willreturn.push_back(temp);
         for (int i = 1; i <= numRows; i++) {
             temp = generate_help(temp);
             willreturn.push_back(temp);
