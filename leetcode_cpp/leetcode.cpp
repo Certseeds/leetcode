@@ -1,4 +1,4 @@
-#pragma GCC optimize(2)
+﻿#pragma GCC optimize(2)
 #include <string>
 #include <fstream>
 #include <iostream>
@@ -203,6 +203,39 @@
 #include "leetcode_1232.h"
 #include "leetcode_1018.h"
 #include "leetcode_1010.h"
+
+#define function_head() function_head1(leetcode_NUM)
+#define function_head1(EXP) function_head2(EXP)
+//#define function_head2(EXP) main_##EXP()
+#define function_head2(EXP)  sums_of_three(main_,EXP,())
+
+
+#define Solution_head Solution_head1(leetcode_NUM)
+#define Solution_head1(EXP) Solution_head2(EXP)
+//#define Solution_head2(EXP) Solution##EXP
+#define Solution_head2(EXP)  sums_of_two(Solution,EXP)
+
+
+#define Solution_object Solution_object1(leetcode_NUM)
+#define Solution_object1(EXP) Solution_object2(EXP)
+//#define Solution_object2(EXP) Solution##EXP
+#define Solution_object2(EXP)  sums_of_two(sol,EXP)
+
+
+#define leetcode_include leetcode_include2(leetcode_NUM)
+#define leetcode_include2(EXP) leetcode_include3(EXP)
+//#define leetcode_include3(EXP) leetcode_##EXP.h
+#define leetcode_include3(EXP)  sums_of_three(leetcode_,EXP,.h)
+
+#define sums_of_three(x,y,z) x##y##z
+#define sums_of_two(x,y) x##y
+
+#define TO_STRING(str) _TO_STRING(str)
+#define _TO_STRING(str) #str
+#define leetcode_NUM test
+#include TO_STRING(leetcode_include)
+
+
 using namespace std;
 void main_1108();
 void main_771();
@@ -404,6 +437,8 @@ void main_830();
 void main_1232();
 void main_1018();
 void main_1010();
+void function_head();
+
 static int faster_streams = []() {
 	std::ios::sync_with_stdio(false);
 	std::cin.tie(nullptr);
@@ -511,12 +546,17 @@ int main() {
 	//main_830();
 	//main_1232();
 	//main_1018();
-	main_1010();
+	//main_1010();
+	function_head();
 	cout << "main end"<<endl;
 	cin.get();
 	cin.get();
 	
 return 0;
+}
+void function_head() {
+	Solution_head Solution_object;
+	Solution_object.test();
 }
 void main_1010() {
 	Solution1010 sol1010;
