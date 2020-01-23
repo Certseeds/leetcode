@@ -4,6 +4,7 @@
 #include <iostream>
 #include "assert.h"
 //1-99 begin
+/*
 #include "leetcode_1.h"
 #include "leetcode_2.h"
 #include "leetcode_3.h"
@@ -137,6 +138,7 @@
 #include "leetcode_1290.h"
 #include "leetcode_1221.h"
 #include "leetcode_1266.h"
+
 #include "leetcode_1252.h"
 #include "leetcode_1299.h"
 #include "leetcode_1207.h"
@@ -203,7 +205,7 @@
 #include "leetcode_1232.h"
 #include "leetcode_1018.h"
 #include "leetcode_1010.h"
-
+*/
 #define function_head() function_head1(leetcode_NUM)
 #define function_head1(EXP) function_head2(EXP)
 //#define function_head2(EXP) main_##EXP()
@@ -232,11 +234,11 @@
 
 #define TO_STRING(str) _TO_STRING(str)
 #define _TO_STRING(str) #str
-#define leetcode_NUM test
+#define leetcode_NUM 1128
 #include TO_STRING(leetcode_include)
 
 
-using namespace std;
+/*
 void main_1108();
 void main_771();
 void main_938();
@@ -310,104 +312,6 @@ void main_307();
 void main_123();
 // 1- 99 begin
 void main_1();
-void main_2();
-void main_3();
-void main_4();
-void main_5();
-void main_6();
-void main_7();
-void main_8();
-void main_9();
-void main_10();
-void main_11();
-void main_12();
-void main_13();
-void main_14();
-void main_15();
-void main_16();
-void main_17();
-void main_18();
-void main_19();
-void main_20();
-void main_21();
-void main_22();
-void main_23();
-void main_24();
-void main_25();
-void main_26();
-void main_27();
-void main_28();
-void main_29();
-void main_30();
-void main_31();
-void main_32();
-void main_33();
-void main_34();
-void main_35();
-void main_36();
-void main_37();
-void main_38();
-void main_39();
-void main_40();
-void main_41();
-void main_42();
-void main_43();
-void main_44();
-void main_45();
-void main_46();
-void main_47();
-void main_48();
-void main_49();
-void main_50();
-void main_51();
-void main_52();
-void main_53();
-void main_54();
-void main_55();
-void main_56();
-void main_57();
-void main_58();
-void main_59();
-void main_60();
-void main_61();
-void main_62();
-void main_63();
-void main_64();
-void main_65();
-void main_66();
-void main_67();
-void main_68();
-void main_69();
-void main_70();
-void main_71();
-void main_72();
-void main_73();
-void main_74();
-void main_75();
-void main_76();
-void main_77();
-void main_78();
-void main_79();
-void main_80();
-void main_81();
-void main_82();
-void main_83();
-void main_84();
-void main_85();
-void main_86();
-void main_87();
-void main_88();
-void main_89();
-void main_90();
-void main_91();
-void main_92();
-void main_93();
-void main_94();
-void main_95();
-void main_96();
-void main_97();
-void main_98();
-void main_99();
 //1-99 end
 void main_1313();
 void main_766();
@@ -437,8 +341,9 @@ void main_830();
 void main_1232();
 void main_1018();
 void main_1010();
+*/
+using namespace std;
 void function_head();
-
 static int faster_streams = []() {
 	std::ios::sync_with_stdio(false);
 	std::cin.tie(nullptr);
@@ -446,109 +351,9 @@ static int faster_streams = []() {
 	return 0;
 }();
 int main() {
-	
-	//main_1108();
-	//main_771();
-	//main_938();
-	//main_709();
-	//main_1021();
-	//main_804();
-	//main_832();
-	//main_905();
-	//main_977();
-	//main_657();
-	//main_728();
-	//main_617();
-	//main_461();
-	//main_852();
-	//main_942();
-	//main_929();
-	//main_922();
-	//main_965();
-	//main_509();
-	//main_1122();
-	//main_1160();
-	//main_944();
-	//main_961();
-    //main_811();
-	//main_559();
-	//main_999();
-	//main_897();
-	//main_1002();
-	//main_1295();
-	//main_1281();
-	//main_1290();
-	//main_1221();
-	//main_1266();
-	cout << "main begin" << endl;
-	//main_1252();
-	//main_1299();
-	//ain_1237();
-    //main_1200();
-    //main_1047();
-	//main_344();
-	//main_872();
-	//main_893();
-	//main_1030();
-	//main_1185();
-	//main_806();
-	//main_1217();
-	//main_867();
-	//main_1022();
-    //main_104();
-	//main_500();
-	//main_1302();
-	//main_1282();
-	//main_807();
-	//main_1038();
-	//main_1315();
-	//main_535();
-	//main_701();
-	//main_654();
-	//main_1008();
-	//main_1078();
-	//main_1305();
-	//main_763();
-	//main_797();
-	//main_814();
-	//main_1261();
-	//main_890();
-	//main_894();
-	//main_1314();
-	//main_304();
-	//main_307();
-	//main_123();
-	//main_1();
-	//main_1313();
-	//main_766();
-	//main_985();
-	//main_1287();
-	//main_1260();
-	//main_566();
-	//main_1089();
-	//main_1170();
-	//main_888();
-	//main_1013();
-	//main_896();
-	//main_283();
-	//main_485();
-	//main_169();
-	//main_1184();
-	//main_448();
-	//main_217();
-	//main_122();
-	//main_697();
-	//main_661();
-	//main_268();
-	//main_118();
-	//main_121();
-	//main_717();
-	//main_830();
-	//main_1232();
-	//main_1018();
-	//main_1010();
+	cout << leetcode_NUM << " begin" << endl;
 	function_head();
-	cout << "main end"<<endl;
+	cout << leetcode_NUM << " end"<<endl;
 	cin.get();
 	cin.get();
 	
@@ -557,276 +362,16 @@ return 0;
 void function_head() {
 	Solution_head Solution_object;
 	Solution_object.test();
-}
-void main_1010() {
-	Solution1010 sol1010;
-	sol1010.test();
-}
-void main_1018() {
-	Solution1018 sol1018;
-	sol1018.test();
-}
-void main_1232() {
-	Solution1232 sol1232;
-	sol1232.test();
-}
-void main_830() {
-	Solution830 sol830;
-	sol830.test();
-}
-void main_717() {
-	Solution717 sol717;
-	sol717.test();
-}
-void main_121() {
-	Solution121 sol121;
-	sol121.test();
-}
-void main_118() {
-	Solution118 sol118;
-	sol118.test();
-}
-void main_268() {
-	Solution268 sol268;
-	sol268.test();
-}
-void main_661() {
-	Solution661 sol661;
-	sol661.test();
-}
-void main_697() {
-	Solution697 sol697;
-	sol697.test();
-}
-void main_122() {
-	Solution122 sol122;
-	sol122.test();
-}
-void main_217() {
-	Solution217 sol217;
-	sol217.test();
-}
-void main_448() {
-	Solution448 sol448;
-	sol448.test();
-}
-void main_1184() {
-	Solution1184 sol1184;
-	sol1184.test();
-}
-void main_169() {
-	Solution169 sol169;
-	sol169.test();
-}
-void main_485() {
-	Solution485 sol485;
-	sol485.test();
-}
-void main_283() {
-	Solution283 sol283;
-	sol283.test();
-}
-void main_896() {
-	Solution896 sol896;
-	sol896.test();
-}
-void main_1013() {
-	Solution1013 sol1013;
-	sol1013.test();
-}
-void main_888() {
-	Solution888 sol888;
-	sol888.test();
-}
-void main_1170() {
-	Solution1170 sol1170;
-	sol1170.test();
-}
-void main_1089() {
-	Solution1089 sol1089;
-	sol1089.test();
-}
-void main_566() {
-	Solution566 sol566;
-	sol566.test();
-}
-void main_1260() {
-	Solution1260 sol1260;
-	sol1260.test();
-}
-void main_1287() {
-	Solution1287 sol1287;
-	sol1287.test();
-}
-void main_985() {
-	Solution985 sol985;
-	sol985.test();
-}
-void main_766() {
-	Solution766 sol766;
-	sol766.test();
-}
-void main_1313() {
-	Solution1313 sol1313;
-	sol1313.test();
-}
-void main_4() {
-	Solution4 sol4;
-	sol4.test();
-}
-void main_1() {
-	Solution1 sol1;
-	sol1.test();
-}
-void main_123() {
-	Solution123 sol123;
-	sol123.test();
-}
-void main_307() {
-	Solution307 sol307;
-	sol307.test();
-}
-void main_304() {
-	Solution304 sol304;
-	sol304.test();
-}
-void main_1314() {
-	Solution1314 sol1314;
-	sol1314.test();
-}
-void main_894() {
-	Solution894 sol894;
-	sol894.test();
-}
-void main_890() {
-	Solution890 sol890;
-	sol890.test();
-}
-void main_1261() {
-	Solution1261 sol1261;
-	sol1261.test();
-}
-void main_814() {
-	Solution814 sol814;
-	sol814.test();
-}
-void main_797() {
-	Solution797 sol797;
-	sol797.test();
-}
-void main_763() {
-	Solution763 sol763;
-	sol763.test();
-}
-void main_1305() {
-	Solution1305 sol1305;
-	sol1305.test();
-}
-void main_1078() {
-	Solution1078 sol1078;
-	sol1078.test();
-}
-void main_1008() {
-	Solution1008 sol1008;
-	sol1008.test();
-}
-void main_654() {
-	Solution654 sol654;
-	sol654.test();
-}
-void main_701() {
-	Solution701 sol701;
-	sol701.test();
-}
-void main_535() {
-	Solution535 sol535;
-	sol535.test();
-}
-void main_1315() {
-	Solution1315 sol1315;
-	sol1315.test();
-}
-void main_1038() {
-	Solution1038 sol1038;
-	sol1038.test();
-}
-void main_807() {
-	Solution807 sol807;
-	sol807.test();
-}
-void main_1282() {
-	Solution1282 sol1282;
-	sol1282.test();
-}
-void main_1302() {
-	Solution1302 sol1302;
-	sol1302.test();
-}
-void main_500() {
-	Solution500 sol500;
-	sol500.test();
-}
-void main_104() {
-	Solution104 sol104;
-	sol104.test();
-}
-void main_1022() {
-	Solution1022 sol1022;
-	sol1022.test();
-}
-void main_867() {
-	Solution867 sol867;
-	sol867.test();
-}
-void main_1217() {
-	Solution1217 sol1217;
-	sol1217.test();
-}
-void main_806() {
-	Solution806 sol806;
-	sol806.test();
-}
-void main_1185() {
-	Solution1185 sol1185;
-	sol1185.test();
-}
-void main_1030(){
-	Solution1030 sol1030;
-	sol1030.test();
-}
-void main_893() {
-	Solution893 sol893;
-	sol893.test();
-}
-void main_872() {
-	Solution872 sol872;
-	sol872.test();
-}
-void main_344() {
-	Solution344 sol344;
-	sol344.test();
-}
-void main_1047() {
-	Solution1047 sol1047;
-	sol1047.test();
-}
-void main_1200() {
+}/*
 
-	Solution1200 sol1200;
-	sol1200.test();
-}
-void main_1237() {
-	Solution1237 sol1237;
-	sol1237.test();
-}
-
-void main_1108() {
+void main_108() {
 	string  temp = "1.1.1.1";
 	Solution1108 sol1108 = Solution1108();
 	cout << sol1108.defangIPaddr(temp);
 	cin.get();
 	cin.get();
 }
+
 void main_771() {
 	unordered_map<char, bool> map;
 	map.insert(make_pair('a', true));
@@ -1224,16 +769,4 @@ void main_1266() {
 
 
 }
-void main_1252() {
-	Solution1252 sol1252;
-	sol1252.test();
-}
-//Use new test way.
-void main_1299() {
-	Solution1299 sol1299;
-	sol1299.test();
-}
-void main_1207() {
-	Solution1207 sol1207;
-	sol1207.test();
-}
+*/
