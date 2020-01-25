@@ -29,7 +29,7 @@ public:
             cout << K << " " << last << endl;
             last += K % 10;
             K /= 10;
-            A.insert(A.begin(),last%10);
+            A.emplace(A.begin(),last%10);
             last = last / 10;
         }
         return A;
@@ -88,8 +88,13 @@ public:
     }
 };
 /*
+use insert:
 Runtime: 152 ms,
 Memory Usage: 12.4 MB,
 11.51%,88.89%.
+use emplace:
+Runtime: 112 ms,
+Memory Usage: 12.4 MB,
+87.05%,100%.
 */
 #endif
