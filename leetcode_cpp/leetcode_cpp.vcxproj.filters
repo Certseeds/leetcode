@@ -735,6 +735,18 @@
     <ClInclude Include="leetcode_840.h">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="leetcode_1328.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="leetcode_1329.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="leetcode_1330.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="leetcode_1331.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="leetcode.cpp">

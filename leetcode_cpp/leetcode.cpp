@@ -283,7 +283,7 @@
 
 #define TO_STRING(str) _TO_STRING(str)
 #define _TO_STRING(str) #str
-#define leetcode_NUM 840
+#define leetcode_NUM 1331
 #include TO_STRING(leetcode_include)
 
 

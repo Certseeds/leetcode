@@ -131,6 +131,10 @@
     <ClInclude Include="leetcode_1323.h" />
     <ClInclude Include="leetcode_1324.h" />
     <ClInclude Include="leetcode_1325.h" />
+    <ClInclude Include="leetcode_1328.h" />
+    <ClInclude Include="leetcode_1329.h" />
+    <ClInclude Include="leetcode_1330.h" />
+    <ClInclude Include="leetcode_1331.h" />
     <ClInclude Include="leetcode_169.h" />
     <ClInclude Include="leetcode_217.h" />
     <ClInclude Include="leetcode_219.h" />
