@@ -762,6 +762,9 @@
     <ClInclude Include="leetcode_1309.h">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="leetcode_1277.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="leetcode.cpp">
