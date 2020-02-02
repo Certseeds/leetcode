@@ -378,6 +378,7 @@
     <ClInclude Include="leetcode_1232.h" />
     <ClInclude Include="leetcode_hash.h" />
     <ClInclude Include="leetcode_test.h" />
+    <ClInclude Include="ListNode.h" />
     <ClInclude Include="TreeNode.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
