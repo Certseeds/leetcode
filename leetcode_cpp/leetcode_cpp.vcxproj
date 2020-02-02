@@ -127,6 +127,7 @@
     <ClInclude Include="leetcode_1128.h" />
     <ClInclude Include="leetcode_1170.h" />
     <ClInclude Include="leetcode_1184.h" />
+    <ClInclude Include="leetcode_1222.h" />
     <ClInclude Include="leetcode_1275.h" />
     <ClInclude Include="leetcode_1277.h" />
     <ClInclude Include="leetcode_1309.h" />
@@ -375,6 +376,7 @@
     <ClInclude Include="leetcode_99.h" />
     <ClInclude Include="leetcode_999.h" />
     <ClInclude Include="leetcode_1232.h" />
+    <ClInclude Include="leetcode_hash.h" />
     <ClInclude Include="leetcode_test.h" />
     <ClInclude Include="TreeNode.h" />
   </ItemGroup>
