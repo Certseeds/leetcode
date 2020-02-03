@@ -22,6 +22,7 @@ public:
                 end = middle;
             }
         }
+        return nums1[begin];
     }
     int findMedianSortedArrays_2(vector<int>& nums2,int num) {
         int begin = 0;

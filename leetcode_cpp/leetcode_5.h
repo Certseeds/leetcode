@@ -1,7 +1,6 @@
-
 #pragma once
-#ifndef _LEETCODE_5_H
-#define _LEETCODE_5_H
+#ifndef _LEETCODE_5_H_
+#define _LEETCODE_5_H_
 #include <vector>
 #include <array>
 #include <string>
@@ -9,8 +8,11 @@
 using namespace std;
 class Solution5 {
 public:
-  void test() {
-  }
+    string longestPalindrome(string s) {
+
+    }
+    void test() {
+    }
 };
 
 #endif
