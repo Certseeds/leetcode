@@ -5,7 +5,7 @@
 #include "assert.h"
 #include "leetcode_macro.h"
 
-#define leetcode_NUM 13
+#define leetcode_NUM 94
 #include TO_STRING(leetcode_include)
 using namespace std;
 void function_head();
