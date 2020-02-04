@@ -118,6 +118,7 @@
   <ItemGroup>
     <ClCompile Include="leetcode.cpp" />
     <ClCompile Include="leetcode_1160.h" />
+    <ClCompile Include="test.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="leetcode_1010.h" />
@@ -377,6 +378,8 @@
     <ClInclude Include="leetcode_999.h" />
     <ClInclude Include="leetcode_1232.h" />
     <ClInclude Include="leetcode_hash.h" />
+    <ClInclude Include="leetcode_macro.h" />
+    <ClInclude Include="leetcode_pragma.h" />
     <ClInclude Include="leetcode_test.h" />
     <ClInclude Include="ListNode.h" />
     <ClInclude Include="TreeNode.h" />

@@ -1,57 +1,138 @@
-﻿#pragma GCC optimize(2)
-#pragma GCC optimize("Ofast")
-#pragma GCC optimize("no-stack-protector")
-#pragma GCC optimize("unroll-loops")
-#pragma GCC optimize("fast-math")
-#pragma GCC optimize("inline")
-#pragma GCC optimize("-fgcse")
-#pragma GCC optimize("-fgcse-lm")
-#pragma GCC optimize("-fipa-sra")
-#pragma GCC optimize("-ftree-pre")
-#pragma GCC optimize("-ftree-vrp")
-#pragma GCC optimize("-fpeephole2")
-#pragma GCC optimize("-ffast-math")
-#pragma GCC optimize("-fsched-spec")
-#pragma GCC optimize("unroll-loops")
-#pragma GCC optimize("-falign-jumps")
-#pragma GCC optimize("-falign-loops")
-#pragma GCC optimize("-falign-labels")
-#pragma GCC optimize("-fdevirtualize")
-#pragma GCC optimize("-fcaller-saves")
-#pragma GCC optimize("-fcrossjumping")
-#pragma GCC optimize("-fthread-jumps")
-#pragma GCC optimize("-funroll-loops")
-#pragma GCC optimize("-fwhole-program")
-#pragma GCC optimize("-freorder-blocks")
-#pragma GCC optimize("-fschedule-insns")
-#pragma GCC optimize("inline-functions")
-#pragma GCC optimize("-ftree-tail-merge")
-#pragma GCC optimize("-fschedule-insns2")
-#pragma GCC optimize("-fstrict-aliasing")
-#pragma GCC optimize("-fstrict-overflow")
-#pragma GCC optimize("-falign-functions")
-#pragma GCC optimize("-fcse-skip-blocks")
-#pragma GCC optimize("-fcse-follow-jumps")
-#pragma GCC optimize("-fsched-interblock")
-#pragma GCC optimize("-fpartial-inlining")
-#pragma GCC optimize("no-stack-protector")
-#pragma GCC optimize("-freorder-functions")
-#pragma GCC optimize("-findirect-inlining")
-#pragma GCC optimize("-fhoist-adjacent-loads")
-#pragma GCC optimize("-frerun-cse-after-loop")
-#pragma GCC optimize("inline-small-functions")
-#pragma GCC optimize("-finline-small-functions")
-#pragma GCC optimize("-ftree-switch-conversion")
-#pragma GCC optimize("-foptimize-sibling-calls")
-#pragma GCC optimize("-fexpensive-optimizations")
-#pragma GCC optimize("-funsafe-loop-optimizations")
-#pragma GCC optimize("inline-functions-called-once")
-#pragma GCC optimize("-fdelete-null-pointer-checks")
-#pragma GCC target("avx,avx2,sse,sse2,sse3,ssse3,popcnt,abm,mmx,tune=native")
+﻿#include "leetcode_pragma.h"
 #include <string>
 #include <fstream>
 #include <iostream>
 #include "assert.h"
+#include "leetcode_macro.h"
+
+#define leetcode_NUM 13
+#include TO_STRING(leetcode_include)
+using namespace std;
+void function_head();
+static int faster_streams = []() {
+	std::ios::sync_with_stdio(false);
+	std::cin.sync_with_stdio(false);
+	std::cout.sync_with_stdio(false);
+	std::cin.tie(nullptr);
+	std::cout.tie(nullptr);
+	return 0;
+}();
+int main() {
+	cout << leetcode_NUM << " begin" << endl;
+	function_head();
+	cout << leetcode_NUM << " end"<<endl;
+	cin.get();
+	cin.get();
+return 0;
+}
+void function_head() {
+	Solution_head Solution_object;
+	Solution_object.test();
+}
+/*
+void main_1108();
+void main_771();
+void main_938();
+void main_709();
+void main_1021();
+void main_804();
+void main_832();
+void main_905();
+void main_977();
+void main_657();
+void main_728();
+void main_617();
+void main_461();
+void main_852();
+void main_942();
+void main_929();
+void main_922();
+void main_965();
+void main_509();
+void main_1122();
+void main_1160();
+void main_944();
+void main_961();
+void main_811();
+void main_559();
+void main_999();
+void main_897();
+void main_1002();
+void main_1295();
+void main_1281();
+void main_1290();
+void main_1221();
+void main_1266();
+void main_1252();
+void main_1299();
+void main_1207();
+void main_1237();
+void main_1200();
+void main_1047();
+void main_344();
+void main_872();
+void main_893();
+void main_1030();
+void main_1185();
+void main_806();
+void main_1217();
+void main_867();
+void main_1022();
+void main_104();
+void main_500();
+void main_1302();
+void main_1282();
+void main_807();
+void main_1038();
+void main_1315();
+void main_535();
+void main_701();
+void main_654();
+void main_1008();
+void main_1078();
+void main_1305();
+void main_763();
+void main_797();
+void main_814();
+void main_1261();
+void main_890();
+void main_894();
+void main_1314();
+void main_304();
+void main_307();
+void main_123();
+// 1- 99 begin
+void main_1();
+//1-99 end
+void main_1313();
+void main_766();
+void main_985();
+void main_1287();
+void main_1260();
+void main_566();
+void main_1089();
+void main_1170();
+void main_888();
+void main_1013();
+void main_896();
+void main_283();
+void main_485();
+void main_169();
+void main_1184();
+void main_448();
+void main_217();
+void main_122();
+void main_697();
+void main_661();
+void main_268();
+void main_118();
+void main_121();
+void main_717();
+void main_830();
+void main_1232();
+void main_1018();
+void main_1010();
+*/
 //1-99 begin
 /*
 #include "leetcode_1.h"
@@ -255,166 +336,7 @@
 #include "leetcode_1018.h"
 #include "leetcode_1010.h"
 */
-#define function_head() function_head1(leetcode_NUM)
-#define function_head1(EXP) function_head2(EXP)
-//#define function_head2(EXP) main_##EXP()
-#define function_head2(EXP)  sums_of_three(main_,EXP,())
-
-
-#define Solution_head Solution_head1(leetcode_NUM)
-#define Solution_head1(EXP) Solution_head2(EXP)
-//#define Solution_head2(EXP) Solution##EXP
-#define Solution_head2(EXP)  sums_of_two(Solution,EXP)
-
-
-#define Solution_object Solution_object1(leetcode_NUM)
-#define Solution_object1(EXP) Solution_object2(EXP)
-//#define Solution_object2(EXP) Solution##EXP
-#define Solution_object2(EXP)  sums_of_two(sol,EXP)
-
-
-#define leetcode_include leetcode_include2(leetcode_NUM)
-#define leetcode_include2(EXP) leetcode_include3(EXP)
-//#define leetcode_include3(EXP) leetcode_##EXP.h
-#define leetcode_include3(EXP)  sums_of_three(leetcode_,EXP,.h)
-
-#define sums_of_three(x,y,z) x##y##z
-#define sums_of_two(x,y) x##y
-
-#define TO_STRING(str) _TO_STRING(str)
-#define _TO_STRING(str) #str
-#define leetcode_NUM 13
-#include TO_STRING(leetcode_include)
-
-
 /*
-void main_1108();
-void main_771();
-void main_938();
-void main_709();
-void main_1021();
-void main_804();
-void main_832();
-void main_905();
-void main_977(); 
-void main_657();
-void main_728();
-void main_617();
-void main_461();
-void main_852();
-void main_942();
-void main_929();
-void main_922();
-void main_965();
-void main_509();
-void main_1122();
-void main_1160();
-void main_944();
-void main_961();
-void main_811();
-void main_559();
-void main_999();
-void main_897();
-void main_1002();
-void main_1295();
-void main_1281();
-void main_1290();
-void main_1221();
-void main_1266();
-void main_1252();
-void main_1299();
-void main_1207();
-void main_1237();
-void main_1200();
-void main_1047();
-void main_344();
-void main_872();
-void main_893();
-void main_1030();
-void main_1185();
-void main_806();
-void main_1217();
-void main_867();
-void main_1022();
-void main_104();
-void main_500();
-void main_1302();
-void main_1282();
-void main_807();
-void main_1038();
-void main_1315();
-void main_535();
-void main_701();
-void main_654();
-void main_1008();
-void main_1078();
-void main_1305();
-void main_763();
-void main_797();
-void main_814();
-void main_1261();
-void main_890();
-void main_894();
-void main_1314();
-void main_304();
-void main_307();
-void main_123();
-// 1- 99 begin
-void main_1();
-//1-99 end
-void main_1313();
-void main_766();
-void main_985();
-void main_1287();
-void main_1260();
-void main_566();
-void main_1089();
-void main_1170();
-void main_888();
-void main_1013();
-void main_896();
-void main_283();
-void main_485();
-void main_169();
-void main_1184();
-void main_448();
-void main_217();
-void main_122();
-void main_697();
-void main_661();
-void main_268();
-void main_118();
-void main_121();
-void main_717();
-void main_830();
-void main_1232();
-void main_1018();
-void main_1010();
-*/
-using namespace std;
-void function_head();
-static int faster_streams = []() {
-	std::ios::sync_with_stdio(false);
-	std::cin.sync_with_stdio(false);
-	std::cout.sync_with_stdio(false);
-	std::cin.tie(nullptr);
-	std::cout.tie(nullptr);
-	return 0;
-}();
-int main() {
-	cout << leetcode_NUM << " begin" << endl;
-	function_head();
-	cout << leetcode_NUM << " end"<<endl;
-	cin.get();
-	cin.get();
-	
-return 0;
-}
-void function_head() {
-	Solution_head Solution_object;
-	Solution_object.test();
-}/*
-
 void main_108() {
 	string  temp = "1.1.1.1";
 	Solution1108 sol1108 = Solution1108();

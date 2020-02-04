@@ -795,6 +795,12 @@
     <ClInclude Include="ListNode.h">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="leetcode_pragma.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="leetcode_macro.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="leetcode.cpp">
@@ -802,6 +808,9 @@
     </ClCompile>
     <ClCompile Include="leetcode_1160.h">
       <Filter>头文件</Filter>
+    </ClCompile>
+    <ClCompile Include="test.cpp">
+      <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
