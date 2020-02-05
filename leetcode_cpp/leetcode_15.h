@@ -3,7 +3,6 @@
 #define _LEETCODE_15_H_
 #include <vector>
 #include <unordered_set>
-#include <string>
 #include <algorithm>
 #include "leetcode_hash.h"
 using namespace std;
