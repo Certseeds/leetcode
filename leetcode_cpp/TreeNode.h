@@ -11,7 +11,7 @@ struct TreeNode {
     TreeNode(int x);
     TreeNode(const TreeNode& obj);
     ~TreeNode();
-    static vector<TreeNode*> numToTreeNode(vector<int> nums);
+    static vector<TreeNode*> numToTree(vector<int> nums);
     static void organize(vector<TreeNode*> Tree);
 };
 TreeNode::TreeNode(int x) {
@@ -30,7 +30,7 @@ inline TreeNode::~TreeNode(){
     this->right = nullptr;
 }
 
-vector<TreeNode*> TreeNode::numToTreeNode(vector<int> nums){
+vector<TreeNode*> TreeNode::numToTree(vector<int> nums){
     vector<TreeNode*> will_return(nums.size(), nullptr);
     for (int i = 0; i < nums.size(); i++) {
         will_return[i] =
