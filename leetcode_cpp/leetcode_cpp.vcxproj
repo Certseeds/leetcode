@@ -118,7 +118,6 @@
   <ItemGroup>
     <ClCompile Include="leetcode.cpp" />
     <ClCompile Include="leetcode_1160.h" />
-    <ClCompile Include="test.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="leetcode_1010.h" />
