@@ -1,3 +1,11 @@
+/*
+ * @Github: https://github.com/Certseeds
+ * @Organization: SUSTech
+ * @Author: nanoseeds
+ * @Date: 2020-01-17 13:18:51
+ * @LastEditors: nanoseeds
+ * @LastEditTime: 2020-02-05 11:49:55
+ */
 #pragma once
 #ifndef _LEETCODE_94_H_
 #define _LEETCODE_94_H_
