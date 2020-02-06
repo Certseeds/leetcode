@@ -47,6 +47,9 @@ public:
             cout << temp->val << " ";
             temp = temp->next;
         } cout << endl;
+        for (int i = 0; i < vec1.size(); i++) {
+            delete vec1[i];
+        }
     } 
 };
 /*
