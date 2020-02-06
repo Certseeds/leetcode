@@ -5,9 +5,13 @@
 #include "assert.h"
 #include "leetcode_macro.h"
 
-#define leetcode_NUM 21
+#define leetcode_NUM 22
 #include TO_STRING(leetcode_include)
-using namespace std;
+//using namespace std;
+using std::ios;
+using std::cin;
+using std::cout;
+using std::endl;
 void function_head();
 static int faster_streams = []() {
 	std::ios::sync_with_stdio(false);
@@ -18,11 +22,11 @@ static int faster_streams = []() {
 	return 0;
 }();
 int main() {
-	cout << leetcode_NUM << " begin" << endl;
+	std::cout << leetcode_NUM << " begin" << std::endl;
 	function_head();
-	cout << leetcode_NUM << " end"<<endl;
-	cin.get();
-	cin.get();
+	std::cout << leetcode_NUM << " end" << std::endl;
+	std::cin.get();
+	std::cin.get();
 return 0;
 }
 void function_head() {
