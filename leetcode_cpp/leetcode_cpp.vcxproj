@@ -377,6 +377,7 @@
     <ClInclude Include="leetcode_999.h" />
     <ClInclude Include="leetcode_1232.h" />
     <ClInclude Include="leetcode_hash.h" />
+    <ClInclude Include="leetcode_helper.hpp" />
     <ClInclude Include="leetcode_macro.h" />
     <ClInclude Include="leetcode_pragma.h" />
     <ClInclude Include="leetcode_test.h" />
