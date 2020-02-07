@@ -336,9 +336,6 @@
     <ClInclude Include="leetcode_23.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="leetcode_24.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
     <ClInclude Include="leetcode_25.h">
       <Filter>头文件</Filter>
     </ClInclude>
@@ -799,6 +796,12 @@
       <Filter>头文件</Filter>
     </ClInclude>
     <ClInclude Include="leetcode_macro.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="leetcode_24.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="catch.hpp">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>

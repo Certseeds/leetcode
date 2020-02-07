@@ -67,7 +67,6 @@ public:
         for (auto& i : vec2) {
             delete i;
         }
-        delete node1;
     }
 };
 /*
