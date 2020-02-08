@@ -1,16 +1,34 @@
-
 #pragma once
-#ifndef _LEETCODE_32_H
-#define _LEETCODE_32_H
+#ifndef _LEETCODE_32_H_
+#define _LEETCODE_32_H_
+#include <stack>
 #include <vector>
-#include <array>
 #include <string>
 #include <algorithm>
-using namespace std;
+using std::max;
+using std::swap;
+using std::cout;
+using std::endl;
+using std::stack;
+using std::vector;
+using std::string;
+using std::reverse; 
 class Solution32 {
 public:
-  void test() {
-  }
+    int longestValidParentheses(string s) {
+        if (s.size() <= 1) {
+            return 0;
+        }
+        
+    }
+    void test() {
+        cout << longestValidParentheses("") << endl;
+        cout << longestValidParentheses("(()") << endl;
+        cout << longestValidParentheses(")()())") << endl;
+        cout << longestValidParentheses("()(())") << endl;
+        cout << longestValidParentheses("()(()") << endl;
+
+    }
 };
 
 #endif
