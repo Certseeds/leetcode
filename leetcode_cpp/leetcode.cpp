@@ -1,11 +1,10 @@
 ﻿#include "leetcode_pragma.h"
-#include <string>
 #include <fstream>
 #include <iostream>
 #include "assert.h"
 #include "leetcode_macro.h"
 #include "leetcode_helper.hpp"
-#define leetcode_NUM 36
+#define leetcode_NUM 38
 #include TO_STRING(leetcode_include)
 //using namespace std;
 using std::ios;
