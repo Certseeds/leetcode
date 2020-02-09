@@ -1,6 +1,6 @@
 #pragma once
 #ifndef _LEETCODE_PRAGMA_H_
-#define _LEETCODE_PRAGMA_H_
+#define _LEETCODE_PRAGMA_H_ 
 /*
  * @Github: https://github.com/Certseeds
  * @Organization: SUSTech
