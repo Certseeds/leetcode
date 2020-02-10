@@ -1,7 +1,17 @@
 #pragma once
 #ifndef _TreeNode_H_
 #define _TreeNode_H_
+/*
+ * @Github: https://github.com/Certseeds
+ * @Organization: SUSTech
+ * @Author: nanoseeds
+ * @Date: 2020-01-12 20:27:58
+ * @LastEditors  : nanoseeds
+ * @LastEditTime : 2020-02-10 16:24:40
+*/
 #include <vector>
+#include <queue>
+using std::queue;
 using std::vector;
 const int No = -100000;
 struct TreeNode {
@@ -13,6 +23,7 @@ struct TreeNode {
     ~TreeNode();
     static vector<TreeNode*> numToTree(vector<int> nums);
     static void organize(vector<TreeNode*> Tree);
+    static void judge_equal(TreeNode* root, vector<int> vec);
 };
 TreeNode::TreeNode(int x) {
     this->val = x;
@@ -48,6 +59,24 @@ void TreeNode::organize(vector<TreeNode*> Tree) {
             Tree[i]->right =
                 (2 * i + 2 < Tree.size()) ? Tree[2 * i + 2] : nullptr;
         }
+    }
+}
+void TreeNode::judge_equal(TreeNode* root, vector<int> vec) {
+    queue<TreeNode*> que;
+    vector<int> nums;
+    que.push(root);
+    while (!que.empty()) {
+        TreeNode* head = que.front(); que.pop();
+        if (head == nullptr) {
+            nums.push_back(No);
+            continue;
+        }
+        nums.push_back(head->val);
+        que.push(head->left);
+        que.push(head->right);
+    }
+    for (int i = 0; i < nums.size(); i++) {
+        assert(nums[i] == vec[i]);
     }
 }
 #endif
