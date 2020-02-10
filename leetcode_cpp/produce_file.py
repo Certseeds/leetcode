@@ -2,10 +2,10 @@ import os
 import sys
 number = sys.argv[1]
 number = str(number)
-model = """
-#pragma once
-#ifndef _LEETCODE_{}_H
-#define _LEETCODE_{}_H
+model = 
+"""#pragma once
+#ifndef _LEETCODE_{}_H_
+#define _LEETCODE_{}_H_
 #include <vector>
 #include <array>
 #include <string>
@@ -13,8 +13,8 @@ model = """
 using namespace std;
 class Solution{} {{
 public:
-  void test() {{
-  }}
+    void test() {{
+    }}
 }};
 
 #endif

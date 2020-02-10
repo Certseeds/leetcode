@@ -72,8 +72,8 @@ public:
     }
 };
 /*
-Runtime: 4 ms,
-Memory Usage: 8.7 MB,
-78.68%,91.17%.
+Runtime: 0 ms,
+Memory Usage: 8.8 MB,
+100%,87.50%.
 */
 #endif
