@@ -10,6 +10,7 @@
  * @LastEditTime : 2020-02-14 22:07:17
 */
 #include <vector>
+#include <string>
 #include <algorithm>
 using std::cout;
 using std::endl;
