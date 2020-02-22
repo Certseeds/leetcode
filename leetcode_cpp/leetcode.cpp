@@ -4,7 +4,7 @@
 #include "assert.h"
 #include "leetcode_macro.h"
 #include "leetcode_helper.hpp"
-#define leetcode_NUM 993
+#define leetcode_NUM 1357
 #include TO_STRING(leetcode_include)
 //using namespace std;
 using std::ios;
