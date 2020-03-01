@@ -11,7 +11,7 @@
  * @LastEditTime : 2020-02-06 09:30:22
  */
 using std::vector;
-const int No = -100000;
+const int No_list = -100000;
 struct ListNode {
     int val;
     ListNode* next;
@@ -36,7 +36,7 @@ vector<ListNode*> ListNode::numToList(vector<int> nums) {
     vector<ListNode*> will_return(nums.size(), nullptr);
     for (int i = 0; i < nums.size(); i++) {
         will_return[i] =
-            (nums[i] != No) ?
+            (nums[i] != No_list) ?
             new ListNode(nums[i]) : nullptr;
     }
     for(int i = 0; i < nums.size()-1; i++) {
