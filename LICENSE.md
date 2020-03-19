@@ -1,5 +1,13 @@
+<!--
+ * @Github: https://github.com/Certseeds/leetcode_cpp
+ * @Organization: SUSTech
+ * @Author: nanoseeds
+ * @Date: 2020-01-11 13:06:18
+ * @LastEditors: nanoseeds
+ * @LastEditTime: 2020-03-19 08:52:49
+ -->
 ### GNU AFFERO GENERAL PUBLIC LICENSE
-
+s
 Version 3, 19 November 2007
 
 Copyright (C) 2007 Free Software Foundation, Inc.

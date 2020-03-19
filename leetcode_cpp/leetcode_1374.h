@@ -27,7 +27,8 @@ class Solution1374 {
 public:
     string generateTheString(int n) {
         char* str = new char[n + 1];
-        memset(str, '\0', sizeof(char) * (n + 1));
+        memset(str, 'b', sizeof(char) * n);
+        str[n] = '\0';
         if (1 == n % 2) {
             str[n - 1] = 'z';
             n--;
@@ -35,11 +36,8 @@ public:
         if (0 != n) {
             str[0] = 'a';
         }
-        for (uint32_t i = 1; i < n; i++) {
-            str[i] = 'b';
-        }
         string will_return = string(str);
-        delete[]str;
+        delete[] str;
         return will_return;
     }
     void test() {

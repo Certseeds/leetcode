@@ -56,10 +56,15 @@
     },"fileheader.configObj": {
         "createFileTime": true,
         "language": {
-            "languagetest": {
-                "head": "/$$",
-                "middle": " $ @",
-                "end": " $/"
+            "gitattributes":{
+                "head":"### ",
+                "middle":" # @",
+                "end":"### "
+            },
+            "gitignore":{
+                "head":"### ",
+                "middle":"## @",
+                "end":"### "
             }
         },
         "autoAdd": true,
@@ -105,9 +110,7 @@
         "CheckFileChange": false
     },
     "fileheader.customMade": {
-        //"Description": "",
-        //"version": "",
-        "Github":"https://github.com/Certseeds",
+        "Github":"https://github.com/Certseeds/leetcode_cpp",
         "Organization": "SUSTech",
         "Author": "nanoseeds",
         "Date": "Do not edit",
