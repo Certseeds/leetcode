@@ -42,19 +42,29 @@ Output: "2314"
 */
 class Solution60 {
 public:
-    string getPermutation(int n, int k) {
-        array<int, 10> fact = { 1,1,2,6,24,120,720,5040,40320,362880 };
+    constexpr uint32_t facts(uint32_t t) {
+        uint32_t will_return = 1;
+        for (uint32_t x = 1; x <= t; x++) {
+            will_return *= x;
+        }
+        return will_return;
+    }// c++ 14 constexpr, count facts in complier time.
+    string getPermutation(int32_t n, int32_t k) {
+        vector<uint32_t> fact(10, 1);
+        for (int i = 0; i < 10; i++) {
+            fact[i] = facts(i);
+        }
         assert(fact[n] >= k && k >= 1);
         assert(n >= 1 && n <= 9);
-        vector<int> nums;
+        vector<uint32_t> nums;
         char will_return[10]; memset(will_return, '\0', sizeof(char) * 10);
-        int k_count = k - 1;
-        vector<int> ordres;
-        for (int i = 1; i <= n; i++) {
+        uint32_t k_count = k - 1;
+        vector<uint32_t> ordres;
+        for (uint32_t i = 1; i <= n; i++) {
             nums.push_back(i);
         }
-        for (int i = 0; i < n; i++) {
-            int temp = k_count / fact[n - 1 - i];
+        for (uint32_t i = 0; i < n; i++) {
+            uint32_t temp = k_count / fact[n - 1 - i];
             ordres.push_back(temp);
             k_count = k_count % fact[n - 1 - i];
             will_return[i] = '0' + nums[ordres[i]];
@@ -62,19 +72,24 @@ public:
         }
         return will_return;
     }
-    string getPermutation_rec_out(int n, int k) {
-        array<int, 10> fact = { 1,1,2,6,24,120,720,5040,40320,362880 };
+    string getPermutation_rec_out(int32_t n, int32_t k) {
+        vector<uint32_t> fact(10, 1);
+        for (int i = 0; i < 10; i++) {
+            fact[i] = facts(i);
+        }
         assert(fact[n] >= k && k >= 1);
         assert(n >= 1 && n <= 9);
-        vector<int> nums;
-        for (int i = 1; i <= n; i++) {
+        vector<uint32_t> nums;
+        for (uint32_t i = 1; i <= n; i++) {
             nums.push_back(i);
         }
-
         return getPermutation_rec_in(n, k-1, nums);
     }
-    string getPermutation_rec_in(int n, int k,vector<int> nums) {
-        array<int, 10> fact = { 1,1,2,6,24,120,720,5040,40320,362880 };
+    string getPermutation_rec_in(int32_t n, int32_t k,vector<uint32_t> nums) {
+        vector<uint32_t> fact(10, 1);
+        for (int i = 0; i < 10; i++) {
+            fact[i] = facts(i);
+        }
         assert(fact[n] >= k && k >= 0);
         assert(n >= 1 && n <= 9);
         char will_return[2]; memset(will_return, '\0', sizeof(char) * 2);
