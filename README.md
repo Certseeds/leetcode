@@ -1,24 +1,41 @@
 <!--
- * @Github: https://github.com/Certseeds/leetcode_cpp
+ * @Github: https://github.com/Certseeds/leetcode
  * @Organization: SUSTech
  * @Author: nanoseeds
  * @Date: 2020-01-11 13:06:18
  * @LastEditors: nanoseeds
- * @LastEditTime: 2020-03-19 08:52:42
+ * @LastEditTime: 2020-05-28 19:53:11
  -->
 
-# leetcode_cpp
-use cpp to slove leetcode problems
+# leetcode_problems
+Try to slove leetcode problems
 
-[![AGPL3.0 Licence](https://img.shields.io/github/license/Certseeds/leetcode_cpp?color=%23FF3300)](https://opensource.org/licenses/AGPL-3.0)  
+1. All code based on AGPL3.0(or any later version).
+  + include .h .cpp .hpp .c in cpp.
+  + include .java 
+  + include .py in python, 
+  + include .sh and so on.
+2. Any other files are based on CC-BY-NC-SA-4.0(or any later version).
 
-[![language](https://img.shields.io/github/languages/top/Certseeds/leetcode_cpp?color=%23330099)]() 
+[![AGPL3.0 Licence](https://img.shields.io/badge/License-AGPL_V3.0-orange)](https://opensource.org/licenses/AGPL-3.0)  
 
-[![commit activity](https://img.shields.io/github/commit-activity/y/Certseeds/leetcode_cpp?color=%230066FF)](https://github.com/Certseeds/leetcode_cpp/commits/master) 
+[![AGPL_V3](https://www.gnu.org/graphics/agplv3-with-text-162x68.png)][agpl_3_0]
 
-[![code size](https://img.shields.io/github/languages/code-size/Certseeds/leetcode_cpp?color=%230099CC)]() 
+[![CC BY-NC-SA 4.0](https://img.shields.io/badge/License-CC%20BY--NC--SA%204.0-orange)][cc_by_nc_sa_4_0]
 
-[![repo size](https://img.shields.io/github/repo-size/Certseeds/leetcode_cpp?color=%23CC9900)]()
+[![CC BY-SA 4.0][cc_by_nc_sa_4_0_image]][cc_by_nc_sa_4_0]
 
+[![language](https://img.shields.io/github/languages/top/Certseeds/leetcode?color=%23330099)]() 
 
+[![commit activity](https://img.shields.io/github/commit-activity/y/Certseeds/leetcode?color=%230066FF)](https://github.com/Certseeds/leetcode/commits/master) 
+
+[![code size](https://img.shields.io/github/languages/code-size/Certseeds/leetcode?color=%230099CC)]() 
+
+[![repo size](https://img.shields.io/github/repo-size/Certseeds/leetcode?color=%23CC9900)]()
+
+[cc_by_nc_sa_4_0]: https://creativecommons.org/licenses/by-nc-sa/4.0/
+
+[cc_by_nc_sa_4_0_image]: https://licensebuttons.net/l/by-nc-sa/4.0/88x31.png
+
+[agpl_3_0]: https://opensource.org/licenses/AGPL-3.0
 
