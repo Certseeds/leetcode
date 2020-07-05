@@ -40,10 +40,6 @@ public:
         }
         return DP.back().back();
     }
-
-    void test() {
-
-    }
 };
 
 #endif

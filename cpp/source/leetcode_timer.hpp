@@ -37,6 +37,7 @@ private:
     std::chrono::milliseconds ms;
 public:
     explicit leetcode_timer() {
+        std::cout << __DATE__ << " " << __TIME__ << std::endl;
         ms = get_ms();
     }
 

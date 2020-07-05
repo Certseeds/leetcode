@@ -17,7 +17,7 @@
 #define Solution_object sums_of_two(sol,leetcode_NUM)
 
 #define postfix _.hpp
-#define leetcode_include sums_of_three(leetcode_,leetcode_NUM,postfix)
+#define leetcode_include sums_of_three(leetcode_test_,leetcode_NUM,postfix)
 
 #define sums_of_three_3(x, y, z) x##y##z
 #define sums_of_three_2(x, y, z) sums_of_three_3(x,y,z)
