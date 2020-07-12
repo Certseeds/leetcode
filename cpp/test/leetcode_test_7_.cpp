@@ -1,12 +1,4 @@
-/*
- * @Github: https://github.com/Certseeds/leetcode
- * @Organization: SUSTech
- * @Author: nanoseeds
- * @Date: 2020-07-05 21:25:27
- * @LastEditors: nanoseeds
- * @LastEditTime: 2020-07-05 21:25:49
- */ 
-/*  leetcode 
+/*  leetcode
     Copyright (C) 2020  nanoseeds
 
     leetcode is free software: you can redistribute it and/or modify
@@ -22,7 +14,19 @@
     You should have received a copy of the GNU Affero General Public License
     along with this program.  If not, see <https://www.gnu.org/licenses/>.
     */
-#define CATCH_CONFIG_MAIN
+/**
+ * @Github: https://github.com/Certseeds/leetcode
+ * @Organization: SUSTech
+ * @Author: nanoseeds
+ * @Date: 2020-07-07 22:27:29
+ * @LastEditors  : nanoseeds
+ */
+#include "catch_main.hpp"
+#include "leetcode_7_.hpp"
 
-#include "catch.hpp"
-#include "public.hpp"
+Solution7 sol7;
+
+TEST_CASE("", "[test 7]") {
+    CHECK(true);
+    CHECK_FALSE(false);
+}

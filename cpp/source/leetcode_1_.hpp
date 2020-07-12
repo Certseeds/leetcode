@@ -18,8 +18,9 @@ and you may not use the same element twice.
 class Solution1 {
 public:
     vector<int> twoSum(vector<int> &nums, int target) {
-        unordered_map<int, int> umaps;
-        for (int i = 0; i < nums.size(); i++) {
+        int32_t nums_size = nums.size();
+        unordered_map<int32_t, int32_t> umaps;
+        for (int32_t i = 0; i < nums_size; i++) {
             if (umaps.find(target - nums[i]) != std::end(umaps)) {
                 return vector<int32_t>{i, umaps[target - nums[i]] - 1};
             }
@@ -27,22 +28,10 @@ public:
         }
         return vector<int32_t>{};
     }
-
     /*
     if the number is not so big, it's better to use brute force,
     if number > 50,choose hashmap.
      */
-    void test() {
-        vector<int> vec1 = {2, 7, 11, 15};
-        vector<int> out1 = twoSum(vec1, 9);
-        for (auto i : out1) {
-            cout << i << endl;
-        }
-        vector<int> out2 = twoSum_sorted(vec1, 9);
-        for (auto i : out2) {
-            cout << i << endl;
-        }
-    }
 };
 /*
 Runtime: 8 ms, 

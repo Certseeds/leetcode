@@ -1,12 +1,11 @@
-/*
+/**
  * @Github: https://github.com/Certseeds/leetcode
  * @Organization: SUSTech
  * @Author: nanoseeds
- * @Date: 2020-07-05 21:25:27
- * @LastEditors: nanoseeds
- * @LastEditTime: 2020-07-05 21:25:49
- */ 
-/*  leetcode 
+ * @Date: 2020-07-12 21:56:13
+ * @LastEditors  : nanoseeds
+ */
+/*  leetcode
     Copyright (C) 2020  nanoseeds
 
     leetcode is free software: you can redistribute it and/or modify
@@ -22,7 +21,24 @@
     You should have received a copy of the GNU Affero General Public License
     along with this program.  If not, see <https://www.gnu.org/licenses/>.
     */
-#define CATCH_CONFIG_MAIN
+#include "catch_main.hpp"
+#include "leetcode_174_.hpp"
 
-#include "catch.hpp"
-#include "public.hpp"
+Solution174 sol174;
+
+TEST_CASE("test 1", "[test 174]") {
+    vector<vector<int32_t>> vec = {{-2, -3,  3},
+                                   {-5, -10, 1},
+                                   {10, 30,  -5}};
+    CHECK(sol174.calculateMinimumHP(vec) == 7);
+}
+
+TEST_CASE("test 2", "[test 174]") {
+    vector<vector<int32_t>> vec = {{0, -3}};
+    CHECK(sol174.calculateMinimumHP(vec) == 4);
+}
+
+TEST_CASE("test 3", "[test 174]") {
+    vector<vector<int32_t>> vec = {{0}};
+    CHECK(sol174.calculateMinimumHP(vec) == 1);
+}

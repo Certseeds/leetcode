@@ -1,5 +1,5 @@
 /*  leetcode
-    Copyright (C) {}  nanoseeds
+    Copyright (C) 2020  nanoseeds
 
     leetcode is free software: you can redistribute it and/or modify
     it under the terms of the GNU Affero General Public License as
@@ -18,47 +18,15 @@
  * @Github: https://github.com/Certseeds/leetcode
  * @Organization: SUSTech
  * @Author: nanoseeds
- * @Date: {}
+ * @Date: 2020-07-07 22:27:29
  * @LastEditors  : nanoseeds
  */
-#pragma once
-#ifndef LEETCODE_SOURCE_LEETCODE_{}_H
-#define LEETCODE_SOURCE_LEETCODE_{}_H
+#include "catch_main.hpp"
+#include "leetcode_9_.hpp"
 
-#include <algorithm>
-#include <array>
-#include <queue>
-#include <stack>
-#include <string>
-#include <unordered_map>
-#include <unordered_set>
-#include <vector>
+Solution9 sol9;
 
-using std::array;
-using std::queue;
-using std::sort;
-using std::stack;
-using std::string;
-using std::vector;
-using std::unordered_map;
-using std::unordered_set;
-using std::priority_queue;
-
-const string endl = "\n";
-constexpr double eps = 0.00000001;
-
-class Solution {
+TEST_CASE("", "[test 9]") {
+    CHECK(true);
+    CHECK_FALSE(false);
 }
-
-{
-{
-public:
-
-void test() {
-    {
-    }
-}
-
-}};
-
-#endif //LEETCODE_CPP_SOURCE_LEETCODE_{}_H

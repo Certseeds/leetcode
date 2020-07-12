@@ -32,18 +32,26 @@ year: str = time.strftime("%Y", time.localtime())
 create_time: str = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime())
 path: str = "./../source/leetcode_{}_.hpp"
 
+path: str = "./../test/leetcode_test_{}_.cpp"
+
 
 def read_template() -> str:
     will_return: str
-    with open("./cpp_template.hpp") as template:
+    with open("cpp_template.txt") as template:
         will_return = template.read()
+    return will_return
+
+
+def read_test_template() -> str:
+    will_return: str
+    with open("cpp_test_template.txt") as test_template:
+        will_return = test_template.read()
     return will_return
 
 
 def write_to_file(order: int) -> None:
     with open(path.format(order), mode='a+') as file:
-        file.write(code_template.format(
-            year, create_time, order, order, order, order))
+        file.write(code_template.format(create_time, year, order, order, order, order))
     print("{} write success".format(path.format(order)))
 
 
@@ -55,7 +63,8 @@ def main(begin_num: int, end_num: int) -> None:
 
 # range in [begin,end)
 if __name__ == '__main__':
-    code_template = read_template()
+    # code_template = read_template()
+    code_template = read_test_template()
     begin: int = int(sys.argv[1])
     end: int = int(sys.argv[2])
     main(begin, end)
