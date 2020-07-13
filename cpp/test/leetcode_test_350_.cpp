@@ -2,11 +2,11 @@
  * @Github: https://github.com/Certseeds/leetcode
  * @Organization: SUSTech
  * @Author: nanoseeds
- * @Date: {}
+ * @Date: 2020-07-13 21:44:20
  * @LastEditors  : nanoseeds
  */
 /*  leetcode
-    Copyright (C) {}  nanoseeds
+    Copyright (C) 2020  nanoseeds
 
     leetcode is free software: you can redistribute it and/or modify
     it under the terms of the GNU Affero General Public License as
@@ -21,33 +21,26 @@
     You should have received a copy of the GNU Affero General Public License
     along with this program.  If not, see <https://www.gnu.org/licenses/>.
     */
+#include "catch_main.hpp"
+#include "leetcode_350_.hpp"
 
-#pragma once
-#ifndef LEETCODE_SOURCE_LEETCODE_{}_H
-#define LEETCODE_SOURCE_LEETCODE_{}_H
+Solution350 sol350;
+using Catch::Matchers::UnorderedEquals;
 
-#include <algorithm>
-#include <array>
-#include <queue>
-#include <stack>
-#include <string>
-#include <unordered_map>
-#include <unordered_set>
-#include <vector>
+TEST_CASE("1", "[test 350]") {
+    vector<int32_t> vec1{1, 2, 2, 1};
+    vector<int32_t> vec2{2, 2};
+    CHECK_THAT(sol350.intersect(vec1, vec2), UnorderedEquals<int>({2, 2}));
+}
 
-using std::array;
-using std::queue;
-using std::sort;
-using std::stack;
-using std::string;
-using std::vector;
-using std::unordered_map;
-using std::unordered_set;
-using std::priority_queue;
+TEST_CASE("2", "[test 350]") {
+    vector<int32_t> vec1{4, 9, 5};
+    vector<int32_t> vec2{9, 4, 9, 8, 4};
+    CHECK_THAT(sol350.intersect(vec1, vec2), UnorderedEquals<int>({4, 9}));
+}
 
-class Solution{} {{
-public:
-
-}};
-
-#endif //LEETCODE_CPP_SOURCE_LEETCODE_{}_H
+TEST_CASE("3", "[test 350]") {
+    vector<int32_t> vec1{1, 2};
+    vector<int32_t> vec2{1, 1};
+    CHECK_THAT(sol350.intersect(vec1, vec2), UnorderedEquals<int>({1}));
+}

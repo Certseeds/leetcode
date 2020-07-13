@@ -2,11 +2,11 @@
  * @Github: https://github.com/Certseeds/leetcode
  * @Organization: SUSTech
  * @Author: nanoseeds
- * @Date: {}
+ * @Date: 2020-07-13 21:43:38
  * @LastEditors  : nanoseeds
  */
 /*  leetcode
-    Copyright (C) {}  nanoseeds
+    Copyright (C) 2020  nanoseeds
 
     leetcode is free software: you can redistribute it and/or modify
     it under the terms of the GNU Affero General Public License as
@@ -23,8 +23,8 @@
     */
 
 #pragma once
-#ifndef LEETCODE_SOURCE_LEETCODE_{}_H
-#define LEETCODE_SOURCE_LEETCODE_{}_H
+#ifndef LEETCODE_SOURCE_LEETCODE_350_H
+#define LEETCODE_SOURCE_LEETCODE_350_H
 
 #include <algorithm>
 #include <array>
@@ -45,9 +45,27 @@ using std::unordered_map;
 using std::unordered_set;
 using std::priority_queue;
 
-class Solution{} {{
+class Solution350 {
 public:
+    vector<int> intersect(vector<int> &nums1, vector<int> &nums2) {
+        if (nums1.size() >= nums2.size()) {
+            std::swap(nums1, nums2);
+        }
+        // nums1.size() < nums2.size()
+        unordered_map<int32_t, int32_t> umap1;
+        for (const auto &i:nums1) {
+            umap1[i]++;
+        }
+        vector<int32_t> will_return;
+        will_return.reserve(nums2.size());
+        for (const auto &i:nums2) {
+            if (umap1[i] > 0) {
+                umap1[i]--;
+                will_return.push_back(i);
+            }
+        }
+        return will_return;
+    }
+};
 
-}};
-
-#endif //LEETCODE_CPP_SOURCE_LEETCODE_{}_H
+#endif //LEETCODE_CPP_SOURCE_LEETCODE_350_H

@@ -31,7 +31,6 @@ code_template: str
 year: str = time.strftime("%Y", time.localtime())
 create_time: str = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime())
 path: str = "./../source/leetcode_{}_.hpp"
-
 path: str = "./../test/leetcode_test_{}_.cpp"
 
 
@@ -63,8 +62,8 @@ def main(begin_num: int, end_num: int) -> None:
 
 # range in [begin,end)
 if __name__ == '__main__':
-    # code_template = read_template()
-    code_template = read_test_template()
+    # code_template:str = read_template()
+    code_template: str = read_test_template()
     begin: int = int(sys.argv[1])
     end: int = int(sys.argv[2])
     main(begin, end)

@@ -9,7 +9,7 @@ include_directories(./includes)
 include_directories(./source)
 include_directories(./test)
 
-set(LEETCODE_NUMBER 5)
+set(LEETCODE_NUMBER 7)
 
 add_executable(${PROJECT_NAME}
         ./includes/public.hpp
