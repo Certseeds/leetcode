@@ -5,7 +5,7 @@
 @Organization: SUSTech
 @Author: nanoseeds
 @LastEditors: nanoseeds
-@LastEditTime: 2020-07-05 12:04:06
+@LastEditTime: 2020-07-20 23:47:50
 '''
 """ leetcode_cpp
     Copyright (C) 2020  nanoseeds
@@ -31,26 +31,25 @@ code_template: str
 year: str = time.strftime("%Y", time.localtime())
 create_time: str = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime())
 path: str = "./../source/leetcode_{}_.hpp"
-path: str = "./../test/leetcode_test_{}_.cpp"
+test_path: str = "./../test/leetcode_test_{}_.cpp"
+code_template: str
+code_test_template: str
 
 
-def read_template() -> str:
+def read_file(file_name: str) -> str:
     will_return: str
-    with open("cpp_template.txt") as template:
+    with open(file_name, mode='r', encoding="UTF-8") as template:
         will_return = template.read()
-    return will_return
-
-
-def read_test_template() -> str:
-    will_return: str
-    with open("cpp_test_template.txt") as test_template:
-        will_return = test_template.read()
     return will_return
 
 
 def write_to_file(order: int) -> None:
     with open(path.format(order), mode='a+') as file:
-        file.write(code_template.format(create_time, year, order, order, order, order))
+        file.write(code_template.format(
+            create_time, year, order, order, order, order))
+    with open(test_path.format(order), mode='a+') as file:
+        file.write(code_test_template.format(
+            create_time, year, order, order, order, order))
     print("{} write success".format(path.format(order)))
 
 
@@ -62,8 +61,8 @@ def main(begin_num: int, end_num: int) -> None:
 
 # range in [begin,end)
 if __name__ == '__main__':
-    # code_template:str = read_template()
-    code_template: str = read_test_template()
+    code_template = read_file("cpp_template.txt")
+    code_test_template = read_file("cpp_test_template.txt")
     begin: int = int(sys.argv[1])
     end: int = int(sys.argv[2])
     main(begin, end)
