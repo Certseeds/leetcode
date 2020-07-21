@@ -1,6 +1,3 @@
-#pragma once
-#ifndef _TreeNode_H_
-#define _TreeNode_H_
 /*
  * @Github: https://github.com/Certseeds
  * @Organization: SUSTech
@@ -9,64 +6,95 @@
  * @LastEditors  : nanoseeds
  * @LastEditTime : 2020-02-10 16:24:40
 */
+#ifndef LEETCODE_SOURCE_TREENODE_H
+#define LEETCODE_SOURCE_TREENODE_H
+
 #include <vector>
 #include <queue>
+
 using std::queue;
 using std::vector;
-const int No = -100000;
-struct TreeNode {
-    int val;
-    TreeNode* left;
-    TreeNode* right;
-    TreeNode(int x);
-    TreeNode(const TreeNode& obj);
+constexpr int No = -100000;
+
+class TreeNode {
+public:
+    int32_t val;
+    TreeNode *left;
+    TreeNode *right;
+
+    explicit TreeNode(int x = 0);
+
+    TreeNode(int x, TreeNode *le, TreeNode *rig);
+
+    TreeNode(const TreeNode &obj);
+
+    TreeNode &operator=(const TreeNode &timer) = delete;
+
+    TreeNode(TreeNode &&timer) = delete;
+
+    TreeNode &operator=(TreeNode &&mat) = delete;
+
     ~TreeNode();
-    static vector<TreeNode*> numToTree(vector<int> nums);
-    static void organize(vector<TreeNode*> Tree);
-    static void judge_equal(TreeNode* root, vector<int> vec);
+
+    static vector<TreeNode *> numToTree(vector<int> nums);
+
+    static void organize(vector<TreeNode *> Tree);
+
+    static bool judge_equal(TreeNode *root, vector<int> vec);
 };
+
 TreeNode::TreeNode(int x) {
     this->val = x;
     this->left = nullptr;
     this->right = nullptr;
 }
-TreeNode::TreeNode(const TreeNode& obj) {
+
+TreeNode::TreeNode(int x, TreeNode *le, TreeNode *rig) {
+    this->val = x;
+    this->left = le;
+    this->right = rig;
+}
+
+TreeNode::TreeNode(const TreeNode &obj) {
     this->val = obj.val;
     this->left = obj.left;
     this->right = obj.right;
 }
-inline TreeNode::~TreeNode(){
+
+inline TreeNode::~TreeNode() {
     this->val = 0;
     this->left = nullptr;
     this->right = nullptr;
 }
 
-vector<TreeNode*> TreeNode::numToTree(vector<int> nums){
-    vector<TreeNode*> will_return(nums.size(), nullptr);
-    for (int i = 0; i < nums.size(); i++) {
+vector<TreeNode *> TreeNode::numToTree(vector<int> nums) {
+    vector<TreeNode *> will_return(nums.size(), nullptr);
+    for (int i = 0; i < static_cast<int32_t>(nums.size()); i++) {
         will_return[i] =
-            (nums[i] != No)? 
-            new TreeNode(nums[i]) : nullptr;
+                (nums[i] != No) ?
+                new TreeNode(nums[i]) : nullptr;
     }
     TreeNode::organize(will_return);
     return will_return;
 }
-void TreeNode::organize(vector<TreeNode*> Tree) {
-    for (int i = 0; i < Tree.size(); i++) {
+
+void TreeNode::organize(vector<TreeNode *> Tree) {
+    int32_t tree_size = Tree.size();
+    for (int i = 0; i < tree_size; i++) {
         if (Tree[i] != nullptr) {
-            Tree[i]->left =
-                (2 * i + 1 < Tree.size()) ? Tree[2 * i + 1] : nullptr;
-            Tree[i]->right =
-                (2 * i + 2 < Tree.size()) ? Tree[2 * i + 2] : nullptr;
+            Tree[i]->left = (2 * i + 1 < tree_size) ? Tree[2 * i + 1] : nullptr;
+            Tree[i]->right = (2 * i + 2 < tree_size) ? Tree[2 * i + 2] : nullptr;
         }
     }
 }
-void TreeNode::judge_equal(TreeNode* root, vector<int> vec) {
-    queue<TreeNode*> que;
+
+bool TreeNode::judge_equal(TreeNode *root, vector<int> vec) {
+    queue<TreeNode *> que;
     vector<int> nums;
     que.push(root);
     while (!que.empty()) {
-        TreeNode* head = que.front(); que.pop();
+        TreeNode *head = que.front();
+        que.pop();
         if (head == nullptr) {
             nums.push_back(No);
             continue;
@@ -75,8 +103,12 @@ void TreeNode::judge_equal(TreeNode* root, vector<int> vec) {
         que.push(head->left);
         que.push(head->right);
     }
-    for (int i = 0; i < nums.size(); i++) {
-        assert(nums[i] == vec[i]);
+    bool will_return = true;
+    for (int i = 0; i < static_cast<int32_t>(nums.size()); i++) {
+        will_return = will_return && (nums[i] == vec[i]);
     }
+    return will_return;
 }
-#endif
+
+
+#endif //LEETCODE_SOURCE_TREENODE_H

@@ -1,12 +1,36 @@
-#pragma once
-#ifndef _LEETCODE_12_H_
-#define _LEETCODE_12_H_
+/**
+ * @Github: https://github.com/Certseeds/leetcode
+ * @Organization: SUSTech
+ * @Author: nanoseeds
+ * @Date: 2020-07-21 21:00:02
+ * @LastEditors  : nanoseeds
+ */
+/*  leetcode
+    Copyright (C) 2020  nanoseeds
+
+    leetcode is free software: you can redistribute it and/or modify
+    it under the terms of the GNU Affero General Public License as
+    published by the Free Software Foundation, either version 3 of the
+    License, or (at your option) any later version.
+
+    leetcode is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU Affero General Public License for more details.
+
+    You should have received a copy of the GNU Affero General Public License
+    along with this program.  If not, see <https://www.gnu.org/licenses/>.
+    */
+#ifndef LEETCODE_CPP_SOURCE_LEETCODE_12_H
+#define LEETCODE_CPP_SOURCE_LEETCODE_12_H
 
 #include <array>
 #include <string>
 #include <algorithm>
 
-using namespace std;
+using std::array;
+using std::string;
+using std::vector;
 
 /*
 Roman numerals are represented by seven different symbols: I, V, X, L, C, D and M.
@@ -77,14 +101,6 @@ public:
         will_return += ones[num];
         return will_return;
     }
-
-    void test() {
-        cout << intToRoman(3) << endl;
-        cout << intToRoman(4) << endl;
-        cout << intToRoman(9) << endl;
-        cout << intToRoman(58) << endl;
-        cout << intToRoman(1994) << endl;
-    }
 };
 /*
 way one:
@@ -96,4 +112,5 @@ Runtime: 4 ms,
 Memory Usage: 8.9 MB,
 94.51%,42.10%.
 */
-#endif
+
+#endif //LEETCODE_CPP_SOURCE_LEETCODE_12_H

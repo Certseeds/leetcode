@@ -1,12 +1,36 @@
-#pragma once
-#ifndef _LEETCODE_13_H_
-#define _LEETCODE_13_H_
+/**
+ * @Github: https://github.com/Certseeds/leetcode
+ * @Organization: SUSTech
+ * @Author: nanoseeds
+ * @Date: 2020-07-21 21:00:02
+ * @LastEditors  : nanoseeds
+ */
+/*  leetcode
+    Copyright (C) 2020  nanoseeds
+
+    leetcode is free software: you can redistribute it and/or modify
+    it under the terms of the GNU Affero General Public License as
+    published by the Free Software Foundation, either version 3 of the
+    License, or (at your option) any later version.
+
+    leetcode is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU Affero General Public License for more details.
+
+    You should have received a copy of the GNU Affero General Public License
+    along with this program.  If not, see <https://www.gnu.org/licenses/>.
+    */
+#ifndef LEETCODE_SOURCE_LEETCODE_13_H
+#define LEETCODE_SOURCE_LEETCODE_13_H
 
 #include <array>
 #include <string>
 #include <algorithm>
 
-using namespace std;
+using std::array;
+using std::vector;
+using std::string;
 
 /*
 Roman numerals are represented by seven different symbols: I, V, X, L, C, D and M.
@@ -43,53 +67,30 @@ Input is guaranteed to be within the range from 1 to 3999.
 */
 class Solution13 {
 public:
-    int romanToInt(string s) {
-        array<string, 10> hundres =
-                {"", "C", "CC", "CCC", "CD", "D", "DC", "DCC", "DCCC", "CM"};
-        array<string, 10> tens =
-                {"", "X", "XX", "XXX", "XL", "L", "LX", "LXX", "LXXX", "XC"};
-        array<string, 10> ones =
-                {"", "I", "II", "III", "IV", "V", "VI", "VII", "VIII", "IX"};
+    int romanToInt(const string &s) {
+        const vector<array<string, 9>> vas = {
+                {"C", "CC", "CCC", "CD", "D", "DC", "DCC", "DCCC", "CM"},
+                {"X", "XX", "XXX", "XL", "L", "LX", "LXX", "LXXX", "XC"},
+                {"I", "II", "III", "IV", "V", "VI", "VII", "VIII", "IX"}
+        };
         int will_return = 0;
         int begin = 0;
+        int added = 1000;
         while (s[begin] == 'M') {
-            will_return += 1000;
+            will_return += added;
             begin++;
         }
-        for (int i = 9; i >= 0; i--) {
-            if (s.compare(
-                    begin, hundres[i].size(), hundres[i], 0, hundres[i].size()) == 0) {
-                will_return += 100 * i;
-                begin += hundres[i].size();
-                break;
-            }
-        }
-        for (int i = 9; i >= 0; i--) {
-            if (s.compare(
-                    begin, tens[i].size(), tens[i], 0, tens[i].size()) == 0) {
-                will_return += 10 * i;
-                begin += tens[i].size();
-                break;
-            }
-        }
-        for (int i = 9; i >= 0; i--) {
-            //cout << ones[i] << " " << s.substr(begin) << endl;
-            if (s.compare(
-                    begin, ones[i].size(), ones[i], 0, ones[i].size()) == 0) {
-                will_return += i;
-                begin += ones[i].size();
-                break;
+        for (const auto &i  :vas) {
+            added /= 10;
+            for (auto j = i.crbegin(); j != i.crend(); j++) {
+                if (!s.compare(begin, j->size(), *j, 0, j->size())) {
+                    will_return += std::distance(j, i.crend() - 1 + 1) * added;
+                    begin += j->size();
+                    break;
+                }
             }
         }
         return will_return;
-    }
-
-    void test() {
-        cout << romanToInt("III") << endl;
-        cout << romanToInt("IV") << endl;
-        cout << romanToInt("IX") << endl;
-        cout << romanToInt("LVIIII") << endl;
-        cout << romanToInt("MCMXCIV") << endl;
     }
 };
 /*
@@ -97,4 +98,5 @@ Runtime: 16 ms,
 Memory Usage: 8.6 MB,
 60.66%,44.12%.
 */
-#endif
+
+#endif //LEETCODE_CPP_SOURCE_LEETCODE_13_H
