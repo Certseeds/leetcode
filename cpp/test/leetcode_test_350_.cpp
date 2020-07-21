@@ -1,12 +1,11 @@
-/*
+/**
  * @Github: https://github.com/Certseeds/leetcode
  * @Organization: SUSTech
  * @Author: nanoseeds
- * @Date: 2020-07-05 21:25:27
- * @LastEditors: nanoseeds
- * @LastEditTime: 2020-07-05 21:25:49
- */ 
-/*  leetcode 
+ * @Date: 2020-07-13 21:44:20
+ * @LastEditors  : nanoseeds
+ */
+/*  leetcode
     Copyright (C) 2020  nanoseeds
 
     leetcode is free software: you can redistribute it and/or modify
@@ -22,7 +21,26 @@
     You should have received a copy of the GNU Affero General Public License
     along with this program.  If not, see <https://www.gnu.org/licenses/>.
     */
-#define CATCH_CONFIG_MAIN
+#include "catch_main.hpp"
+#include "leetcode_350_.hpp"
 
-#include "catch.hpp"
-#include "public.hpp"
+Solution350 sol350;
+using Catch::Matchers::UnorderedEquals;
+
+TEST_CASE("1", "[test 350]") {
+    vector<int32_t> vec1{1, 2, 2, 1};
+    vector<int32_t> vec2{2, 2};
+    CHECK_THAT(sol350.intersect(vec1, vec2), UnorderedEquals<int>({2, 2}));
+}
+
+TEST_CASE("2", "[test 350]") {
+    vector<int32_t> vec1{4, 9, 5};
+    vector<int32_t> vec2{9, 4, 9, 8, 4};
+    CHECK_THAT(sol350.intersect(vec1, vec2), UnorderedEquals<int>({4, 9}));
+}
+
+TEST_CASE("3", "[test 350]") {
+    vector<int32_t> vec1{1, 2};
+    vector<int32_t> vec2{1, 1};
+    CHECK_THAT(sol350.intersect(vec1, vec2), UnorderedEquals<int>({1}));
+}

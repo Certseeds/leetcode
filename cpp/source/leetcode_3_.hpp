@@ -1,3 +1,27 @@
+/*
+ * @Github: https://github.com/Certseeds/leetcode
+ * @Organization: SUSTech
+ * @Author: nanoseeds
+ * @Date: 2020-03-27 11:59:53
+ * @LastEditors: nanoseeds
+ * @LastEditTime: 2020-07-13 22:16:33
+ */
+/*  leetcode_cpp
+   Copyright (C) 2020  nanoseeds
+
+   leetcode_cpp is free software: you can redistribute it and/or modify
+   it under the terms of the GNU Affero General Public License as
+   published by the Free Software Foundation, either version 3 of the
+   License, or (at your option) any later version.
+
+   leetcode_cpp is distributed in the hope that it will be useful,
+   but WITHOUT ANY WARRANTY; without even the implied warranty of
+   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+   GNU Affero General Public License for more details.
+
+   You should have received a copy of the GNU Affero General Public License
+   along with this program.  If not, see <https://www.gnu.org/licenses/>.
+   */
 #pragma once
 #ifndef _LEETCODE_3_H_
 #define _LEETCODE_3_H_
@@ -17,13 +41,14 @@ greedy to get the max-length,if meet a repeat character,then throw the last one.
 class Solution3 {
 public:
     int lengthOfLongestSubstring(string s) {
-        int maxv = INT16_MIN;
-        int len = 0;
-        int begin = 0;
+        int32_t maxv = INT16_MIN;
+        int32_t len = 0;
+        int32_t begin = 0;
+        int32_t s_size = s.size();
         //unordered_map<int, int> umap;
         vector<int> umap(128, 0);
         //128 not 26 because maybe have " ".
-        for (int i = 0; i < s.size(); i++) {
+        for (int32_t i = 0; i < s_size; i++) {
             len++;
             if (umap[s[i]] != 0 && umap[s[i]] > begin) {
                 len += (begin - umap[s[i]]);
@@ -35,17 +60,27 @@ public:
         return max(len, maxv);
     }
 
-    void test() {
-        string str1 = "abcabcbb";
-        string str2 = "bbbbb";
-        string str3 = "pwwkew";
-        string str4 = "abba";
-        string str5 = " ";
-        cout << lengthOfLongestSubstring(str1) << endl;
-        cout << lengthOfLongestSubstring(str2) << endl;
-        cout << lengthOfLongestSubstring(str3) << endl;
-        cout << lengthOfLongestSubstring(str4) << endl;
-        cout << lengthOfLongestSubstring(str5) << endl;
+    int lengthOfLongestSubstring2(string s) {
+        if (s.size() <= 1) {
+            return s.size();
+        }
+        array<uint8_t, 256> uarray = {false};
+        int32_t left = 0;
+        int32_t right = 1;
+        int32_t diff = 0;
+        int32_t s_size = s.size();
+        uarray[s[left]] = 1;
+        while (right < s_size) {
+            if (!uarray[s[right]]) {
+                uarray[s[right]] = true;
+                right++;
+            } else {
+                uarray[s[left]] = false;
+                left++;
+            }
+            diff = std::max(diff, right - left);
+        }
+        return diff;
     }
 };
 /*

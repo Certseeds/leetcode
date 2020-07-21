@@ -1,12 +1,11 @@
-/*
+/**
  * @Github: https://github.com/Certseeds/leetcode
  * @Organization: SUSTech
  * @Author: nanoseeds
- * @Date: 2020-07-05 21:25:27
- * @LastEditors: nanoseeds
- * @LastEditTime: 2020-07-05 21:25:49
- */ 
-/*  leetcode 
+ * @Date: 2020-07-20 23:47:54
+ * @LastEditors  : nanoseeds
+ */
+/*  leetcode
     Copyright (C) 2020  nanoseeds
 
     leetcode is free software: you can redistribute it and/or modify
@@ -22,7 +21,22 @@
     You should have received a copy of the GNU Affero General Public License
     along with this program.  If not, see <https://www.gnu.org/licenses/>.
     */
-#define CATCH_CONFIG_MAIN
+#include "catch_main.hpp"
+#include "leetcode_167_.hpp"
 
-#include "catch.hpp"
-#include "public.hpp"
+using Catch::Matchers::Equals;
+using Catch::Matchers::UnorderedEquals;
+using Catch::Matchers::Contains;
+Solution167 sol167;
+
+TEST_CASE("test case 1", "[test 167]") {
+    const vector<int32_t> vec{2, 7, 11, 15};
+    CHECK_THAT(sol167.twoSum(vec, 9), Equals<int32_t>({1, 2}));
+    CHECK_THAT(sol167.twoSum2(vec, 9), Equals<int32_t>({1, 2}));
+}
+
+TEST_CASE("test case 2", "[test 167]") {
+    const vector<int32_t> vec{3, 2, 4};
+    CHECK_THAT(sol167.twoSum(vec, 6), Equals<int32_t>({1, 2}));
+    CHECK_THAT(sol167.twoSum2(vec, 6), Equals<int32_t>({1, 2}));
+}

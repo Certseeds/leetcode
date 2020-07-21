@@ -33,7 +33,7 @@
 using std::ios;
 using std::cin;
 using std::cout;
-const std::string endl = "\n";
+const std::string end = "\n";
 leetcode_timer timer{};
 
 static int faster_streams = []() {

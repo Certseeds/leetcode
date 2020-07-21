@@ -1,3 +1,10 @@
+/**
+ * @Github: https://github.com/Certseeds/leetcode
+ * @Organization: SUSTech
+ * @Author: nanoseeds
+ * @Date: {}
+ * @LastEditors  : nanoseeds
+ */
 /*  leetcode
     Copyright (C) {}  nanoseeds
 
@@ -14,13 +21,7 @@
     You should have received a copy of the GNU Affero General Public License
     along with this program.  If not, see <https://www.gnu.org/licenses/>.
     */
-/**
- * @Github: https://github.com/Certseeds/leetcode
- * @Organization: SUSTech
- * @Author: nanoseeds
- * @Date: {}
- * @LastEditors  : nanoseeds
- */
+
 #pragma once
 #ifndef LEETCODE_SOURCE_LEETCODE_{}_H
 #define LEETCODE_SOURCE_LEETCODE_{}_H
@@ -44,20 +45,8 @@ using std::unordered_map;
 using std::unordered_set;
 using std::priority_queue;
 
-const string endl = "\n";
-constexpr double eps = 0.00000001;
-
-class Solution {
-}
-
-{
-{
+class Solution{} {{
 public:
-
-void test() {
-    {
-    }
-}
 
 }};
 

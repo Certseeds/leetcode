@@ -13,6 +13,7 @@
 *.gitignore     text
 *.md            text
 *.LICENSE       text
+*.template text diff=text
 
 # scripts
 *.sh text eol=lf

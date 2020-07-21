@@ -1,3 +1,27 @@
+/*
+ * @Github: https://github.com/Certseeds/leetcode
+ * @Organization: SUSTech
+ * @Author: nanoseeds
+ * @Date: 2020-03-27 11:59:52
+ * @LastEditors: nanoseeds
+ * @LastEditTime: 2020-07-13 22:16:55
+ */
+/*  leetcode_cpp
+   Copyright (C) 2020  nanoseeds
+
+   leetcode_cpp is free software: you can redistribute it and/or modify
+   it under the terms of the GNU Affero General Public License as
+   published by the Free Software Foundation, either version 3 of the
+   License, or (at your option) any later version.
+
+   leetcode_cpp is distributed in the hope that it will be useful,
+   but WITHOUT ANY WARRANTY; without even the implied warranty of
+   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+   GNU Affero General Public License for more details.
+
+   You should have received a copy of the GNU Affero General Public License
+   along with this program.  If not, see <https://www.gnu.org/licenses/>.
+   */
 #pragma once
 #ifndef _LEETCODE_1_H
 #define _LEETCODE_1_H
@@ -18,8 +42,9 @@ and you may not use the same element twice.
 class Solution1 {
 public:
     vector<int> twoSum(vector<int> &nums, int target) {
-        unordered_map<int, int> umaps;
-        for (int i = 0; i < nums.size(); i++) {
+        int32_t nums_size = nums.size();
+        unordered_map<int32_t, int32_t> umaps;
+        for (int32_t i = 0; i < nums_size; i++) {
             if (umaps.find(target - nums[i]) != std::end(umaps)) {
                 return vector<int32_t>{i, umaps[target - nums[i]] - 1};
             }
@@ -27,22 +52,10 @@ public:
         }
         return vector<int32_t>{};
     }
-
     /*
     if the number is not so big, it's better to use brute force,
     if number > 50,choose hashmap.
      */
-    void test() {
-        vector<int> vec1 = {2, 7, 11, 15};
-        vector<int> out1 = twoSum(vec1, 9);
-        for (auto i : out1) {
-            cout << i << endl;
-        }
-        vector<int> out2 = twoSum_sorted(vec1, 9);
-        for (auto i : out2) {
-            cout << i << endl;
-        }
-    }
 };
 /*
 Runtime: 8 ms, 
