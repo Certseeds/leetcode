@@ -69,15 +69,15 @@ public:
         if (num > 1000) {
             return "M" + intToRoman(num - 1000);
         } else if (num > 100) {
-            array<string, 11> hundres = {
+            const array<string, 11> hundres = {
                     "", "C", "CC", "CCC", "CD", "D", "DC", "DCC", "DCCC", "CM", "M"};
             return hundres[num / 100] + intToRoman(num % 100);
         } else if (num > 10) {
-            array<string, 11> tens = {
+            const array<string, 11> tens = {
                     "", "X", "XX", "XXX", "XL", "L", "LX", "LXX", "LXXX", "XC", "C"};
             return tens[num / 10] + intToRoman(num % 10);
         } else if (num <= 10) {
-            array<string, 11> ones = {
+            const array<string, 11> ones = {
                     "", "I", "II", "III", "IV", "V", "VI", "VII", "VIII", "IX", "X"};
             return ones[num];
         }
@@ -85,11 +85,11 @@ public:
     }
 
     string intToRoman(int num) {
-        array<string, 11> hundres =
+        const array<string, 11> hundres =
                 {"", "C", "CC", "CCC", "CD", "D", "DC", "DCC", "DCCC", "CM", "M"};
-        array<string, 11> tens =
+        const array<string, 11> tens =
                 {"", "X", "XX", "XXX", "XL", "L", "LX", "LXX", "LXXX", "XC", "C"};
-        array<string, 11> ones =
+        const array<string, 11> ones =
                 {"", "I", "II", "III", "IV", "V", "VI", "VII", "VIII", "IX", "X"};
         string will_return = string((num / 1000), 'M');
         will_return.reserve(sizeof(char) * 16);

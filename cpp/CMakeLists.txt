@@ -9,8 +9,8 @@ include_directories(./includes)
 include_directories(./source)
 include_directories(./test)
 
-set(LEETCODE_NUMBER 13)
-
+set(LEETCODE_NUMBER 11)
+MESSAGE(${LEETCODE_NUMBER})
 add_executable(${PROJECT_NAME}
         ./includes/public.hpp
         ./includes/catch_main.hpp
