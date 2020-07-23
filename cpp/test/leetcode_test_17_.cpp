@@ -1,3 +1,10 @@
+/**
+ * @Github: https://github.com/Certseeds/leetcode
+ * @Organization: SUSTech
+ * @Author: nanoseeds
+ * @Date: 2020-07-23 23:26:46
+ * @LastEditors: nanoseeds
+ */
 /*  leetcode
     Copyright (C) 2020  nanoseeds
 
@@ -14,30 +21,20 @@
     You should have received a copy of the GNU Affero General Public License
     along with this program.  If not, see <https://www.gnu.org/licenses/>.
     */
-/**
- * @Github: https://github.com/Certseeds/leetcode
- * @Organization: SUSTech
- * @Author: nanoseeds
- * @Date: 2020-07-07 22:27:29
- * @LastEditors  : nanoseeds
- */
 #include "catch_main.hpp"
-#include "leetcode_9_.hpp"
+#include "leetcode_17_.hpp"
 
-Solution9 sol9;
+using Catch::Matchers::Equals;
+using Catch::Matchers::UnorderedEquals;
+using Catch::Matchers::Contains;
+Solution17 sol17;
 
-TEST_CASE("test case 1", "[test 9]") {
-    CHECK(sol9.isPalindrome(121));
+TEST_CASE("test case 1", "[test 17]") {
+    CHECK_THAT(sol17.letterCombinations("23"),
+               UnorderedEquals<string>({"ad", "ae", "af", "bd", "be", "bf", "cd", "ce", "cf"}));
 }
 
-TEST_CASE("test case 2", "[test 9]") {
-    CHECK_FALSE(sol9.isPalindrome(-121));
-}
-
-TEST_CASE("test case 3", "[test 9]") {
-    CHECK_FALSE(sol9.isPalindrome(120));
-}
-
-TEST_CASE("test case 4", "[test 9]") {
-    CHECK_FALSE(sol9.isPalindrome(10));
+TEST_CASE("test case 2", "[test 17]") {
+    CHECK_THAT(sol17.letterCombinations(""),
+               UnorderedEquals<string>({}));
 }

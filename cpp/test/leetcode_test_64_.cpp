@@ -3,7 +3,7 @@
  * @Organization: SUSTech
  * @Author: nanoseeds
  * @Date: 2020-07-23 23:13:38
- * @LastEditors  : nanoseeds
+ * @LastEditors: nanoseeds
  */
 /*  leetcode
     Copyright (C) 2020  nanoseeds
@@ -21,36 +21,17 @@
     You should have received a copy of the GNU Affero General Public License
     along with this program.  If not, see <https://www.gnu.org/licenses/>.
     */
+#include "catch_main.hpp"
+#include "leetcode_64_.hpp"
 
-#pragma once
-#ifndef LEETCODE_SOURCE_LEETCODE_64_H
-#define LEETCODE_SOURCE_LEETCODE_64_H
+using Catch::Matchers::Equals;
+using Catch::Matchers::UnorderedEquals;
+using Catch::Matchers::Contains;
+Solution64 sol64;
 
-#include <vector>
-
-using std::vector;
-
-class Solution64 {
-public:
-    int minPathSum(vector<vector<int>> &grid) {
-        if (grid.empty() || grid[0].empty()) {
-            return 0;
-        }
-        int m = grid.size();
-        int n = grid[0].size();
-        for (int i = 1; i < m; i++) {
-            grid[i][0] += grid[i - 1][0];
-        }
-        for (int i = 1; i < n; i++) {
-            grid[0][i] += grid[0][i - 1];
-        }
-        for (int i = 1; i < m; i++) {
-            for (int j = 1; j < n; j++) {
-                grid[i][j] += std::min(grid[i - 1][j], grid[i][j - 1]);
-            }
-        }
-        return grid.back().back();
-    }
-};
-
-#endif //LEETCODE_CPP_SOURCE_LEETCODE_64_H
+TEST_CASE("test case 1", "[test 64]") {
+    vector<vector<int32_t>> vec{{1, 3, 1},
+                                {1, 5, 1},
+                                {4, 2, 1}};
+    CHECK(sol64.minPathSum(vec) == 7);
+}
