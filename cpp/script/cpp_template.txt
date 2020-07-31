@@ -3,10 +3,10 @@
  * @Organization: SUSTech
  * @Author: nanoseeds
  * @Date: {}
- * @LastEditors  : nanoseeds
+ * @LastEditors: nanoseeds
  */
 /*  leetcode
-    Copyright (C) {}  nanoseeds
+    Copyright (C) {} nanoseeds
 
     leetcode is free software: you can redistribute it and/or modify
     it under the terms of the GNU Affero General Public License as

@@ -1,3 +1,10 @@
+/**
+ * @Github: https://github.com/Certseeds/leetcode
+ * @Organization: SUSTech
+ * @Author: nanoseeds
+ * @Date: 2020-07-31 23:36:44
+ * @LastEditors: nanoseeds
+ */
 /*  leetcode
     Copyright (C) 2020  nanoseeds
 
@@ -14,21 +21,17 @@
     You should have received a copy of the GNU Affero General Public License
     along with this program.  If not, see <https://www.gnu.org/licenses/>.
     */
-/**
- * @Github: https://github.com/Certseeds/leetcode
- * @Organization: SUSTech
- * @Author: nanoseeds
- * @Date: 2020-07-07 22:27:29
- * @LastEditors  : nanoseeds
- */
 #include "catch_main.hpp"
-#include "leetcode_10_.hpp"
+#include "leetcode_343_.hpp"
 
-Solution10 sol10;
+using Catch::Matchers::Equals;
+using Catch::Matchers::UnorderedEquals;
+using Catch::Matchers::Contains;
+Solution343 sol343;
 
-TEST_CASE("test case 1", "[test 10]") {
-    CHECK_FALSE(sol10.isMatch("aa", "a"));
-    CHECK(sol10.isMatch("aa", "a*"));
-    CHECK(sol10.isMatch("ab", ".*"));
-    CHECK(sol10.isMatch("mississippi", "mis*is*p*."));
+TEST_CASE("test case 1", "[test 343]") {
+    for (int i = 3; i <= 58; ++i) {
+        CHECK(sol343.integerBreak(i) == sol343.integerBreak_DP(i));
+        CHECK(sol343.integerBreak_DP(i) == sol343.integerBreak_DP2(i));
+    }
 }

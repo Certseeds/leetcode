@@ -1,3 +1,10 @@
+/**
+ * @Github: https://github.com/Certseeds/leetcode
+ * @Organization: SUSTech
+ * @Author: nanoseeds
+ * @Date: 2020-07-31 23:49:58
+ * @LastEditors: nanoseeds
+ */
 /*  leetcode
     Copyright (C) 2020  nanoseeds
 
@@ -14,21 +21,26 @@
     You should have received a copy of the GNU Affero General Public License
     along with this program.  If not, see <https://www.gnu.org/licenses/>.
     */
-/**
- * @Github: https://github.com/Certseeds/leetcode
- * @Organization: SUSTech
- * @Author: nanoseeds
- * @Date: 2020-07-07 22:27:29
- * @LastEditors  : nanoseeds
- */
 #include "catch_main.hpp"
-#include "leetcode_10_.hpp"
+#include "leetcode_0803_.hpp"
 
-Solution10 sol10;
+using Catch::Matchers::Equals;
+using Catch::Matchers::UnorderedEquals;
+using Catch::Matchers::Contains;
+Solution0803 sol0803;
 
-TEST_CASE("test case 1", "[test 10]") {
-    CHECK_FALSE(sol10.isMatch("aa", "a"));
-    CHECK(sol10.isMatch("aa", "a*"));
-    CHECK(sol10.isMatch("ab", ".*"));
-    CHECK(sol10.isMatch("mississippi", "mis*is*p*."));
+TEST_CASE("test case 1", "[test 803]") {
+    vector<int> vec{0, 2, 3, 4, 5};
+    CHECK(sol0803.findMagicIndex(vec) == 0);
 }
+
+TEST_CASE("test case 2", "[test 803]") {
+    vector<int> vec{1, 1, 1};
+    CHECK(sol0803.findMagicIndex(vec) == 1);
+}
+
+TEST_CASE("test case 3", "[test 803]") {
+    vector<int> vec{0, 0, 2};
+    CHECK(sol0803.findMagicIndex(vec) == 0);
+}
+

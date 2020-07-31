@@ -2,11 +2,11 @@
  * @Github: https://github.com/Certseeds/leetcode
  * @Organization: SUSTech
  * @Author: nanoseeds
- * @LastEditDate: 2020-07-31 23:49:58
- * @LastEditors: nanoseeds
+ * @Date: 2020-07-31 23:15:18
+ * @LastEditors  : nanoseeds
  */
 /*  leetcode
-    Copyright (C) 2020 nanoseeds
+    Copyright (C) 2020  nanoseeds
 
     leetcode is free software: you can redistribute it and/or modify
     it under the terms of the GNU Affero General Public License as
@@ -21,36 +21,35 @@
     You should have received a copy of the GNU Affero General Public License
     along with this program.  If not, see <https://www.gnu.org/licenses/>.
     */
+
 #pragma once
-#ifndef LEETCODE_SOURCE_LEETCODE_10_H
-#define LEETCODE_SOURCE_LEETCODE_10_H
+#ifndef LEETCODE_SOURCE_LEETCODE_1025_H
+#define LEETCODE_SOURCE_LEETCODE_1025_H
 
-#include <regex>
-#include <string>
-#include <algorithm>
+#include <vector>
 
-using namespace std;
+using std::vector;
 
-/*
-Given an input string (s) and a pattern (p), 
-implement regular expression matching with support for '.' and '*'.
-
-'.' Matches any single character.
-'*' Matches zero or more of the preceding element.
-The matching should cover the entire input string (not partial).
-*/
-class Solution10 {
+class Solution1025 {
 public:
-    bool isMatch(const string &s, const string &p) {
-        return std::regex_match(s, std::regex(p));
+    bool divorGame1(int N) {
+        return !(N & 1);
     }
 
-    void test() {
+    bool divorGame1_2(const int N) {
+        vector<uint8_t> DP(N + 3, false);
+        DP[1] = false;
+        DP[2] = true;
+        for (int i = 3; i <= N; i++) {
+            for (int j = 1; j < i; ++j) {
+                if (i % j == 0 && DP[i - j] == 0) {
+                    DP[i] = true;
+                    break;
+                }
+            }
+        }
+        return DP[N];
     }
 };
-/*
-Runtime: 148 ms,
-Memory Usage: 12.1 MB,
-22.29%,16.95%.
-*/
-#endif // LEETCODE_SOURCE_LEETCODE_10_H
+
+#endif //LEETCODE_CPP_SOURCE_LEETCODE_1025_H

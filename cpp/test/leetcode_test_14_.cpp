@@ -2,7 +2,7 @@
  * @Github: https://github.com/Certseeds/leetcode
  * @Organization: SUSTech
  * @Author: nanoseeds
- * @LastEditDate: 2020-07-31 23:49:58
+ * @Date: 2020-08-01 00:00:12
  * @LastEditors: nanoseeds
  */
 /*  leetcode
@@ -21,36 +21,32 @@
     You should have received a copy of the GNU Affero General Public License
     along with this program.  If not, see <https://www.gnu.org/licenses/>.
     */
-#pragma once
-#ifndef LEETCODE_SOURCE_LEETCODE_10_H
-#define LEETCODE_SOURCE_LEETCODE_10_H
+#include "catch_main.hpp"
+#include "leetcode_14_.hpp"
 
-#include <regex>
-#include <string>
-#include <algorithm>
+using Catch::Matchers::Equals;
+using Catch::Matchers::UnorderedEquals;
+using Catch::Matchers::Contains;
+Solution14 sol14;
 
-using namespace std;
+TEST_CASE("test case 1", "[test 14]") {
+    const vector<string> strs = {
+            "flower", "flow", "flight"
+    };
+    CHECK(sol14.longestCommonPrefix(strs) == "fl");
+}
 
-/*
-Given an input string (s) and a pattern (p), 
-implement regular expression matching with support for '.' and '*'.
+TEST_CASE("test case 2", "[test 14]") {
+    const vector<string> strs = {
+            "dog", "racecar", "car"
+    };
+    CHECK(sol14.longestCommonPrefix(strs) == "");
 
-'.' Matches any single character.
-'*' Matches zero or more of the preceding element.
-The matching should cover the entire input string (not partial).
-*/
-class Solution10 {
-public:
-    bool isMatch(const string &s, const string &p) {
-        return std::regex_match(s, std::regex(p));
-    }
+}
 
-    void test() {
-    }
-};
-/*
-Runtime: 148 ms,
-Memory Usage: 12.1 MB,
-22.29%,16.95%.
-*/
-#endif // LEETCODE_SOURCE_LEETCODE_10_H
+TEST_CASE("test case 3", "[test 14]") {
+    const vector<string> strs = {
+    };
+    CHECK(sol14.longestCommonPrefix(strs) == "");
+
+}

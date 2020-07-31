@@ -23,6 +23,7 @@
  */
 #ifndef LEETCODE_PUBLIC_HPP
 #define LEETCODE_PUBLIC_HPP
+
 #include <string>
 #include <cassert>
 #include <fstream>
@@ -33,7 +34,7 @@
 using std::ios;
 using std::cin;
 using std::cout;
-const std::string end = "\n";
+constexpr char end = '\n';
 leetcode_timer timer{};
 
 static int faster_streams = []() {

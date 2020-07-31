@@ -1,3 +1,10 @@
+/**
+ * @Github: https://github.com/Certseeds/leetcode
+ * @Organization: SUSTech
+ * @Author: nanoseeds
+ * @Date: 2020-07-31 23:15:18
+ * @LastEditors: nanoseeds
+ */
 /*  leetcode
     Copyright (C) 2020  nanoseeds
 
@@ -14,21 +21,26 @@
     You should have received a copy of the GNU Affero General Public License
     along with this program.  If not, see <https://www.gnu.org/licenses/>.
     */
-/**
- * @Github: https://github.com/Certseeds/leetcode
- * @Organization: SUSTech
- * @Author: nanoseeds
- * @Date: 2020-07-07 22:27:29
- * @LastEditors  : nanoseeds
- */
 #include "catch_main.hpp"
-#include "leetcode_10_.hpp"
+#include "leetcode_1025_.hpp"
 
-Solution10 sol10;
+using Catch::Matchers::Equals;
+using Catch::Matchers::UnorderedEquals;
+using Catch::Matchers::Contains;
+Solution1025 sol1025;
 
-TEST_CASE("test case 1", "[test 10]") {
-    CHECK_FALSE(sol10.isMatch("aa", "a"));
-    CHECK(sol10.isMatch("aa", "a*"));
-    CHECK(sol10.isMatch("ab", ".*"));
-    CHECK(sol10.isMatch("mississippi", "mis*is*p*."));
+TEST_CASE("test case 1", "[test 1025]") {
+    CHECK(sol1025.divorGame1(2));
+    CHECK(sol1025.divorGame1_2(2));
+}
+
+TEST_CASE("test case 2", "[test 1025]") {
+    CHECK_FALSE(sol1025.divorGame1(3));
+    CHECK_FALSE(sol1025.divorGame1_2(3));
+}
+
+TEST_CASE("test case multiply", "[test 1025]") {
+    for (int i = 4; i < 114; ++i) {
+        CHECK(sol1025.divorGame1_2(i) == (i % 2 == 0));
+    }
 }
