@@ -4,7 +4,7 @@
  # @Author: nanoseeds
  # @Date: 2020-01-11 13:06:18
  # @LastEditors: nanoseeds
- # @LastEditTime: 2020-07-06 16:36:59
+ # @LastEditTime: 2020-08-13 23:28:24
 ### 
 * text=auto
 
@@ -14,6 +14,7 @@
 *.md            text
 *.LICENSE       text
 *.template text diff=text
+include/catch.hpp linguist-vendored
 
 # scripts
 *.sh text eol=lf
