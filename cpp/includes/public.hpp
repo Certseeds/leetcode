@@ -38,6 +38,7 @@ constexpr char end = '\n';
 leetcode_timer timer{};
 
 static int faster_streams = []() {
+    srand(time(0));
     std::ios::sync_with_stdio(false);
     std::istream::sync_with_stdio(false);
     std::ostream::sync_with_stdio(false);
