@@ -3,7 +3,9 @@
 #define _LEETCODE_104_H
 
 #include <stack>
+#ifdef __LOCAL__
 #include "TreeNode.h"
+#endif
 
 using namespace std;
 

@@ -3,7 +3,9 @@
 #define _LEETCODE_814_H_
 
 #include <vector>
+#ifdef __LOCAL__
 #include "TreeNode.h"
+#endif
 #include <algorithm>
 
 using namespace std;

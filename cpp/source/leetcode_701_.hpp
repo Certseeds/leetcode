@@ -4,7 +4,9 @@
 
 #include <vector>
 #include <string>
+#ifdef __LOCAL__
 #include "TreeNode.h"
+#endif
 
 using namespace std;
 

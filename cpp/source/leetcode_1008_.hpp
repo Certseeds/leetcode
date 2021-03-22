@@ -2,7 +2,9 @@
 #ifndef _LEETCODE_1008_H_
 #define _LEETCODE_1008_H_
 
+#ifdef __LOCAL__
 #include "TreeNode.h"
+#endif
 
 using namespace std;
 

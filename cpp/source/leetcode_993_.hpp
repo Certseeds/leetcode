@@ -12,7 +12,9 @@
 #include <vector>
 #include <queue>
 #include <algorithm>
+#ifdef __LOCAL__
 #include "TreeNode.h"
+#endif
 
 using std::max;
 using std::queue;

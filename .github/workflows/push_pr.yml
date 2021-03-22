@@ -50,16 +50,16 @@ jobs:
         working-directory: ${{github.workspace}}/cpp/cmake-build-debug
         run: |
           cmake .. -DCMAKE_BUILD_TYPE=DEBUG
-          cmake --build . --config DEBUG
+          cmake --build . --config DEBUG --parallel $(nproc)
           ctest -C DEBUG
 
-      - name: cmake release
-        shell: bash
-        working-directory: ${{github.workspace}}/cpp/cmake-build-release
-        run: |
-          cmake .. -DCMAKE_BUILD_TYPE=RELEASE
-          cmake --build . --config RELEASE
-          ctest -C RELEASE
+      # - name: cmake release
+      #   shell: bash
+      #   working-directory: ${{github.workspace}}/cpp/cmake-build-release
+      #   run: |
+      #     cmake .. -DCMAKE_BUILD_TYPE=RELEASE
+      #     cmake --build . --config RELEASE --parallel $(nproc)
+      #     ctest -C RELEASE
 
       - name: tree
         run: tree

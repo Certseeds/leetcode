@@ -12,8 +12,12 @@
 #include <queue>
 #include <vector>
 #include <algorithm>
+#ifdef __LOCAL__
 #include "TreeNode.h"
+#endif
+#ifdef __LOCAL__
 #include "ListNode.h"
+#endif
 
 using std::queue;
 using std::vector;

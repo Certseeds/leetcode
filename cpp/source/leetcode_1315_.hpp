@@ -4,7 +4,9 @@
 
 #include <stack>
 #include <vector>
+#ifdef __LOCAL__
 #include "TreeNode.h"
+#endif
 
 using namespace std;
 

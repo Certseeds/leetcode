@@ -2,7 +2,9 @@
 #ifndef _LEETCODE_1302_H
 #define _LEETCODE_1302_H
 
+#ifdef __LOCAL__
 #include "TreeNode.h"
+#endif
 #include <vector>
 //#include <set>
 using namespace std;

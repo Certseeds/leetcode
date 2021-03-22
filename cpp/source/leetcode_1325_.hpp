@@ -5,7 +5,9 @@
 #include <vector>
 #include <numeric>
 #include <algorithm>
+#ifdef __LOCAL__
 #include "TreeNode.h"
+#endif
 
 using namespace std;
 

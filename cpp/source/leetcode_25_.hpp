@@ -12,7 +12,9 @@
 #include <vector>
 #include <queue>
 #include <algorithm>
+#ifdef __LOCAL__
 #include "ListNode.h"
+#endif
 
 using std::cout;
 using std::endl;

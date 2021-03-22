@@ -28,7 +28,9 @@
 
 #include <vector>
 #include <array>
+#ifdef __LOCAL__
 #include "ListNode.h"
+#endif
 #include <algorithm>
 
 using namespace std;

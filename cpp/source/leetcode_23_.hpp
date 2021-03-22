@@ -13,7 +13,9 @@
 #include <set>
 #include <queue>
 #include <algorithm>
+#ifdef __LOCAL__
 #include "ListNode.h"
+#endif
 
 using std::vector;
 using std::min;
