@@ -36,7 +36,7 @@ TEST_CASE("test case 1", "[test 167]") {
 }
 
 TEST_CASE("test case 2", "[test 167]") {
-    const vector<int32_t> vec{3, 2, 4};
-    CHECK_THAT(sol167.twoSum(vec, 6), Equals<int32_t>({1, 2}));
-    CHECK_THAT(sol167.twoSum2(vec, 6), Equals<int32_t>({1, 2}));
+    const vector<int32_t> vec{2, 3, 4};
+    CHECK_THAT(sol167.twoSum(vec, 6), Equals<int32_t>({1, 3}));
+    CHECK_THAT(sol167.twoSum2(vec, 6), Equals<int32_t>({1, 3}));
 }

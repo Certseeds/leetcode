@@ -31,6 +31,8 @@
 #include <string>
 #include <algorithm>
 
+using std::string;
+using std::vector;
 
 class Solution5 {
 public:

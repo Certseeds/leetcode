@@ -40,9 +40,9 @@ TEST_CASE("test case 2", "[test 120]") {
     }
     sol120.multiply_0("123", "456");
     std::cout << sol120.add_str("123", "459") << end;
-    std::cout << string('0', 10) << std::endl;
+    std::cout << string(10, '0') << std::endl;
     for (int j = 0; j < 10; ++j) {
-        string temp = "";
+        string temp;
         std::cout << temp.append('0', j) << end;
     }
 }

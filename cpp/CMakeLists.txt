@@ -10,11 +10,26 @@ include_directories(./includes)
 include_directories(./source)
 include_directories(./test)
 
-set(LEETCODE_NUMBER 1)
-MESSAGE(${LEETCODE_NUMBER})
-add_executable(${PROJECT_NAME}
-        ./includes/catch_main.hpp
-        ./source/leetcode_${LEETCODE_NUMBER}_.hpp
-        ./test/leetcode_test_${LEETCODE_NUMBER}_.cpp
-        )
+ENABLE_TESTING()
+set(dependencies 1 3 5 6 7 9 11 12 13 14 17 44 64 95 120 153 154 167 174 343 350 785 0803 1025)
+foreach (LEETCODE_NUMBER IN LISTS dependencies)
+    MESSAGE(${LEETCODE_NUMBER})
+    add_executable(${PROJECT_NAME}_${LEETCODE_NUMBER}
+            ./source/leetcode_${LEETCODE_NUMBER}_.hpp
+            ./test/leetcode_test_${LEETCODE_NUMBER}_.cpp
+            )
+    ADD_TEST(${PROJECT_NAME}_${LEETCODE_NUMBER}_CTEST ${PROJECT_NAME}_${LEETCODE_NUMBER})
+endforeach ()
+unset(dependencies)
 
+#file(GLOB USER_LIBS_PATH ./source/leetcode_*_.hpp)
+#foreach(elementName IN LISTS USER_LIBS_PATH)
+#    string(REGEX REPLACE ".*leetcode_" "" LEETCODE_NUMBER ${elementName})
+#    string(REGEX REPLACE "_.hpp" "" LEETCODE_NUMBER ${LEETCODE_NUMBER})
+#    add_executable(${PROJECT_NAME}_${LEETCODE_NUMBER}
+#            ./includes/catch_main.hpp
+#            ./source/leetcode_${LEETCODE_NUMBER}_.hpp
+#            ./test/leetcode_test_${LEETCODE_NUMBER}_.cpp
+#            )
+#endforeach()
+#unset(elementName)

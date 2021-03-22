@@ -1,0 +1,65 @@
+# @Github: https://github.com/Certseeds/CS203_DSAA_template
+# @Organization: SUSTech
+# @Author: nanoseeds
+# @Date: 2020-07-26 16:36:10
+# @LastEditors: nanoseeds
+#@LastEditTime: 2020-07-26 16:43:03
+# This is a basic workflow to help you get started with Actions
+
+name: test and release
+
+# Controls when the action will run. Triggers the workflow on push or pull request
+# events but only for the master branch
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+
+    # A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+  test:
+    name: test for push pr
+    # The type of runner that the job will run on
+    runs-on: ubuntu-latest
+
+    # Steps represent a sequence of tasks that will be executed as part of the job
+    steps:
+
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      - name: checkout code
+        uses: actions/checkout@v2
+
+      # ensure the path and files of project
+      - name: ensure the path and files of project
+        run: sudo apt install tree; tree
+
+      - name: Use cmake
+        run: cmake --version
+
+      - name: Create Build Environment
+        shell: bash
+        # Some projects don't allow in-source building, so create a separate build directory
+        # We'll use this as our working directory for all subsequent commands
+        run: |
+          cmake -E make_directory ${{github.workspace}}/cpp/cmake-build-debug
+          cmake -E make_directory ${{github.workspace}}/cpp/cmake-build-release
+
+      - name: cmake debug
+        shell: bash
+        working-directory: ${{github.workspace}}/cpp/cmake-build-debug
+        run: |
+          cmake .. -DCMAKE_BUILD_TYPE=DEBUG
+          cmake --build . --config DEBUG
+          ctest -C DEBUG
+
+      - name: cmake release
+        shell: bash
+        working-directory: ${{github.workspace}}/cpp/cmake-build-release
+        run: |
+          cmake .. -DCMAKE_BUILD_TYPE=RELEASE
+          cmake --build . --config RELEASE
+          ctest -C RELEASE
+
+      - name: tree
+        run: tree

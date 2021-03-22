@@ -27,7 +27,6 @@
 Solution5 sol5;
 
 TEST_CASE("1", "[test 5]") {
-    std::cout << endl;
     CHECK(sol5.longestPalindrome("babad").size() == 3);
 }
 

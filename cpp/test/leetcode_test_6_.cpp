@@ -26,7 +26,13 @@
 
 Solution6 sol6;
 
-TEST_CASE("", "[test 6]") {
-    CHECK(true);
+TEST_CASE("test basic", "[test 6]") {
+    CHECK(sol6.convert("PAYPALISHIRING", 3) == "PAHNAPLSIIGYIR");
+    CHECK(sol6.convert("PAYPALISHIRING", 4) == "PINALSIGYAHRPI");
+    CHECK(sol6.convert("A", 1) == "A");
+    CHECK(sol6.convert("AB", 2) == "AB");
+    CHECK(sol6.convert("ABC", 3) == "ABC");
+    CHECK(sol6.convert("ABCD", 4) == "ABCD");
+    CHECK(sol6.convert("ABCDE", 4) == "ABCED");
     CHECK_FALSE(false);
 }

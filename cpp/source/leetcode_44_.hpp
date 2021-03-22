@@ -8,7 +8,6 @@
 
 using std::vector;
 using std::string;
-const string end = "\n";
 
 class Solution44 {
 public:
