@@ -41,7 +41,7 @@ greedy to get the max-length,if meet a repeat character,then throw the last one.
 class Solution3 {
 public:
     int lengthOfLongestSubstring(string s) {
-        int32_t maxv = INT16_MIN;
+        int32_t maxv = std::numeric_limits<int16_t>::min();
         int32_t len = 0;
         int32_t begin = 0;
         int32_t s_size = s.size();
