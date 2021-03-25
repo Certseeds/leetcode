@@ -1,4 +1,3 @@
-#pragma once
 #ifndef _LEETCODE_20_H
 #define _LEETCODE_20_H
 /*
@@ -9,12 +8,28 @@
  * @LastEditors  : nanoseeds
  * @LastEditTime : 2020-02-06 10:40:03
  */
+/*  leetcode
+    Copyright (C) 2020-2021  nanoseeds
+
+    leetcode is free software: you can redistribute it and/or modify
+    it under the terms of the GNU Affero General Public License as
+    published by the Free Software Foundation, either version 3 of the
+    License, or (at your option) any later version.
+
+    leetcode is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU Affero General Public License for more details.
+
+    You should have received a copy of the GNU Affero General Public License
+    along with this program.  If not, see <https://www.gnu.org/licenses/>.
+    */
 #include <stack>
 #include <string>
 #include <algorithm>
 #include <unordered_map>
 
-using namespace std;
+using std::string;
 
 /*
 Given a string containing just the characters 
@@ -29,30 +44,22 @@ Note that an empty string is also considered valid.
 */
 class Solution20 {
 public:
-    bool isValid(string s) {
-        stack<char> stk;
-        unordered_map<int, int> umap;
+    bool isValid(const string &s) {
+        std::stack<uint8_t> stk;
+        std::unordered_map<int32_t, int32_t> umap;
         umap['('] = ')';
         umap['['] = ']';
         umap['{'] = '}';
         stk.push('?');
-        for (int i = 0; i < s.size(); i++) {
-            if (umap[stk.top()] == s[i]) {
+        for (const auto i : s) {
+            if (umap[stk.top()] == i) {
                 stk.pop();
             } else {
-                stk.push(s[i]);
+                stk.push(i);
             }
         }
         stk.pop();
         return stk.empty();
-    }
-
-    void test() {
-        assert(isValid("()") == 1);
-        assert(isValid("()[]{}") == 1);
-        assert(isValid("(]") == 0);
-        assert(isValid("([)]") == 0);
-        assert(isValid("{[]}") == 1);
     }
 };
 /*
