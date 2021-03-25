@@ -12,8 +12,11 @@
 #include <vector>
 #include <string>
 #include <algorithm>
+
 #ifdef __LOCAL__
+
 #include "ListNode.h"
+
 #endif
 
 using namespace std;
@@ -25,12 +28,13 @@ remove the n-th node from the end of list and return its head.
 class Solution19 {
 public:
     ListNode *removeNthFromEnd(ListNode *head, int n) {
-        ListNode *will_return = new ListNode(0);
+        // auto *will_return = new ListNode(0);
+        auto will_return_o = ListNode(0);
+        auto *const will_return = &will_return_o;
         will_return->next = head;
         ListNode *first = will_return;
         ListNode *second = will_return;
         for (int i = 0; i <= n; i++) {
-            cout << second->val << endl;
             second = second->next;
         }
         while (second != nullptr) {
@@ -42,20 +46,6 @@ public:
         }
         first->next = (first->next)->next;
         return will_return->next;
-    }
-
-    void test() {
-        vector<int> nums = {1, 2, 3, 4, 5};
-        vector<ListNode *> vec1 = ListNode::numToList(nums);
-        ListNode *temp = removeNthFromEnd(vec1[0], 2);
-        while (temp != nullptr) {
-            cout << temp->val << " ";
-            temp = temp->next;
-        }
-        cout << endl;
-        for (int i = 0; i < vec1.size(); i++) {
-            delete vec1[i];
-        }
     }
 };
 /*

@@ -1,6 +1,7 @@
 #pragma once
 #ifndef _ListNode_H_
 #define _ListNode_H_
+
 #include <vector>
 /*
  * @Github: https://github.com/Certseeds
@@ -11,37 +12,43 @@
  * @LastEditTime : 2020-02-06 09:30:22
  */
 using std::vector;
-const int No_list = -100000;
+static constexpr const int32_t No_list = -100000;
+
 struct ListNode {
-    int val;
-    ListNode* next;
-    ListNode(int x);
-    ListNode(const ListNode& obj);
+    int32_t val;
+    ListNode *next;
+
+    explicit ListNode(int32_t x);
+
+    ListNode(const ListNode &obj);
+
     ~ListNode();
-    static vector<ListNode*> numToList(vector<int> nums);
+
+    static vector<ListNode *> numToList(vector<int32_t> nums);
 };
-ListNode::ListNode(int x) {
-    this->val = x;
-    this->next = nullptr;
+
+ListNode::ListNode(int32_t x) : val(x), next(nullptr) {
 }
-ListNode::ListNode(const ListNode& obj) {
-    this->val = obj.val;
-    this->next = obj.next;
+
+ListNode::ListNode(const ListNode &obj) : val(obj.val), next(obj.next) {
 }
+
 ListNode::~ListNode() {
     this->val = 0;
-    this->next = 0;
+    this->next = nullptr;
 }
-vector<ListNode*> ListNode::numToList(vector<int> nums) {
-    vector<ListNode*> will_return(nums.size(), nullptr);
-    for (int i = 0; i < nums.size(); i++) {
+
+vector<ListNode *> ListNode::numToList(vector<int32_t> nums) {
+    vector<ListNode *> will_return(nums.size(), nullptr);
+    for (size_t i = 0; i < nums.size(); i++) {
         will_return[i] =
-            (nums[i] != No_list) ?
-            new ListNode(nums[i]) : nullptr;
+                (nums[i] != No_list) ?
+                new ListNode(nums[i]) : nullptr;
     }
-    for(int i = 0; i < nums.size()-1; i++) {
+    for (size_t i = 0; i < nums.size() - 1; i++) {
         will_return[i]->next = will_return[i + 1];
     }
     return will_return;
 }
+
 #endif
