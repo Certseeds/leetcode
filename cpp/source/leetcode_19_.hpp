@@ -34,6 +34,15 @@ public:
         will_return->next = head;
         ListNode *first = will_return;
         ListNode *second = will_return;
+        if (n == 0) {
+            second = second->next;
+            while (second->next != nullptr) {
+                first = first->next;
+                second = second->next;
+            }
+            first->next = nullptr;
+            return head;
+        }
         for (int i = 0; i <= n; i++) {
             second = second->next;
         }
