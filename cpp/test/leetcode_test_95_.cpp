@@ -29,12 +29,12 @@ using Catch::Matchers::UnorderedEquals;
 using Catch::Matchers::Contains;
 Solution95 sol95;
 
-TEST_CASE("test case 1", "[test 95]") {
+TEST_CASE("test case 1 [test 95]", "[test 95]") {
     auto three = sol95.generateTrees(0);
     CHECK_THAT(three, Equals<TreeNode *>({}));
 }
 
-TEST_CASE("test case 2", "[test 95]") {
+TEST_CASE("test case 2 [test 95]", "[test 95]") {
     const vector<vector<int32_t>> result{
             {1, No, 2,  No, 3,  No, No},
             {1, No, 3,  2,  No, No, No},

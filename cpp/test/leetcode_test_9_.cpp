@@ -26,18 +26,18 @@
 
 Solution9 sol9;
 
-TEST_CASE("test case 1", "[test 9]") {
+TEST_CASE("test case 1 [test 9]", "[test 9]") {
     CHECK(sol9.isPalindrome(121));
 }
 
-TEST_CASE("test case 2", "[test 9]") {
+TEST_CASE("test case 2 [test 9]", "[test 9]") {
     CHECK_FALSE(sol9.isPalindrome(-121));
 }
 
-TEST_CASE("test case 3", "[test 9]") {
+TEST_CASE("test case 3 [test 9]", "[test 9]") {
     CHECK_FALSE(sol9.isPalindrome(120));
 }
 
-TEST_CASE("test case 4", "[test 9]") {
+TEST_CASE("test case 4 [test 9]", "[test 9]") {
     CHECK_FALSE(sol9.isPalindrome(10));
 }

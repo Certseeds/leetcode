@@ -29,19 +29,19 @@ using Catch::Matchers::UnorderedEquals;
 using Catch::Matchers::Contains;
 Solution11 sol11;
 
-TEST_CASE("test case 1", "[test 11]") {
+TEST_CASE("test case 1 [test 11]", "[test 11]") {
     const vector<int32_t> vec = {1, 8, 6, 2, 5, 4, 8, 3, 7};
     CHECK(sol11.maxArea(vec) == 49);
     CHECK(sol11.maxArea_n2(vec) == 49);
 }
 
-TEST_CASE("test case 2", "[test 11]") {
+TEST_CASE("test case 2 [test 11]", "[test 11]") {
     const vector<int32_t> vec = {1, 1, 4, 5, 1, 4, 1, 9, 1, 9, 8, 1, 0};
     CHECK(sol11.maxArea(vec) == 35);
     CHECK(sol11.maxArea_n2(vec) == 35);
 }
 
-TEST_CASE("test case 3", "[test 11]") {
+TEST_CASE("test case 3 [test 11]", "[test 11]") {
     const vector<int32_t> vec = {959, 231, 691, 608, 805, 486, 630, 971, 712, 984, 856, 529, 979, 540, 301, 381, 285,
                                  908, 78, 301, 818, 599, 996, 438, 163, 758, 301, 878, 22, 526, 771, 941, 59, 206, 636,
                                  421, 45, 736, 676, 518, 645, 128, 291, 747, 458, 209, 987, 902, 632, 221, 955, 275,

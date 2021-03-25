@@ -15,7 +15,6 @@ include_directories(${CMAKE_CURRENT_SOURCE_DIR}/test)
 ENABLE_TESTING()
 set(dependencies 1 3 5 6 7 9 11 12 13 14 17 19 20 44 64 95 120 153 154 167 174 343 350 785 0803 1010 1025)
 foreach (LEETCODE_NUMBER IN LISTS dependencies)
-    MESSAGE(${LEETCODE_NUMBER})
     add_executable(${PROJECT_NAME}_${LEETCODE_NUMBER}
             ${CMAKE_CURRENT_SOURCE_DIR}/source/leetcode_${LEETCODE_NUMBER}_.hpp
             ${CMAKE_CURRENT_SOURCE_DIR}/test/leetcode_test_${LEETCODE_NUMBER}_.cpp
@@ -23,6 +22,8 @@ foreach (LEETCODE_NUMBER IN LISTS dependencies)
     ADD_TEST(${PROJECT_NAME}_${LEETCODE_NUMBER}_CTEST ${PROJECT_NAME}_${LEETCODE_NUMBER})
 endforeach ()
 unset(dependencies)
+
+add_executable(${PROJECT_NAME}_pch ${CMAKE_CURRENT_SOURCE_DIR}/test/all.cpp) # only for ci
 
 #file(GLOB USER_LIBS_PATH ./source/leetcode_*_.hpp)
 #foreach(elementName IN LISTS USER_LIBS_PATH)

@@ -26,14 +26,14 @@
 
 Solution20 sol20;
 
-TEST_CASE("test case 1", "[test 20]") {
+TEST_CASE("test case 1 [test 20]", "[test 20]") {
     CHECK(sol20.isValid("()"));
     CHECK(sol20.isValid("()[]{}"));
     CHECK(sol20.isValid("(()[]{})[()[]{}]{()[]{}}"));
     CHECK(sol20.isValid("(((()[]{})[()[]{}]{()[]{}})[]{})[()[]{}]{()[]{}}"));
 }
 
-TEST_CASE("test case 0", "[test 20]") {
+TEST_CASE("test case 0 [test 20]", "[test 20]") {
     CHECK_FALSE(sol20.isValid("(]"));
     CHECK_FALSE(sol20.isValid("(}"));
     CHECK_FALSE(sol20.isValid("[}"));

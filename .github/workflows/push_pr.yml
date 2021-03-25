@@ -50,8 +50,8 @@ jobs:
         working-directory: ${{github.workspace}}/cpp/cmake-build-debug
         run: |
           cmake .. -DCMAKE_BUILD_TYPE=DEBUG
-          cmake --build . --config DEBUG --parallel $(nproc)
-          ctest -C DEBUG
+          cmake --build . --config DEBUG --target leetcode_cpp_pch --parallel $(nproc)
+          ./leetcode_cpp_pch
 
       # - name: cmake release
       #   shell: bash

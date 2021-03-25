@@ -26,32 +26,32 @@
 
 Solution7 sol7;
 
-TEST_CASE("1", "[test 7]") {
+TEST_CASE("1 [test 7]", "[test 7]") {
     CHECK(sol7.reverse(123) == 321);
     CHECK(sol7.reverse2(123) == 321);
 }
 
-TEST_CASE("2", "[test 7]") {
+TEST_CASE("2 [test 7]", "[test 7]") {
     CHECK(sol7.reverse(-123) == -321);
     CHECK(sol7.reverse2(-123) == -321);
 }
 
-TEST_CASE("3", "[test 7]") {
+TEST_CASE("3 [test 7]", "[test 7]") {
     CHECK(sol7.reverse(120) == 21);
     CHECK(sol7.reverse2(120) == 21);
 }
 
-TEST_CASE("4", "[test 7]") {
+TEST_CASE("4 [test 7]", "[test 7]") {
     CHECK(sol7.reverse(0) == 0);
     CHECK(sol7.reverse2(0) == 0);
 }
 
-TEST_CASE("5", "[test 7]") {
+TEST_CASE("5 [test 7]", "[test 7]") {
     CHECK(sol7.reverse(-2147483648) == 0);
     CHECK(sol7.reverse2(-2147483648) == 0);
 }
 
-TEST_CASE("6", "[test 7]") {
+TEST_CASE("6 [test 7]", "[test 7]") {
     CHECK(sol7.reverse(1463847412) == 2147483641);
     CHECK(sol7.reverse2(1463847412) == 2147483641);
 }

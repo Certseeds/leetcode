@@ -29,7 +29,7 @@ using Catch::Matchers::UnorderedEquals;
 using Catch::Matchers::Contains;
 Solution785 sol785;
 
-TEST_CASE("test case 1", "[test 785]") {
+TEST_CASE("test case 1 [test 785]", "[test 785]") {
     const vector<vector<int32_t>> vec{{1, 3},
                                       {0, 2},
                                       {1, 3},
@@ -37,7 +37,7 @@ TEST_CASE("test case 1", "[test 785]") {
     CHECK(sol785.isBipartite(vec));
 }
 
-TEST_CASE("test case 2", "[test 785]") {
+TEST_CASE("test case 2 [test 785]", "[test 785]") {
     const vector<vector<int32_t>> vec{{1, 2, 3},
                                       {0, 2},
                                       {0, 1, 3},
@@ -45,7 +45,7 @@ TEST_CASE("test case 2", "[test 785]") {
     CHECK(sol785.isBipartite(vec) == 0);
 }
 
-TEST_CASE("test case 3", "[test 785]") {
+TEST_CASE("test case 3 [test 785]", "[test 785]") {
     const vector<vector<int32_t>> vec{{},
                                       {2, 4, 6},
                                       {1, 4, 8, 9},
@@ -59,7 +59,7 @@ TEST_CASE("test case 3", "[test 785]") {
     CHECK(sol785.isBipartite(vec) == 0);
 }
 
-TEST_CASE("test case 4", "[test 785]") {
+TEST_CASE("test case 4 [test 785]", "[test 785]") {
 
     const vector<vector<int32_t>> vec{{4},
                                       {},
@@ -69,9 +69,9 @@ TEST_CASE("test case 4", "[test 785]") {
     CHECK(sol785.isBipartite(vec));
 }
 
-TEST_CASE("test case 5", "[test 785]") {
+TEST_CASE("test case 5 [test 785]", "[test 785]") {
     const vector<vector<int32_t>> vec{{2,  4},
-                                      {2,  3,  4},
+                                      {2,  3, 4},
                                       {0,  1},
                                       {1},
                                       {0,  1},

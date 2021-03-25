@@ -29,7 +29,7 @@ using Catch::Matchers::UnorderedEquals;
 using Catch::Matchers::Contains;
 Solution64 sol64;
 
-TEST_CASE("test case 1", "[test 64]") {
+TEST_CASE("test case 1 [test 64]", "[test 64]") {
     vector<vector<int32_t>> vec{{1, 3, 1},
                                 {1, 5, 1},
                                 {4, 2, 1}};

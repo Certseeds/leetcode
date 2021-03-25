@@ -26,26 +26,26 @@
 
 Solution5 sol5;
 
-TEST_CASE("1", "[test 5]") {
+TEST_CASE("1 [test 5]", "[test 5]") {
     CHECK(sol5.longestPalindrome("babad").size() == 3);
 }
 
-TEST_CASE("2", "[test 5]") {
+TEST_CASE("2 [test 5]", "[test 5]") {
     CHECK(sol5.longestPalindrome("cbbc").size() == 4);
 }
 
-TEST_CASE("2_", "[test 5]") {
+TEST_CASE("2_  [test 5]", "[test 5]") {
     CHECK(sol5.longestPalindrome("cbbd").size() == 2);
 }
 
-TEST_CASE("3", "[test 5]") {
+TEST_CASE("3 [test 5]", "[test 5]") {
     CHECK(sol5.longestPalindrome("cb").size() == 2);
 }
 
-TEST_CASE("4", "[test 5]") {
+TEST_CASE("4 [test 5]", "[test 5]") {
     CHECK(sol5.longestPalindrome("c").size() == 1);
 }
 
-TEST_CASE("5", "[test 5]") {
+TEST_CASE("5 [test 5]", "[test 5]") {
     CHECK(sol5.longestPalindrome("").size() == 0);
 }

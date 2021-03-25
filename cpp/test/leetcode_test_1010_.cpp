@@ -26,22 +26,22 @@
 
 Solution1010 sol1010;
 
-TEST_CASE("2", "[test 2]") {
+TEST_CASE("2 [test 1010]", "[test 1010]") {
     const vector<int32_t> vec1 = {30, 20, 150, 100, 40};
     CHECK(sol1010.numPairsDivisibleBy60(vec1) == 3);
 }
 
-TEST_CASE("3", "[test 2]") {
+TEST_CASE("3 [test 1010]", "[test 1010]") {
     const vector<int32_t> vec2 = {60, 60, 60};
     CHECK(sol1010.numPairsDivisibleBy60(vec2) == 3);
 }
 
-TEST_CASE("4", "[test 2]") {
+TEST_CASE("4 [test 1010]", "[test 1010]") {
     const vector<int32_t> vec3 = {54, 8, 17, 437, 54, 498, 455, 239, 183, 347, 59, 199, 52, 488, 147, 82};
     CHECK(sol1010.numPairsDivisibleBy60(vec3) == 2);
 }
 
-TEST_CASE("5", "[test 2]") {
+TEST_CASE("5 [test 1010]", "[test 1010]") {
     const vector<int32_t> vec4 = {418, 204, 77, 278, 239, 457, 284, 263, 372, 279, 476, 416, 360, 18};
     CHECK(sol1010.numPairsDivisibleBy60(vec4) == 1);
 }

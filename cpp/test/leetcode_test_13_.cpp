@@ -29,27 +29,27 @@ using Catch::Matchers::UnorderedEquals;
 using Catch::Matchers::Contains;
 Solution13 sol13;
 
-TEST_CASE("test case 1", "[test 13]") {
+TEST_CASE("test case 1 [test 13]", "[test 13]") {
     CHECK(sol13.romanToInt("III") == 3);
 }
 
-TEST_CASE("test case 2", "[test 13]") {
+TEST_CASE("test case 2 [test 13]", "[test 13]") {
     CHECK(sol13.romanToInt("IV") == 4);
 }
 
-TEST_CASE("test case 3", "[test 13]") {
+TEST_CASE("test case 3 [test 13]", "[test 13]") {
     CHECK(sol13.romanToInt("IX") == 9);
 }
 
-TEST_CASE("test case 4", "[test 13]") {
+TEST_CASE("test case 4 [test 13]", "[test 13]") {
     CHECK(sol13.romanToInt("LVIII") == 58);
 }
 
-TEST_CASE("test case 5", "[test 13]") {
+TEST_CASE("test case 5 [test 13]", "[test 13]") {
     CHECK(sol13.romanToInt("MCMXCIV") == 1994);
 }
 
-TEST_CASE("test case 6", "[test 13]") {
+TEST_CASE("test case 6 [test 13]", "[test 13]") {
     CHECK(sol13.romanToInt(
             "MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMDXIV") ==
           114514);

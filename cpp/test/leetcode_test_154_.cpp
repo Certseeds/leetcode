@@ -29,22 +29,22 @@ using Catch::Matchers::UnorderedEquals;
 using Catch::Matchers::Contains;
 Solution154 sol154;
 
-TEST_CASE("test case 1", "[test 154]") {
+TEST_CASE("test case 1 [test 154]", "[test 154]") {
     const vector<int32_t> input = {1, 2, 5};
     CHECK(sol154.findMin(input) == 1);
 }
 
-TEST_CASE("test case 2", "[test 154]") {
+TEST_CASE("test case 2 [test 154]", "[test 154]") {
     const vector<int32_t> input = {2, 2, 2, 0, 1};
     CHECK(sol154.findMin(input) == 0);
 }
 
-TEST_CASE("test case 3", "[test 154]") {
+TEST_CASE("test case 3 [test 154]", "[test 154]") {
     const vector<int32_t> input = {3, 4, 5, 1, 2};
     CHECK(sol154.findMin(input) == 1);
 }
 
-TEST_CASE("test case 4", "[test 154]") {
+TEST_CASE("test case 4 [test 154]", "[test 154]") {
     const vector<int32_t> input = {4, 5, 6, 7, 0, 1, 2};
     CHECK(sol154.findMin(input) == 0);
 }

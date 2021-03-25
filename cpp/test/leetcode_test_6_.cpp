@@ -26,7 +26,7 @@
 
 Solution6 sol6;
 
-TEST_CASE("test basic", "[test 6]") {
+TEST_CASE("test basic [test 6]", "[test 6]") {
     CHECK(sol6.convert("PAYPALISHIRING", 3) == "PAHNAPLSIIGYIR");
     CHECK(sol6.convert("PAYPALISHIRING", 4) == "PINALSIGYAHRPI");
     CHECK(sol6.convert("A", 1) == "A");

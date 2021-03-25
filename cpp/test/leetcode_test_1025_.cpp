@@ -29,17 +29,17 @@ using Catch::Matchers::UnorderedEquals;
 using Catch::Matchers::Contains;
 Solution1025 sol1025;
 
-TEST_CASE("test case 1", "[test 1025]") {
+TEST_CASE("test case 1 [test 1025]", "[test 1025]") {
     CHECK(sol1025.divorGame1(2));
     CHECK(sol1025.divorGame1_2(2));
 }
 
-TEST_CASE("test case 2", "[test 1025]") {
+TEST_CASE("test case 2 [test 1025]", "[test 1025]") {
     CHECK_FALSE(sol1025.divorGame1(3));
     CHECK_FALSE(sol1025.divorGame1_2(3));
 }
 
-TEST_CASE("test case multiply", "[test 1025]") {
+TEST_CASE("test case multiply [test 1025]", "[test 1025]") {
     for (int i = 4; i < 114; ++i) {
         CHECK(sol1025.divorGame1_2(i) == (i % 2 == 0));
     }

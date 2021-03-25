@@ -26,19 +26,19 @@
 
 Solution174 sol174;
 
-TEST_CASE("test 1", "[test 174]") {
+TEST_CASE("test 1 [test 174]", "[test 174]") {
     vector<vector<int32_t>> vec = {{-2, -3,  3},
                                    {-5, -10, 1},
                                    {10, 30,  -5}};
     CHECK(sol174.calculateMinimumHP(vec) == 7);
 }
 
-TEST_CASE("test 2", "[test 174]") {
+TEST_CASE("test 2 [test 174]", "[test 174]") {
     vector<vector<int32_t>> vec = {{0, -3}};
     CHECK(sol174.calculateMinimumHP(vec) == 4);
 }
 
-TEST_CASE("test 3", "[test 174]") {
+TEST_CASE("test 3 [test 174]", "[test 174]") {
     vector<vector<int32_t>> vec = {{0}};
     CHECK(sol174.calculateMinimumHP(vec) == 1);
 }

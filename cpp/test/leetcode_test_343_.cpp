@@ -29,7 +29,7 @@ using Catch::Matchers::UnorderedEquals;
 using Catch::Matchers::Contains;
 Solution343 sol343;
 
-TEST_CASE("test case 1", "[test 343]") {
+TEST_CASE("test case 1 [test 343]", "[test 343]") {
     for (int i = 3; i <= 58; ++i) {
         CHECK(sol343.integerBreak(i) == sol343.integerBreak_DP(i));
         CHECK(sol343.integerBreak_DP(i) == sol343.integerBreak_DP2(i));

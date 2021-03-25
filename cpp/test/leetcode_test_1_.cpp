@@ -29,7 +29,7 @@ using Catch::Matchers::Equals;
 using Catch::Matchers::UnorderedEquals;
 using Catch::Matchers::Contains;
 
-TEST_CASE("basic tests", "[test 1]") {
+TEST_CASE("basic tests [test 1]", "[test 1]") {
     vector<int32_t> vec{2, 7, 11, 15};
     auto result = sol1.twoSum(vec, 9);
     SECTION("size is always 2") {
@@ -40,7 +40,7 @@ TEST_CASE("basic tests", "[test 1]") {
     }
 }
 
-TEST_CASE("basic tests 2", "[test 1]") {
+TEST_CASE("basic tests 2 [test 1]", "[test 1]") {
     vector<int32_t> vec{3, 2, 4};
     auto result = sol1.twoSum(vec, 6);
     SECTION("size is always 2") {

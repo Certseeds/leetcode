@@ -27,19 +27,19 @@
 Solution350 sol350;
 using Catch::Matchers::UnorderedEquals;
 
-TEST_CASE("1", "[test 350]") {
+TEST_CASE("1 [test 350]", "[test 350]") {
     vector<int32_t> vec1{1, 2, 2, 1};
     vector<int32_t> vec2{2, 2};
     CHECK_THAT(sol350.intersect(vec1, vec2), UnorderedEquals<int>({2, 2}));
 }
 
-TEST_CASE("2", "[test 350]") {
+TEST_CASE("2 [test 350]", "[test 350]") {
     vector<int32_t> vec1{4, 9, 5};
     vector<int32_t> vec2{9, 4, 9, 8, 4};
     CHECK_THAT(sol350.intersect(vec1, vec2), UnorderedEquals<int>({4, 9}));
 }
 
-TEST_CASE("3", "[test 350]") {
+TEST_CASE("3 [test 350]", "[test 350]") {
     vector<int32_t> vec1{1, 2};
     vector<int32_t> vec2{1, 1};
     CHECK_THAT(sol350.intersect(vec1, vec2), UnorderedEquals<int>({1}));

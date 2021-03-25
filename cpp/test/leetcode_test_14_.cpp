@@ -29,14 +29,14 @@ using Catch::Matchers::UnorderedEquals;
 using Catch::Matchers::Contains;
 Solution14 sol14;
 
-TEST_CASE("test case 1", "[test 14]") {
+TEST_CASE("test case 1 [test 14]", "[test 14]") {
     const vector<string> strs = {
             "flower", "flow", "flight"
     };
     CHECK(sol14.longestCommonPrefix(strs) == "fl");
 }
 
-TEST_CASE("test case 2", "[test 14]") {
+TEST_CASE("test case 2 [test 14]", "[test 14]") {
     const vector<string> strs = {
             "dog", "racecar", "car"
     };
@@ -44,9 +44,8 @@ TEST_CASE("test case 2", "[test 14]") {
 
 }
 
-TEST_CASE("test case 3", "[test 14]") {
+TEST_CASE("test case 3 [test 14]", "[test 14]") {
     const vector<string> strs = {
     };
     CHECK(sol14.longestCommonPrefix(strs) == "");
-
 }

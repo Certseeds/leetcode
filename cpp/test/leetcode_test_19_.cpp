@@ -26,7 +26,7 @@
 
 Solution19 sol19;
 
-TEST_CASE("test case 1", "[test 19]") {
+TEST_CASE("test case 1 [test 19]", "[test 19]") {
     vector<int> nums = {1, 2, 3, 4, 5};
     vector<ListNode *> vec1 = ListNode::numToList(nums);
     ListNode *temp = sol19.removeNthFromEnd(vec1[0], 2);
@@ -40,7 +40,7 @@ TEST_CASE("test case 1", "[test 19]") {
     }
 }
 
-TEST_CASE("test case 2", "[test 19]") {
+TEST_CASE("test case 2 [test 19]", "[test 19]") {
     vector<int> nums = {1, 2, 3, 4, 5};
     vector<ListNode *> vec1 = ListNode::numToList(nums);
     ListNode *temp = sol19.removeNthFromEnd(vec1[0], 0);
@@ -54,7 +54,7 @@ TEST_CASE("test case 2", "[test 19]") {
     }
 }
 
-TEST_CASE("test case 3", "[test 19]") {
+TEST_CASE("test case 3 [test 19]", "[test 19]") {
     vector<int> nums = {1, 2, 3, 4, 5};
     vector<ListNode *> vec1 = ListNode::numToList(nums);
     ListNode *temp = sol19.removeNthFromEnd(vec1[0], 5);

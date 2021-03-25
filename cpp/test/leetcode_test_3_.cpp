@@ -26,39 +26,39 @@
 
 Solution3 sol3;
 
-TEST_CASE("1", "[test 3]") {
+TEST_CASE("1 [test 3]", "[test 3]") {
     string str = "abcabcbb";
     CHECK(sol3.lengthOfLongestSubstring(str) == 3);
     CHECK(sol3.lengthOfLongestSubstring2(str) == 3);
 }
 
-TEST_CASE("2", "[test 3]") {
+TEST_CASE("2 [test 3]", "[test 3]") {
     string str = "bbbbb";
     CHECK(sol3.lengthOfLongestSubstring(str) == 1);
     CHECK(sol3.lengthOfLongestSubstring2(str) == 1);
 
 }
 
-TEST_CASE("3", "[test 3]") {
+TEST_CASE("3 [test 3]", "[test 3]") {
     string str = "pwwkew";
     CHECK(sol3.lengthOfLongestSubstring(str) == 3);
     CHECK(sol3.lengthOfLongestSubstring2(str) == 3);
 }
 
-TEST_CASE("4", "[test 3]") {
+TEST_CASE("4 [test 3]", "[test 3]") {
     string str = "abba";
     cout << sol3.lengthOfLongestSubstring(str) << endl;
     CHECK(sol3.lengthOfLongestSubstring(str) == 2);
     CHECK(sol3.lengthOfLongestSubstring2(str) == 2);
 }
 
-TEST_CASE("5", "[test 3]") {
+TEST_CASE("5 [test 3]", "[test 3]") {
     string str = " ";
     CHECK(sol3.lengthOfLongestSubstring(str) == 1);
     CHECK(sol3.lengthOfLongestSubstring2(str) == 1);
 }
 
-TEST_CASE("6", "[test 3]") {
+TEST_CASE("6 [test 3]", "[test 3]") {
     string str = "   ";
     CHECK(sol3.lengthOfLongestSubstring(str) == 1);
     CHECK(sol3.lengthOfLongestSubstring2(str) == 1);

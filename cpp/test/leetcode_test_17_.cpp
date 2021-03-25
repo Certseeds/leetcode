@@ -29,12 +29,12 @@ using Catch::Matchers::UnorderedEquals;
 using Catch::Matchers::Contains;
 Solution17 sol17;
 
-TEST_CASE("test case 1", "[test 17]") {
+TEST_CASE("test case 1 [test 17]", "[test 17]") {
     CHECK_THAT(sol17.letterCombinations("23"),
                UnorderedEquals<string>({"ad", "ae", "af", "bd", "be", "bf", "cd", "ce", "cf"}));
 }
 
-TEST_CASE("test case 2", "[test 17]") {
+TEST_CASE("test case 2 [test 17]", "[test 17]") {
     CHECK_THAT(sol17.letterCombinations(""),
                UnorderedEquals<string>({}));
 }

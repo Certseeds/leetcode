@@ -58,7 +58,7 @@ public:
         for (auto i = num2.crbegin(); i != num2.crend(); i++) {
             nums_vec.push_back(multiply(num1, *i));
         }
-        for (int j = 0; j < nums_vec.size(); ++j) {
+        for (size_t j = 0; j < nums_vec.size(); ++j) {
             nums_vec[j].append('0', j);
         }
         for (int j = 0; j < nums_vec.size() - 1; ++j) {

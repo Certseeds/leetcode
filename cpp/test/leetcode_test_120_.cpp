@@ -26,7 +26,7 @@
 
 Solution120 sol120;
 
-TEST_CASE("test case 1", "[test 120]") {
+TEST_CASE("test case 1 [test 120]", "[test 120]") {
     vector<vector<int32_t>> vec = {{2},
                                    {3, 4},
                                    {6, 5, 7},
@@ -34,15 +34,15 @@ TEST_CASE("test case 1", "[test 120]") {
     CHECK(sol120.minimumTotal(vec) == 11);
 }
 
-TEST_CASE("test case 2", "[test 120]") {
+TEST_CASE("test case 2 [test 120]", "[test 120]") {
     for (int i = 0; i < 10; ++i) {
-        std::cout << sol120.multiply("12345", '0' + i) << std::endl;
+        //std::cout << sol120.multiply("12345", '0' + i) << std::endl;
     }
     sol120.multiply_0("123", "456");
-    std::cout << sol120.add_str("123", "459") << end;
+    std::cout << sol120.add_str("123", "459") << end8_t;
     std::cout << string(10, '0') << std::endl;
-    for (int j = 0; j < 10; ++j) {
-        string temp;
-        std::cout << temp.append('0', j) << end;
-    }
+    //for (int j = 0; j < 10; ++j) {
+    //string temp;
+    //std::cout << temp.append('0', j) << end8_t;
+    //}
 }

@@ -34,7 +34,7 @@
 using std::ios;
 using std::cin;
 using std::cout;
-constexpr char end = '\n';
+static constexpr const char end8_t = '\n';
 leetcode_timer timer{};
 
 static int faster_streams = []() {

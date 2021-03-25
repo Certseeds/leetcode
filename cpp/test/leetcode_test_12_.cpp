@@ -29,32 +29,32 @@ using Catch::Matchers::UnorderedEquals;
 using Catch::Matchers::Contains;
 Solution12 sol12;
 
-TEST_CASE("test case 1", "[test 12]") {
+TEST_CASE("test case 1 [test 12", "[test 12]") {
     CHECK(sol12.intToRoman(3) == "III");
     CHECK(sol12.intToRoman_2(3) == "III");
 }
 
-TEST_CASE("test case 2", "[test 12]") {
+TEST_CASE("test case 2 [test 12", "[test 12]") {
     CHECK(sol12.intToRoman(4) == "IV");
     CHECK(sol12.intToRoman_2(4) == "IV");
 }
 
-TEST_CASE("test case 3", "[test 12]") {
+TEST_CASE("test case 3 [test 12", "[test 12]") {
     CHECK(sol12.intToRoman(9) == "IX");
     CHECK(sol12.intToRoman_2(9) == "IX");
 }
 
-TEST_CASE("test case 4", "[test 12]") {
+TEST_CASE("test case 4 [test 12", "[test 12]") {
     CHECK(sol12.intToRoman(58) == "LVIII");
     CHECK(sol12.intToRoman_2(58) == "LVIII");
 }
 
-TEST_CASE("test case 5", "[test 12]") {
+TEST_CASE("test case 5 [test 12", "[test 12]") {
     CHECK(sol12.intToRoman(1994) == "MCMXCIV");
     CHECK(sol12.intToRoman_2(1994) == "MCMXCIV");
 }
 
-TEST_CASE("test case 6", "[test 12]") {
+TEST_CASE("test case 6 [test 12", "[test 12]") {
     CHECK(sol12.intToRoman(114514) ==
           "MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMDXIV");
     CHECK(sol12.intToRoman_2(114514) ==
