@@ -2,11 +2,11 @@
  * @Github: https://github.com/Certseeds/leetcode
  * @Organization: SUSTech
  * @Author: nanoseeds
- * @Date: {}
+ * @Date: {0}
  * @LastEditors: nanoseeds
  */
 /*  leetcode
-    Copyright (C) {} nanoseeds
+    Copyright (C) 2020-{1} nanoseeds
 
     leetcode is free software: you can redistribute it and/or modify
     it under the terms of the GNU Affero General Public License as
@@ -22,13 +22,13 @@
     along with this program.  If not, see <https://www.gnu.org/licenses/>.
     */
 #include "catch_main.hpp"
-#include "leetcode_{}_.hpp"
+#include "leetcode_{2}_.hpp"
 using Catch::Matchers::Equals;
 using Catch::Matchers::UnorderedEquals;
 using Catch::Matchers::Contains;
-Solution{} sol{};
+Solution{2} sol{2};
 
-TEST_CASE("", "[test {}]") {{
+TEST_CASE(" [test {2}]", "[test {2}]") {{
     CHECK(true);
     CHECK_FALSE(false);
 }}

@@ -41,9 +41,7 @@ ListNode::~ListNode() {
 vector<ListNode *> ListNode::numToList(vector<int32_t> nums) {
     vector<ListNode *> will_return(nums.size(), nullptr);
     for (size_t i = 0; i < nums.size(); i++) {
-        will_return[i] =
-                (nums[i] != No_list) ?
-                new ListNode(nums[i]) : nullptr;
+        will_return[i] = (nums[i] != No_list) ? new ListNode(nums[i]) : nullptr;
     }
     for (size_t i = 0; i < nums.size() - 1; i++) {
         will_return[i]->next = will_return[i + 1];

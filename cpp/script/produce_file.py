@@ -1,14 +1,17 @@
 #!/usr/bin/env python3
 # coding=utf-8
-'''
+import sys
+import time
+
+"""
 @Github: https://github.com/Certseeds/leetcode
 @Organization: SUSTech
 @Author: nanoseeds
 @LastEditors: nanoseeds
 @LastEditTime: 2020-07-20 23:47:50
-'''
+"""
 """ leetcode_cpp
-    Copyright (C) 2020  nanoseeds
+    Copyright (C) 2020-2021  nanoseeds
 
     CS305_Network is free software: you can redistribute it and/or modify
     it under the terms of the GNU Affero General Public License as
@@ -23,9 +26,6 @@
     You should have received a copy of the GNU Affero General Public License
     along with this program.  If not, see <https://www.gnu.org/licenses/>.
 """
-
-import sys
-import time
 
 code_template: str
 year: str = time.strftime("%Y", time.localtime())
@@ -45,12 +45,10 @@ def read_file(file_name: str) -> str:
 
 def write_to_file(order: int) -> None:
     with open(path.format(order), mode='a+') as file:
-        file.write(code_template.format(
-            create_time, year, order, order, order, order))
+        file.write(code_template.format(create_time, year, order))
     with open(test_path.format(order), mode='a+') as file:
-        file.write(code_test_template.format(
-            create_time, year, order, order, order, order))
-    print("{} write success".format(path.format(order)))
+        file.write(code_test_template.format(create_time, year, order))
+    print(f"{path.format(order)} write success")
 
 
 def main(begin_num: int, end_num: int) -> None:

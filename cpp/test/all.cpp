@@ -14,6 +14,7 @@
 #include <leetcode_test_17_.cpp>
 #include <leetcode_test_19_.cpp>
 #include <leetcode_test_20_.cpp>
+#include <leetcode_test_21_.cpp>
 #include <leetcode_test_44_.cpp>
 #include <leetcode_test_64_.cpp>
 #include <leetcode_test_95_.cpp>
