@@ -24,9 +24,37 @@
 #include "catch_main.hpp"
 #include "leetcode_4_.hpp"
 
+namespace Solution4 {
+
 Solution4 sol4;
 
-TEST_CASE("", "[test 4]") {
-    CHECK(true);
-    CHECK_FALSE(false);
+TEST_CASE("1 [test 4]", "[test 4]") {
+    const vector<int32_t> num1{1, 3};
+    const vector<int32_t> num2{2};
+    CHECK(sol4.findMedianSortedArrays(num1, num2) == 2);
+}
+
+TEST_CASE("2 [test 4]", "[test 4]") {
+    const vector<int32_t> num1{1, 3};
+    const vector<int32_t> num2{2, 4};
+    CHECK(sol4.findMedianSortedArrays(num1, num2) == 2.5f);
+}
+
+TEST_CASE("3 [test 4]", "[test 4]") {
+    const vector<int32_t> num1{0, 0};
+    const vector<int32_t> num2{0, 0};
+    CHECK(sol4.findMedianSortedArrays(num1, num2) == 0);
+}
+
+TEST_CASE("4 [test 4]", "[test 4]") {
+    const vector<int32_t> num1{1};
+    const vector<int32_t> num2{};
+    CHECK(sol4.findMedianSortedArrays(num1, num2) == 1);
+}
+
+TEST_CASE("5 [test 4]", "[test 4]") {
+    const vector<int32_t> num1{2};
+    const vector<int32_t> num2{};
+    CHECK(sol4.findMedianSortedArrays(num1, num2) == 2);
+}
 }

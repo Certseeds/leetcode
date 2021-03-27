@@ -23,7 +23,7 @@
  */
 #include "catch_main.hpp"
 #include "leetcode_3_.hpp"
-
+namespace Solution3 {
 Solution3 sol3;
 
 TEST_CASE("1 [test 3]", "[test 3]") {
@@ -62,4 +62,5 @@ TEST_CASE("6 [test 3]", "[test 3]") {
     string str = "   ";
     CHECK(sol3.lengthOfLongestSubstring(str) == 1);
     CHECK(sol3.lengthOfLongestSubstring2(str) == 1);
+}
 }

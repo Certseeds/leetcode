@@ -1,3 +1,6 @@
+#pragma once
+#ifndef _LEETCODE_3_H_
+#define _LEETCODE_3_H_
 /*
  * @Github: https://github.com/Certseeds/leetcode
  * @Organization: SUSTech
@@ -22,15 +25,12 @@
    You should have received a copy of the GNU Affero General Public License
    along with this program.  If not, see <https://www.gnu.org/licenses/>.
    */
-#pragma once
-#ifndef _LEETCODE_3_H_
-#define _LEETCODE_3_H_
-
 #include <vector>
 #include <string>
 #include <algorithm>
 #include <unordered_map>
 
+namespace Solution3 {
 using namespace std;
 
 /*
@@ -83,6 +83,7 @@ public:
         return diff;
     }
 };
+}
 /*
 Hashmap:
 Runtime: 28 ms,
