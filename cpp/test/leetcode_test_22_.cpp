@@ -2,11 +2,11 @@
  * @Github: https://github.com/Certseeds/leetcode
  * @Organization: SUSTech
  * @Author: nanoseeds
- * @Date: {0}
+ * @Date: 2021-03-27 10:32:10
  * @LastEditors: nanoseeds
  */
 /*  leetcode
-    Copyright (C) 2020-{1} nanoseeds
+    Copyright (C) 2020-2021 nanoseeds
 
     leetcode is free software: you can redistribute it and/or modify
     it under the terms of the GNU Affero General Public License as
@@ -22,15 +22,32 @@
     along with this program.  If not, see <https://www.gnu.org/licenses/>.
     */
 #include "catch_main.hpp"
-#include "leetcode_{2}_.hpp"
-namespace Solution{2} {{
-using Catch::Matchers::Equals;
-using Catch::Matchers::UnorderedEquals;
-using Catch::Matchers::Contains;
-Solution{2} sol{2};
+#include "leetcode_22_.hpp"
 
-TEST_CASE(" [test {2}]", "[test {2}]") {{
-    CHECK(true);
-    CHECK_FALSE(false);
-}}
-}}
+namespace Solution22 {
+using Catch::Matchers::UnorderedEquals;
+
+Solution22 sol22;
+static const vector<string> gene5{
+        "((()))",
+        "(()())",
+        "(())()",
+        "()(())",
+        "()()()"
+};
+
+TEST_CASE("1 [test 22]", "[test 22]") {
+    CHECK(sol22.generateParenthesis(1).size() == 1);
+    CHECK(sol22.generateParenthesis(2).size() == 2);
+    CHECK(sol22.generateParenthesis(3).size() == 5);
+    CHECK(sol22.generateParenthesis(4).size() == 14);
+    CHECK_THAT(sol22.generateParenthesis(3), UnorderedEquals(gene5));
+}
+
+TEST_CASE("2 [test 22]", "[test 22]") {
+    for (int32_t i = 1; i < 5; ++i) {
+        CHECK_THAT(sol22.generateParenthesis(i), UnorderedEquals(sol22.generateParenthesis2(i)));
+        //std::cout << i << std::endl;
+    }
+}
+}

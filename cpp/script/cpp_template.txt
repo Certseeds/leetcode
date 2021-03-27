@@ -35,6 +35,7 @@
 #include <unordered_set>
 #include <vector>
 
+namespace Solution{2} {{
 using std::array;
 using std::queue;
 using std::sort;
@@ -49,5 +50,5 @@ class Solution{2} {{
 public:
 
 }};
-
+}}
 #endif //LEETCODE_CPP_SOURCE_LEETCODE_{2}_H

@@ -13,14 +13,6 @@
 #include <string>
 #include <unordered_set>
 #include <algorithm>
-
-using std::vector;
-using std::string;
-using std::unordered_set;
-using std::cout;
-using std::endl;
-using std::endl;
-
 /*
 Given n pairs of parentheses, 
 write a function to generate all combinations of well-formed parentheses.
@@ -34,16 +26,25 @@ For example, given n = 3, a solution set is:
   "()()()"
 ]
 */
+namespace Solution22 {
+using std::vector;
+using std::string;
+using std::unordered_set;
+using std::cout;
+using std::endl;
+using std::endl;
+
 class Solution22 {
 public:
-    vector<string> generateParenthesis(int n) {
+    vector<string> generateParenthesis(int32_t n) {
+        assert(n >= 0);
         if (n == 1) {
             return vector<string>{"()"};
         }
         vector<string> temp = generateParenthesis(n - 1);
         unordered_set<string> uset;
-        for (auto i : temp) {
-            for (int j = 0; j < n; j++) {
+        for (const auto &i : temp) {
+            for (int32_t j = 0; j < n; j++) {
                 uset.insert(string(i).insert(j, "()"));
             }
         }
@@ -53,12 +54,13 @@ public:
         return temp;
     }
 
-    vector<string> generateParenthesis2(int n) {
+    vector<string> generateParenthesis2(int32_t n) {
+        assert(n >= 0);
         vector<string> will_return = {"()"};
         unordered_set<string> uset;
-        for (int i = 2; i <= n; i++) {
-            for (auto j : will_return) {
-                for (int k = 0; k < i; k++) {
+        for (int32_t i = 2; i <= n; i++) {
+            for (const auto &j : will_return) {
+                for (int32_t k = 0; k < i; k++) {
                     uset.insert(string(j).insert(k, "()"));
                 }
             }
@@ -69,19 +71,9 @@ public:
         }
         return will_return;
     }
-
-    void test() {
-        vector<string> vec1 = generateParenthesis(3);
-        for (auto i : vec1) {
-            cout << i << endl;
-        }
-        cout << endl;
-        vector<string> vec2 = generateParenthesis2(3);
-        for (auto i : vec2) {
-            cout << i << endl;
-        }
-    }
 };
+}
+
 /*
 recursion:
 Runtime: 4 ms,
