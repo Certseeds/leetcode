@@ -24,9 +24,42 @@
 #include "catch_main.hpp"
 #include "leetcode_8_.hpp"
 
+namespace Solution8 {
+
 Solution8 sol8;
 
-TEST_CASE("", "[test 8]") {
-    CHECK(true);
-    CHECK_FALSE(false);
+TEST_CASE("1 [test 8]", "[test 8]") {
+    CHECK(sol8.myAtoi("42") == 42);
+    CHECK(sol8.myAtoi("65537") == 65537);
+    CHECK(sol8.myAtoi("114514") == 114514);
+    CHECK(sol8.myAtoi("1919810") == 1919810);
+}
+
+TEST_CASE("2 [test 8]", "[test 8]") {
+    CHECK(sol8.myAtoi("+42") == 42);
+    CHECK(sol8.myAtoi("+65537") == 65537);
+    CHECK(sol8.myAtoi("+114514") == 114514);
+    CHECK(sol8.myAtoi("+1919810") == 1919810);
+}
+
+TEST_CASE("3 [test 8]", "[test 8]") {
+    CHECK(sol8.myAtoi("-42") == -42);
+    CHECK(sol8.myAtoi("-65537") == -65537);
+    CHECK(sol8.myAtoi("-114514") == -114514);
+    CHECK(sol8.myAtoi("-1919810") == -1919810);
+}
+
+TEST_CASE("4 [test 8]", "[test 8]") {
+    CHECK(sol8.myAtoi("  -42") == -42);
+    CHECK(sol8.myAtoi("  -65537") == -65537);
+    CHECK(sol8.myAtoi("    -114514") == -114514);
+    CHECK(sol8.myAtoi("     -1919810") == -1919810);
+}
+
+TEST_CASE("5 [test 8]", "[test 8]") {
+    CHECK(sol8.myAtoi("114514 with meaningless words") == 114514);
+    CHECK(sol8.myAtoi("meaningless words with -65537") == 0);
+    CHECK(sol8.myAtoi("2147483647") == std::numeric_limits<int32_t>::max());
+    CHECK(sol8.myAtoi("-2147483648") == std::numeric_limits<int32_t>::min());
+}
 }
