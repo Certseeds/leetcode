@@ -13,12 +13,12 @@ import time
 """ leetcode_cpp
     Copyright (C) 2020-2021  nanoseeds
 
-    CS305_Network is free software: you can redistribute it and/or modify
+    leetcode_cpp is free software: you can redistribute it and/or modify
     it under the terms of the GNU Affero General Public License as
     published by the Free Software Foundation, either version 3 of the
     License, or (at your option) any later version.
 
-    CS305_Network is distributed in the hope that it will be useful,
+    leetcode_cpp is distributed in the hope that it will be useful,
     but WITHOUT ANY WARRANTY; without even the implied warranty of
     MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
     GNU Affero General Public License for more details.
@@ -34,6 +34,7 @@ path: str = "./../source/leetcode_{}_.hpp"
 test_path: str = "./../test/leetcode_test_{}_.cpp"
 code_template: str
 code_test_template: str
+file_header: str
 
 
 def read_file(file_name: str) -> str:
@@ -45,9 +46,11 @@ def read_file(file_name: str) -> str:
 
 def write_to_file(order: int) -> None:
     with open(path.format(order), mode='a+') as file:
-        file.write(code_template.format(create_time, year, order))
+        file.write(file_header.format(create_time, year))
+        file.write(code_template.format(order))
     with open(test_path.format(order), mode='a+') as file:
-        file.write(code_test_template.format(create_time, year, order))
+        file.write(file_header.format(create_time, year))
+        file.write(code_test_template.format(order))
     print(f"{path.format(order)} write success")
 
 
@@ -59,8 +62,9 @@ def main(begin_num: int, end_num: int) -> None:
 
 # range in [begin,end)
 if __name__ == '__main__':
-    code_template = read_file("cpp_template.txt")
-    code_test_template = read_file("cpp_test_template.txt")
+    code_template = read_file("./cpp_template.txt")
+    code_test_template = read_file("./cpp_test_template.txt")
+    file_header = read_file("file_header.txt")
     begin: int = int(sys.argv[1])
     end: int = int(sys.argv[2])
     main(begin, end)

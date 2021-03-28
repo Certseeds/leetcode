@@ -28,6 +28,8 @@
 #include <vector>
 #include <algorithm>
 
+namespace Solution7 {
+
 using std::vector;
 
 /*
@@ -80,6 +82,7 @@ public:
         return will_return;
     }
 };
+}
 /*
 Runtime: 4 ms,
 Memory Usage: 8.6 MB,

@@ -23,6 +23,7 @@
  */
 #include "catch_main.hpp"
 #include "leetcode_7_.hpp"
+namespace Solution7 {
 
 Solution7 sol7;
 
@@ -54,4 +55,5 @@ TEST_CASE("5 [test 7]", "[test 7]") {
 TEST_CASE("6 [test 7]", "[test 7]") {
     CHECK(sol7.reverse(1463847412) == 2147483641);
     CHECK(sol7.reverse2(1463847412) == 2147483641);
+}
 }

@@ -5,6 +5,7 @@
 #include <array>
 #include <string>
 #include <algorithm>
+namespace Solution6 {
 
 using namespace std;
 
@@ -47,5 +48,5 @@ public:
         return string(vec.cbegin(), vec.cend());
     }
 };
-
+}
 #endif

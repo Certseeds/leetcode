@@ -24,6 +24,8 @@
 #include "catch_main.hpp"
 #include "leetcode_1_.hpp"
 
+namespace Solution1 {
+
 Solution1 sol1;
 using Catch::Matchers::Equals;
 using Catch::Matchers::UnorderedEquals;
@@ -49,4 +51,5 @@ TEST_CASE("basic tests 2 [test 1]", "[test 1]") {
         CHECK_THAT(result, UnorderedEquals<int32_t>({1, 2}));
         CHECK_THAT(result, Contains<int32_t>({}));
     }
+}
 }

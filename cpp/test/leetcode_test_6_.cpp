@@ -23,6 +23,7 @@
  */
 #include "catch_main.hpp"
 #include "leetcode_6_.hpp"
+namespace Solution6{
 
 Solution6 sol6;
 
@@ -35,4 +36,5 @@ TEST_CASE("test basic [test 6]", "[test 6]") {
     CHECK(sol6.convert("ABCD", 4) == "ABCD");
     CHECK(sol6.convert("ABCDE", 4) == "ABCED");
     CHECK_FALSE(false);
+}
 }

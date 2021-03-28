@@ -23,6 +23,7 @@
  */
 #include "catch_main.hpp"
 #include "leetcode_5_.hpp"
+namespace Solution5 {
 
 Solution5 sol5;
 
@@ -48,4 +49,4 @@ TEST_CASE("4 [test 5]", "[test 5]") {
 
 TEST_CASE("5 [test 5]", "[test 5]") {
     CHECK(sol5.longestPalindrome("").size() == 0);
-}
+}}

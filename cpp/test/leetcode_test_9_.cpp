@@ -23,6 +23,7 @@
  */
 #include "catch_main.hpp"
 #include "leetcode_9_.hpp"
+namespace Solution9 {
 
 Solution9 sol9;
 
@@ -40,4 +41,4 @@ TEST_CASE("test case 3 [test 9]", "[test 9]") {
 
 TEST_CASE("test case 4 [test 9]", "[test 9]") {
     CHECK_FALSE(sol9.isPalindrome(10));
-}
+}}

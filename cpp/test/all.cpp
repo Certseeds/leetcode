@@ -9,6 +9,7 @@
 #include <leetcode_test_7_.cpp>
 #include <leetcode_test_8_.cpp>
 #include <leetcode_test_9_.cpp>
+#include <leetcode_test_10_.cpp>
 #include <leetcode_test_11_.cpp>
 #include <leetcode_test_12_.cpp>
 #include <leetcode_test_13_.cpp>

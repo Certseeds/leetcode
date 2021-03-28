@@ -31,6 +31,8 @@
 #include <string>
 #include <algorithm>
 
+namespace Solution5 {
+
 using std::string;
 using std::vector;
 
@@ -71,5 +73,5 @@ public:
         return s.substr(begin_end.first, begin_end.second);
     }
 };
-
+}
 #endif

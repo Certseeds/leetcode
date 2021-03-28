@@ -31,14 +31,16 @@
 #include <unordered_map>
 #include <algorithm>
 
-using namespace std;
 
 /*
-Given an array of integers, 
+Given an array of integers,
 return indices of the two numbers such that they add up to a specific target.
 You may assume that each input would have exactly one solution,
 and you may not use the same element twice.
 */
+namespace Solution1 {
+using namespace std;
+
 class Solution1 {
 public:
     vector<int> twoSum(vector<int> &nums, int target) {
@@ -57,8 +59,9 @@ public:
     if number > 50,choose hashmap.
      */
 };
+}
 /*
-Runtime: 8 ms, 
+Runtime: 8 ms,
 Memory Usage: 10.9 MB,
 92.85%,9.17%.
 */

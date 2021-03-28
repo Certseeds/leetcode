@@ -27,6 +27,7 @@
 
 #include <vector>
 #include <algorithm>
+namespace Solution9 {
 
 using std::vector;
 
@@ -53,6 +54,7 @@ public:
         return true;
     }
 };
+}
 /*
 Runtime: 28 ms,
 Memory Usage: 12 MB,

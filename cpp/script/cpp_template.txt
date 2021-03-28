@@ -1,30 +1,6 @@
-/**
- * @Github: https://github.com/Certseeds/leetcode
- * @Organization: SUSTech
- * @Author: nanoseeds
- * @Date: {0}
- * @LastEditors: nanoseeds
- */
-/*  leetcode
-    Copyright (C) 2020-{1} nanoseeds
-
-    leetcode is free software: you can redistribute it and/or modify
-    it under the terms of the GNU Affero General Public License as
-    published by the Free Software Foundation, either version 3 of the
-    License, or (at your option) any later version.
-
-    leetcode is distributed in the hope that it will be useful,
-    but WITHOUT ANY WARRANTY; without even the implied warranty of
-    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-    GNU Affero General Public License for more details.
-
-    You should have received a copy of the GNU Affero General Public License
-    along with this program.  If not, see <https://www.gnu.org/licenses/>.
-    */
-
 #pragma once
-#ifndef LEETCODE_SOURCE_LEETCODE_{2}_H
-#define LEETCODE_SOURCE_LEETCODE_{2}_H
+#ifndef LEETCODE_SOURCE_LEETCODE_{0}_H
+#define LEETCODE_SOURCE_LEETCODE_{0}_H
 
 #include <algorithm>
 #include <array>
@@ -35,7 +11,7 @@
 #include <unordered_set>
 #include <vector>
 
-namespace Solution{2} {{
+namespace Solution{0} {{
 using std::array;
 using std::queue;
 using std::sort;
@@ -46,9 +22,9 @@ using std::unordered_map;
 using std::unordered_set;
 using std::priority_queue;
 
-class Solution{2} {{
+class Solution{0} {{
 public:
 
 }};
 }}
-#endif //LEETCODE_CPP_SOURCE_LEETCODE_{2}_H
+#endif //LEETCODE_CPP_SOURCE_LEETCODE_{0}_H

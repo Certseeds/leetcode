@@ -28,26 +28,24 @@
 #include <regex>
 #include <string>
 #include <algorithm>
-
-using namespace std;
-
 /*
-Given an input string (s) and a pattern (p), 
+Given an input string (s) and a pattern (p),
 implement regular expression matching with support for '.' and '*'.
 
 '.' Matches any single character.
 '*' Matches zero or more of the preceding element.
 The matching should cover the entire input string (not partial).
 */
+namespace Solution10 {
+using namespace std;
+
 class Solution10 {
 public:
     bool isMatch(const string &s, const string &p) {
         return std::regex_match(s, std::regex(p));
     }
-
-    void test() {
-    }
 };
+}
 /*
 Runtime: 148 ms,
 Memory Usage: 12.1 MB,
