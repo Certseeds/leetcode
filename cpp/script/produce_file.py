@@ -27,7 +27,6 @@ import time
     along with this program.  If not, see <https://www.gnu.org/licenses/>.
 """
 
-code_template: str
 year: str = time.strftime("%Y", time.localtime())
 create_time: str = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime())
 path: str = "./../source/leetcode_{}_.hpp"
