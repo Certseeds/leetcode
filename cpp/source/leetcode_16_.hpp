@@ -5,14 +5,17 @@
 #include <vector>
 #include <algorithm>
 
-using namespace std;
+
 
 /*
-Given an array nums of n integers and an integer target, 
-find three integers in nums such that the sum is closest to target. 
+Given an array nums of n integers and an integer target,
+find three integers in nums such that the sum is closest to target.
 Return the sum of the three integers.
 You may assume that each input would have exactly one solution.
 */
+namespace Solution16 {
+using namespace std;
+
 class Solution16 {
 public:
     int threeSumClosest(vector<int> &nums, int target) {
@@ -37,6 +40,7 @@ public:
         cout << threeSumClosest(vec1, 1) << endl;
     }
 };
+}
 /*
 Runtime: 252 ms,
 Memory Usage: 8.8 MB,

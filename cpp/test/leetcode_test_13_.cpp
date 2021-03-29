@@ -23,6 +23,7 @@
     */
 #include "catch_main.hpp"
 #include "leetcode_13_.hpp"
+namespace Solution13 {
 
 using Catch::Matchers::Equals;
 using Catch::Matchers::UnorderedEquals;
@@ -54,5 +55,4 @@ TEST_CASE("test case 6 [test 13]", "[test 13]") {
             "MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMDXIV") ==
           114514);
 }
-
-
+}

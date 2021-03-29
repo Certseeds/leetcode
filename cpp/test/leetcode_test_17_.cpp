@@ -23,6 +23,7 @@
     */
 #include "catch_main.hpp"
 #include "leetcode_17_.hpp"
+namespace Solution17 {
 
 using Catch::Matchers::Equals;
 using Catch::Matchers::UnorderedEquals;
@@ -37,4 +38,5 @@ TEST_CASE("test case 1 [test 17]", "[test 17]") {
 TEST_CASE("test case 2 [test 17]", "[test 17]") {
     CHECK_THAT(sol17.letterCombinations(""),
                UnorderedEquals<string>({}));
+}
 }

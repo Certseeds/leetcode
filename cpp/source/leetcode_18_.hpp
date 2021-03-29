@@ -8,6 +8,7 @@
 #include <string>
 #include <algorithm>
 
+namespace Solution18 {
 using namespace std;
 
 class Solution18 {
@@ -15,5 +16,5 @@ public:
     void test() {
     }
 };
-
+}
 #endif

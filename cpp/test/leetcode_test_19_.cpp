@@ -23,6 +23,7 @@
     */
 #include "catch_main.hpp"
 #include "leetcode_19_.hpp"
+namespace Solution19 {
 
 Solution19 sol19;
 
@@ -66,4 +67,5 @@ TEST_CASE("test case 3 [test 19]", "[test 19]") {
     for (auto &i : vec1) {
         delete i;
     }
+}
 }

@@ -30,14 +30,17 @@
 #include <string>
 #include <algorithm>
 
-using std::string;
-using std::vector;
+
 
 /*
 Write a function to find the longest common prefix string amongst an array of strings.
-If there is no common prefix, 
+If there is no common prefix,
 return an empty string "".
 */
+namespace Solution14 {
+using std::string;
+using std::vector;
+
 class Solution14 {
 public:
     string longestCommonPrefix(const vector<string> &strs) {
@@ -62,6 +65,7 @@ public:
         return will_return;
     }
 };
+}
 /*
 Runtime: 4 ms,
 Memory Usage: 9.2 MB,

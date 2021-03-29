@@ -29,16 +29,19 @@
 #include <string>
 #include <algorithm>
 
+
+/*
+Given a string containing digits from 2-9 inclusive,
+return all possible letter combinations that the number could represent.
+
+A mapping of digit to letters (just like on the telephone buttons) is given below.
+Note that 1 does not map to any letters.
+*/
+namespace Solution17 {
+
 using std::vector;
 using std::string;
 
-/*
-Given a string containing digits from 2-9 inclusive, 
-return all possible letter combinations that the number could represent.
-
-A mapping of digit to letters (just like on the telephone buttons) is given below. 
-Note that 1 does not map to any letters.
-*/
 class Solution17 {
 public:
     vector<string> letterCombinations(const string &digits) {
@@ -69,6 +72,7 @@ public:
         return will_return;
     }
 };
+}
 /*
 Runtime: 0 ms,
 Memory Usage: 9.8 MB,

@@ -18,13 +18,13 @@
 #include "ListNode.h"
 
 #endif
-
-using namespace std;
-
 /*
 Given a linked list,
 remove the n-th node from the end of list and return its head.
 */
+namespace Solution19 {
+using namespace std;
+
 class Solution19 {
 public:
     ListNode *removeNthFromEnd(ListNode *head, int n) {
@@ -57,6 +57,7 @@ public:
         return will_return->next;
     }
 };
+}
 /*
 Runtime: 4 ms,
 Memory Usage: 8.9 MB,

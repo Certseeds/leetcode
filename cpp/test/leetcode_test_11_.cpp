@@ -23,6 +23,7 @@
     */
 #include "catch_main.hpp"
 #include "leetcode_11_.hpp"
+namespace Solution11 {
 
 using Catch::Matchers::Equals;
 using Catch::Matchers::UnorderedEquals;
@@ -50,4 +51,5 @@ TEST_CASE("test case 3 [test 11]", "[test 11]") {
                                  568, 225, 588, 283, 689, 792, 677, 312, 229, 665, 585, 417, 666};
     CHECK(sol11.maxArea(vec) == 74004);
     CHECK(sol11.maxArea_n2(vec) == 74004);
+}
 }

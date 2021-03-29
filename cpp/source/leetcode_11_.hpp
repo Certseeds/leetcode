@@ -29,24 +29,26 @@
 #include <vector>
 #include <algorithm>
 
-using std::vector;
 
 /*
-Given n non-negative integers a1, a2, ..., an , 
-where each represents a point at coordinate (i, ai). 
-n vertical lines are drawn such that the two endpoints of line i 
-is at (i, ai) and (i, 0). Find two lines, 
-which together with x-axis forms a container, 
+Given n non-negative integers a1, a2, ..., an ,
+where each represents a point at coordinate (i, ai).
+n vertical lines are drawn such that the two endpoints of line i
+is at (i, ai) and (i, 0). Find two lines,
+which together with x-axis forms a container,
 uch that the container contains the most water.
 
 Note: You may not slant the container and n is at least 2.
 */
+namespace Solution11 {
+using std::vector;
+
 class Solution11 {
 public:
     int maxArea_n2(const vector<int> &height) {
         // O(n^2) unused
-        int maxv = INT32_MIN;
-        int h_size = height.size();
+        int32_t maxv{std::numeric_limits<int32_t>::min()};
+        int32_t h_size = height.size();
         for (int i = 0; i < h_size; i++) {
             for (int j = i + 1; j < h_size; j++) {
                 maxv = std::max(maxv, std::min(height[i], height[j]) * (j - i));
@@ -56,8 +58,8 @@ public:
     }
 
     int maxArea(const vector<int> &height) {
-        int begin = 0;
-        int end = height.size() - 1;
+        int32_t begin = 0;
+        int32_t end = height.size() - 1;
         int will_return = (end - begin) * std::min(height[begin], height[end]);
         while (begin < end) {
             if (height[begin] >= height[end]) {
@@ -70,6 +72,7 @@ public:
         return will_return;
     }
 };
+}
 /*
 Brute Force:
 Runtime: 1988 ms,

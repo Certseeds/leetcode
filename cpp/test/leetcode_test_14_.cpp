@@ -23,6 +23,7 @@
     */
 #include "catch_main.hpp"
 #include "leetcode_14_.hpp"
+namespace Solution14 {
 
 using Catch::Matchers::Equals;
 using Catch::Matchers::UnorderedEquals;
@@ -48,4 +49,5 @@ TEST_CASE("test case 3 [test 14]", "[test 14]") {
     const vector<string> strs = {
     };
     CHECK(sol14.longestCommonPrefix(strs) == "");
+}
 }
