@@ -173,31 +173,6 @@ public:
         }
         return will_return.next;
     }
-
-    void test() {
-        vector<int> nums1 = {1, 4, 5};
-        vector<int> nums2 = {1, 3, 4};
-        vector<int> nums3 = {2, 6};
-        vector<ListNode *> vec1 = ListNode::numToList(nums1);
-        vector<ListNode *> vec2 = ListNode::numToList(nums2);
-        vector<ListNode *> vec3 = ListNode::numToList(nums3);
-        vector<ListNode *> vec4 = {vec1[0], vec2[0], vec3[0]};
-        ListNode *temp = mergeKLists4(vec4);
-        while (temp != nullptr) {
-            cout << temp->val << " ";
-            temp = temp->next;
-        }
-        cout << endl;
-        for (auto &i : vec1) {
-            delete i;
-        }
-        for (auto &i : vec2) {
-            delete i;
-        }
-        for (auto &i : vec3) {
-            delete i;
-        }
-    }
 };
 
 }
