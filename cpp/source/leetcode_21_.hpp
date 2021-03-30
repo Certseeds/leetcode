@@ -19,14 +19,16 @@
 
 #endif
 
-using namespace std;
 
 /*
-Merge two sorted linked lists and 
-return it as a new list. 
-The new list should be made 
+Merge two sorted linked lists and
+return it as a new list.
+The new list should be made
 by splicing together the nodes of the first two lists.
 */
+namespace Solution21 {
+using namespace std;
+
 class Solution21 {
 public:
     ListNode *mergeTwoLists(ListNode *l1, ListNode *l2) {
@@ -77,6 +79,7 @@ public:
         }
     }
 };
+}
 /*
 Runtime: 8 ms,
 Memory Usage: 9.5 MB,

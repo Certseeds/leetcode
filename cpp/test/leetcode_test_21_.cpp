@@ -24,6 +24,8 @@
 #include "catch_main.hpp"
 #include "leetcode_21_.hpp"
 
+namespace Solution21 {
+
 using Catch::Matchers::Equals;
 using Catch::Matchers::UnorderedEquals;
 using Catch::Matchers::Contains;
@@ -63,4 +65,5 @@ TEST_CASE("2 [test 21]", "[test 21]") {
     for (auto &i : vec2) {
         delete i;
     }
+}
 }

@@ -13,19 +13,16 @@
 #include <set>
 #include <queue>
 #include <algorithm>
+
 #ifdef __LOCAL__
+
 #include "ListNode.h"
+
 #endif
 
-using std::vector;
-using std::min;
-using std::cout;
-using std::endl;
-using std::multiset;
-using std::priority_queue;
 
 /*
-Merge k sorted linked lists and return it as one sorted list. 
+Merge k sorted linked lists and return it as one sorted list.
 Analyze and describe its complexity.
 
 Example:
@@ -38,7 +35,16 @@ Input:
 ]
 Output: 1->1->2->3->4->4->5->6
 */
+namespace Solution23 {
+using std::vector;
+using std::min;
+using std::cout;
+using std::endl;
+using std::multiset;
+using std::priority_queue;
+
 class Solution23 {
+
 public:
     ListNode *mergeKLists(vector<ListNode *> &lists) {
         ListNode will_return(0);
@@ -57,13 +63,13 @@ public:
     }
 
     ListNode *mergeKLists_helper2(vector<ListNode *> &vec) {
-        int minv = INT32_MAX;
+        int32_t minv = std::numeric_limits<int32_t>::max();
         for (auto i : vec) {
             minv = min(minv, i->val);
         }
         for (auto &i : vec) {
             if (minv == i->val) {
-                ListNode *will_return = i;
+                auto *const will_return = i;
                 i = i->next;
                 return will_return;
             }
@@ -119,7 +125,7 @@ public:
         }
         ListNode will_return(0);
         ListNode *head = &will_return;
-        for (int i = lists.size() - 1; i > 0; i--) {
+        for (int32_t i = lists.size() - 1; i > 0; i--) {
             lists[i - 1] = mergeTwoLists(lists[i], lists[i - 1]);
             head->next = lists[i - 1];
         }
@@ -145,9 +151,9 @@ public:
     }
 
     ListNode *mergeKLists4(vector<ListNode *> &lists) {
-        ListNode will_return(0);
+        ListNode will_return{0};
         ListNode *head = &will_return;
-        auto cmp = [](const ListNode *l1, const ListNode *l2) {
+        const auto cmp = [](const ListNode *l1, const ListNode *l2) {
             return l1->val > l2->val;
         };
         priority_queue<ListNode *, vector<ListNode *>, decltype(cmp)> pq(cmp);
@@ -157,7 +163,7 @@ public:
             }
         }
         while (!pq.empty()) {
-            ListNode *root = pq.top();
+            auto * const root = pq.top();
             pq.pop();
             head->next = root;
             if (root->next != nullptr) {
@@ -182,20 +188,22 @@ public:
             temp = temp->next;
         }
         cout << endl;
-        for (int i = 0; i < vec1.size(); i++) {
-            delete vec1[i];
+        for (auto &i : vec1) {
+            delete i;
         }
-        for (int i = 0; i < vec2.size(); i++) {
-            delete vec2[i];
+        for (auto &i : vec2) {
+            delete i;
         }
-        for (int i = 0; i < vec3.size(); i++) {
-            delete vec3[i];
+        for (auto &i : vec3) {
+            delete i;
         }
     }
 };
+
+}
 /*
 brute force merge:
-Runtime: 304 ms, 
+Runtime: 304 ms,
 Memory Usage: 12.3 MB,
 18%,6%.
 merge use min heap:
@@ -215,4 +223,4 @@ Runtime: 32 ms,
 Memory Usage: 12.8 MB,
 60.15%,5.95%.
 */
-#endif
+#endif //_LEETCODE_23_H_

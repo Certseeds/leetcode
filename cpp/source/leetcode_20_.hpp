@@ -48,7 +48,7 @@ class Solution20 {
 public:
     bool isValid(const string &s) {
         std::stack<uint8_t> stk;
-        std::unordered_map<int32_t, int32_t> umap;
+        std::unordered_map<uint8_t, uint8_t> umap;
         umap['('] = ')';
         umap['['] = ']';
         umap['{'] = '}';
