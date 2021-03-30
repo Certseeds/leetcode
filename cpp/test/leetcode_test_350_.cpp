@@ -23,6 +23,7 @@
     */
 #include "catch_main.hpp"
 #include "leetcode_350_.hpp"
+namespace Solution350 {
 
 Solution350 sol350;
 using Catch::Matchers::UnorderedEquals;
@@ -43,4 +44,4 @@ TEST_CASE("3 [test 350]", "[test 350]") {
     vector<int32_t> vec1{1, 2};
     vector<int32_t> vec2{1, 1};
     CHECK_THAT(sol350.intersect(vec1, vec2), UnorderedEquals<int>({1}));
-}
+}}

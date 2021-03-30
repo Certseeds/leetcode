@@ -23,6 +23,7 @@
     */
 #include "catch_main.hpp"
 #include "leetcode_153_.hpp"
+namespace Solution153 {
 
 using Catch::Matchers::Equals;
 using Catch::Matchers::UnorderedEquals;
@@ -47,4 +48,4 @@ TEST_CASE("test case 3 [test 153]", "[test 153]") {
 TEST_CASE("test case 4 [test 153]", "[test 153]") {
     const vector<int32_t> input = {4, 5, 6, 7, 0, 1, 2};
     CHECK(sol153.findMin(input) == 0);
-}
+}}

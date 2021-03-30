@@ -23,6 +23,7 @@
     */
 #include "catch_main.hpp"
 #include "leetcode_120_.hpp"
+namespace Solution120 {
 
 Solution120 sol120;
 
@@ -45,4 +46,4 @@ TEST_CASE("test case 2 [test 120]", "[test 120]") {
     //string temp;
     //std::cout << temp.append('0', j) << end8_t;
     //}
-}
+}}

@@ -28,6 +28,8 @@
 
 #include <vector>
 
+namespace Solution1025 {
+
 using std::vector;
 
 class Solution1025 {
@@ -35,7 +37,6 @@ public:
     bool divorGame1(int N) {
         return !(N & 1);
     }
-
     bool divorGame1_2(const int N) {
         vector<uint8_t> DP(N + 3, false);
         DP[1] = false;
@@ -51,5 +52,5 @@ public:
         return DP[N];
     }
 };
-
+}
 #endif //LEETCODE_CPP_SOURCE_LEETCODE_1025_H

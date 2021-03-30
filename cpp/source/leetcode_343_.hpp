@@ -29,6 +29,8 @@
 #include <vector>
 #include <cmath>
 
+namespace Solution343 {
+
 using std::vector;
 
 class Solution343 {
@@ -75,5 +77,5 @@ public:
         return DP[n];
     }
 };
-
+}
 #endif //LEETCODE_CPP_SOURCE_LEETCODE_343_H

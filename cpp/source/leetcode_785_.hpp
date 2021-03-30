@@ -31,9 +31,8 @@
 #include <queue>
 #include <stack>
 #include <string>
-#include <unordered_map>
-#include <unordered_set>
 #include <vector>
+namespace Solution785 {
 
 using std::array;
 using std::queue;
@@ -41,9 +40,6 @@ using std::sort;
 using std::stack;
 using std::string;
 using std::vector;
-using std::unordered_map;
-using std::unordered_set;
-using std::priority_queue;
 enum class Color {
     uncolor = -1,
     red = 0,
@@ -78,5 +74,5 @@ public:
         return true;
     }
 };
-
+}
 #endif //LEETCODE_CPP_SOURCE_LEETCODE_785_H

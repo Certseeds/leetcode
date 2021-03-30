@@ -24,6 +24,7 @@
 #include "catch_main.hpp"
 #include "leetcode_1025_.hpp"
 
+namespace Solution1025 {
 using Catch::Matchers::Equals;
 using Catch::Matchers::UnorderedEquals;
 using Catch::Matchers::Contains;
@@ -43,4 +44,5 @@ TEST_CASE("test case multiply [test 1025]", "[test 1025]") {
     for (int i = 4; i < 114; ++i) {
         CHECK(sol1025.divorGame1_2(i) == (i % 2 == 0));
     }
+}
 }

@@ -23,6 +23,7 @@
  */
 #include "catch_main.hpp"
 #include "leetcode_1010_.hpp"
+namespace Solution1010 {
 
 Solution1010 sol1010;
 
@@ -44,4 +45,5 @@ TEST_CASE("4 [test 1010]", "[test 1010]") {
 TEST_CASE("5 [test 1010]", "[test 1010]") {
     const vector<int32_t> vec4 = {418, 204, 77, 278, 239, 457, 284, 263, 372, 279, 476, 416, 360, 18};
     CHECK(sol1010.numPairsDivisibleBy60(vec4) == 1);
+}
 }

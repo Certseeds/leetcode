@@ -24,6 +24,8 @@
 #include "catch_main.hpp"
 #include "leetcode_785_.hpp"
 
+namespace Solution785 {
+
 using Catch::Matchers::Equals;
 using Catch::Matchers::UnorderedEquals;
 using Catch::Matchers::Contains;
@@ -71,7 +73,7 @@ TEST_CASE("test case 4 [test 785]", "[test 785]") {
 
 TEST_CASE("test case 5 [test 785]", "[test 785]") {
     const vector<vector<int32_t>> vec{{2,  4},
-                                      {2,  3, 4},
+                                      {2,  3,  4},
                                       {0,  1},
                                       {1},
                                       {0,  1},
@@ -121,4 +123,5 @@ TEST_CASE("test case 5 [test 785]", "[test 785]") {
                                       {46, 47, 49},
                                       {45, 46, 47, 48}};
     CHECK(sol785.isBipartite(vec) == 0);
+}
 }

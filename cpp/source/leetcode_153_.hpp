@@ -28,6 +28,8 @@
 #include <vector>
 #include <algorithm>
 
+namespace Solution153 {
+
 using std::vector;
 
 class Solution153 {
@@ -49,5 +51,5 @@ public:
         return numbers[begin];
     }
 };
-
+}
 #endif //LEETCODE_CPP_SOURCE_LEETCODE_153_H

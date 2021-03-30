@@ -28,6 +28,7 @@
 
 #include <vector>
 
+namespace Solution64 {
 using std::vector;
 
 class Solution64 {
@@ -52,5 +53,5 @@ public:
         return grid.back().back();
     }
 };
-
+}
 #endif //LEETCODE_CPP_SOURCE_LEETCODE_64_H

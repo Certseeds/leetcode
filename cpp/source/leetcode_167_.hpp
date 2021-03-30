@@ -37,6 +37,7 @@
 #include <algorithm>
 #include <unordered_map>
 #include <vector>
+namespace Solution167 {
 
 using std::unordered_map;
 using std::vector;
@@ -70,5 +71,5 @@ public:
         return vector<int32_t>{begin + 1, ends + 1};
     }
 };
-
+}
 #endif  //LEETCODE_CPP_SOURCE_LEETCODE_167_H

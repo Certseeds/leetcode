@@ -35,6 +35,8 @@
 #include <unordered_set>
 #include <vector>
 
+namespace Solution350 {
+
 using std::array;
 using std::queue;
 using std::sort;
@@ -67,5 +69,5 @@ public:
         return will_return;
     }
 };
-
+}
 #endif //LEETCODE_CPP_SOURCE_LEETCODE_350_H

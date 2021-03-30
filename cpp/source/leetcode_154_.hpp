@@ -29,6 +29,8 @@
 #include <vector>
 #include <algorithm>
 
+namespace Solution154 {
+
 using std::vector;
 
 class Solution154 {
@@ -50,5 +52,5 @@ public:
         return numbers[begin];
     }
 };
-
+}
 #endif //LEETCODE_CPP_SOURCE_LEETCODE_154_H

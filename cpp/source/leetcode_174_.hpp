@@ -25,6 +25,7 @@
 #pragma once
 #ifndef LEETCODE_SOURCE_LEETCODE_174_H
 #define LEETCODE_SOURCE_LEETCODE_174_H
+namespace Solution174 {
 
 #include <algorithm>
 #include <array>
@@ -75,4 +76,5 @@ public:
 
 };
 
+}
 #endif //LEETCODE_CPP_SOURCE_LEETCODE_174_H

@@ -28,6 +28,8 @@
 
 #include <vector>
 
+namespace Solution0803 {
+
 using std::vector;
 
 class Solution0803 {
@@ -57,5 +59,5 @@ public:
         return left_min;
     }
 };
-
+}
 #endif //LEETCODE_CPP_SOURCE_LEETCODE_0803_H

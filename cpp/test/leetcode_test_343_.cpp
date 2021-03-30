@@ -23,6 +23,7 @@
     */
 #include "catch_main.hpp"
 #include "leetcode_343_.hpp"
+namespace Solution343 {
 
 using Catch::Matchers::Equals;
 using Catch::Matchers::UnorderedEquals;
@@ -34,4 +35,5 @@ TEST_CASE("test case 1 [test 343]", "[test 343]") {
         CHECK(sol343.integerBreak(i) == sol343.integerBreak_DP(i));
         CHECK(sol343.integerBreak_DP(i) == sol343.integerBreak_DP2(i));
     }
+}
 }

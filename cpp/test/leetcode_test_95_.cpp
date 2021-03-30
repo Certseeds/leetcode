@@ -23,6 +23,7 @@
     */
 #include "catch_main.hpp"
 #include "leetcode_95_.hpp"
+namespace Solution95 {
 
 using Catch::Matchers::Equals;
 using Catch::Matchers::UnorderedEquals;
@@ -47,4 +48,5 @@ TEST_CASE("test case 2 [test 95]", "[test 95]") {
     for (int i = 0; i < 5; ++i) {
         CHECK(TreeNode::judge_equal(three[i], result[i]));
     }
+}
 }

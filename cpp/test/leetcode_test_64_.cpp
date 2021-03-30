@@ -23,6 +23,7 @@
     */
 #include "catch_main.hpp"
 #include "leetcode_64_.hpp"
+namespace Solution64 {
 
 using Catch::Matchers::Equals;
 using Catch::Matchers::UnorderedEquals;
@@ -34,4 +35,5 @@ TEST_CASE("test case 1 [test 64]", "[test 64]") {
                                 {1, 5, 1},
                                 {4, 2, 1}};
     CHECK(sol64.minPathSum(vec) == 7);
+}
 }

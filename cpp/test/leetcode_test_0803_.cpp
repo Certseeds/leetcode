@@ -23,6 +23,7 @@
     */
 #include "catch_main.hpp"
 #include "leetcode_0803_.hpp"
+namespace Solution0803 {
 
 using Catch::Matchers::Equals;
 using Catch::Matchers::UnorderedEquals;
@@ -43,4 +44,4 @@ TEST_CASE("test case 3 [test 803]", "[test 803]") {
     vector<int> vec{0, 0, 2};
     CHECK(sol0803.findMagicIndex(vec) == 0);
 }
-
+}

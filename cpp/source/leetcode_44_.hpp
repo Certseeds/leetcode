@@ -6,6 +6,7 @@
 #include <string>
 #include <algorithm>
 
+namespace Solution44 {
 using std::vector;
 using std::string;
 
@@ -40,5 +41,5 @@ public:
         return DP.back().back();
     }
 };
-
+}
 #endif

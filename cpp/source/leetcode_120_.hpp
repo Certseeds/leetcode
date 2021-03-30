@@ -31,6 +31,8 @@
 #include <string>
 #include <iostream>
 
+namespace Solution120 {
+
 using std::vector;
 using std::string;
 
@@ -61,7 +63,7 @@ public:
         for (size_t j = 0; j < nums_vec.size(); ++j) {
             nums_vec[j].append('0', j);
         }
-        for (int j = 0; j < nums_vec.size() - 1; ++j) {
+        for (size_t j = 0; j < nums_vec.size() - 1; ++j) {
             nums_vec[j + 1] = add_str(nums_vec[j], nums_vec[j + 1]);
         }
         return nums_vec.back();
@@ -112,5 +114,6 @@ public:
         return num1;
     }
 };
+}
 
 #endif //LEETCODE_CPP_SOURCE_LEETCODE_120_H

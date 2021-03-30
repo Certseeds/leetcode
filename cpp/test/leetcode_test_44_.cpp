@@ -9,6 +9,7 @@
 #include "catch_main.hpp"
 #include "leetcode_44_.hpp"
 
+namespace Solution44 {
 Solution44 sol44;
 
 TEST_CASE("double empty [test 44]", "[test 44]") {
@@ -35,4 +36,5 @@ TEST_CASE("* can match '' or any string [test 44]", "[test 44]") {
 
 TEST_CASE("both * and ? [test 44]", "[test 44]") {
     CHECK_FALSE(sol44.isMatch("acdcb", "a*c?b"));
+}
 }

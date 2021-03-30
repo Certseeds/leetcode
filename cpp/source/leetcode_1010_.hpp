@@ -4,19 +4,18 @@
 
 #include <vector>
 #include <array>
-
-using std::vector;
-using std::array;
-
 /*
 In a list of songs, the i-th song has a duration of time[i] seconds.
 
-Return the number of pairs of songs 
+Return the number of pairs of songs
 for which their total duration in seconds is divisible by 60.
 
-Formally, 
+Formally,
 we want the number of indices i < j with (time[i] + time[j]) % 60 == 0.
 */
+namespace Solution1010 {
+using std::vector;
+using std::array;
 class Solution1010 {
 public:
     int numPairsDivisibleBy60(const vector<int> &time) {
@@ -29,6 +28,7 @@ public:
         return willreturn - uses[30] - uses[0];
     }
 };
+}
 /*
 Runtime: 8 ms,
 Memory Usage: 11.7 MB,

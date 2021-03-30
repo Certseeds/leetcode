@@ -33,6 +33,7 @@
 #ifdef __LOCAL__
 #include "TreeNode.h"
 #endif
+namespace Solution95 {
 
 using std::vector;
 
@@ -63,5 +64,5 @@ public:
         return will_return;
     }
 };
-
+}
 #endif  //LEETCODE_CPP_SOURCE_LEETCODE_95_H
