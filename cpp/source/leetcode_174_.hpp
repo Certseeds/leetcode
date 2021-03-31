@@ -25,7 +25,6 @@
 #pragma once
 #ifndef LEETCODE_SOURCE_LEETCODE_174_H
 #define LEETCODE_SOURCE_LEETCODE_174_H
-namespace Solution174 {
 
 #include <algorithm>
 #include <array>
@@ -36,6 +35,7 @@ namespace Solution174 {
 #include <unordered_set>
 #include <vector>
 
+namespace Solution174 {
 using std::array;
 using std::queue;
 using std::sort;
