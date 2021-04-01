@@ -47,10 +47,11 @@ def write_to_file(order: int) -> None:
     with open(path.format(order), mode='a+') as file:
         file.write(file_header.format(create_time, year))
         file.write(code_template.format(order))
+    print(f"{path.format(order)} write success")
     with open(test_path.format(order), mode='a+') as file:
         file.write(file_header.format(create_time, year))
         file.write(code_test_template.format(order))
-    print(f"{path.format(order)} write success")
+    print(f"{test_path.format(order)} write success")
 
 
 def main(begin_num: int, end_num: int) -> None:

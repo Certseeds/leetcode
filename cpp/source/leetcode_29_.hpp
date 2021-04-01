@@ -1,6 +1,6 @@
 ﻿#pragma once
-#ifndef _LEETCODE_29_H_
-#define _LEETCODE_29_H_
+#ifndef LEETCODE_CPP_SOURCE_LEETCODE_29_H
+#define LEETCODE_CPP_SOURCE_LEETCODE_29_H
 /*
  * @Github: https://github.com/Certseeds
  * @Organization: SUSTech
@@ -12,14 +12,10 @@
 #include <vector>
 #include <algorithm>
 
-using std::abs;
-using std::min;
-using std::cout;
-using std::endl;
-using std::vector;
+
 
 /*
-Given two integers dividend and divisor, divide two integers without using multiplication, 
+Given two integers dividend and divisor, divide two integers without using multiplication,
 division and mod operator.
 
 Return the quotient after dividing dividend by divisor.
@@ -38,26 +34,33 @@ Note:
 
 Both dividend and divisor will be 32-bit signed integers.
 The divisor will never be 0.
-Assume we are dealing with an environment which could only 
-store integers within the 32-bit signed integer range: [−2^31,  2^31 − 1]. 
-For the purpose of this problem, 
+Assume we are dealing with an environment which could only
+store integers within the 32-bit signed integer range: [−2^31,  2^31 − 1].
+For the purpose of this problem,
 assume that your function returns 231 − 1 when the division result overflows.
 */
+namespace Solution29 {
+using std::abs;
+using std::min;
+using std::cout;
+using std::endl;
+using std::vector;
+
 class Solution29 {
 public:
-    int divide(int dividend, int divisor) {
+    int divide(int32_t dividend, int32_t divisor) {
         if (dividend == divisor) {
             return 1;
-        } else if (divisor == INT32_MIN) {
+        } else if (divisor == std::numeric_limits<int32_t>::min()) {
             return 0;
         } else if (divisor == 1) {
             return dividend;
         }
-        int will_return = 0;
-        int signs = 1;
-        if (dividend == INT32_MIN) {
+        int32_t will_return = 0;
+        int32_t signs = 1;
+        if (dividend == std::numeric_limits<int32_t>::min()) {
             if (divisor == -1) {
-                return INT32_MAX;
+                return std::numeric_limits<int32_t>::max();
             }
             will_return += 1;
             dividend += sign(divisor) * divisor;
@@ -80,25 +83,12 @@ public:
         }
         return will_return * signs;
     }
-
-    void test() {
-        //cout << divide(INT32_MIN, -1) << endl;
-        assert(divide(INT32_MIN, -1) == INT32_MAX);
-        //cout << divide(INT32_MIN, 1) << endl;
-        assert(divide(INT32_MIN, 1) == INT32_MIN);
-        //cout << divide(INT32_MIN, 2) << endl;
-        //cout << divide(INT32_MIN, 2) << endl;
-        assert(divide(INT32_MIN, 2) == -1073741824);
-        assert(divide(INT32_MIN, -2) == 1073741824);
-        assert(divide(10, 3) == 3);
-        assert(divide(7, -3) == -2);
-        assert(divide(INT32_MIN, INT32_MIN) == 1);
-        assert(divide(-1010369383, -2147483648) == 0);
-    }
 };
+}
 /*
 Runtime: 4 ms,
 Memory Usage: 8.4 MB,
 76.24%,8.00%.
 */
-#endif
+
+#endif //LEETCODE_CPP_SOURCE_LEETCODE_29_H
