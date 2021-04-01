@@ -14,7 +14,7 @@ include_directories(${CMAKE_CURRENT_SOURCE_DIR}/test)
 #target_precompile_headers(CATCH_MAIN ${CMAKE_CURRENT_SOURCE_DIR}/includes/catch_main.hpp)
 ENABLE_TESTING()
 set(dependencies
-        1 3 4 5 6 7 8 9 10 11 12 13 14 15 17 19 20 21 22 23 24 25 26 27
+        1 3 4 5 6 7 8 9 10 11 12 13 14 15 17 19 20 21 22 23 24 25 26 27 28
         44 64 95 120 153 154 167 174 343 350 785 0803 1010 1025)
 foreach (LEETCODE_NUMBER IN LISTS dependencies)
     add_executable(${PROJECT_NAME}_${LEETCODE_NUMBER}
