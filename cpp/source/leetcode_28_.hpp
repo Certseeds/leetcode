@@ -50,9 +50,8 @@ public:
         if (needle.empty()) {
             return 0;
         }
-        int will_return = -1;
         for (size_t i = 0; i < haystack.size();) {
-            int temp = i;
+            size_t temp = i;
             for (size_t j = 0; j < needle.size();) {
                 cout << i << " " << j << endl;
                 if (haystack[i] == needle[j]) {
@@ -63,7 +62,7 @@ public:
                     break;
                 }
                 if (j == needle.size()) {
-                    return (i - j);
+                    return i - j;
                 }
             }
             i = temp + 1;
@@ -96,8 +95,8 @@ public:
 
     vector<int> get_next(const string &h) {
         vector<int> will_return(h.size(), -1);
-        int x = -1;
-        int y = 0;
+        int64_t x = -1;
+        size_t y = 0;
         while (y < h.size() - 1) {
             if (x == -1 || h[x] == h[y]) {
                 x++;

@@ -49,7 +49,7 @@ void transfer(vector<int> &vec, int k) {
     }
     auto iter = vec.begin();
     auto iter2 = vec.begin() + k;
-    for (int i = 0; i < vec.size() / k - 1; i++) {
+    for (size_t i = 0; i < vec.size() / k - 1; i++) {
         //cout << i << endl;
         std::reverse(iter, iter2);
         iter += k;
@@ -59,9 +59,9 @@ void transfer(vector<int> &vec, int k) {
 }
 
 void _test(int x, int y, const std::function<ListNode *(ListNode *, int)> &func) {
-    vector<int> nums1;
+    vector<int> nums1(x, -1);
     for (int i = 0; i < x; i++) {
-        nums1.push_back(i + 1);
+        nums1[i] = i + 1;
     }
     vector<ListNode *> vec1 = ListNode::numToList(nums1);
     transfer(nums1, y);

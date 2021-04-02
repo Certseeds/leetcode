@@ -52,6 +52,7 @@ using std::vector;
 class Solution25 {
 public:
     ListNode *reverseKGroup(ListNode *root, int k) {
+
         ListNode will_return(0);
         ListNode *head = &will_return;
         head->next = root;
@@ -62,7 +63,7 @@ public:
             que.push(root);
             root = root->next;
         }
-        while (que.size() >= k) {
+        while (que.size() >= static_cast<size_t>(k)) {
             for (int i = 0; i < k; i++) {
                 vec.push_back(que.front());
                 que.pop();
