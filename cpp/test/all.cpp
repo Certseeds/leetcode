@@ -43,3 +43,4 @@
 #include <leetcode_test_785_.cpp>
 #include <leetcode_test_1010_.cpp>
 #include <leetcode_test_1025_.cpp>
+#include <leetcode_test_1143_.cpp>
