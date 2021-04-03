@@ -30,6 +30,7 @@
 #include <leetcode_test_30_.cpp>
 #include <leetcode_test_44_.cpp>
 #include <leetcode_test_50_.cpp>
+#include <leetcode_test_56_.cpp>
 #include <leetcode_test_64_.cpp>
 #include <leetcode_test_95_.cpp>
 #include <leetcode_test_120_.cpp>
