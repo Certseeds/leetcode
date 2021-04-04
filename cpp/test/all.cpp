@@ -28,6 +28,8 @@
 #include <leetcode_test_28_.cpp>
 #include <leetcode_test_29_.cpp>
 #include <leetcode_test_30_.cpp>
+#include <leetcode_test_31_.cpp>
+#include <leetcode_test_32_.cpp>
 #include <leetcode_test_44_.cpp>
 #include <leetcode_test_50_.cpp>
 #include <leetcode_test_56_.cpp>

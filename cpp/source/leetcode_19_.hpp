@@ -29,7 +29,7 @@ class Solution19 {
 public:
     ListNode *removeNthFromEnd(ListNode *head, int n) {
         // auto *will_return = new ListNode(0);
-        auto will_return_o = ListNode(0);
+        ListNode will_return_o{0};
         auto *const will_return = &will_return_o;
         will_return->next = head;
         ListNode *first = will_return;

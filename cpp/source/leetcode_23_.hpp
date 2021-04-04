@@ -78,7 +78,7 @@ public:
     }
 
     ListNode *mergeKLists2(vector<ListNode *> &lists) {
-        ListNode will_return(0);
+        ListNode will_return{0};
         ListNode *head = &will_return;
         auto cmp = [](const ListNode *l1, const ListNode *l2) {
             return l1->val < l2->val;

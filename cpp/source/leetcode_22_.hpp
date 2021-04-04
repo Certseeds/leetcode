@@ -14,7 +14,7 @@
 #include <unordered_set>
 #include <algorithm>
 /*
-Given n pairs of parentheses, 
+Given n pairs of parentheses,
 write a function to generate all combinations of well-formed parentheses.
 
 For example, given n = 3, a solution set is:
@@ -56,7 +56,7 @@ public:
 
     vector<string> generateParenthesis2(int32_t n) {
         assert(n >= 0);
-        vector<string> will_return = {"()"};
+        vector<string> will_return{"()"};
         unordered_set<string> uset;
         for (int32_t i = 2; i <= n; i++) {
             for (const auto &j : will_return) {
