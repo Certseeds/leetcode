@@ -29,9 +29,9 @@ using Catch::Matchers::Equals;
 Solution88 sol88;
 
 TEST_CASE("4 [test 88]", "[test 88]") {
-    vector<int> vec1;
-    vector<int> vec2;
-    vector<int> result;
+    vector<int> vec1{};
+    vector<int> vec2{};
+    vector<int> result{};
     GIVEN("given [test 88]") {
         THEN("test case 1 [test 88]") {
             vec1 = {4, 5, 6, 0, 0, 0};
@@ -48,6 +48,9 @@ TEST_CASE("4 [test 88]", "[test 88]") {
         }THEN("test case 4 [test 88]") {
             vec1 = {0};
             vec2 = {1};
+            result = {1};
+        }THEN("test case 5 [test 88]") {
+            vec1 = {1};
             result = {1};
         }
         sol88.merge(vec1, vec1.size() - vec2.size(), vec2, vec2.size());
