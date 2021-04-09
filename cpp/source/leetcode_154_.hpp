@@ -35,10 +35,9 @@ using std::vector;
 
 class Solution154 {
 public:
-    int findMin(const vector<int> &numbers) {
-        int begin = 0;
-        int end = numbers.size() - 1;
-        int middle = 0;
+    int32_t findMin(const vector<int32_t> &numbers) {
+        size_t begin{0},middle{0};
+        size_t end{numbers.size() - 1};
         while (begin < end) {
             middle = (end - begin) / 2 + begin;
             if (numbers[middle] > numbers[end]) {
