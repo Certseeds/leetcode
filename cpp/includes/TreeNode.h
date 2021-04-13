@@ -14,7 +14,7 @@
 
 using std::queue;
 using std::vector;
-constexpr int No = -100000;
+static constexpr const int32_t No{-100000};
 
 class TreeNode {
 public:
@@ -22,11 +22,11 @@ public:
     TreeNode *left;
     TreeNode *right;
 
-    explicit TreeNode(int x = 0);
+    TreeNode(int x, TreeNode *le, TreeNode *rig) : val(x), left(le), right(rig) {};
 
-    TreeNode(int x, TreeNode *le, TreeNode *rig);
+    explicit TreeNode(int x = 0) : TreeNode(x, nullptr, nullptr) {};
 
-    TreeNode(const TreeNode &obj);
+    TreeNode(const TreeNode &obj) : TreeNode(obj.val, obj.left, obj.right) {};
 
     TreeNode &operator=(const TreeNode &timer) = delete;
 
@@ -36,30 +36,12 @@ public:
 
     ~TreeNode();
 
-    static vector<TreeNode *> numToTree(vector<int> nums);
+    static vector<TreeNode *> numToTree(const vector<int> &nums);
 
     static void organize(vector<TreeNode *> Tree);
 
-    static bool judge_equal(TreeNode *root, vector<int> vec);
+    static bool judge_equal(TreeNode *root, const vector<int> &vec);
 };
-
-TreeNode::TreeNode(int x) {
-    this->val = x;
-    this->left = nullptr;
-    this->right = nullptr;
-}
-
-TreeNode::TreeNode(int x, TreeNode *le, TreeNode *rig) {
-    this->val = x;
-    this->left = le;
-    this->right = rig;
-}
-
-TreeNode::TreeNode(const TreeNode &obj) {
-    this->val = obj.val;
-    this->left = obj.left;
-    this->right = obj.right;
-}
 
 inline TreeNode::~TreeNode() {
     this->val = 0;
@@ -67,7 +49,8 @@ inline TreeNode::~TreeNode() {
     this->right = nullptr;
 }
 
-vector<TreeNode *> TreeNode::numToTree(vector<int> nums) {
+vector<TreeNode *> TreeNode::numToTree(const vector<int> &nums) {
+
     vector<TreeNode *> will_return(nums.size(), nullptr);
     for (int i = 0; i < static_cast<int32_t>(nums.size()); i++) {
         will_return[i] =
@@ -88,9 +71,9 @@ void TreeNode::organize(vector<TreeNode *> Tree) {
     }
 }
 
-bool TreeNode::judge_equal(TreeNode *root, vector<int> vec) {
-    queue<TreeNode *> que;
-    vector<int> nums;
+bool TreeNode::judge_equal(TreeNode *root, const vector<int> &vec) {
+    queue<TreeNode *> que{};
+    vector<int> nums{};
     que.push(root);
     while (!que.empty()) {
         TreeNode *head = que.front();
@@ -103,7 +86,7 @@ bool TreeNode::judge_equal(TreeNode *root, vector<int> vec) {
         que.push(head->left);
         que.push(head->right);
     }
-    bool will_return = true;
+    bool will_return{true};
     for (int i = 0; i < static_cast<int32_t>(nums.size()); i++) {
         will_return = will_return && (nums[i] == vec[i]);
     }
