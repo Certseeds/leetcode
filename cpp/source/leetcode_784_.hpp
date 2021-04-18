@@ -19,8 +19,8 @@ using std::vector;
 using std::string;
 
 /*
-Given a string S, we can transform every letter 
-individually to be lowercase or uppercase to create another string.  
+Given a string S, we can transform every letter
+individually to be lowercase or uppercase to create another string.
 Return a list of all possible strings we could create.
 
 Examples:
@@ -41,13 +41,13 @@ public:
     vector<string> letterCasePermutation(const string &S) {
         vector<int> pos;
         pos.reserve(S.size());
-        for (int i = 0; i <= S.size(); i++) {
+        for (int32_t i{0}; i <= S.size(); i++) {
             if ((S[i] >= 'a' && S[i] <= 'z') || (S[i] >= 'A' && S[i] <= 'Z')) {
                 pos.push_back(i);
             }
         }
         vector<string> will_return((1 << pos.size()), S);
-        for (int i = 0; i < pos.size(); i++) {
+        for (int32_t i{0}; i < pos.size(); i++) {
             char low = up_to_low(S[pos[i]]);
             char up = low_to_up(S[pos[i]]);
             int divisor = (1 << (pos.size() - 1 - i));
@@ -83,13 +83,13 @@ public:
         vector<string> out1 = letterCasePermutation(str1);
         vector<string> out2 = letterCasePermutation(str2);
         vector<string> out3 = letterCasePermutation(str3);
-        for (int i = 0; i < out1.size(); i++) {
+        for (int32_t i{0}; i < out1.size(); i++) {
             assert(out1[i] == _out1[i]);
         }
-        for (int i = 0; i < out2.size(); i++) {
+        for (int32_t i{0}; i < out2.size(); i++) {
             assert(out2[i] == _out2[i]);
         }
-        for (int i = 0; i < out3.size(); i++) {
+        for (int32_t i{0}; i < out3.size(); i++) {
             assert(out3[i] == _out3[i]);
         }
     }

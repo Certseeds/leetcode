@@ -22,21 +22,21 @@ using std::vector;
 using std::string;
 /*
 Given a string s consisting only of characters a, b and c.
-Return the number of substrings containing at least 
+Return the number of substrings containing at least
 one occurrence of all these characters a, b and c.
 
 Example 1:
 Input: s = "abcabc"
 Output: 10
-Explanation: The substrings containing at least one 
-occurrence of the characters a, b and c 
+Explanation: The substrings containing at least one
+occurrence of the characters a, b and c
 are "abc", "abca", "abcab", "abcabc", "bca", "bcab", "bcabc", "cab", "cabc" and "abc" (again).
 
 Example 2:
 Input: s = "aaacb"
 Output: 3
-Explanation: The substrings containing at least one 
-occurrence of the characters a, b and c 
+Explanation: The substrings containing at least one
+occurrence of the characters a, b and c
 are "aaacb", "aacb" and "acb".
 
 Example 3:
@@ -57,7 +57,7 @@ public:
         vector<int> a(s.size(), 0);
         vector<int> b(s.size(), 0);
         vector<int> c(s.size(), 0);
-        for (int i = 0; i < s.size(); i++) {
+        for (int32_t i{0}; i < s.size(); i++) {
             temp[s[i] - 'a']++;
         }
         if (temp[0] == 0 || temp[1] == 0 || temp[2] == 0) {
@@ -66,7 +66,7 @@ public:
         get_nexts('a', a, s);
         get_nexts('b', b, s);
         get_nexts('c', c, s);
-        for (int i = 0; i <= s.size() - 3; i++) {
+        for (int32_t i{0}; i <= s.size() - 3; i++) {
             switch (s[i]) {
                 case 'a': {
                     if (b[i] == 0 || c[i] == 0) {
@@ -95,7 +95,7 @@ public:
     }
 
     void get_nexts(const char &ch, vector<int> &vec, const string &s) {
-        for (int i = 0; i < s.size();) {
+        for (int32_t i{0}; i < s.size();) {
             //cout << i << endl;
             int find = 0;
             for (int j = i + 1; j < s.size(); j++) {

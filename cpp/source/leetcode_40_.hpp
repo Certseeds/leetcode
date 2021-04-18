@@ -22,7 +22,7 @@ using std::unordered_set;
 using std::int32_vector_hasher;
 
 /*
-Given a collection of candidate numbers (candidates) and a target number (target), 
+Given a collection of candidate numbers (candidates) and a target number (target),
 find all unique combinations in candidates where the candidate numbers sums to target.
 
 Each number in candidates may only be used once in the combination.
@@ -56,7 +56,7 @@ public:
         unordered_set<vector<int>, int32_vector_hasher> uset;
         vector<vector<int>> will_return;
         vector<vector<int>> temp;
-        for (int i = 0; i < nums.size(); i++) {
+        for (int32_t i{0}; i < nums.size(); i++) {
             if (target == nums[i]) {
                 uset.insert(vector<int>{target});
             } else if (target > nums[i]) {

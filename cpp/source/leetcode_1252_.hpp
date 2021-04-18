@@ -11,7 +11,7 @@ public:
     int oddCells1(int n, int m, vector<vector<int>> &indices) {
         vector<vector<int>> matrix(m, vector<int>(n, 0));
         int willreturn = 0;
-        for (int i = 0; i < indices.size(); i++) {
+        for (int32_t i{0}; i < indices.size(); i++) {
             for (int j = 0; j < m; j++) {
                 matrix[j][indices[i][0]] += 1;
             }
@@ -19,7 +19,7 @@ public:
                 matrix[indices[i][1]][j] += 1;
             }
         }
-        for (int i = 0; i < m; i++) {
+        for (int32_t i{0}; i < m; i++) {
             for (int j = 0; j < n; j++) {
                 willreturn += matrix[i][j] & 1;
             }
@@ -32,11 +32,11 @@ public:
         vector<bool> columns(m, true);
         int n2 = 0;
         int m2 = 0;
-        for (int i = 0; i < indices.size(); i++) {
+        for (int32_t i{0}; i < indices.size(); i++) {
             rows[indices[i][0]] = !rows[indices[i][0]];
             columns[indices[i][1]] = !columns[indices[i][1]];
         }
-        for (int i = 0; i < m; i++) {
+        for (int32_t i{0}; i < m; i++) {
             m2 += !columns[i];
         }
         for (int j = 0; j < n; j++) {

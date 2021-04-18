@@ -11,7 +11,7 @@
 using namespace std;
 
 /*
-You have a set of tiles, 
+You have a set of tiles,
 where each tile has one letter tiles[i] printed on it.
 Return the number of possible non-empty sequences of letters you can make.
 EX:
@@ -27,20 +27,20 @@ public:
         array<int, 27> chars = {0};
         vector<int> nums;
         map<vector<int>, vector<int>> items;
-        for (int i = 0; i < tiles.size(); i++) {
+        for (int32_t i{0}; i < tiles.size(); i++) {
             chars[tiles[i] - 'A' + 1]++;
             cout << i << endl;
         }
         //small ===> big
         sort(chars.begin(), chars.end(), less<int>());
-        for (int i = 1; i < 27; i++) {
+        for (int32_t i{1}; i < 27; i++) {
             if (chars[i] > 0) {
                 nums.push_back(chars[i]);
                 cout << chars[i] << endl;
             }
         }
 
-        for (int i = 0; i < nums.size(); i++) {
+        for (int32_t i{0}; i < nums.size(); i++) {
             cout << i << " " << nums.size() << endl;
             vector<int> first(nums);
             vector<int> second(nums.size());
@@ -51,7 +51,7 @@ public:
         }
         int willreturn = nums.size();
         cout << "willreturn is : " << willreturn << endl;
-        for (int i = 1; i < tiles.size(); i++) {
+        for (int32_t i{1}; i < tiles.size(); i++) {
             cout << i << endl;
             map<vector<int>, vector<int>> items2;
             for (auto itor = items.begin(); itor != items.end(); itor++) {

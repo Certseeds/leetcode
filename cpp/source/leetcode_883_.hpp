@@ -11,7 +11,7 @@ class Solution883 {
 public:
     int projectionArea(vector<vector<int>> &grid) {
         int willreturn = 0;
-        for (int i = 0; i < grid.size(); i++) {
+        for (int32_t i{0}; i < grid.size(); i++) {
             int max1 = 0;
             int max2 = 0;
             for (int j = 0; j < grid.size(); j++) {

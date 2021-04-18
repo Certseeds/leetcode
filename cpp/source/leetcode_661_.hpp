@@ -10,9 +10,9 @@
 using namespace std;
 
 /*
-Given a 2D integer matrix M representing the gray scale of an image, 
-you need to design a smoother to make the gray scale of each cell becomes 
-the average gray scale (rounding down) of all the 8 surrounding cells and itself. 
+Given a 2D integer matrix M representing the gray scale of an image,
+you need to design a smoother to make the gray scale of each cell becomes
+the average gray scale (rounding down) of all the 8 surrounding cells and itself.
 If a cell has less than 8 surrounding cells, then use as many as you can.
 */
 class Solution661 {
@@ -32,7 +32,7 @@ public:
             } else {
                 willreturn[0][0] = (M[0][0] + M[0][1]) / 2;
                 willreturn[0][sizes_in - 1] = (M[0][sizes_in - 2] + M[0][sizes_in - 1]) / 2;
-                for (int i = 1; i < sizes_in - 1; i++) {
+                for (int32_t i{1}; i < sizes_in - 1; i++) {
                     willreturn[0][i] = (
                                                M[0][i - 1] + M[0][i] + M[0][i + 1]) / 3;
                 }
@@ -47,7 +47,7 @@ public:
                 willreturn[0][0] = (M[0][0] + M[1][0]) / 2;
                 willreturn[sizes - 1][0] = (M[sizes - 1][0]
                                             + M[sizes - 2][0]) / 2;
-                for (int i = 1; i < sizes - 1; i++) {
+                for (int32_t i{1}; i < sizes - 1; i++) {
                     willreturn[i][0] = (
                                                M[i - 1][0] + M[i][0] + M[i + 1][0]) / 3;
                 }
@@ -68,7 +68,7 @@ public:
                                                       M[sizes - 1][sizes_in - 1] + M[sizes - 1][sizes_in - 2] +
                                                       M[sizes - 2][sizes_in - 1] + M[sizes - 2][sizes_in - 2]
                                               ) / 4;
-        for (int i = 1; i < sizes_in - 1; i++) {
+        for (int32_t i{1}; i < sizes_in - 1; i++) {
             willreturn[0][i] = (
                                        M[0][i - 1] + M[0][i] + M[0][i + 1] +
                                        M[1][i - 1] + M[1][i] + M[1][i + 1]) / 6;
@@ -76,7 +76,7 @@ public:
                                                M[sizes - 2][i - 1] + M[sizes - 2][i] + M[sizes - 2][i + 1] +
                                                M[sizes - 1][i - 1] + M[sizes - 1][i] + M[sizes - 1][i + 1]) / 6;
         }
-        for (int i = 1; i < sizes - 1; i++) {
+        for (int32_t i{1}; i < sizes - 1; i++) {
             willreturn[i][0] = (
                                        M[i - 1][0] + M[i][0] + M[i + 1][0] +
                                        M[i - 1][1] + M[i][1] + M[i + 1][1]
@@ -148,7 +148,7 @@ public:
     }
 };
 /*
-Runtime: 132 ms, 
+Runtime: 132 ms,
 Memory Usage: 17.8 MB,
 99.54%,50.00%.
 */

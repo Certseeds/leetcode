@@ -26,7 +26,7 @@ public:
         if (root == nullptr)
             return 0;
         int maxvalue = 0;
-        for (int i = 0; i < root->children.size(); i++) {
+        for (int32_t i{0}; i < root->children.size(); i++) {
             maxvalue = max(maxvalue, maxDepth(root->children[i]));
         }
         return maxvalue + 1;
@@ -42,7 +42,7 @@ public:
         if (!(root->children.size()))
             return depth;
         int x = depth;
-        for (int i = 0; i < root->children.size(); i++) {
+        for (int32_t i{0}; i < root->children.size(); i++) {
             int nextDepth = maxDepth3(root->children[i], depth + 1);
             x = x > nextDepth ? x : nextDepth;
             x = max(x, nextDepth);

@@ -10,7 +10,7 @@ class Solution1295 {
 public:
     int findNumbers(vector<int> &nums) {
         int count = 0;
-        for (int i = 0; i < nums.size(); i++) {
+        for (int32_t i{0}; i < nums.size(); i++) {
             bool temp = true;
             //cout << nums[i] << " ";
             while (nums[i] > 0) {

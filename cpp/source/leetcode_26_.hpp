@@ -20,7 +20,7 @@ public:
         if (nums.size() <= 1) {
             return nums.size();
         }
-        size_t will_return = 1;
+        size_t will_return{1};
         for (size_t i = 1; i < nums.size(); i++) {
             if (nums[i] != nums[i - 1]) {
                 nums[will_return] = nums[i];
@@ -36,22 +36,6 @@ public:
         const auto length = std::distance(std::begin(nums), result);
         nums.resize(length);
         return length;
-    }
-
-    void test() {
-        vector<int> vec1 = {1, 2};
-        vector<int> vec2 = {1, 1, 2};
-        vector<int> vec3 = {0, 0, 1, 1, 1, 2, 2, 3, 3, 4};
-        cout << removeDuplicates(vec1) << endl;
-        cout << removeDuplicates(vec2) << endl;
-        cout << removeDuplicates(vec3) << endl;
-        cout << "---------------------" << endl;
-        vec1 = {1, 2};
-        vec2 = {1, 1, 2};
-        vec3 = {0, 0, 1, 1, 1, 2, 2, 3, 3, 4};
-        cout << removeDuplicates2(vec1) << endl;
-        cout << removeDuplicates2(vec2) << endl;
-        cout << removeDuplicates2(vec3) << endl;
     }
 };
 }

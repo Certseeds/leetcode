@@ -31,7 +31,7 @@ public:
     string tictactoe(vector<vector<int>> &moves) {
         int judge;
         vector<vector<int>> matrix(3, vector<int>(3, 0));
-        for (int i = 0; i < moves.size(); i++) {
+        for (int32_t i{0}; i < moves.size(); i++) {
             moves[]
             judge = tictactoe_judge(moves);
             if (judge != 0) {

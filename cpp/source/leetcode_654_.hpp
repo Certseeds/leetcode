@@ -56,7 +56,7 @@ public:
 
     TreeNode *constructMaximumBinaryTree2(vector<int> &nums) {
         stack < TreeNode * > nodes;
-        for (int i = 0; i < nums.size(); i++) {
+        for (int32_t i{0}; i < nums.size(); i++) {
             TreeNode *temp = new TreeNode(nums[i]);
             while (!nodes.empty() && nums[i] > nodes.top()->val) {
                 temp->left = nodes.top();

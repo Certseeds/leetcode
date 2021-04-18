@@ -12,18 +12,18 @@ using namespace std;
 /*
 Given a positive integer num consisting only of digits 6 and 9.
 
-Return the maximum number you can get by 
+Return the maximum number you can get by
 changing at most one digit (6 becomes 9, and 9 becomes 6).
 */
 class Solution1323 {
 public:
     int maximum69Number(int num) {
         array<int, 5> arr = {0};
-        for (int i = 0; i < 5; i++) {
+        for (int32_t i{0}; i < 5; i++) {
             arr[4 - i] = num % 10;
             num /= 10;
         }
-        for (int i = 0; i < 5; i++) {
+        for (int32_t i{0}; i < 5; i++) {
             if (arr[i] == 6) {
                 arr[i] = 9;
                 break;

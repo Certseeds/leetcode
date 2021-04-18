@@ -14,7 +14,7 @@ public:
         vector<int> even;
         int temp;
         int count = 0;
-        for (int i = 0; i < A.size(); i++) {
+        for (int32_t i{0}; i < A.size(); i++) {
             if (A[i] % 2 != i % 2) {
                 count++;
                 if (i % 2) {
@@ -24,7 +24,7 @@ public:
                 }
             }
         }
-        for (int i = 0; i < count / 2; i++) {
+        for (int32_t i{0}; i < count / 2; i++) {
             temp = A[even[i]];
             A[even[i]] = A[odd[i]];
             A[odd[i]] = temp;
@@ -40,7 +40,7 @@ public:
         odd[10000] = 0;
         even[10000] = 0;
         int *temp = new int;
-        for (int i = 0; i < A.size(); i++) {
+        for (int32_t i{0}; i < A.size(); i++) {
             if (A[i] % 2 != i % 2) {
                 even[even[10000]] = i;
                 odd[odd[10000]] = i;
@@ -49,7 +49,7 @@ public:
             }
         }
 
-        for (int i = 0; i < odd[10000]; i++) {
+        for (int32_t i{0}; i < odd[10000]; i++) {
             (*temp) = A[even[i]];
             A[even[i]] = A[odd[i]];
             A[odd[i]] = (*temp);
@@ -64,7 +64,7 @@ public:
         vector<int> willreturn(A.size());
         int odd = 0;
         int even = 1;
-        for (int i = 0; i < A.size(); i++) {
+        for (int32_t i{0}; i < A.size(); i++) {
             if (A[i] % 2) {
                 willreturn[even] = A[i];
                 even += 2;

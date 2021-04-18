@@ -17,10 +17,10 @@ using std::endl;
 using std::vector;
 
 /*
-Given two arrays of integers nums and index. 
+Given two arrays of integers nums and index.
 Your task is to create target array under the following rules:
 Initially target array is empty.
-From left to right read nums[i] and index[i], 
+From left to right read nums[i] and index[i],
 insert at index index[i] the value nums[i] in target array.
 Repeat the previous step until there are no elements to read in nums and index.
 Return the target array.
@@ -65,7 +65,7 @@ public:
     vector<int32_t> createTargetArray(vector<int32_t> &nums, vector<int32_t> &index) {
         vector<int32_t> will_return;
         will_return.reserve(nums.size());
-        for (int i = 0; i < index.size(); i++) {
+        for (int32_t i{0}; i < index.size(); i++) {
             will_return.insert(will_return.begin() + index[i], nums[i]);
         }
         return will_return;

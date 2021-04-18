@@ -44,7 +44,7 @@ public:
 
     void test() {
         vector<TreeNode *> tree;
-        for (int i = 1; i <= 7; i++) {
+        for (int32_t i{1}; i <= 7; i++) {
             TreeNode *temp = new TreeNode(i % 2);
             tree.push_back(temp);
         }
@@ -55,7 +55,7 @@ public:
         tree[2]->left = tree[5];
         tree[2]->right = tree[6];
         cout << maxDepth(tree[0]) << endl;
-        for (int i = 0; i < 7; i++) {
+        for (int32_t i{0}; i < 7; i++) {
             delete tree[i];
         }
     }

@@ -77,7 +77,7 @@ public:
 
     void test() {
         vector<TreeNode *> tree;
-        for (int i = 1; i <= 8; i++) {
+        for (int32_t i{1}; i <= 8; i++) {
             TreeNode *temp = new TreeNode(i);
             tree.push_back(temp);
         }
@@ -89,7 +89,7 @@ public:
         tree[2]->right = tree[5];
         tree[5]->right = tree[7];
         cout << deepestLeavesSum2(tree[0]) << endl;
-        for (int i = 0; i < 8; i++) {
+        for (int32_t i{0}; i < 8; i++) {
             delete tree[i];
         }
     }

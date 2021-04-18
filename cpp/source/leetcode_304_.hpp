@@ -8,9 +8,9 @@
 using namespace std;
 
 /*
-Given a 2D matrix matrix, 
-ind the sum of the elements inside the rectangle 
-defined by its upper left corner (row1, col1) and 
+Given a 2D matrix matrix,
+ind the sum of the elements inside the rectangle
+defined by its upper left corner (row1, col1) and
 lower right corner (row2, col2).
 */
 class Solution304 {
@@ -22,7 +22,7 @@ public:
             return;
         }
         vector<vector<int>> sumRange(matrix.size() + 1, vector<int>(matrix[0].size() + 1));
-        for (int i = 0; i < matrix.size(); i++) {
+        for (int32_t i{0}; i < matrix.size(); i++) {
             for (int j = 0; j < matrix[0].size(); j++) {
                 sumRange[i + 1][j + 1] = sumRange[i][j + 1] + sumRange[i + 1][j]
                                          - sumRange[i][j] + matrix[i][j];
@@ -55,7 +55,7 @@ public:
     }
 };
 /*
-Runtime: 24 ms, 
+Runtime: 24 ms,
 Memory Usage: 16.8 MB,
 79.68%,66.67%.
 */

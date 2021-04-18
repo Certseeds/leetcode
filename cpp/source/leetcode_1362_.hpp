@@ -19,17 +19,17 @@ using std::endl;
 using std::vector;
 
 /*
-Given an integer num, 
+Given an integer num,
 find the closest two integers in absolute difference whose product equals num + 1 or num + 2.
 Return the two integers in any order.
 
 Example 1:
 Input: num = 8
 Output: [3,3]
-Explanation: For num + 1 = 9, 
-the closest divisors are 3 & 3, 
-for num + 2 = 10, 
-the closest divisors are 2 & 5, 
+Explanation: For num + 1 = 9,
+the closest divisors are 3 & 3,
+for num + 2 = 10,
+the closest divisors are 2 & 5,
 hence 3 & 3 is chosen.
 
 Example 2:
@@ -50,13 +50,13 @@ public:
         int range = sqrt(num) + 1;
         vector<int> ranges1(range + 1, INT32_MAX);
         vector<int> ranges2(range + 1, INT32_MAX);
-        for (int i = 1; i < range + 1; i++) {
+        for (int32_t i{1}; i < range + 1; i++) {
             ranges1[i] = (num + 1) / i;
             ranges2[i] = (num + 2) / i;
         }
         int diff1 = INT32_MAX;
         int pos1 = 0;
-        for (int i = 1; i < range + 1; i++) {
+        for (int32_t i{1}; i < range + 1; i++) {
             if (num + 1 == ranges1[i] * i) {
                 if (diff1 > (max(i, ranges1[i]) - min(i, ranges1[i]))) {
                     diff1 = (max(i, ranges1[i]) - min(i, ranges1[i]));
@@ -66,7 +66,7 @@ public:
         }
         int diff2 = INT32_MAX;
         int pos2 = 0;
-        for (int i = 1; i < range + 1; i++) {
+        for (int32_t i{1}; i < range + 1; i++) {
             if (num + 2 == ranges2[i] * i) {
                 if (diff2 > (max(i, ranges2[i]) - min(i, ranges2[i]))) {
                     diff2 = (max(i, ranges2[i]) - min(i, ranges2[i]));

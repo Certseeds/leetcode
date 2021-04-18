@@ -15,9 +15,9 @@ public:
         vector<array<int, 27>> orders;
         int count_value[27];
         int willreturn = 0;
-        for (int i = 0; i < words.size(); i++) {
+        for (int32_t i{0}; i < words.size(); i++) {
             array<int, 27> temparray;
-            for (int i = 0; i < 27; i++) {
+            for (int32_t i{0}; i < 27; i++) {
                 temparray[i] = 0;
             }
             for (int j = 0; j < words[i].size(); j++) {
@@ -25,13 +25,13 @@ public:
             }
             orders.push_back(temparray);
         }
-        for (int i = 0; i < 27; i++) {
+        for (int32_t i{0}; i < 27; i++) {
             count_value[i] = 0;
         }
-        for (int i = 0; i < chars.size(); i++) {
+        for (int32_t i{0}; i < chars.size(); i++) {
             count_value[(int) chars[i] - 96] += 1;
         }
-        for (int i = 0; i < words.size(); i++) {
+        for (int32_t i{0}; i < words.size(); i++) {
             bool tempjudge = true;
             for (int j = 1; j < 27; j++) {
                 tempjudge = tempjudge & (count_value[j] >= orders[i][j]);

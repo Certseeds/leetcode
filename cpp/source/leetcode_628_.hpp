@@ -27,7 +27,7 @@ public:
         int end = 1;
         int length = 1;
         vector<vector<int>> willreturn;
-        for (int i = 1; i < S.size(); i++) {
+        for (int32_t i{1}; i < S.size(); i++) {
             end = i;
             if (S[i] == S[i - 1]) {
                 length++;

@@ -9,8 +9,8 @@
 using namespace std;
 
 /*
-Given an array consisting of n integers, 
-find the contiguous subarray of given length k 
+Given an array consisting of n integers,
+find the contiguous subarray of given length k
 that has the maximum average value.
 And you need to output the maximum average value.
 */
@@ -23,7 +23,7 @@ public:
         vector<int> DP(nums.size() - k + 1);
         DP[0] = std::accumulate(nums.begin(), nums.begin() + k, 0);
         int willreturn = DP[0];
-        for (int i = 1; i <= nums.size() - k; i++) {
+        for (int32_t i{1}; i <= nums.size() - k; i++) {
             DP[i] = DP[i - 1] - nums[i - 1] + nums[k + i - 1];
             willreturn = max(willreturn, DP[i]);
         }

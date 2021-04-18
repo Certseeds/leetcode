@@ -6627,7 +6627,7 @@ namespace Catch {
             void measure(Fun&& fun, std::true_type) {
                 Detail::optimizer_barrier();
                 impl->start();
-                for (int i = 0; i < k; ++i) invoke_deoptimized(fun, i);
+                for (int32_t i{0}; i < k; ++i) invoke_deoptimized(fun, i);
                 impl->finish();
                 Detail::optimizer_barrier();
             }
@@ -6778,7 +6778,7 @@ namespace Catch {
             template <typename Fun>
             struct repeater {
                 void operator()(int k) const {
-                    for (int i = 0; i < k; ++i) {
+                    for (int32_t i{0}; i < k; ++i) {
                         fun();
                     }
                 }
@@ -7132,7 +7132,7 @@ namespace Catch {
                 auto time_limit = std::min(resolution * clock_cost_estimation_tick_limit, FloatDuration<Clock>(clock_cost_estimation_time_limit));
                 auto time_clock = [](int k) {
                     return Detail::measure<Clock>([k] {
-                        for (int i = 0; i < k; ++i) {
+                        for (int32_t i{0}; i < k; ++i) {
                             volatile auto ignored = Clock::now();
                             (void)ignored;
                         }
@@ -7255,7 +7255,7 @@ namespace Catch {
                     samples.reserve(last - first);
 
                     Duration mean = Duration(0);
-                    int i = 0;
+                    int32_t i{0};
                     for (auto it = first; it < last; ++it, ++i) {
                         samples.push_back(Duration(*it));
                         mean += Duration(*it);
@@ -12528,7 +12528,7 @@ namespace Catch {
                 // tracker's children, and instead return the current
                 // tracker.
                 // A case where this check is important is e.g.
-                //     for (int i = 0; i < 5; ++i) {
+                //     for (int32_t i{0}; i < 5; ++i) {
                 //         int n = GENERATE(1, 2);
                 //     }
                 //
@@ -13351,7 +13351,7 @@ namespace Catch {
 
         char **utf8Argv = new char *[ argc ];
 
-        for ( int i = 0; i < argc; ++i ) {
+        for ( int32_t i{0}; i < argc; ++i ) {
             int bufSize = WideCharToMultiByte( CP_UTF8, 0, argv[i], -1, nullptr, 0, nullptr, nullptr );
 
             utf8Argv[ i ] = new char[ bufSize ];
@@ -13361,7 +13361,7 @@ namespace Catch {
 
         int returnCode = applyCommandLine( argc, utf8Argv );
 
-        for ( int i = 0; i < argc; ++i )
+        for ( int32_t i{0}; i < argc; ++i )
             delete [] utf8Argv[ i ];
 
         delete [] utf8Argv;
@@ -14891,7 +14891,7 @@ namespace Detail {
 
     std::string rawMemoryToString( const void *object, std::size_t size ) {
         // Reverse order for little endian architectures
-        int i = 0, end = static_cast<int>( size ), inc = 1;
+        int32_t i{0}, end = static_cast<int>( size ), inc = 1;
         if( Endianness::which() == Endianness::Little ) {
             i = end-1;
             end = inc = -1;

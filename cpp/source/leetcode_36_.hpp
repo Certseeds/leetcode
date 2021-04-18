@@ -28,7 +28,7 @@ Each of the 9 3x3 sub-boxes of the grid must contain the digits 1-9 without repe
 
 A partially filled sudoku which is valid.
 
-The Sudoku board could be partially filled, 
+The Sudoku board could be partially filled,
 where empty cells are filled with the character '.'.
 */
 class Solution36 {
@@ -37,7 +37,7 @@ public:
     const int block_36 = 3;
 
     bool isValidSudoku(const vector<vector<char>> &board) {
-        for (int i = 0; i < sizes_36; i++) {
+        for (int32_t i{0}; i < sizes_36; i++) {
             //cout << i << endl;
             if (!isValidSudoku_corss_line(board, i) ||
                 !isValidSudoku_block(board, (i / block_36) * block_36, (i % block_36) * block_36)) {
@@ -50,7 +50,7 @@ public:
     bool isValidSudoku_block(const vector<vector<char>> &board,
                              const int left, const int up) {
         unordered_set<int> uset;
-        for (int i = 0; i < sizes_36; i++) {
+        for (int32_t i{0}; i < sizes_36; i++) {
             if (uset.count(board[left + i / block_36][up + i % block_36]) == 1) {
                 return false;
             }
@@ -64,7 +64,7 @@ public:
     bool isValidSudoku_corss_line(const vector<vector<char>> &board, const int number) {
         unordered_set<int> uset1;
         unordered_set<int> uset2;
-        for (int i = 0; i < sizes_36; i++) {
+        for (int32_t i{0}; i < sizes_36; i++) {
             if (uset1.count(board[number][i]) == 1 ||
                 (uset2.count(board[i][number]) == 1)
                     ) {

@@ -14,7 +14,7 @@ public:
         stack<int> order;
         stack<int> level;
         int now = 0;
-        for (int i = 0; i < S.size(); i++) {
+        for (int32_t i{0}; i < S.size(); i++) {
             if (clean.empty()) {
                 clean.push(S[i]);
                 order.push(i);
@@ -37,7 +37,7 @@ public:
                 }
             }
         }
-        for (int i = 0; i < level.size(); i++) {
+        for (int32_t i{0}; i < level.size(); i++) {
             S.erase(order.top(), 1);
             order.pop();
         }

@@ -17,7 +17,7 @@ public:
         int32_t p_size = p.size();
         vector<vector<uint8_t>> DP(s_size + 1, vector<uint8_t>(p_size + 1, false));
         DP[0][0] = true;
-        for (int i = 1; i <= p_size; i++) {
+        for (int32_t i{1}; i <= p_size; i++) {
             DP[0][i] = (p[i - 1] == '*') && DP[0][i - 1];
         }
         for (int32_t i = 1; i <= s_size; i++) {

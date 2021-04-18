@@ -10,11 +10,11 @@
 using namespace std;
 
 /*
-Given a binary tree, each node has value 0 or 1.  
-Each root-to-leaf path represents a binary number starting with the most significant bit. 
-For example, if the path is 0 -> 1 -> 1 -> 0 -> 1, 
+Given a binary tree, each node has value 0 or 1.
+Each root-to-leaf path represents a binary number starting with the most significant bit.
+For example, if the path is 0 -> 1 -> 1 -> 0 -> 1,
 then this could represent 01101 in binary, which is 13.
-For all leaves in the tree, 
+For all leaves in the tree,
 consider the numbers represented by the path from the root to that leaf.
 hese numbers.
 */
@@ -48,7 +48,7 @@ public:
 
     void test() {
         vector<TreeNode *> tree;
-        for (int i = 1; i <= 7; i++) {
+        for (int32_t i{1}; i <= 7; i++) {
             TreeNode *temp = new TreeNode(i % 2);
             tree.push_back(temp);
         }
@@ -59,7 +59,7 @@ public:
         tree[2]->left = tree[5];
         tree[2]->right = tree[6];
         cout << sumRootToLeaf(tree[0]) << endl;
-        for (int i = 0; i < 7; i++) {
+        for (int32_t i{0}; i < 7; i++) {
             delete tree[i];
         }
     }

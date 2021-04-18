@@ -12,16 +12,16 @@ using namespace std;
 
 /*
 
-There are n cities numbered from 0 to n-1. 
-Given the array edges where edges[i] = [fromi, toi, weighti] 
-represents a bidirectional and weighted edge between cities fromi and toi, 
+There are n cities numbered from 0 to n-1.
+Given the array edges where edges[i] = [fromi, toi, weighti]
+represents a bidirectional and weighted edge between cities fromi and toi,
 and given the integer distanceThreshold.
 
-Return the city with the smallest number of cities that are reachable through some path 
-and whose distance is at most distanceThreshold, If there are multiple such cities, 
+Return the city with the smallest number of cities that are reachable through some path
+and whose distance is at most distanceThreshold, If there are multiple such cities,
 return the city with the greatest number.
 
-Notice that the distance of a path connecting cities i and j is equal to 
+Notice that the distance of a path connecting cities i and j is equal to
 the sum of the edges' weights along that path.
 min path of map.
 O(ElogV).
@@ -29,14 +29,14 @@ input:
 vector<vector<std::pair<int,int>>> maps,first is number,second is length.
 begin node  n.
 output:
-a vector<int> vec, vec[i] means the min path's length from n to i. 
+a vector<int> vec, vec[i] means the min path's length from n to i.
 */
 class Solution1334 {
 public:
     int findTheCity(int n, vector<vector<int>> &edges, int distanceThreshold) {
         vector<vector<std::pair<int, int>>> maps(n);
         auto cmp = [&distanceThreshold](int i) { return (i <= distanceThreshold); };
-        for (int i = 0; i < edges.size(); i++) {
+        for (int32_t i{0}; i < edges.size(); i++) {
             if (edges[i][2] <= distanceThreshold) {
                 maps[edges[i][0]].push_back(std::make_pair(edges[i][1], edges[i][2]));
                 maps[edges[i][1]].push_back(std::make_pair(edges[i][0], edges[i][2]));
@@ -45,7 +45,7 @@ public:
         int count = INT16_MAX;
         int willreturn = -1;
         vector<int> dis(n);
-        for (int i = 0; i < n; i++) {
+        for (int32_t i{0}; i < n; i++) {
             dis = minimum_path(maps, i);
             int temp = std::count_if(dis.begin(), dis.end(), cmp) - 1;
             if (count >= temp) {
@@ -69,7 +69,7 @@ public:
         while (!nodes.empty()) {
             auto root = nodes.top();
             nodes.pop();
-            for (int i = 0; i < map[root.first].size(); i++) {
+            for (int32_t i{0}; i < map[root.first].size(); i++) {
                 int root_v = root.first;
                 if (d[map[root_v][i].first] > d[root_v] + map[root_v][i].second) {
                     d[map[root_v][i].first] = d[root_v] + map[root_v][i].second;

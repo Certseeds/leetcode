@@ -21,15 +21,15 @@ using std::vector;
 using std::reverse;
 
 /*
-In an infinite binary tree where every node has two children, 
+In an infinite binary tree where every node has two children,
 the nodes are labelled in row order.
 
-In the odd numbered rows (ie., the first, third, fifth,...), 
+In the odd numbered rows (ie., the first, third, fifth,...),
 the labelling is left to right,
-while in the even numbered rows (second, fourth, sixth,...), 
+while in the even numbered rows (second, fourth, sixth,...),
 the labelling is right to left.
-Given the label of a node in this tree, 
-return the labels in the path from the root 
+Given the label of a node in this tree,
+return the labels in the path from the root
 of the tree to the node with that label.
 Example 1:
 Input: label = 14
@@ -56,7 +56,7 @@ public:
             }
         }
         reverse(paths.begin(), paths.end());
-        for (int i = 1; i < paths.size(); i += 2) {
+        for (int32_t i{1}; i < paths.size(); i += 2) {
             paths[i] = pathInZigZagTree_helper(i, paths[i]);
         }
         return paths;
@@ -71,10 +71,10 @@ public:
         vector<int> _out2 = {1, 2, 6, 10, 26};
         vector<int> out1 = pathInZigZagTree(14);
         vector<int> out2 = pathInZigZagTree(26);
-        for (int i = 0; i < out1.size(); i++) {
+        for (int32_t i{0}; i < out1.size(); i++) {
             assert(out1[i] == _out1[i]);
         }
-        for (int i = 0; i < out2.size(); i++) {
+        for (int32_t i{0}; i < out2.size(); i++) {
             assert(out2[i] == _out2[i]);
         }
     }

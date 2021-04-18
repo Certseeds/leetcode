@@ -60,7 +60,7 @@ public:
         pows[1] = x * x;
         vector<short> nums{};
         nums.reserve(32);
-        for (int i = 1; i <= 32; i++) {
+        for (int32_t i{1}; i <= 32; i++) {
             if ((n & (1 << (i - 1))) > 0) {
                 nums.push_back(i);
                 // 拆解成2^i次方之积

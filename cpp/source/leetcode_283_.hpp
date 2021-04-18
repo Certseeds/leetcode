@@ -9,8 +9,8 @@
 using namespace std;
 
 /*
-Given an array nums, 
-write a function to move all 0's to the end of it 
+Given an array nums,
+write a function to move all 0's to the end of it
 while maintaining the relative order of the non-zero elements.
 the fastest way is the slow and fast ptr.
 */
@@ -30,7 +30,7 @@ public:
                 iter++;
             }
         }
-        for (int i = 0; i < count; i++) {
+        for (int32_t i{0}; i < count; i++) {
             nums.push_back(0);
         }
     }
@@ -73,11 +73,11 @@ public:
 };
 /*
 way 1:
-Runtime: 16 ms, 
+Runtime: 16 ms,
 Memory Usage: 9.6 MB,
 63.06%,45.83%.
 way 2:
-Runtime: 12 ms, 
+Runtime: 12 ms,
 Memory Usage: 9.8 MB,
 97.11%,5.55%.
 */

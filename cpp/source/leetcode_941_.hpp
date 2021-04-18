@@ -10,7 +10,7 @@
 using namespace std;
 
 /*
-Given an array A of integers, 
+Given an array A of integers,
 return true if and only if it is a valid mountain array.
 A.size()>=3
 */
@@ -21,7 +21,7 @@ public:
             return false;
         }
         int count = 0;
-        for (int i = 1; i < A.size() - 1; i++) {
+        for (int32_t i{1}; i < A.size() - 1; i++) {
             if ((A[i] - A[i - 1]) == 0 || (A[i + 1] - A[i] == 0)) {
                 return false;
             }

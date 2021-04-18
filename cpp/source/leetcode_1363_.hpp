@@ -23,7 +23,7 @@ public:
         int sum = std::accumulate(d.begin(), d.end(), 0);
         std::sort(d.begin(), d.end(), std::less<int>());
         while (sum % 3 != 0) {
-            for (int i = 0; i < add.size(); i++) {
+            for (int32_t i{0}; i < add.size(); i++) {
                 if (add[i] == 1 && d[i] > 0) {
                     sum -= d[i];
                     add[i] = 0;
@@ -32,7 +32,7 @@ public:
             }
         }
         vector<int> nums;
-        for (int i = 0; i < add.size(); i++) {
+        for (int32_t i{0}; i < add.size(); i++) {
             if (1 == add[i]) {
                 nums.push_back(d[i]);
             }

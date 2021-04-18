@@ -8,12 +8,12 @@
 using namespace std;
 
 /*
-A 3 x 3 magic square is a 3 x 3 grid filled 
-with distinct numbers from 1 to 9 such that each row, 
+A 3 x 3 magic square is a 3 x 3 grid filled
+with distinct numbers from 1 to 9 such that each row,
 column, and both diagonals all have the same sum.
 
-Given an grid of integers, 
-how many 3 x 3 "magic square" subgrids are there?  
+Given an grid of integers,
+how many 3 x 3 "magic square" subgrids are there?
 (Each subgrid is contiguous).
 */
 class Solution840 {
@@ -23,7 +23,7 @@ public:
             return 0;
         }
         int count = 0;
-        for (int i = 0; i <= grid.size() - 3; i++) {
+        for (int32_t i{0}; i <= grid.size() - 3; i++) {
             for (int j = 0; j <= grid[0].size() - 3; j++) {
                 count += numMagicSquaresInside_help(grid, i, j);
             }
@@ -32,7 +32,7 @@ public:
     }
 
     bool numMagicSquaresInside_help(vector<vector<int>> &grid, int x, int y) {
-        for (int i = 0; i < 3; i++) {
+        for (int32_t i{0}; i < 3; i++) {
             for (int j = 0; j < 3; j++) {
                 if (grid[x + i][y + j] > 9 || grid[x + i][y + j] < 1) {
                     return 0;

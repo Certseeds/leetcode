@@ -21,7 +21,7 @@ public:
                 "y", "z"};
         array<int, 26> max;
         max.fill(0);
-        for (int i = 0; i < A.size(); i++) {
+        for (int32_t i{0}; i < A.size(); i++) {
             std::array<int, 26> temp;
             temp.fill(0);
             for (int j = 0; j < A[i].size(); j++) {
@@ -30,14 +30,14 @@ public:
             numbers.push_back(temp);
         }
 
-        for (int i = 0; i < 26; i++) {
+        for (int32_t i{0}; i < 26; i++) {
             int x = 0x3f3f3f3f;
             for (int j = 0; j < A.size(); j++) {
                 x = x > numbers[j][i] ? numbers[j][i] : x;
             }
             max[i] = x;
         }
-        for (int i = 0; i < 26; i++) {
+        for (int32_t i{0}; i < 26; i++) {
             int numbers = max[i];
             for (int j = 0; j < numbers; j++) {
                 willreturn.push_back(filling[i]);

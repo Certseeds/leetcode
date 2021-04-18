@@ -64,7 +64,7 @@ public:
             root = root->next;
         }
         while (que.size() >= static_cast<size_t>(k)) {
-            for (int i = 0; i < k; i++) {
+            for (int32_t i{0}; i < k; i++) {
                 vec.push_back(que.front());
                 que.pop();
             }
@@ -87,7 +87,7 @@ public:
         vector<ListNode *> vec;
         vec.reserve(k);
         while (reverseKGroup_help(root, k)) {
-            for (int i = 0; i < k; i++) {
+            for (int32_t i{0}; i < k; i++) {
                 vec.push_back(root);
                 root = root->next;
             }
@@ -105,7 +105,7 @@ public:
 
     bool reverseKGroup_help(ListNode *root, int k) {
         ListNode *temp = root;
-        for (int i = 0; i < k; i++) {
+        for (int32_t i{0}; i < k; i++) {
             if (temp == nullptr) {
                 return false;
             }
@@ -120,7 +120,7 @@ public:
         head->next = root;
         while (reverseKGroup_help(head->next, k)) {
             head->next = reverseKGroup_help2(head->next, k);
-            for (int i = 0; i < k; i++) {
+            for (int32_t i{0}; i < k; i++) {
                 head = head->next;
             }
         }
@@ -134,7 +134,7 @@ public:
         ListNode *fir = root;
         ListNode *sec = root->next;
         ListNode *temp = root->next->next;
-        for (int i = 0; i < k - 1; i++) {
+        for (int32_t i{0}; i < k - 1; i++) {
             temp = sec->next;
             sec->next = fir;
             fir = sec;

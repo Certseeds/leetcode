@@ -13,7 +13,7 @@ class Solution344 {
 public:
     void reverseString(vector<char> &s) {
         char temp;
-        for (int i = 0; i < s.size() / 2; i++) {
+        for (int32_t i{0}; i < s.size() / 2; i++) {
             swap(s[i], s[s.size() - 1 - i]);
         }
     }

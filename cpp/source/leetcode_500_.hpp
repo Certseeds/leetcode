@@ -27,7 +27,7 @@ public:
                 2, 2, 3, 3, 1, 1, 1, 1, 2, 1,
                 1, 3, 1, 3, 1, 3};
         vector<string> willreturn;
-        for (int i = 0; i < words.size(); i++) {
+        for (int32_t i{0}; i < words.size(); i++) {
             bool judge = true;
             for (int j = 0; j < words[i].size() - 1; j++) {
                 //cout << words[i][j] << endl;

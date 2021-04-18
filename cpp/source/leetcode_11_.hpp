@@ -49,7 +49,7 @@ public:
         // O(n^2) unused
         int32_t maxv{std::numeric_limits<int32_t>::min()};
         int32_t h_size = height.size();
-        for (int i = 0; i < h_size; i++) {
+        for (int32_t i{0}; i < h_size; i++) {
             for (int j = i + 1; j < h_size; j++) {
                 maxv = std::max(maxv, std::min(height[i], height[j]) * (j - i));
             }

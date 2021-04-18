@@ -13,7 +13,7 @@ public:
     int arrayPairSum(vector<int> &nums) {
         sort(nums.begin(), nums.end());
         int temp = 0;
-        for (int i = 0; i < nums.size(); i += 2) {
+        for (int32_t i{0}; i < nums.size(); i += 2) {
             temp += nums[i];
         }
         return temp;

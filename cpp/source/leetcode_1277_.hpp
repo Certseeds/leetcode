@@ -10,7 +10,7 @@
 using namespace std;
 
 /*
-Given a m * n matrix of ones and zeros, 
+Given a m * n matrix of ones and zeros,
 return how many square submatrices have all ones.
 */
 // DP
@@ -21,19 +21,19 @@ public:
         int ymax = matrix[0].size();
         vector<vector<int>> row(matrix);
         vector<vector<int>> column(matrix);
-        for (int i = 0; i < xmax; i++) {
+        for (int32_t i{0}; i < xmax; i++) {
             for (int j = 1; j < ymax; j++) {
                 row[i][j] += row[i][j - 1];
             }
         }
-        for (int i = 1; i < xmax; i++) {
+        for (int32_t i{1}; i < xmax; i++) {
             for (int j = 0; j < ymax; j++) {
                 column[i][j] += column[i - 1][j];
             }
         }
         int count = std::accumulate(column[xmax - 1].begin(), column[xmax - 1].end(), 0);
-        //cout << count << " begin" << endl;  
-        for (int i = 0; i < xmax; i++) {
+        //cout << count << " begin" << endl;
+        for (int32_t i{0}; i < xmax; i++) {
             for (int j = 0; j < ymax; j++) {
                 // cout << i << " " << j << endl;
                 if (!matrix[i][j]) {
@@ -69,13 +69,13 @@ public:
         int32_t row = matrix.size();
         int32_t col = matrix.front().size();
         vector<vector<int32_t>> dp(row + 1, vector<int32_t>(col + 1));
-        for (int i = 0; i < row; ++i) {
+        for (int32_t i{0}; i < row; ++i) {
             for (int j = 0; j < col; ++j) {
                 dp[i + 1][j + 1] = dp[i][j + 1] + dp[i + 1][j] - dp[i][j] + matrix[i][j];
             }
         }
         will_return += dp.back().back();
-        for (int i = 0; i < row; ++i) {
+        for (int32_t i{0}; i < row; ++i) {
             for (int j = 0; j < col; ++j) {
                 for (int k = 1; k < min(row - i, col - j); ++k) {
                     if (dp[i + k + 1][j + k + 1] - dp[i][j + k + 1] - dp[i + k + 1][j] + dp[i][j] ==
@@ -98,13 +98,13 @@ public:
         int32_t row = matrix.size();
         int32_t col = matrix.front().size();
         will_return -= matrix[0][0];
-        for (int i = 0; i < col; ++i) {
+        for (int32_t i{0}; i < col; ++i) {
             will_return += matrix[0][i];
         }
-        for (int i = 0; i < row; ++i) {
+        for (int32_t i{0}; i < row; ++i) {
             will_return += matrix[i][0];
         }
-        for (int i = 1; i < row; ++i) {
+        for (int32_t i{1}; i < row; ++i) {
             for (int j = 1; j < col; ++j) {
                 if (matrix[i][j] == 1) {
                     matrix[i][j] = 1 + min(min(matrix[i - 1][j], matrix[i][j - 1]), matrix[i - 1][j - 1]);

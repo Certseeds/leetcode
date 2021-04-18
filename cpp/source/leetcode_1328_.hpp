@@ -25,7 +25,7 @@ public:
         vector<int> willreturn(arr);
         std::sort(arr.begin(), arr.end(), less<int>());
         umap[arr[0]] = 1;
-        for (int i = 1; i < arr.size(); i++) {
+        for (int32_t i{1}; i < arr.size(); i++) {
             if (arr[i] == arr[i - 1]) {
                 umap[arr[i]] = max;
             } else {
@@ -33,7 +33,7 @@ public:
             }
             max += (arr[i] > arr[i - 1]);
         }
-        for (int i = 0; i < arr.size(); i++) {
+        for (int32_t i{0}; i < arr.size(); i++) {
             willreturn[i] = umap[willreturn[i]];
 
         }

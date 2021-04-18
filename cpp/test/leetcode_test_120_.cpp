@@ -36,7 +36,7 @@ TEST_CASE("test case 1 [test 120]", "[test 120]") {
 }
 
 TEST_CASE("test case 2 [test 120]", "[test 120]") {
-    for (int i = 0; i < 10; ++i) {
+    for (int32_t i{0}; i < 10; ++i) {
         //std::cout << sol120.multiply("12345", '0' + i) << std::endl;
     }
     sol120.multiply_0("123", "456");

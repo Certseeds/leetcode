@@ -60,7 +60,7 @@ void transfer(vector<int> &vec, int k) {
 
 void _test(int x, int y, const std::function<ListNode *(ListNode *, int)> &func) {
     vector<int> nums1(x, -1);
-    for (int i = 0; i < x; i++) {
+    for (int32_t i{0}; i < x; i++) {
         nums1[i] = i + 1;
     }
     vector<ListNode *> vec1 = ListNode::numToList(nums1);

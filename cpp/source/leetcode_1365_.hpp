@@ -51,7 +51,7 @@ public:
     vector<int> smallerNumbersThanCurrent(vector<int> &nums) {
         vector<int> sorted_nums(nums);
         std::sort(sorted_nums.begin(), sorted_nums.end());
-        for (int i = 0; i < nums.size(); i++) {
+        for (int32_t i{0}; i < nums.size(); i++) {
             nums[i] = std::lower_bound(
                     sorted_nums.begin(), sorted_nums.end(), nums[i])
                       - sorted_nums.begin();

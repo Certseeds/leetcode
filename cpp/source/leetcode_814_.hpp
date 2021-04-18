@@ -11,9 +11,9 @@
 using namespace std;
 
 /*
-We are given the head node root of a binary tree, 
+We are given the head node root of a binary tree,
 where additionally every node's value is either a 0 or a 1.
-Return the same tree where every subtree 
+Return the same tree where every subtree
 (of the given tree) not containing a 1 has been removed.
 (Recall that the subtree of a node X is X,
 plus every node that is a descendant of X.)
@@ -38,7 +38,7 @@ public:
 
     void test() {
         vector<TreeNode *> tree;
-        for (int i = 0; i <= 8; i++) {
+        for (int32_t i{0}; i <= 8; i++) {
             TreeNode *temp = new TreeNode(i % 2);
             tree.push_back(temp);
         }
@@ -48,7 +48,7 @@ public:
         tree[1] = pruneTree_rec(tree[1]);
         cout << tree[1]->val << " " << tree[1]->right->val << " " << tree[1]->right->right->val << endl;
         cout << (tree[1]->left == nullptr) << " " << (tree[1]->right->left == nullptr) << endl;
-        for (int i = 0; i <= 8; i++) { ;
+        for (int32_t i{0}; i <= 8; i++) { ;
             delete tree[i];
         }
     }

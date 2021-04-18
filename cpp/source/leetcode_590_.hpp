@@ -31,7 +31,7 @@ public:
         if (root == nullptr) {
             return;
         }
-        for (int i = 0; i < root->children.size(); i++) {
+        for (int32_t i{0}; i < root->children.size(); i++) {
             real_action(root->children[i], vec);
         }
         vec.push_back(root->val);

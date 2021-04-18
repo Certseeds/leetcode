@@ -14,13 +14,13 @@ public:
         vector<bool> vec(S.size());
         vector<int> vec2;
         vector<int> vec3(S.size());
-        for (int i = 0; i < S.size(); i++) {
+        for (int32_t i{0}; i < S.size(); i++) {
             vec[i] = (S[i] == C);
             vec3[i] = 0;
             if (vec[i])
                 vec2.push_back(i);
         }
-        for (int i = 0; i < vec2.size(); i++) {
+        for (int32_t i{0}; i < vec2.size(); i++) {
             int temp = vec2[i] - 1;
             int count = 1;
             while (temp >= 0 && !vec[temp]) {

@@ -9,12 +9,12 @@
 using namespace std;
 
 /*
-Given an array of integers where 1 �� a[i] �� n (n = size of array), 
+Given an array of integers where 1 �� a[i] �� n (n = size of array),
 some elements appear twice and others appear once.
 
 Find all the elements of [1, n] inclusive that do not appear in this array.
 
-Could you do it without extra space and in O(n) runtime? 
+Could you do it without extra space and in O(n) runtime?
 You may assume the returned list does not count as extra space.
 */
 class Solution448 {
@@ -22,11 +22,11 @@ public:
     vector<int> findDisappearedNumbers(vector<int> &nums) {
         vector<int> res;
         int len = nums.size();
-        for (int i = 0; i < len; i++) {
+        for (int32_t i{0}; i < len; i++) {
             int m = abs(nums[i]) - 1; // index start from 0
             nums[m] = nums[m] > 0 ? -nums[m] : nums[m];
         }
-        for (int i = 0; i < len; i++) {
+        for (int32_t i{0}; i < len; i++) {
             if (nums[i] > 0) {
                 res.push_back(i + 1);
             }
@@ -44,8 +44,8 @@ public:
     }
 };
 /*
-Runtime: 72 ms, 
-Memory Usage: 15 MB, 
+Runtime: 72 ms,
+Memory Usage: 15 MB,
 99.63%,66.67%.
 */
 #endif

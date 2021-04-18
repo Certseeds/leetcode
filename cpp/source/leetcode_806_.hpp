@@ -16,7 +16,7 @@ public:
         int number_of_a = 97;
         int line = 1;
         int number = 0;
-        for (int i = 0; i < S.size(); i++) {
+        for (int32_t i{0}; i < S.size(); i++) {
             if (number + widths[S[i] - number_of_a] <= 100) {
                 number += widths[S[i] - number_of_a];
             } else {

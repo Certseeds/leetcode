@@ -11,8 +11,8 @@ using namespace std;
 
 /*
 A string S of lowercase letters is given.
-We want to partition this string into as many parts as possible 
-so that each letter appears in at most one part, 
+We want to partition this string into as many parts as possible
+so that each letter appears in at most one part,
 and return a list of integers representing the size of these parts.
 */
 class Solution763 {
@@ -23,11 +23,11 @@ public:
         unordered_map<int, vector<int>> umaps;
         vector<int> willreturn;
         int count = 0;
-        for (int i = 0; i < S.size(); i++) {
+        for (int32_t i{0}; i < S.size(); i++) {
             left[S[i] - 'a'] = min(left[S[i] - 'a'], i);
             right[S[i] - 'a'] = max(right[S[i] - 'a'], i);
         }
-        for (int i = 0; i < 26; i++) {
+        for (int32_t i{0}; i < 26; i++) {
             if (left[i] != INT32_MAX || right[i] != INT32_MIN) {
                 umaps.insert(make_pair(i, vector<int>{left[i], right[i]}));
                 //cout << char(i+'a')<< " "<<left[i] << " " << right[i] << endl;
@@ -62,12 +62,12 @@ public:
     vector<int> partitionLabels2(string S) {
         array<int, 26> vals = {0};
         vector<int> willreturn;
-        for (int i = 0; i < S.size(); i++) {
+        for (int32_t i{0}; i < S.size(); i++) {
             vals[S[i] - 'a'] = i;
         }
         int left = 0;
         int right = 0;
-        for (int i = 0; i < S.size(); i++) {
+        for (int32_t i{0}; i < S.size(); i++) {
             right = max(right, vals[S[i] - 'a']);
             // this and the next judge means, if the left's range final in here.
             if (right == i) {
@@ -82,14 +82,14 @@ public:
         string str1 = "ababcbacadefegdehijhklij";
         vector<int> vec1 = partitionLabels(str1);
         cout << "vec1 begin " << endl;
-        for (int i = 0; i < vec1.size(); i++) {
+        for (int32_t i{0}; i < vec1.size(); i++) {
             cout << vec1[i] << endl;
         }
         cout << "vec1 finish " << endl;
         string str2 = "eccbbbbdec";
         vector<int> vec2 = partitionLabels2(str2);
         cout << "vec2 begin " << endl;
-        for (int i = 0; i < vec2.size(); i++) {
+        for (int32_t i{0}; i < vec2.size(); i++) {
             cout << vec1[i] << endl;
         }
         cout << "vec2 finish " << endl;

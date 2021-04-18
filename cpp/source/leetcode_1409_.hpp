@@ -1,4 +1,4 @@
-/*  leetcode_cpp 
+/*  leetcode_cpp
     Copyright (C) 2020  nanoseeds
 
     leetcode_cpp is free software: you can redistribute it and/or modify
@@ -18,7 +18,7 @@
  * @Github: https://github.com/Certseeds/leetcode_cpp
  * @Organization: SUSTech
  * @Author: nanoseeds
- * @Date: 2020-04-15 10:13:12 
+ * @Date: 2020-04-15 10:13:12
  * @LastEditors  : nanoseeds
  */
 #ifndef LEETCODE_CPP_SOURCE_LEETCODE_1409_H
@@ -43,7 +43,7 @@ class Solution1409 {
             return will_return;
         }
         unordered_map<int32_t, int32_t> num_pos;
-        for (int i = 0; i < m; ++i) {
+        for (int32_t i{0}; i < m; ++i) {
             num_pos[i + 1] = i;
         }
         for (const auto &i:queries) {

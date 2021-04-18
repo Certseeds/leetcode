@@ -21,13 +21,13 @@ using std::array;
 using std::string;
 
 /*
-Given two equal-size strings s and t. 
-In one step you can choose any character of t 
+Given two equal-size strings s and t.
+In one step you can choose any character of t
 and replace it with another character.
 
 Return the minimum number of steps to make t an anagram of s.
 
-An Anagram of a string is a string that contains 
+An Anagram of a string is a string that contains
 the same characters with a different (or the same) ordering.
 
 Example 1:
@@ -63,11 +63,11 @@ public:
         array<int, 26> str_t = {0};
         int sizes = s.size();
         int count = 0;
-        for (int i = 0; i < sizes; i++) {
+        for (int32_t i{0}; i < sizes; i++) {
             str_s[static_cast<int>(s[i] - 'a')]++;
             str_t[static_cast<int>(t[i] - 'a')]++;
         }
-        for (int i = 0; i < 26; i++) {
+        for (int32_t i{0}; i < 26; i++) {
             count += max(0, str_s[i] - str_t[i]);
         }
         return count;

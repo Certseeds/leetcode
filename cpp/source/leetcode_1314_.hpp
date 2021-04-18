@@ -10,9 +10,9 @@
 using namespace std;
 
 /*
-Given a m * n matrix mat and an integer K, 
-return a matrix answer where each answer[i][j] is the sum of 
-all elements mat[r][c] for i - K <= r <= i + K, j - K <= c <= j + K, 
+Given a m * n matrix mat and an integer K,
+return a matrix answer where each answer[i][j] is the sum of
+all elements mat[r][c] for i - K <= r <= i + K, j - K <= c <= j + K,
 and (r, c) is a valid position in the matrix.
 it need the prefix sum.
 do more use 304 307 308
@@ -26,7 +26,7 @@ public:
         unordered_map<unsigned long long, int> ordered;
         int sizes1 = willreturn.size();
         int sizes2 = willreturn[0].size();
-        for (int i = 0; i < sizes1; i++) {
+        for (int32_t i{0}; i < sizes1; i++) {
             for (int j = 0; j < sizes2; j++) {
                 unsigned long long temp =
                         (max(0, i - f) << 21) +
@@ -92,19 +92,19 @@ public:
         vector<vector<int>> vec1 = matrixBlockSum(input1, 1);
         vector<vector<int>> vec2 = matrixBlockSum(input1, 2);
         vector<vector<int>> vec3 = matrixBlockSum(input2, 1);
-        for (int i = 0; i < vec1.size(); i++) {
+        for (int32_t i{0}; i < vec1.size(); i++) {
             for (int j = 0; j < vec1[0].size(); j++) {
                 cout << vec1[i][j] << " ";
             }
             cout << endl;
         }
-        for (int i = 0; i < vec2.size(); i++) {
+        for (int32_t i{0}; i < vec2.size(); i++) {
             for (int j = 0; j < vec2[0].size(); j++) {
                 cout << vec2[i][j] << " ";
             }
             cout << endl;
         }
-        for (int i = 0; i < vec3.size(); i++) {
+        for (int32_t i{0}; i < vec3.size(); i++) {
             for (int j = 0; j < vec3[0].size(); j++) {
                 cout << vec3[i][j] << " ";
             }

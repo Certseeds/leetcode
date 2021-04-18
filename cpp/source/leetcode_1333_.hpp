@@ -9,18 +9,18 @@
 using namespace std;
 
 /*
-Given the array restaurants where  restaurants[i] = [idi, ratingi, veganFriendlyi, pricei, distancei]. 
+Given the array restaurants where  restaurants[i] = [idi, ratingi, veganFriendlyi, pricei, distancei].
 You have to filter the restaurants using three filters.
 
-The veganFriendly filter will be either true 
-(meaning you should only include restaurants with veganFriendlyi set to true) 
-or false (meaning you can include any restaurant). 
-In addition, you have the filters maxPrice and maxDistance 
+The veganFriendly filter will be either true
+(meaning you should only include restaurants with veganFriendlyi set to true)
+or false (meaning you can include any restaurant).
+In addition, you have the filters maxPrice and maxDistance
 which are the maximum value for price and distance of restaurants you should consider respectively.
 
-Return the array of restaurant IDs after filtering, 
-ordered by rating from highest to lowest. For restaurants with the same rating, 
-order them by id from highest to lowest. 
+Return the array of restaurant IDs after filtering,
+ordered by rating from highest to lowest. For restaurants with the same rating,
+order them by id from highest to lowest.
 For simplicity veganFriendlyi and veganFriendly take value 1 when it is true, and 0 when it is false.
 single week 173-1
 */
@@ -31,7 +31,7 @@ public:
         std::sort(restaurants.begin(), restaurants.end(), less_1333);
         vector<int> willreturn;
         willreturn.reserve(restaurants.size());
-        for (int i = 0; i < restaurants.size(); i++) {
+        for (int32_t i{0}; i < restaurants.size(); i++) {
             if (
                     (restaurants[i][2] || !veganFriendly) &&
                     (maxPrice >= restaurants[i][3]) &&

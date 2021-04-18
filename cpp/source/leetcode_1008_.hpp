@@ -16,7 +16,7 @@ public:
     TreeNode *bstFromPreorder(vector<int> &preorder) {
         TreeNode *root = new TreeNode(preorder[0]);
         TreeNode *path = root;
-        for (int i = 1; i < preorder.size(); i++) {
+        for (int32_t i{1}; i < preorder.size(); i++) {
             TreeNode *Node = new TreeNode(preorder[i]);
             path = root;
             while (true) {
@@ -42,7 +42,7 @@ public:
 
     TreeNode *bstFromPreorder2(vector<int> &preorder) {
         TreeNode *root = new TreeNode(preorder[0]);
-        for (int i = 1; i < preorder.size(); i++) {
+        for (int32_t i{1}; i < preorder.size(); i++) {
             rec(root, preorder[i]);
         }
         return root;
@@ -87,10 +87,10 @@ public:
 };
 /*
 circulate
-Runtime: 0 ms, faster than 100.00% 
-Memory Usage: 12.6 MB, less than 9.52% 
+Runtime: 0 ms, faster than 100.00%
+Memory Usage: 12.6 MB, less than 9.52%
 recurrence
-Runtime: 8 ms, faster than 40.37% 
-Memory Usage: 14.1 MB, less than 9.52% 
+Runtime: 8 ms, faster than 40.37%
+Memory Usage: 14.1 MB, less than 9.52%
 */
 #endif

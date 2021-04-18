@@ -18,7 +18,7 @@ public:
         bool judge = true;
         while (judge) {
             judge = false;
-            for (int i = 0; i < S.size(); i++) {
+            for (int32_t i{0}; i < S.size(); i++) {
                 if (S[i] == S[i + 1]) {
                     S.erase(i, 2);
                     judge = true;
@@ -31,7 +31,7 @@ public:
 
     string removeDuplicates2(string &S) {
         int count = S.size();
-        for (int i = 0; i < count; i++) {
+        for (int32_t i{0}; i < count; i++) {
             if (S[i] == S[i + 1]) {
                 S.erase(i, 2);
                 i = min(0, i - 1);
@@ -43,7 +43,7 @@ public:
 
     string removeDuplicates3(string &S) {
         string willreturn = "0";
-        for (int i = 0; i < S.size(); i++) {
+        for (int32_t i{0}; i < S.size(); i++) {
             if (willreturn.back() == S[i]) {
                 willreturn.pop_back();
             } else {

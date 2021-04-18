@@ -10,9 +10,9 @@
 using namespace std;
 
 /*
-Given an array of integers and an integer k, 
-you need to find the number of unique k-diff pairs in the array. 
-Here a k-diff pair is defined as an integer pair (i, j), 
+Given an array of integers and an integer k,
+you need to find the number of unique k-diff pairs in the array.
+Here a k-diff pair is defined as an integer pair (i, j),
 where i and j are both numbers in the array and their absolute difference is k.
 */
 class Solution532 {
@@ -23,7 +23,7 @@ public:
         }
         unordered_map<int, int> umap;
         int count = 0;
-        for (int i = 0; i < nums.size(); i++) {
+        for (int32_t i{0}; i < nums.size(); i++) {
             umap[nums[i]]++;
         }
         if (k == 0) {

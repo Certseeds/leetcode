@@ -11,10 +11,10 @@
 using namespace std;
 
 /*
-A full binary tree 
+A full binary tree
 is a binary tree where each node has exactly 0 or 2 children.
 
-Return a list of all possible full binary trees with N nodes.  
+Return a list of all possible full binary trees with N nodes.
 Each element of the answer is the root node of one possible tree.
 
 Each node of each tree in the answer must have node.val = 0.
@@ -30,7 +30,7 @@ public:
         if (n == 1) {
             willreturn.push_back(new TreeNode(0));
         }
-        for (int i = 1; i <= n - 2; i += 2) {
+        for (int32_t i{1}; i <= n - 2; i += 2) {
             vector<TreeNode *> left = allPossibleFBT(i);
             vector<TreeNode *> right = allPossibleFBT(n - i - 1);
             for (auto j : left) {
@@ -49,7 +49,7 @@ public:
     }
 };
 /*
-Runtime: 180 ms, 
+Runtime: 180 ms,
 Memory Usage: 45.8 MB
 11.16%,7.14%.
 */

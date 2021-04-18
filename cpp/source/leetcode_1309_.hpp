@@ -9,7 +9,7 @@
 using namespace std;
 
 /*
-Given a string s formed by digits ('0' - '9') and '#' . 
+Given a string s formed by digits ('0' - '9') and '#' .
 We want to map s to English lowercase characters as follows:
 
 Characters ('a' to 'i') are represented by ('1' to '9') respectively.
@@ -22,7 +22,7 @@ class Solution1309 {
 public:
     string freqAlphabets(string s) {
         vector<char> chars;
-        int i = 0;
+        int32_t i{0};
         for (; i < s.size() - 2; i++) {
             if (s[i + 2] == '#') {
                 chars.push_back((s[i] - '0') * 10 + (s[i + 1] - '0') + 'a' - 1);

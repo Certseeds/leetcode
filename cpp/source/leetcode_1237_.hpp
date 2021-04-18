@@ -70,7 +70,7 @@ public:
     void test() {
         CustomFunction temp;
         vector<vector<int>> test1 = findSolution(temp, 6);
-        for (int i = 0; i < test1.size(); i++) {
+        for (int32_t i{0}; i < test1.size(); i++) {
             cout << test1[i][0] << " " << test1[i][1] << endl;
 
         }

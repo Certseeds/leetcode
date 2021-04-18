@@ -44,7 +44,7 @@ class Solution208 {
         Trie() = default;
 
         /** Inserts a word into the trie. */
-        void insert(string word) {
+        void insert(const string &word) {
             uset.insert(word);
         }
 
@@ -84,7 +84,7 @@ private:
         Trie2() = default;
 
         /** Inserts a word into the trie. */
-        void insert(string word) {
+        void insert(const string &word) {
             std::array<Node *, 26> *array = &sons;
             for (size_t i{0}; i < word.size() - 1; i++) {
                 const auto &ch = word[i] - 'a';
@@ -99,7 +99,6 @@ private:
                     (*array)[ch] = new Node(ch, false);
                 }
                 (*array)[ch]->isfinish = true;
-                array = &(*array)[ch]->sons;
             }
         }
 

@@ -17,7 +17,7 @@ public:
 
     int findTheLongestSubstring(string s) {
         vector<vector<int>> vowel(5, vector<int>(s.size(), 0));
-        for (int i = 0; i < 5; i++) {
+        for (int32_t i{0}; i < 5; i++) {
             vowel[i][0] = (s[0] == aeiou[i]);
             for (int j = 1; j < s.size(); j++) {
                 vowel[i][j] += (s[j] == aeiou[i]);
@@ -28,7 +28,7 @@ public:
     }
 
     bool judgement(const vector<vector<int>> &vowel, int begin, int end) {
-        for (int i = 0; i < 5; i++) {
+        for (int32_t i{0}; i < 5; i++) {
             if (1 == (vowel[i][end] - vowel[i][begin]) % 2) {
                 return false;
             }

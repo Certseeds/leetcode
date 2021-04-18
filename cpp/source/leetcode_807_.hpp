@@ -20,7 +20,7 @@ public:
         int willreturn = 0;
         vector<int> row;
         vector<int> line;
-        for (int i = 0; i < grid.size(); i++) {
+        for (int32_t i{0}; i < grid.size(); i++) {
             int maxrow = INT16_MIN;
             int maxline = INT16_MIN;
             for (int j = 0; j < grid[0].size(); j++) {
@@ -30,7 +30,7 @@ public:
             row.push_back(maxrow);
             line.push_back(maxline);
         }
-        for (int i = 0; i < grid.size(); i++) {
+        for (int32_t i{0}; i < grid.size(); i++) {
             for (int j = 0; j < grid[0].size(); j++) {
                 willreturn += min(row[i], line[j]) - grid[i][j];
             }

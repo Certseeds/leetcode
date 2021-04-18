@@ -63,7 +63,7 @@ public:
         int end = 0;
         int count = 0;
         unordered_set<int> uset;
-        for (int i = 0; i < events.size(); i++) {
+        for (int32_t i{0}; i < events.size(); i++) {
             //cout << i << " ";
             for (int j = events[i][0]; j <= events[i][1]; j++) {
                 if (uset.count(j) == 0) {

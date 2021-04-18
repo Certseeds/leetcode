@@ -25,7 +25,7 @@ using std::string;
 /*
 Write a program to count the number of days between two dates.
 
-The two dates are given as strings, 
+The two dates are given as strings,
 their format is YYYY-MM-DD as shown in the examples.
 
 Example 1:
@@ -101,7 +101,7 @@ public:
         if (judge_year_days(year_2) == 365) {
             temp1 = month_365;
         }
-        for (int i = 0; i < month_2 - 1; i++) {
+        for (int32_t i{0}; i < month_2 - 1; i++) {
             will_return += temp1[i];
         }
         will_return += day_2;

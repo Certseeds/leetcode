@@ -16,7 +16,7 @@ public:
     bool uniqueOccurrences(vector<int> &arr) {
         unordered_map<int, int> maps;
         unordered_set<int> maps_value;
-        for (int i = 0; i < arr.size(); i++) {
+        for (int32_t i{0}; i < arr.size(); i++) {
             maps[arr[i]]++;
         }
         for (auto it = maps.begin(); it != maps.end(); it++) {

@@ -17,7 +17,7 @@ using std::endl;
 using std::vector;
 
 /*
-Given a m * n matrix grid which is sorted in 
+Given a m * n matrix grid which is sorted in
 non-increasing order both row-wise and column-wise.
 Return the number of negative numbers in grid.
 
@@ -66,7 +66,7 @@ public:
         int middle_2 = 0;
         int will_return = (grid.size() - begin_1) * grid[0].size();
         //cout << " middle count is " << will_return << endl;
-        for (int i = 0; i < begin_1; i++) {
+        for (int32_t i{0}; i < begin_1; i++) {
             while (begin_2 < end_2) {
                 middle_2 = (end_2 - begin_2) / 2 + begin_2;
                 if (grid[i][middle_2] >= 0) {

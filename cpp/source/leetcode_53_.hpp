@@ -21,7 +21,7 @@ public:
         int begin_max = INT16_MIN;
         int end = nums.size() - 1;
         int end_max = nums[0] - nums[1];
-        for (int i = 1; i < nums.size() - 1; i++) {
+        for (int32_t i{1}; i < nums.size() - 1; i++) {
             if (nums[i] - nums[i - 1] > begin_max) {
                 begin_max = nums[i] - nums[i - 1];
                 begin = i;

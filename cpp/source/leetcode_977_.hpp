@@ -12,7 +12,7 @@ using namespace std;
 class Solution977 {
 public:
     vector<int> &sortedSquares(vector<int> &A) {
-        for (int i = 0; i < A.size(); i++) {
+        for (int32_t i{0}; i < A.size(); i++) {
             A[i] = A[i] * A[i];
         }
         std::sort(A.begin(), A.end());

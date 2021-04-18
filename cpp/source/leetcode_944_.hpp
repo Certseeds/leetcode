@@ -13,7 +13,7 @@ public:
     int minDeletionSize(vector<string> &A) {
         int count = 0;
         bool notdeletex = true;
-        for (int i = 0; i < A[0].length(); i++) {
+        for (int32_t i{0}; i < A[0].length(); i++) {
             for (int j = 1; j < A.size(); j++) {
                 notdeletex = notdeletex & (A[j][i] - A[j - 1][i] >= 0);
             }

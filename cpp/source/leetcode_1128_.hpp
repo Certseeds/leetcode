@@ -10,8 +10,8 @@ using namespace std;
 
 /*
 Given a list of dominoes,
-dominoes[i] = [a, b] is equivalent to dominoes[j] = [c, d] 
-if and only if either (a==c and b==d), or (a==d and b==c) - that is, 
+dominoes[i] = [a, b] is equivalent to dominoes[j] = [c, d]
+if and only if either (a==c and b==d), or (a==d and b==c) - that is,
 one domino can be rotated to be equal to another domino.
 
 Return the number of pairs (i, j) for which 0 <= i < j < dominoes.length,
@@ -24,7 +24,7 @@ public:
         array<int, MAX_VALUE * (1 << 4 + 1) + 1> arr = {0};
         int maxv = 0;
         int minv = 0;
-        for (int i = 0; i < dominoes.size(); i++) {
+        for (int32_t i{0}; i < dominoes.size(); i++) {
             maxv = max(dominoes[i][0], dominoes[i][1]);
             minv = min(dominoes[i][0], dominoes[i][1]);
             arr[(maxv << 4) + minv]++;

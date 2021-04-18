@@ -9,7 +9,7 @@
 using namespace std;
 
 /*
-Given an integer array sorted in non-decreasing order, 
+Given an integer array sorted in non-decreasing order,
 there is exactly one integer in the array that occurs more than 25% of the time.
 Return that integer.
 it looks like it should be a ergodic question using unordered_map,
@@ -22,7 +22,7 @@ public:
         int willreturn = -1;
         int tfpt = arr.size() / 4 + 1;
         unordered_map<int, int> umaps;
-        for (int i = 0; i < arr.size(); i++) {
+        for (int32_t i{0}; i < arr.size(); i++) {
             umaps[arr[i]]++;
             if (umaps[arr[i]] > tfpt) {
                 return arr[i];
@@ -32,7 +32,7 @@ public:
 
     int findSpecialInteger2(vector<int> &arr) {
         int tfpt = arr.size() / 4;
-        for (int i = 0; i < 4; i++) {
+        for (int32_t i{0}; i < 4; i++) {
             int value = arr[i * tfpt];
             auto dist = equal_range(begin(arr), end(arr), value);
             if (distance(dist.first, dist.second) > tfpt) {
@@ -50,12 +50,12 @@ public:
     }
 };
 /*
-Runtime: 16 ms, 
-Memory Usage: 10.3 MB, 
+Runtime: 16 ms,
+Memory Usage: 10.3 MB,
 85.84%,100%.
 new way:
-Runtime: 4 ms, 
-Memory Usage: 9.7 MB, 
+Runtime: 4 ms,
+Memory Usage: 9.7 MB,
 the complex do not improve,however,
 a magic part
 '''

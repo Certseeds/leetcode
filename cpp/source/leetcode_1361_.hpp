@@ -22,24 +22,24 @@ using std::queue;
 using std::vector;
 
 /*
-You have n binary tree nodes numbered from 0 to n - 1 
-where node i has two children leftChild[i] and rightChild[i], 
+You have n binary tree nodes numbered from 0 to n - 1
+where node i has two children leftChild[i] and rightChild[i],
 return true if and only if all the given nodes form exactly one valid binary tree.
 
-If node i has no left child then leftChild[i] will equal -1, 
+If node i has no left child then leftChild[i] will equal -1,
 similarly for the right child.
 
-Note that the nodes have no values and 
+Note that the nodes have no values and
 that we only use the node numbers in this problem.
 
 Example 1:
-Input: n = 4, 
-leftChild = [1,-1,3,-1], 
+Input: n = 4,
+leftChild = [1,-1,3,-1],
 rightChild = [2,-1,-1,-1]
 Output: true
 
 Example 2:
-Input: n = 4, 
+Input: n = 4,
 leftChild = [1,-1,3,-1],
 rightChild = [2,3,-1,-1]
 Output: false
@@ -51,7 +51,7 @@ rightChild = [-1,-1]
 Output: false
 
 Example 4:
-Input: n = 6, 
+Input: n = 6,
 leftChild = [1,-1,-1,4,-1,-1],
 rightChild = [2,-1,-1,5,-1,-1]
 Output: false
@@ -66,10 +66,10 @@ class Solution1361 {
 public:
     bool validateBinaryTreeNodes(int n, vector<int> &leftChild, vector<int> &rightChild) {
         vector<TreeNode *> nodes(n, nullptr);
-        for (int i = 0; i < n; i++) {
+        for (int32_t i{0}; i < n; i++) {
             nodes[i] = new TreeNode(i);
         }
-        for (int i = 0; i < n; i++) {
+        for (int32_t i{0}; i < n; i++) {
             if (leftChild[i] != -1) {
                 nodes[i]->left = nodes[leftChild[i]];
             }

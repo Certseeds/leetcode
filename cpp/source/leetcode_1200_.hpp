@@ -17,7 +17,7 @@ public:
         vector<vector<int>> willreturn;
         std::sort(arr.begin(), arr.end(), std::less<int>());
         int Min_Value = 0x7FFFFFFF;
-        for (int i = 0; i < arr.size() - 1; i++) {
+        for (int32_t i{0}; i < arr.size() - 1; i++) {
             //cout << Min_Value << endl;
             if (arr[i + 1] - arr[i] == Min_Value) {
                 willreturn.push_back(vector<int>{arr[i], arr[i + 1]});

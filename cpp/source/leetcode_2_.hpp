@@ -36,12 +36,12 @@
 using namespace std;
 
 /*
-You are given two non-empty linked lists representing two non-negative integers. 
-The digits are stored in reverse order and 
-each of their nodes contain a single digit. 
+You are given two non-empty linked lists representing two non-negative integers.
+The digits are stored in reverse order and
+each of their nodes contain a single digit.
 Add the two numbers and return it as a linked list.
 
-You may assume the two numbers do not contain any leading zero, 
+You may assume the two numbers do not contain any leading zero,
 except the number 0 itself.
 */
 class Solution2 {
@@ -68,7 +68,7 @@ public:
         }
         ListNode *head = new ListNode(nums[0]);
         ListNode *willreturn = head;
-        for (int i = 1; i < nums.size(); i++) {
+        for (int32_t i{1}; i < nums.size(); i++) {
             head->next = new ListNode(nums[i]);
             head = head->next;
         }

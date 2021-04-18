@@ -9,11 +9,11 @@
 using namespace std;
 
 /*
-Given a non-empty array of non-negative integers nums, 
-the degree of this array is defined 
+Given a non-empty array of non-negative integers nums,
+the degree of this array is defined
 as the maximum frequency of any one of its elements.
 
-Your task is to find the smallest possible length 
+Your task is to find the smallest possible length
 of a (contiguous) subarray of nums, that has the same degree as nums.
 */
 class Solution697 {
@@ -25,7 +25,7 @@ public:
         unordered_map<int, int> times, begin;
         int max = INT16_MIN;
         int willreturn = 0;
-        for (int i = 0; i < nums.size(); i++) {
+        for (int32_t i{0}; i < nums.size(); i++) {
             if (times[nums[i]] == 0) {
                 times[nums[i]] = 1;
                 begin[nums[i]] = i;
@@ -53,7 +53,7 @@ public:
     }
 };
 /*
-Runtime: 32 ms, 
+Runtime: 32 ms,
 Memory Usage: 13.2 MB,
 96.34%,100%.
 */

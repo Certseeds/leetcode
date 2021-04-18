@@ -49,7 +49,7 @@ public:
 
     void test() {
         vector<TreeNode *> tree;
-        for (int i = 0; i <= 9; i++) {
+        for (int32_t i{0}; i <= 9; i++) {
             TreeNode *temp = new TreeNode(i);
             tree.push_back(temp);
         }
@@ -63,7 +63,7 @@ public:
         tree[7]->right = tree[8];
         //bstToGst(tree[0]);
         cout << rec(tree[4], 0);
-        for (int i = 0; i <= 9; i++) {
+        for (int32_t i{0}; i <= 9; i++) {
             delete tree[i];
         }
     }

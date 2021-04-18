@@ -8,8 +8,8 @@
 using namespace std;
 
 /*
-Given an integer array nums, 
-find the sum of the elements between indices i and j (i �� j), 
+Given an integer array nums,
+find the sum of the elements between indices i and j (i �� j),
 inclusive.
 The update(i, val) function modifies nums by updating the element at index i to val.
 */
@@ -26,7 +26,7 @@ public:
         }
         this->nums = nums;
         this->num = floor(sqrt(nums.size()));
-        for (int i = 0; i < (nums.size()) / this->num; i++) {
+        for (int32_t i{0}; i < (nums.size()) / this->num; i++) {
             int temp = 0;
             for (int j = 0; j < this->num; j++) {
                 temp += nums[i * this->num + j];

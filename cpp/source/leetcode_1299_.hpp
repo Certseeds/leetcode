@@ -24,7 +24,7 @@ public:
         vector<int> array_in_1 = {17, 18, 5, 4, 6, 1};
         vector<int> array_out_2 = {18, 6, 6, 6, 1, -1};
         vector<int> array_out = replaceElements(array_in_1);
-        for (int i = 0; i < array_out.size(); i++) {
+        for (int32_t i{0}; i < array_out.size(); i++) {
             cout << array_out[i] << " " << array_out_2[i] << endl;
             assert(array_out[i] == array_out_2[i]);
         }

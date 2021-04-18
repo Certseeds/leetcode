@@ -12,12 +12,12 @@
 using namespace std;
 
 /*
-Given a string s. 
+Given a string s.
 Return all the words vertically in the same order in which they appear in s.
-Words are returned as a list of strings, 
-complete with spaces when is necessary. 
+Words are returned as a list of strings,
+complete with spaces when is necessary.
 (Trailing spaces are not allowed).
-Each word would be put on only one column and 
+Each word would be put on only one column and
 that in one column there will be only one word.
 */
 class Solution1324 {
@@ -33,7 +33,7 @@ public:
             strs.push_back(t);
         }
         vector<string> willreturn(max_length, string(" ", strs.size()));
-        for (int i = 0; i < max_length; i++) {
+        for (int32_t i{0}; i < max_length; i++) {
             for (int j = 0; j < strs.size(); j++) {
                 willreturn[i][j] =
                         (i >= strs[j].size()) ? block : strs[j][i];
@@ -57,7 +57,7 @@ public:
         max_length = max(max_length, int(str2.size()));
         strs.push_back(str2);
         vector<string> willreturn(max_length, string(strs.size(), ' '));
-        for (int i = 0; i < max_length; i++) {
+        for (int32_t i{0}; i < max_length; i++) {
             for (int j = 0; j < strs.size(); j++) {
                 willreturn[i][j] =
                         (i >= strs[j].size()) ? ' ' : strs[j][i];

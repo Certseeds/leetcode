@@ -22,7 +22,7 @@ class Solution1260 {
 public:
     vector<vector<int>> shiftGrid(vector<vector<int>> &grid, int k) {
         grid = transfer(grid);
-        for (int i = 0; i < k; i++) {
+        for (int32_t i{0}; i < k; i++) {
             vector<int> temp = grid.back();
             grid.pop_back();
             int temp_int = temp.back();
@@ -39,7 +39,7 @@ public:
             return vector<vector<int>>();
         }
         vector<vector<int>> ans(C, vector<int>(R));
-        for (int i = 0; i < C; ++i) {
+        for (int32_t i{0}; i < C; ++i) {
             for (int j = 0; j < R; ++j) {
                 ans[i][j] = begin[j][i];
             }
@@ -62,8 +62,8 @@ public:
     }
 };
 /*
-Runtime: 56 ms, 
-Memory Usage: 16.3 MB, 
+Runtime: 56 ms,
+Memory Usage: 16.3 MB,
 99.27%,100%.
 If k goes bigger, it will beat more people.
 */

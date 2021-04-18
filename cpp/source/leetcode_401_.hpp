@@ -21,29 +21,29 @@ using std::vector;
 using std::string;
 
 /*
-A binary watch has 4 LEDs on the top which represent the hours (0-11), 
+A binary watch has 4 LEDs on the top which represent the hours (0-11),
 and the 6 LEDs on the bottom represent the minutes (0-59).
 
-Each LED represents a zero or one, 
+Each LED represents a zero or one,
 with the least significant bit on the right.
 
-For example, 
+For example,
 "0011" "011001"
 the above binary watch reads "3:25".
 
-Given a non-negative integer n which represents 
-the number of LEDs that are currently on, 
+Given a non-negative integer n which represents
+the number of LEDs that are currently on,
 return all possible times the watch could represent.
 
 Example:
 Input: n = 1
-Return: 
+Return:
 ["1:00", "2:00", "4:00", "8:00", "0:01",
 "0:02","0:04", "0:08", "0:16", "0:32"]
 
 Note:
 The order of output does not matter.
-The hour must not contain a leading zero, 
+The hour must not contain a leading zero,
 for example "01:00" is not valid, it should be "1:00".
 The minute must be consist of two digits and may contain a leading zero,
 for example "10:2" is not valid, it should be "10:02".
@@ -73,7 +73,7 @@ public:
                 break;
             }
             case 1: {
-                for (int i = 0; i < 4; i++) {
+                for (int32_t i{0}; i < 4; i++) {
                     nums.push_back((1 << i));
                 }
                 break;
@@ -93,7 +93,7 @@ public:
             }
         }
         vector<string> will_return;
-        for (int i = 0; i < nums.size(); i++) {
+        for (int32_t i{0}; i < nums.size(); i++) {
             will_return.push_back(hour_toStirng(nums[i]));
         }
         return will_return;
@@ -118,13 +118,13 @@ public:
                 break;
             }
             case 1: {
-                for (int i = 0; i < 6; i++) {
+                for (int32_t i{0}; i < 6; i++) {
                     nums.push_back((1 << i));
                 }
                 break;
             }
             case 2: {
-                for (int i = 0; i < 6; i++) {
+                for (int32_t i{0}; i < 6; i++) {
                     for (int j = i + 1; j < 6; j++) {
                         nums.push_back((1 << i) + (1 << j));
                     }
@@ -132,7 +132,7 @@ public:
                 break;
             }
             case 3: {
-                for (int i = 0; i < 6; i++) {
+                for (int32_t i{0}; i < 6; i++) {
                     for (int j = i + 1; j < 6; j++) {
                         for (int k = j + 1; k < 6; k++) {
                             nums.push_back((1 << i) + (1 << j) + (1 << k));
@@ -142,7 +142,7 @@ public:
                 break;
             }
             case 4: {
-                for (int i = 0; i < 6; i++) {
+                for (int32_t i{0}; i < 6; i++) {
                     for (int j = i + 1; j < 6; j++) {
                         if (63 - (1 << i) - (1 << j) < 60) {
                             nums.push_back(63 - (1 << i) - (1 << j));
@@ -152,7 +152,7 @@ public:
                 break;
             }
             case 5: {
-                for (int i = 0; i < 6; i++) {
+                for (int32_t i{0}; i < 6; i++) {
                     if (63 - (1 << i) < 60) {
                         nums.push_back(63 - (1 << i));
                     }

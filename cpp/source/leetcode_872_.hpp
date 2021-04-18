@@ -29,7 +29,7 @@ public:
         if (val1.size() != val2.size()) {
             return false;
         }
-        for (int i = 0; i < val1.size(); i++) {
+        for (int32_t i{0}; i < val1.size(); i++) {
             if (val1[i] != val2[i]) {
                 return false;
             }
@@ -63,7 +63,7 @@ public:
         cout << "test begin" << endl;
         vector<TreeNode872 *> arr1;
         vector<TreeNode872 *> arr2;
-        for (int i = 0; i < 10; i++) {
+        for (int32_t i{0}; i < 10; i++) {
             TreeNode872 *temp = new TreeNode872(i);
             TreeNode872 *temp2 = new TreeNode872(i);
             arr1.push_back(temp);
@@ -96,11 +96,11 @@ public:
             cout << i << endl;
         }
         bool judge = true;
-        for (int i = 0; i < val1.size(); i++) {
+        for (int32_t i{0}; i < val1.size(); i++) {
             judge = judge & (val1[i] == val2[i]);
         }
         cout << ((judge == 1) ? "true" : "false") << endl;
-        for (int i = 0; i < 10; i++) {
+        for (int32_t i{0}; i < 10; i++) {
             delete arr1[i];
             delete arr2[i];
         }

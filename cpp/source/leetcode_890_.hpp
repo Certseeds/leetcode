@@ -10,16 +10,16 @@
 using namespace std;
 
 /*
-You have a list of words and a pattern, 
+You have a list of words and a pattern,
 and you want to know which words in words matches the pattern.
 
-A word matches the pattern 
-if there exists a permutation of letters p 
-so that after replacing every letter x in the pattern with p(x), 
+A word matches the pattern
+if there exists a permutation of letters p
+so that after replacing every letter x in the pattern with p(x),
 we get the desired word.
 
-(Recall that a permutation of letters is a bijection 
-from letters to letters: every letter maps to another letter, 
+(Recall that a permutation of letters is a bijection
+from letters to letters: every letter maps to another letter,
 and no two letters map to the same letter.)
 
 Return a list of the words in words that match the given pattern.
@@ -39,7 +39,7 @@ public:
         */
         // pattern -> word
         vector<string> willreturn;
-        for (int i = 0; i < words.size(); i++) {
+        for (int32_t i{0}; i < words.size(); i++) {
             bool judge_bool = true;
             //cout << words[i] << endl;
             for (int j = 0; j < pattern.size(); j++) {
@@ -79,11 +79,11 @@ public:
 };
 /*
 Memset():
-Runtime: 0 ms, 
+Runtime: 0 ms,
 Memory Usage: 8.9 MB,
 100%,100%.
 unordered_map() || std::fill() to vector<int>:
-Runtime: 8 ms, 
+Runtime: 8 ms,
 Memory Usage: 9.3 MB,
 39.50%,81.82%.
 */

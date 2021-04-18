@@ -8,9 +8,9 @@
 using namespace std;
 
 /*
-A matrix is Toeplitz 
+A matrix is Toeplitz
 if every diagonal from top-left to bottom-right has the same element.
-Now given an M x N matrix, 
+Now given an M x N matrix,
 return True if and only if the matrix is Toeplitz.
 */
 class Solution766 {
@@ -20,7 +20,7 @@ public:
             return true;
         }
         int min_v = min(matrix.size(), matrix[0].size());
-        for (int i = 1; i < matrix.size(); i++) {
+        for (int32_t i{1}; i < matrix.size(); i++) {
             int val = i + 1;
             int num = matrix[i][0];
             for (int j = 1; j < min(matrix.size() - i, matrix[0].size()); j++) {
@@ -31,13 +31,13 @@ public:
             }
         }
         int num = matrix[0][0];
-        for (int i = 1; i < min_v; i++) {
+        for (int32_t i{1}; i < min_v; i++) {
             if (num != matrix[i][i]) {
                 return false;
             }
         }
         cout << "middle" << endl;
-        for (int i = 1; i < matrix[0].size(); i++) {
+        for (int32_t i{1}; i < matrix[0].size(); i++) {
             num = matrix[0][i];
             int val = i + 1;
             for (int j = 1; j < min(matrix.size(), matrix[0].size() - i); j++) {

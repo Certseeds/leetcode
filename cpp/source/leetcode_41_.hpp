@@ -18,7 +18,7 @@ using std::swap;
 using std::vector;
 
 /*
-Given an unsorted integer array, 
+Given an unsorted integer array,
 find the smallest missing positive integer.
 */
 class Solution41 {
@@ -26,12 +26,12 @@ public:
     int firstMissingPositive(vector<int> &nums) {
         int maxv = nums.size();
         vector<int> num(nums.size() + 1, 0);
-        for (int i = 0; i < nums.size(); i++) {
+        for (int32_t i{0}; i < nums.size(); i++) {
             if (nums[i] > 0 && nums[i] <= maxv) {
                 num[nums[i] - 1] = nums[i];
             }
         }
-        for (int i = 0; i < num.size(); i++) {
+        for (int32_t i{0}; i < num.size(); i++) {
             if (num[i] == 0) {
                 return (i + 1);
             }

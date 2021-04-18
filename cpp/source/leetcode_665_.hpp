@@ -10,11 +10,11 @@
 using namespace std;
 
 /*
-Given an array with n integers, 
-your task is to check if it could become non-decreasing 
+Given an array with n integers,
+your task is to check if it could become non-decreasing
 by modifying at most 1 element.
 
-We define an array is non-decreasing if array[i] <= array[i + 1] 
+We define an array is non-decreasing if array[i] <= array[i + 1]
 holds for every i (1 <= i < n).
 */
 class Solution665 {
@@ -22,7 +22,7 @@ public:
     bool checkPossibility(vector<int> &nums) {
         int count = 0;
         int position = 0;
-        for (int i = 0; i < nums.size() - 1; i++) {
+        for (int32_t i{0}; i < nums.size() - 1; i++) {
             if (nums[i] - nums[i + 1] > 0) {
                 count++;
                 position = i;

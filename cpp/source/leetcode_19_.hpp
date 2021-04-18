@@ -43,7 +43,7 @@ public:
             first->next = nullptr;
             return head;
         }
-        for (int i = 0; i <= n; i++) {
+        for (int32_t i{0}; i <= n; i++) {
             second = second->next;
         }
         while (second != nullptr) {

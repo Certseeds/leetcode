@@ -46,7 +46,7 @@ public:
             nums.push_back(x % 10);
             x /= 10;
         }
-        int i = 0;
+        int32_t i{0};
         while (i < static_cast<int>(nums.size()) && nums[i] == 0) {
             i++;
         }

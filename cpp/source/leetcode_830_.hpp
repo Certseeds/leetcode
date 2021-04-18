@@ -12,10 +12,10 @@ using namespace std;
 In a string S of lowercase letters,
 these letters form consecutive groups of the same character.
 
-For example, a string like S = "abbxxxxzyy" 
+For example, a string like S = "abbxxxxzyy"
 has the groups "a", "bb", "xxxx", "z" and "yy".
 
-Call a group large if it has 3 or more characters.  
+Call a group large if it has 3 or more characters.
 We would like the starting and ending positions of every large group.
 
 The final answer should be in lexicographic order.
@@ -26,7 +26,7 @@ public:
         int end = 1;
         int length = 1;
         vector<vector<int>> willreturn;
-        for (int i = 1; i < S.size(); i++) {
+        for (int32_t i{1}; i < S.size(); i++) {
             end = i;
             if (S[i] == S[i - 1]) {
                 length++;
@@ -72,7 +72,7 @@ public:
     }
 };
 /*
-Runtime: 8 ms, 
+Runtime: 8 ms,
 Memory Usage: 9.5 MB,
 74.47%,20.00%.
 */

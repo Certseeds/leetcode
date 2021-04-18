@@ -2,11 +2,11 @@
  * @Github: https://github.com/Certseeds/leetcode
  * @Organization: SUSTech
  * @Author: nanoseeds
- * @Date: 2020-07-21 20:33:53
+ * @Date: 2021-04-18 22:59:48
  * @LastEditors: nanoseeds
  */
 /*  leetcode
-    Copyright (C) 2020  nanoseeds
+    Copyright (C) 2020-2021 nanoseeds
 
     leetcode is free software: you can redistribute it and/or modify
     it under the terms of the GNU Affero General Public License as
@@ -22,31 +22,37 @@
     along with this program.  If not, see <https://www.gnu.org/licenses/>.
     */
 #include "catch_main.hpp"
-#include "leetcode_95_.hpp"
-namespace Solution95 {
+#include "leetcode_81_.hpp"
 
+namespace Solution81 {
 using Catch::Matchers::Equals;
 using Catch::Matchers::UnorderedEquals;
 using Catch::Matchers::Contains;
-Solution95 sol95;
+Solution81 sol81;
 
-TEST_CASE("test case 1 [test 95]", "[test 95]") {
-    auto three = sol95.generateTrees(0);
-    CHECK_THAT(three, Equals<TreeNode *>({}));
+TEST_CASE("1 [test 81]", "[test 81]") {
+    CHECK_FALSE(sol81.search({1}, 0));
+    CHECK(sol81.search({2, 5, 6, 0, 0, 1, 2}, 0));
 }
 
-TEST_CASE("test case 2 [test 95]", "[test 95]") {
-    const vector<vector<int32_t>> result{
-            {1, No, 2,  No, 3,  No, No},
-            {1, No, 3,  2,  No, No, No},
-            {2, 1,  3,  No, No, No, No},
-            {3, 1,  No, No, 2,  No, No},
-            {3, 2,  No, 1,  No, No, No},
-    };
-    auto three = sol95.generateTrees(3);
-    CHECK(three.size() == 5);
-    for (int32_t i{0}; i < 5; ++i) {
-        CHECK(TreeNode::judge_equal(three[i], result[i]));
-    }
+TEST_CASE("2 [test 81]", "[test 81]") {
+    CHECK(sol81.search({1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 1, 1, 1, 1, 1}, 2));
+}
+
+TEST_CASE("3 [test 81]", "[test 81]") {
+    CHECK(sol81.search({1, 0, 1, 1, 1}, 0));
+    CHECK_FALSE(sol81.search({1, 0, 1, 1, 1}, 2));
+}
+
+TEST_CASE("4 [test 81]", "[test 81]") {
+    CHECK_FALSE(sol81.search({2, 5, 6, 0, 0, 1, 2}, 3));
+}
+
+TEST_CASE("5 [test 81]", "[test 81]") {
+    CHECK_FALSE(sol81.search({1, 1}, 0));
+}
+
+TEST_CASE("6 [test 81]", "[test 81]") {
+    CHECK_FALSE(sol81.search({1, 1, 1, 3}, 2));
 }
 }

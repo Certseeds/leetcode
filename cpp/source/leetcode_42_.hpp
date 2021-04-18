@@ -17,7 +17,7 @@ public:
     int trap(vector<int> &height) {
         int count = 0;
         int sizes = height.size();
-        for (int i = 0; i < sizes - 1; i++) {
+        for (int32_t i{0}; i < sizes - 1; i++) {
             if (height[i] == 0) {
                 continue;
             }

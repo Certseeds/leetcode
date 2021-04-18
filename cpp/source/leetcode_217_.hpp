@@ -10,19 +10,19 @@
 using namespace std;
 
 /*
-Given an array of integers, 
+Given an array of integers,
 find if the array contains any duplicates.
 
-Your function should return true if any value appears at least twice in the array, 
+Your function should return true if any value appears at least twice in the array,
 and it should return false if every element is distinct.
 hashtable is O(n) but the constant is too big,
-(bigger than log(n) now ) 
+(bigger than log(n) now )
 */
 class Solution217 {
 public:
     bool containsDuplicate(vector<int> &nums) {
         unordered_set<int> judges;
-        for (int i = 0; i < nums.size(); i++) {
+        for (int32_t i{0}; i < nums.size(); i++) {
             if (judges.count(nums[i])) {
                 return true;
             } else {
@@ -42,7 +42,7 @@ public:
     }
 };
 /*
-Runtime: 20 ms, 
+Runtime: 20 ms,
 Memory Usage: 16.5 MB,
 99.48%,77.63%.
 */

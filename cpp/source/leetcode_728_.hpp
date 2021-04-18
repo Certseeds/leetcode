@@ -40,7 +40,7 @@ public:
         temp.push_back(middle);
 
 
-        for (int i = 0; i < temp.size(); i++) {
+        for (int32_t i{0}; i < temp.size(); i++) {
             if (constX % temp[i] != 0) {
                 return false;
             }

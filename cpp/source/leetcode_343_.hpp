@@ -55,7 +55,7 @@ public:
 
     int integerBreak_DP(int n) {
         vector<int> DP(n + 1, 0);
-        for (int i = 1; i <= n; i++) {
+        for (int32_t i{1}; i <= n; i++) {
             for (int j = 1; j < i; j++) {
                 DP[i] = std::max(DP[i], std::max(j * (i - j), j * DP[i - j]));
             }

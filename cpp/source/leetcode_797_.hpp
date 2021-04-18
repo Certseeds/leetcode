@@ -9,11 +9,11 @@
 using namespace std;
 
 /*
-Given a directed, acyclic graph of N nodes.  
-Find all possible paths from node 0 to node N-1, 
+Given a directed, acyclic graph of N nodes.
+Find all possible paths from node 0 to node N-1,
 and return them in any order.
-The graph is given as follows:  
-the nodes are 0, 1, ..., graph.length - 1.  
+The graph is given as follows:
+the nodes are 0, 1, ..., graph.length - 1.
 graph[i] is a list of all nodes j for which the edge (i, j) exists.
 -->
 find all paths in directed, acyclic graph from A to B.
@@ -27,7 +27,7 @@ public:
         temp.push_back(vector<int>{0});
         int aim = graph.size() - 1;
         cout << "aim is " << aim << endl;
-        for (int i = 0; i < aim; i++) {
+        for (int32_t i{0}; i < aim; i++) {
             vector<vector<int>> replace;
             for (int j = 0; j < temp.size(); j++) {
                 vector<int> added(temp[j]);
@@ -59,7 +59,7 @@ public:
         temp.push_back(vector<int>{0});
         int aim = graph.size() - 1;
         cout << "aim is " << aim << endl;
-        for (int i = 0; i < aim; i++) {
+        for (int32_t i{0}; i < aim; i++) {
             vector<vector<int>> replace;
             for (int j = 0; j < temp.size(); j++) {
                 vector<int> added(temp[j]);
@@ -101,7 +101,7 @@ my own:
 Runtime: 96 ms,
 Memory Usage: 20.8 MB
 25.52%,10%.
-if ingnore the knock of paths, it will be 
+if ingnore the knock of paths, it will be
 Runtime: 88 ms,
 Memory Usage: 18.5 MB,
 43.83%,10%.

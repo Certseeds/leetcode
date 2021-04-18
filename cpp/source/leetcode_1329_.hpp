@@ -20,8 +20,8 @@ using std::less;
 using std::vector;
 
 /*
-Given a m * n matrix mat of integers, 
-sort it diagonally in ascending order from the top-left 
+Given a m * n matrix mat of integers,
+sort it diagonally in ascending order from the top-left
 to the bottom-right then return the sorted array.
 
 Example :
@@ -53,7 +53,7 @@ public:
         int length = 0;
         vector<int> nums;
         nums.reserve(min_size);
-        for (int i = 0; i < mat.size(); i++) {
+        for (int32_t i{0}; i < mat.size(); i++) {
             length = min(min_size, out_size - i);
             for (int j = 0; j < length; j++) {
                 nums.push_back(mat[i + j][j]);
@@ -64,7 +64,7 @@ public:
             }
             nums.clear();
         }
-        for (int i = 1; i < mat[0].size(); i++) {
+        for (int32_t i{1}; i < mat[0].size(); i++) {
             length = min(min_size, in_size - i);
             for (int j = 0; j < length; j++) {
                 nums.push_back(mat[j][i + j]);
@@ -88,7 +88,7 @@ public:
                 {1, 2, 2, 2},
                 {1, 2, 3, 3}};
         vector<vector<int>> out1 = diagonalSort(input1);
-        for (int i = 0; i < out1.size(); i++) {
+        for (int32_t i{0}; i < out1.size(); i++) {
             for (int j = 0; j < out1[0].size(); j++) {
                 assert(out1[i][j] == _out1[i][j]);
             }

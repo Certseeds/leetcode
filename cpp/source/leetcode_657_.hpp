@@ -11,7 +11,7 @@ public:
     bool judgeCircle(string &moves) {
         int x = 0;
         int y = 0;
-        for (int i = 0; i < moves.size(); i++) {
+        for (int32_t i{0}; i < moves.size(); i++) {
             switch (moves[i]) {
                 case ('L'): {
                     x += 1;

@@ -15,7 +15,7 @@ public:
         vector<int> point;
         vector<int> plus;
         unordered_map<string, int> pairs;
-        for (int i = 0; i < emails.size(); i++) {
+        for (int32_t i{0}; i < emails.size(); i++) {
             transfer(emails[i], point, plus);
             cout << emails[i] << endl;
             if (pairs.count(emails[i]) == 0) {
@@ -27,7 +27,7 @@ public:
 
     void transfer(string &str, vector<int> &po, vector<int> &pl) {
         int at = str.find('@');
-        for (int i = 0; i < at; i++) {
+        for (int32_t i{0}; i < at; i++) {
             if (str[i] == 46) {
                 po.push_back(i);
             } else if (str[i] == 43) {
@@ -39,7 +39,7 @@ public:
             str.erase(pl.front(), at - pl.front());
         }
         at = po.size();
-        for (int i = 0; i < at; i++) {
+        for (int32_t i{0}; i < at; i++) {
             str.erase(po.back(), 1);
             po.pop_back();
         }

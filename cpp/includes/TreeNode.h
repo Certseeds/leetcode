@@ -52,7 +52,7 @@ inline TreeNode::~TreeNode() {
 vector<TreeNode *> TreeNode::numToTree(const vector<int> &nums) {
 
     vector<TreeNode *> will_return(nums.size(), nullptr);
-    for (int i = 0; i < static_cast<int32_t>(nums.size()); i++) {
+    for (int32_t i{0}; i < static_cast<int32_t>(nums.size()); i++) {
         will_return[i] =
                 (nums[i] != No) ?
                 new TreeNode(nums[i]) : nullptr;
@@ -63,7 +63,7 @@ vector<TreeNode *> TreeNode::numToTree(const vector<int> &nums) {
 
 void TreeNode::organize(vector<TreeNode *> Tree) {
     int32_t tree_size = Tree.size();
-    for (int i = 0; i < tree_size; i++) {
+    for (int32_t i{0}; i < tree_size; i++) {
         if (Tree[i] != nullptr) {
             Tree[i]->left = (2 * i + 1 < tree_size) ? Tree[2 * i + 1] : nullptr;
             Tree[i]->right = (2 * i + 2 < tree_size) ? Tree[2 * i + 2] : nullptr;
@@ -87,7 +87,7 @@ bool TreeNode::judge_equal(TreeNode *root, const vector<int> &vec) {
         que.push(head->right);
     }
     bool will_return{true};
-    for (int i = 0; i < static_cast<int32_t>(nums.size()); i++) {
+    for (int32_t i{0}; i < static_cast<int32_t>(nums.size()); i++) {
         will_return = will_return && (nums[i] == vec[i]);
     }
     return will_return;

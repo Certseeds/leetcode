@@ -9,8 +9,8 @@
 using namespace std;
 
 /*
-Given a m * n matrix mat of integers, 
-sort it diagonally in ascending order 
+Given a m * n matrix mat of integers,
+sort it diagonally in ascending order
 from the top-left to the bottom-right then return the sorted array.
 */
 class Solution1330 {
@@ -30,7 +30,7 @@ public:
             return vector<vector<int>>();
         }
         vector<vector<int>> ans(C, vector<int>(R));
-        for (int i = 0; i < C; ++i) {
+        for (int32_t i{0}; i < C; ++i) {
             for (int j = 0; j < R; ++j) {
                 ans[i][j] = begin[j][i];
             }

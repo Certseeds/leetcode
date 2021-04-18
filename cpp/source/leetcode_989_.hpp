@@ -9,11 +9,11 @@
 using namespace std;
 
 /*
-For a non-negative integer X, 
-the array-form of X is an array of its digits in left to right order.  
+For a non-negative integer X,
+the array-form of X is an array of its digits in left to right order.
 For example, if X = 1231, then the array form is [1,2,3,1].
 
-Given the array-form A of a non-negative integer X, 
+Given the array-form A of a non-negative integer X,
 return the array-form of the integer X+K.
 */
 class Solution989 {
@@ -40,7 +40,7 @@ public:
 
     vector<int> addToArrayForm2(vector<int> &A, int K) {
         unsigned long long counts = 0;
-        for (int i = 0; i < A.size(); i++) {
+        for (int32_t i{0}; i < A.size(); i++) {
             counts *= 10;
             counts += A[i];
             cout << counts << endl;
@@ -64,7 +64,7 @@ public:
         vector<int> vec5 = {0};
         vector<int> vec6 = {0};
 
-        vector<int> out1 = addToArrayForm(vec1, 34);// 1234      
+        vector<int> out1 = addToArrayForm(vec1, 34);// 1234
         vector<int> out2 = addToArrayForm(vec2, 181);// 455
         vector<int> out3 = addToArrayForm(vec3, 806);//1021
         vector<int> out4 = addToArrayForm(vec4, 1);//10 000 000 000

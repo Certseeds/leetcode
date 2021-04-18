@@ -15,7 +15,7 @@ public:
     vector<string> subdomainVisits(vector<string> &cpd) {
         vector<string> willreturn;
         unordered_map<string, int> umaps;
-        for (int i = 0; i < cpd.size(); i++) {
+        for (int32_t i{0}; i < cpd.size(); i++) {
             int number = getNumber(cpd[i]);
             vector<string> domain = getDomains(cpd[i]);
             for (int j = 0; j < domain.size(); j++) {

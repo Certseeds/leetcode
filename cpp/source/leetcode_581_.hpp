@@ -11,8 +11,8 @@ using namespace std;
 
 /*
 Given an integer array,
-you need to find one continuous subarray that if you only 
-sort this subarray in ascending order, 
+you need to find one continuous subarray that if you only
+sort this subarray in ascending order,
 then the whole array will be sorted in ascending order, too.
 
 You need to find the shortest such subarray and output its length.
@@ -24,7 +24,7 @@ public:
         sort(nums2.begin(), nums2.end());
         int left = 0;
         int right = nums.size();
-        for (int i = 0; i < nums2.size(); i++) {
+        for (int32_t i{0}; i < nums2.size(); i++) {
             if (nums2[i] == nums[i]) {
                 left++;
             } else {

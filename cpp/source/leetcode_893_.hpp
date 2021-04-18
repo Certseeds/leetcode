@@ -13,7 +13,7 @@ class Solution893 {
 public:
     int numSpecialEquivGroups(vector<string> &A) {
         vector<vector<array < int, 27>> > maps;
-        for (int i = 0; i < A.size(); i++) {
+        for (int32_t i{0}; i < A.size(); i++) {
             vector<array < int, 27>>
             map_in;
             array<int, 27> single = {0};
@@ -28,7 +28,7 @@ public:
         set<array < int, 52>>
         willreturn;
 
-        for (int i = 0; i < A.size(); i++) {
+        for (int32_t i{0}; i < A.size(); i++) {
             array<int, 52> temp = {0};
             for (int j = 1; j <= 26; j++) {
                 temp[j - 1] = maps[i][0][j];
@@ -44,7 +44,7 @@ public:
 
     int numSpecialEquivGroups2(vector<string> &A) {
         set<array < int, 52> > maps;
-        for (int i = 0; i < A.size(); i++) {
+        for (int32_t i{0}; i < A.size(); i++) {
             array<int, 52> nums = {0};
             for (int j = 0; j < A[i].size(); j++) {
                 nums[A[i][j] - 97 + (j % 2) * 26]++;

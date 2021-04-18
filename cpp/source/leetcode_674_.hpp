@@ -17,7 +17,7 @@ public:
     int findLengthOfLCIS(vector<int> &nums) {
         int will_Return = (nums.size() >= 1);
         int maxv = 1;
-        for (int i = 1; i < nums.size(); i++) {
+        for (int32_t i{1}; i < nums.size(); i++) {
             maxv = (nums[i] > nums[i - 1]) ? (maxv + 1) : 1;
             will_Return = max(will_Return, maxv);
         }
@@ -37,7 +37,7 @@ public:
     }
 };
 /*
-Runtime: 4 ms, 
+Runtime: 4 ms,
 Memory Usage: 9.4 MB,
 99.62%,83.33%.
 */

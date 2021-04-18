@@ -10,7 +10,7 @@
 using namespace std;
 
 /*
-Given a non-negative integer numRows, 
+Given a non-negative integer numRows,
 generate the first numRows of Pascal's triangle.
 */
 class Solution118 {
@@ -18,7 +18,7 @@ public:
     inline vector<vector<int>> generate(int numRows) {
         vector<vector<int>> willreturn;
         vector<int> temp = {};
-        for (int i = 1; i <= numRows; i++) {
+        for (int32_t i{1}; i <= numRows; i++) {
             temp = generate_help(temp);
             willreturn.push_back(temp);
         }
@@ -28,7 +28,7 @@ public:
     inline vector<int> generate_help(vector<int> vec) {
         vector<int> willreturn(vec);
         willreturn.push_back(1);
-        for (int i = 1; i < vec.size(); i++) {
+        for (int32_t i{1}; i < vec.size(); i++) {
             willreturn[i] = vec[i - 1] + vec[i];
         }
         return willreturn;
@@ -52,7 +52,7 @@ public:
     }
 };
 /*
-Runtime: 4 ms, 
+Runtime: 4 ms,
 Memory Usage: 8.9 MB,
 61.92%,44.44%.
 */

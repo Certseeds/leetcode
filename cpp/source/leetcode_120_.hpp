@@ -41,7 +41,7 @@ public:
     int minimumTotal(vector<vector<int>> &dp) {
         int m = dp.size();
         // ensure the size is 一个首项为1，间距为1的递增数列。
-        for (int i = 1; i < m; i++) {
+        for (int32_t i{1}; i < m; i++) {
             dp[i].front() += dp[i - 1].front();
             for (int j = 1; j < i; j++) {
                 dp[i][j] += std::min(dp[i - 1][j - 1], dp[i - 1][j]);

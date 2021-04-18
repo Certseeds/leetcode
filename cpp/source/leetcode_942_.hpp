@@ -13,7 +13,7 @@ public:
         int min = 0;
         int max = S.size();
         vector<int> willreturn(max + 1);
-        for (int i = 0; i < S.size(); i++) {
+        for (int32_t i{0}; i < S.size(); i++) {
             if (S[i] == 73) {
                 willreturn[i] = min;
                 min++;

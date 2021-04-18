@@ -54,7 +54,7 @@ public:
     }// c++ 14 constexpr, count facts in complier time.
     string getPermutation(int32_t n, int32_t k) {
         vector<uint32_t> fact(10, 1);
-        for (int i = 0; i < 10; i++) {
+        for (int32_t i{0}; i < 10; i++) {
             fact[i] = facts(i);
         }
         assert(fact[n] >= k && k >= 1);
@@ -79,7 +79,7 @@ public:
 
     string getPermutation_rec_out(int32_t n, int32_t k) {
         vector<uint32_t> fact(10, 1);
-        for (int i = 0; i < 10; i++) {
+        for (int32_t i{0}; i < 10; i++) {
             fact[i] = facts(i);
         }
         assert(fact[n] >= k && k >= 1);
@@ -93,7 +93,7 @@ public:
 
     string getPermutation_rec_in(int32_t n, int32_t k, vector<uint32_t> nums) {
         vector<uint32_t> fact(10, 1);
-        for (int i = 0; i < 10; i++) {
+        for (int32_t i{0}; i < 10; i++) {
             fact[i] = facts(i);
         }
         assert(fact[n] >= k && k >= 0);

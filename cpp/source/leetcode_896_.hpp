@@ -9,7 +9,7 @@
 using namespace std;
 
 /*
-An array is monotonic 
+An array is monotonic
 if it is either monotone increasing or monotone decreasing.
 
 An array A is monotone increasing if for all i <= j,
@@ -28,7 +28,7 @@ public:
         int counts;
         int maxv = INT16_MIN;
         int minv = INT16_MAX;
-        for (int i = 1; i < A.size(); i++) {
+        for (int32_t i{1}; i < A.size(); i++) {
             counts = isMonotonic_judge(A[i] - A[i - 1]);
             maxv = max(maxv, counts);
             minv = min(minv, counts);

@@ -12,7 +12,7 @@ Given an array A of 0s and 1s, consider N_i:
 the i-th subarray from A[0] to A[i] interpreted as a binary number
 (from most-significant-bit to least-significant-bit.)
 
-Return a list of booleans answer, 
+Return a list of booleans answer,
 where answer[i] is true if and only if N_i is divisible by 5.
 */
 class Solution1018 {
@@ -20,7 +20,7 @@ public:
     vector<bool> prefixesDivBy5(vector<int> &A) {
         vector<bool> willreturn(A.size());
         int num = 0;
-        for (int i = 0; i < A.size(); i++) {
+        for (int32_t i{0}; i < A.size(); i++) {
             num = (2 * num + A[i]) % 5;
             willreturn[i] = (num == 0);
         }

@@ -9,11 +9,11 @@ using namespace std;
 
 /*
 We have two special characters.
-The first character can be represented by one bit 0. 
+The first character can be represented by one bit 0.
 The second character can be represented by two bits (10 or 11).
 
-Now given a string represented by several bits. 
-Return whether the last character must be a one-bit character or not. 
+Now given a string represented by several bits.
+Return whether the last character must be a one-bit character or not.
 The given string will always end with a zero.
 */
 class Solution717 {
@@ -26,7 +26,7 @@ public:
             // sizes == 2 is the same with sizes >2
             // it means, test the string before the last one is over or not
         else {
-            int i = 0;
+            int32_t i{0};
             for (; i < sizes - 1; i++) {
                 i += bits[i];
             }
@@ -46,7 +46,7 @@ public:
     }
 };
 /*
-Runtime: 4 ms, 
+Runtime: 4 ms,
 Memory Usage: 8.8 MB,
 77.44%,66.67%.
 */

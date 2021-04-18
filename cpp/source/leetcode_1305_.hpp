@@ -71,7 +71,7 @@ public:
 
     void test() {
         vector<TreeNode *> tree;
-        for (int i = 0; i <= 7; i++) {
+        for (int32_t i{0}; i <= 7; i++) {
             TreeNode *temp = new TreeNode(i);
             tree.push_back(temp);
         }
@@ -83,10 +83,10 @@ public:
         tree[5]->right = tree[3];
         //bstToGst(tree[0]);
         vector<int> output = getAllElements(tree[2], tree[5]);
-        for (int i = 0; i < output.size(); i++) {
+        for (int32_t i{0}; i < output.size(); i++) {
             cout << output[i] << endl;
         }
-        for (int i = 0; i <= 7; i++) {
+        for (int32_t i{0}; i <= 7; i++) {
             delete tree[i];
         }
     }

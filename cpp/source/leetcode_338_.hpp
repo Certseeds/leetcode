@@ -1,4 +1,4 @@
-/*  leetcode_cpp 
+/*  leetcode_cpp
     Copyright (C) 2020  nanoseeds
 
     leetcode_cpp is free software: you can redistribute it and/or modify
@@ -18,7 +18,7 @@
  * @Github: https://github.com/Certseeds/leetcode_cpp
  * @Organization: SUSTech
  * @Author: nanoseeds
- * @Date: 2020-06-11 10:04:22 
+ * @Date: 2020-06-11 10:04:22
  * @LastEditors  : nanoseeds
  */
 #ifndef LEETCODE_SOURCE_LEETCODE_338_H
@@ -40,7 +40,7 @@ public:
         int range_max = get_range(num + 1);
         vector<int32_t> will_return = {0, 1};
         will_return.reserve(pow(2, range_max));
-        for (int i = 1; i < range_max; ++i) {
+        for (int32_t i{1}; i < range_max; ++i) {
             vector<int32_t> temp(will_return);
             for (auto &j:temp) {
                 j++;
@@ -62,7 +62,7 @@ public:
     }
 
     int get_range(const int &x) {
-        for (int i = 0; i < x; ++i) {
+        for (int32_t i{0}; i < x; ++i) {
             if (std::pow(2, i) >= x) {
                 return i;
             }

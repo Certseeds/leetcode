@@ -16,7 +16,7 @@ and 0 represents that the seat is empty.
 There is at least one empty seat,
 and at least one person sitting.
 
-Alex wants to sit in the seat such that the distance 
+Alex wants to sit in the seat such that the distance
 between him and the closest person to him is maximized.
 
 Return that maximum distance to closest person.
@@ -29,13 +29,13 @@ public:
         int willreturn = INT16_MIN;
         left[0] = (seats[0] == 1) ? 0 : INT16_MAX;
         right[seats.size() - 1] = (seats[seats.size() - 1] == 1) ? 0 : INT16_MAX;
-        for (int i = 1; i < seats.size(); i++) {
+        for (int32_t i{1}; i < seats.size(); i++) {
             left[i] = (seats[i] == 1) ? 0 : left[i - 1] + 1;
         }
         for (int i = seats.size() - 2; i >= 0; i--) {
             right[i] = (seats[i] == 1) ? 0 : right[i + 1] + 1;
         }
-        for (int i = 0; i < seats.size(); i++) {
+        for (int32_t i{0}; i < seats.size(); i++) {
             willreturn = max(
                     willreturn,
                     min(left[i],

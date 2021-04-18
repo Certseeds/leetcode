@@ -13,9 +13,9 @@ using namespace std;
 /*
 On an 8x8 chessboard, there can be multiple Black Queens and one White King.
 
-Given an array of integer coordinates queens that 
-represents the positions of the Black Queens, 
-and a pair of coordinates king that represent the position of the White King, 
+Given an array of integer coordinates queens that
+represents the positions of the Black Queens,
+and a pair of coordinates king that represent the position of the White King,
 return the coordinates of all the queens (in any order) that can attack the King.
 */
 class Solution1222 {
@@ -57,28 +57,28 @@ public:
                 break;
             }
         }
-        for (int i = 1; i <= min(x, y); i++) {
+        for (int32_t i{1}; i <= min(x, y); i++) {
             if (umap.count(std::make_pair(x - i, y - i)) == 1) {
                 will_return.push_back(vector<int>{x - i, y - i});
                 umap.erase(std::make_pair(x - i, y - i));
                 break;
             }
         }
-        for (int i = 1; i <= min(Chessboard - x, Chessboard - y); i++) {
+        for (int32_t i{1}; i <= min(Chessboard - x, Chessboard - y); i++) {
             if (umap.count(std::make_pair(x + i, y + i)) == 1) {
                 will_return.push_back(vector<int>{x + i, y + i});
                 umap.erase(std::make_pair(x + i, y + i));
                 break;
             }
         }
-        for (int i = 1; i <= min(x, Chessboard - y); i++) {
+        for (int32_t i{1}; i <= min(x, Chessboard - y); i++) {
             if (umap.count(std::make_pair(x - i, y + i)) == 1) {
                 will_return.push_back(vector<int>{x - i, y + i});
                 umap.erase(std::make_pair(x - i, y + i));
                 break;
             }
         }
-        for (int i = 1; i <= min(Chessboard - x, y); i++) {
+        for (int32_t i{1}; i <= min(Chessboard - x, y); i++) {
             if (umap.count(std::make_pair(x + i, y - i)) == 1) {
                 will_return.push_back(vector<int>{x + i, y - i});
                 umap.erase(std::make_pair(x + i, y - i));

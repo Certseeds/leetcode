@@ -34,7 +34,7 @@ public:
         string temp = "[.]";
         string willreturned = "";
 
-        for (int i = 0; i < 3; i++) {
+        for (int32_t i{0}; i < 3; i++) {
             willreturned = willreturned + numbers[i] + temp;
         }
         willreturned += numbers[3];

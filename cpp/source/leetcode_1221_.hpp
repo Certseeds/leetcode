@@ -12,7 +12,7 @@ public:
         int left = 0;
         //int right = 0;
         int willreturn = 0;
-        for (int i = 0; i < s.size(); i++) {
+        for (int32_t i{0}; i < s.size(); i++) {
             left += (s[i] == 'R');
             //right += !(s[i] == 'R') ;
             //cout << left << " " << right << " " << i << endl;

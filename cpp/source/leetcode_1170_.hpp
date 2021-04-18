@@ -11,10 +11,10 @@ using namespace std;
 /*
 Let's define a function f(s) over a non-empty string s,
 which calculates the frequency of the smallest character in s. For example,
-if s = "dcce" then f(s) = 2 because the smallest character is "c" 
+if s = "dcce" then f(s) = 2 because the smallest character is "c"
 and its frequency is 2.
 
-Now, given string arrays queries and words, 
+Now, given string arrays queries and words,
 return an integer array answer, where each answer[i] is the number of words such that f(queries[i]) < f(W), where W is a word in words
 upper_bound,distance(),a magic function.
 */
@@ -24,14 +24,14 @@ public:
         vector<int> quer(queries.size());
         vector<int> wor(words.size());
 
-        for (int i = 0; i < queries.size(); i++) {
+        for (int32_t i{0}; i < queries.size(); i++) {
             quer[i] = numSmallerByFrequency_help(queries[i]);
         }
-        for (int i = 0; i < words.size(); i++) {
+        for (int32_t i{0}; i < words.size(); i++) {
             wor[i] = numSmallerByFrequency_help(words[i]);
         }
         sort(wor.begin(), wor.end(), less<int>());
-        for (int i = 0; i < queries.size(); i++) {
+        for (int32_t i{0}; i < queries.size(); i++) {
             //cout << i << endl;
             auto diff = std::upper_bound(wor.begin(), wor.end(), quer[i]);
             quer[i] = distance(diff, std::end(wor));
@@ -42,7 +42,7 @@ public:
     inline int numSmallerByFrequency_help(string &s) {
         int num = INT16_MAX;
         int val = 1;
-        for (int i = 0; i < s.size(); i++) {
+        for (int32_t i{0}; i < s.size(); i++) {
             if (num > s[i]) {
                 num = s[i];
                 val = 1;
@@ -71,7 +71,7 @@ public:
     }
 };
 /*
-Runtime: 16 ms, 
+Runtime: 16 ms,
 Memory Usage: 11 MB,
 97.16%,100%.
 */

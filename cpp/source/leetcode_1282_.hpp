@@ -10,10 +10,10 @@ using namespace std;
 
 /*There are n people
 whose IDs go from 0 to n - 1 and each person belongs exactly to one group.
-Given the array groupSizes of length n telling the group size each person belongs to, 
+Given the array groupSizes of length n telling the group size each person belongs to,
 return the groups there are and the people's IDs each group includes.
 You can return any solution in any order and the same applies for IDs.
-Also, it is guaranteed that there exists at least one solution. 
+Also, it is guaranteed that there exists at least one solution.
 */
 class Solution1282 {
 public:
@@ -34,7 +34,7 @@ public:
     vector<vector<int>> groupThePeople2(vector<int> &groupSizes) {
         unordered_map<int, vector<int>> nums;
         vector<vector<int>> will_return;
-        for (int i = 0; i < groupSizes.size(); i++) {
+        for (int32_t i{0}; i < groupSizes.size(); i++) {
             nums[groupSizes[i]].push_back(i);
             if (nums[groupSizes[i]].size() == groupSizes[i]) {
                 will_return.push_back(nums[groupSizes[i]]);

@@ -32,7 +32,7 @@ public:
             return;
         }
         vec.push_back(root->val);
-        for (int i = 0; i < root->children.size(); i++) {
+        for (int32_t i{0}; i < root->children.size(); i++) {
             real_action(root->children[i], vec);
         }
     }

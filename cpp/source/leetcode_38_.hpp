@@ -17,7 +17,7 @@ using std::endl;
 using std::string;
 
 /*
-The count-and-say sequence is 
+The count-and-say sequence is
 the sequence of integers with the first five terms as following:
 
 1.     1
@@ -43,7 +43,7 @@ public:
         }
         string str1 = countAndSay(n - 1);
         string will_return = "";
-        for (int i = 0; i < str1.size();) {
+        for (int32_t i{0}; i < str1.size();) {
             int length = 0;
             while (str1[i + length] == str1[i]) {
                 length++;
@@ -56,7 +56,7 @@ public:
     }
 
     void test() {
-        /*  
+        /*
           cout << countAndSay(1) << endl;
           cout << countAndSay(2) << endl;
           cout << countAndSay(3) << endl;
