@@ -26,6 +26,7 @@
 #include <functional>
 
 namespace Solution25 {
+using namespace LISTNODE;
 using Catch::Matchers::Equals;
 using Catch::Matchers::UnorderedEquals;
 using Catch::Matchers::Contains;
@@ -64,6 +65,7 @@ void _test(int x, int y, const std::function<ListNode *(ListNode *, int)> &func)
         nums1[i] = i + 1;
     }
     vector<ListNode *> vec1 = ListNode::numToList(nums1);
+    const ListNodeLink vec1_{vec1};
     transfer(nums1, y);
     ListNode *node1 = func(vec1[0], y);
     int begin = 0;
@@ -72,10 +74,6 @@ void _test(int x, int y, const std::function<ListNode *(ListNode *, int)> &func)
         //cout << node1->val << " " << nums1[begin] << " ";
         node1 = node1->next;
         begin++;
-    }
-    //cout << endl;
-    for (auto &i : vec1) {
-        delete i;
     }
 }
 

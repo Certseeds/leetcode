@@ -25,6 +25,7 @@
 #include "leetcode_21_.hpp"
 
 namespace Solution21 {
+using namespace LISTNODE;
 
 using Catch::Matchers::Equals;
 using Catch::Matchers::UnorderedEquals;
@@ -32,38 +33,26 @@ using Catch::Matchers::Contains;
 Solution21 sol21;
 
 TEST_CASE("1 [test 21]", "[test 21]") {
-    vector<ListNode *> vec1 = ListNode::numToList(vector<int32_t>{1, 2, 4});
-    vector<ListNode *> vec2 = ListNode::numToList(vector<int32_t>{1, 3, 4});
+    ListNodeLink vec1{1,2,4};
+    ListNodeLink vec2{1,3,4};
     ListNode *node1 = sol21.mergeTwoLists2(vec1[0], vec2[0]);
     int32_t lastV = std::numeric_limits<int32_t>::min();
     while (node1 != nullptr) {
         CHECK(node1->val >= lastV);
         lastV = node1->val;
         node1 = node1->next;
-    }
-    for (auto &i : vec1) {
-        delete i;
-    }
-    for (auto &i : vec2) {
-        delete i;
     }
 }
 
 TEST_CASE("2 [test 21]", "[test 21]") {
-    vector<ListNode *> vec1 = ListNode::numToList(vector<int32_t>{1, 1, 1, 4, 4, 5});
-    vector<ListNode *> vec2 = ListNode::numToList(vector<int32_t>{0, 1, 1, 1, 8, 9, 9});
+    ListNodeLink vec1{1, 1, 1, 4, 4, 5};
+    ListNodeLink vec2{0, 1, 1, 1, 8, 9, 9};
     ListNode *node1 = sol21.mergeTwoLists2(vec1[0], vec2[0]);
     int32_t lastV = std::numeric_limits<int32_t>::min();
     while (node1 != nullptr) {
         CHECK(node1->val >= lastV);
         lastV = node1->val;
         node1 = node1->next;
-    }
-    for (auto &i : vec1) {
-        delete i;
-    }
-    for (auto &i : vec2) {
-        delete i;
     }
 }
 }

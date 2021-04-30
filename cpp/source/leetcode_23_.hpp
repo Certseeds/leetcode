@@ -42,9 +42,12 @@ using std::cout;
 using std::endl;
 using std::multiset;
 using std::priority_queue;
+using namespace LISTNODE;
 
 class Solution23 {
-
+#ifndef __LOCAL__
+    static size_t alloc_delete_count{0};
+#endif
 public:
     ListNode *mergeKLists(vector<ListNode *> &lists) {
         ListNode will_return(0);
@@ -172,6 +175,9 @@ public:
             head = head->next;
         }
         return will_return.next;
+    }
+    ~Solution23(){
+        assert(alloc_delete_count==0);
     }
 };
 

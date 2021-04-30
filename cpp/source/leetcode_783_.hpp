@@ -31,9 +31,13 @@
 
 // same with 530
 namespace Solution783 {
+using namespace TREENODE;
 using std::stack;
 using std::vector;
 class Solution783 {
+#ifndef __LOCAL__
+    static size_t alloc_delete_count{0};
+#endif
 public:
     int32_t minDiffInBST(TreeNode *root) {
         if (root == nullptr) {
@@ -81,7 +85,9 @@ public:
         }
         return will_return;
     }
-
+    ~Solution783() {
+        assert(alloc_delete_count==0);
+    }
 };
 }
 #endif //LEETCODE_CPP_SOURCE_LEETCODE_783_H

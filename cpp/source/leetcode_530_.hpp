@@ -30,13 +30,17 @@
 #include "TreeNode.h"
 
 namespace Solution530 {
+using namespace TREENODE;
 using std::stack;
 using std::vector;
 
 // same with 783
 class Solution530 {
+#ifndef __LOCAL__
+    static size_t alloc_delete_count = 0;
+#endif
 public:
-    int getMinimumDifference(TreeNode* root) {
+    int getMinimumDifference(TreeNode *root) {
         if (root == nullptr) {
             return std::numeric_limits<int32_t>::max();
         }
@@ -59,7 +63,9 @@ public:
         int32_t left_will_return = getMinimumDifference(root->left);
         int32_t right_will_return = getMinimumDifference(root->right);
         return std::min(will_return, std::min(left_will_return, right_will_return));
-    } int32_t getMinimumDifference2(TreeNode *root) {
+    }
+
+    int32_t getMinimumDifference2(TreeNode *root) {
         if (root == nullptr) {
             return std::numeric_limits<int32_t>::max();
         }
@@ -78,6 +84,9 @@ public:
             head = head->right;
         }
         return will_return;
+    }
+    ~Solution530() {
+        assert(alloc_delete_count==0);
     }
 };
 }

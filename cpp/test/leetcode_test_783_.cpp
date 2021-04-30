@@ -25,6 +25,7 @@
 #include "leetcode_783_.hpp"
 
 namespace Solution783 {
+using namespace TREENODE;
 Solution783 sol783;
 
 TEST_CASE("1 [test 783]", "[test 783]") {
@@ -35,6 +36,7 @@ TEST_CASE("1 [test 783]", "[test 783]") {
     }THEN("1-iter [test 783]") {
         CHECK(sol783.minDiffInBST2(vec[0]) == 1);
     }
+    std::unique_ptr<TreeNode> vec_{vec[0]};
 }
 
 TEST_CASE("2 [test 783]", "[test 783]") {
@@ -45,5 +47,6 @@ TEST_CASE("2 [test 783]", "[test 783]") {
     }THEN("2-iter [test 783]") {
         CHECK(sol783.minDiffInBST2(vec[0]) == 1);
     }
+    std::unique_ptr<TreeNode> vec_{vec[0]};
 }
 }

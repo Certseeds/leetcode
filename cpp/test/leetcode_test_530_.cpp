@@ -25,6 +25,7 @@
 #include "leetcode_530_.hpp"
 
 namespace Solution530 {
+using namespace TREENODE;
 Solution530 sol530;
 
 TEST_CASE("1 [test 530]", "[test 530]") {
@@ -35,6 +36,7 @@ TEST_CASE("1 [test 530]", "[test 530]") {
     }THEN("1-iter [test 530]") {
         CHECK(sol530.getMinimumDifference2(vec[0]) == 1);
     }
+    std::unique_ptr<TreeNode> vec_{vec[0]};
 }
 
 TEST_CASE("2 [test 530]", "[test 530]") {
@@ -45,5 +47,6 @@ TEST_CASE("2 [test 530]", "[test 530]") {
     }THEN("2-iter [test 530]") {
         CHECK(sol530.getMinimumDifference2(vec[0]) == 1);
     }
+    std::unique_ptr<TreeNode> vec_{vec[0]};
 }
 }

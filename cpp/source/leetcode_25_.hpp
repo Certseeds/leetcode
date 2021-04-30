@@ -43,13 +43,16 @@ only nodes itself may be changed.
 Reverse Linkedlist.
 */
 namespace Solution25 {
+using namespace LISTNODE;
 using std::cout;
 using std::endl;
 using std::swap;
 using std::queue;
 using std::vector;
-
 class Solution25 {
+#ifndef __LOCAL__
+    static size_t alloc_delete_count{0};
+#endif
 public:
     ListNode *reverseKGroup(ListNode *root, int k) {
 
@@ -142,6 +145,9 @@ public:
         }
         root->next = temp;
         return fir;
+    }
+    ~Solution25(){
+        assert(alloc_delete_count == 0);
     }
 };
 }

@@ -32,12 +32,17 @@ Given 1->2->3->4,
 you should return the list as 2->1->4->3.
 */
 namespace Solution24 {
+using namespace LISTNODE;
+
 using std::cout;
 using std::endl;
 using std::swap;
 using std::vector;
 
 class Solution24 {
+#ifndef __LOCAL__
+    static size_t alloc_delete_count{0};
+#endif
 public:
     ListNode *swapPairs(ListNode *root) {
         ListNode will_return{0};
@@ -51,6 +56,9 @@ public:
             head = head->next->next;
         }
         return will_return.next;
+    }
+    ~Solution24(){
+        assert(alloc_delete_count==0);
     }
 };
 }

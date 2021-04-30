@@ -23,49 +23,39 @@
     */
 #include "catch_main.hpp"
 #include "leetcode_19_.hpp"
+
 namespace Solution19 {
+using namespace LISTNODE;
 
 Solution19 sol19;
 
 TEST_CASE("test case 1 [test 19]", "[test 19]") {
-    vector<int> nums = {1, 2, 3, 4, 5};
-    vector<ListNode *> vec1 = ListNode::numToList(nums);
-    ListNode *temp = sol19.removeNthFromEnd(vec1[0], 2);
+    ListNodeLink vec1{1, 2, 3, 4, 5};
+    const auto *const temp = sol19.removeNthFromEnd(vec1[0], 2);
     CHECK(temp->val == 1);
     CHECK(temp->next->val == 2);
     CHECK(temp->next->next->val == 3);
     CHECK(temp->next->next->next->val == 5);
     CHECK(temp->next->next->next->next == nullptr);
-    for (auto &i : vec1) {
-        delete i;
-    }
 }
 
 TEST_CASE("test case 2 [test 19]", "[test 19]") {
-    vector<int> nums = {1, 2, 3, 4, 5};
-    vector<ListNode *> vec1 = ListNode::numToList(nums);
-    ListNode *temp = sol19.removeNthFromEnd(vec1[0], 0);
+    ListNodeLink vec1{1, 2, 3, 4, 5};
+    const auto *const temp = sol19.removeNthFromEnd(vec1[0], 0);
     CHECK(temp->val == 1);
     CHECK(temp->next->val == 2);
     CHECK(temp->next->next->val == 3);
     CHECK(temp->next->next->next->val == 4);
     CHECK(temp->next->next->next->next == nullptr);
-    for (auto &i : vec1) {
-        delete i;
-    }
 }
 
 TEST_CASE("test case 3 [test 19]", "[test 19]") {
-    vector<int> nums = {1, 2, 3, 4, 5};
-    vector<ListNode *> vec1 = ListNode::numToList(nums);
-    ListNode *temp = sol19.removeNthFromEnd(vec1[0], 5);
+    ListNodeLink vec1{1, 2, 3, 4, 5};
+    const auto *const temp = sol19.removeNthFromEnd(vec1[0], 5);
     CHECK(temp->val == 2);
     CHECK(temp->next->val == 3);
     CHECK(temp->next->next->val == 4);
     CHECK(temp->next->next->next->val == 5);
     CHECK(temp->next->next->next->next == nullptr);
-    for (auto &i : vec1) {
-        delete i;
-    }
 }
 }

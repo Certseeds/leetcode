@@ -25,6 +25,8 @@
 #include "leetcode_24_.hpp"
 
 namespace Solution24 {
+using namespace LISTNODE;
+
 Solution24 sol24;
 
 TEST_CASE("1 [test 24]", "[test 24]") {
@@ -32,21 +34,18 @@ TEST_CASE("1 [test 24]", "[test 24]") {
 }
 
 TEST_CASE("2 [test 24]", "[test 24]") {
-    vector<ListNode *> vec1 = ListNode::numToList({1, 2, 3, 4});
-    auto results = sol24.swapPairs(vec1[0]);
+    ListNodeLink vec1{1, 2, 3, 4};
+    const auto *const results = sol24.swapPairs(vec1[0]);
     CHECK(results->val == 2);
     CHECK(results->next->val == 1);
     CHECK(results->next->next->val == 4);
     CHECK(results->next->next->next->val == 3);
     CHECK(results->next->next->next->next == nullptr);
-    for (auto &i : vec1) {
-        delete i;
-    }
 }
 
 TEST_CASE("3 [test 24]", "[test 24]") {
-    vector<ListNode *> vec1 = ListNode::numToList({1, 1, 4, 5, 1, 4});
-    auto results = sol24.swapPairs(vec1[0]);
+    ListNodeLink vec1{1, 1, 4, 5, 1, 4};
+    const auto *const results = sol24.swapPairs(vec1[0]);
     CHECK(results->val == 1);
     CHECK(results->next->val == 1);
     CHECK(results->next->next->val == 5);
@@ -54,8 +53,5 @@ TEST_CASE("3 [test 24]", "[test 24]") {
     CHECK(results->next->next->next->next->val == 4);
     CHECK(results->next->next->next->next->next->val == 1);
     CHECK(results->next->next->next->next->next->next == nullptr);
-    for (auto &i : vec1) {
-        delete i;
-    }
 }
 }

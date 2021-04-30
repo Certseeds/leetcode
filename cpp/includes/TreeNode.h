@@ -6,23 +6,26 @@
  * @LastEditors  : nanoseeds
  * @LastEditTime : 2020-02-10 16:24:40
 */
-#ifndef LEETCODE_SOURCE_TREENODE_H
-#define LEETCODE_SOURCE_TREENODE_H
+#ifndef LEETCODE_CPP_INCLUDES_TREENODE_H
+#define LEETCODE_CPP_INCLUDES_TREENODE_H
 
+#include <utility>
 #include <vector>
 #include <queue>
-
+namespace TREENODE {
 using std::queue;
 using std::vector;
 static constexpr const int32_t No{-100000};
-
+static size_t alloc_delete_count{0};
 class TreeNode {
 public:
     int32_t val;
     TreeNode *left;
     TreeNode *right;
 
-    TreeNode(int x, TreeNode *le, TreeNode *rig) : val(x), left(le), right(rig) {};
+    TreeNode(int x, TreeNode *le, TreeNode *rig) : val(x), left(le), right(rig) {
+        alloc_delete_count++;
+    };
 
     explicit TreeNode(int x = 0) : TreeNode(x, nullptr, nullptr) {};
 
@@ -43,10 +46,44 @@ public:
     static bool judge_equal(TreeNode *root, const vector<int> &vec);
 };
 
+class TreeNodeLink {
+
+public:
+    vector<TreeNode *> list{};
+
+    TreeNodeLink(std::initializer_list<int32_t> list_) : list(TreeNode::numToTree(list_)) {}
+
+    explicit TreeNodeLink(vector<TreeNode *> list_) : list(std::move(list_)) {}
+
+    explicit TreeNodeLink(TreeNode *li) {
+        list.push_back(li);
+    }
+
+    virtual ~TreeNodeLink() {
+        for (auto &i:list) {
+            delete i;
+        }
+    }
+
+    TreeNode *operator[](size_t i) {
+        if (i >= list.size()) {
+            return nullptr;
+        }
+        return list[i];
+    }
+};
+
 inline TreeNode::~TreeNode() {
+    alloc_delete_count--;
+    if (this->left != nullptr) {
+        delete this->left;
+        this->left = nullptr;
+    }
+    if (this->right != nullptr) {
+        delete this->right;
+        this->right = nullptr;
+    }
     this->val = 0;
-    this->left = nullptr;
-    this->right = nullptr;
 }
 
 vector<TreeNode *> TreeNode::numToTree(const vector<int> &nums) {
@@ -92,6 +129,6 @@ bool TreeNode::judge_equal(TreeNode *root, const vector<int> &vec) {
     }
     return will_return;
 }
+}
 
-
-#endif //LEETCODE_SOURCE_TREENODE_H
+#endif // LEETCODE_CPP_INCLUDES_TREENODE_H

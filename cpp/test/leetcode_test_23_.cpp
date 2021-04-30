@@ -26,18 +26,17 @@
 
 
 namespace Solution23 {
+using namespace LISTNODE;
+
 using Catch::Matchers::Equals;
 using Catch::Matchers::UnorderedEquals;
 using Catch::Matchers::Contains;
 Solution23 sol23;
 
 TEST_CASE("4 [test 23]", "[test 23]") {
-    vector<int> nums1{1, 4, 5};
-    vector<int> nums2{1, 3, 4};
-    vector<int> nums3{2, 6};
-    vector<ListNode *> vec1 = ListNode::numToList(nums1);
-    vector<ListNode *> vec2 = ListNode::numToList(nums2);
-    vector<ListNode *> vec3 = ListNode::numToList(nums3);
+    ListNodeLink vec1{1, 4, 5};
+    ListNodeLink vec2{1, 3, 4};
+    ListNodeLink vec3{2, 6};
     vector<ListNode *> vec4{};
     GIVEN("init data 1 [test 23]") {
         WHEN("data init results [test 23]") {
@@ -82,15 +81,6 @@ TEST_CASE("4 [test 23]", "[test 23]") {
                 temp = temp->next;
             }
         }
-    }
-    for (auto &i : vec1) {
-        delete i;
-    }
-    for (auto &i : vec2) {
-        delete i;
-    }
-    for (auto &i : vec3) {
-        delete i;
     }
 }
 }

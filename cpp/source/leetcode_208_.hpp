@@ -34,6 +34,7 @@ namespace Solution208 {
 using std::array;
 using std::string;
 using std::unordered_set;
+static size_t alloc_delete_count {0};
 
 class Solution208 {
     class Trie {
@@ -69,20 +70,35 @@ private:
     class Trie2 {
     private:
         static constexpr const size_t array_size{26};
-
         class Node {
         public:
             uint8_t self;
             uint8_t isfinish;
             std::array<Node *, array_size> sons{nullptr};
 
-            explicit Node(uint8_t self_, uint8_t finish) : self(self_), isfinish(finish) {}
+            explicit Node(uint8_t self_, uint8_t finish) : self(self_), isfinish(finish) {
+                alloc_delete_count++;
+            }
+
+            ~Node() {
+                alloc_delete_count--;
+                for (size_t i{0}; i < array_size; i++) {
+                    delete sons[i];
+                    sons[i]= nullptr;
+                }
+            }
         };
 
         std::array<Node *, array_size> sons{nullptr};
     public:
         Trie2() = default;
-
+        ~Trie2(){
+            for (size_t i{0}; i < array_size; i++) {
+                delete sons[i];
+                sons[i]= nullptr;
+            }
+            assert(alloc_delete_count == 0);
+        }
         /** Inserts a word into the trie. */
         void insert(const string &word) {
             std::array<Node *, 26> *array = &sons;

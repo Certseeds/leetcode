@@ -6,8 +6,8 @@
  * @Organization: SUSTech
  * @Author: nanoseeds
  * @Date: 2020-01-17 13:18:46
- * @LastEditors  : nanoseeds
- * @LastEditTime : 2020-02-06 10:14:54
+ * @LastEditors: nanoseeds
+ * @LastEditTime: 2021-04-30 12:16:20
  */
 #include <vector>
 #include <string>
@@ -23,9 +23,14 @@ Given a linked list,
 remove the n-th node from the end of list and return its head.
 */
 namespace Solution19 {
+using namespace LISTNODE;
+
 using namespace std;
 
 class Solution19 {
+#ifndef __LOCAL__
+    static size_t alloc_delete_count{0};
+#endif
 public:
     ListNode *removeNthFromEnd(ListNode *head, int n) {
         // auto *will_return = new ListNode(0);
@@ -55,6 +60,9 @@ public:
         }
         first->next = (first->next)->next;
         return will_return->next;
+    }
+    ~Solution19(){
+        assert(alloc_delete_count==0);
     }
 };
 }

@@ -24,15 +24,16 @@
 #include "catch_main.hpp"
 #include "leetcode_95_.hpp"
 namespace Solution95 {
-
+using namespace TREENODE;
 using Catch::Matchers::Equals;
 using Catch::Matchers::UnorderedEquals;
 using Catch::Matchers::Contains;
 Solution95 sol95;
 
 TEST_CASE("test case 1 [test 95]", "[test 95]") {
-    auto three = sol95.generateTrees(0);
+    const auto three = sol95.generateTrees(0);
     CHECK_THAT(three, Equals<TreeNode *>({}));
+    const TreeNodeLink link1{three};
 }
 
 TEST_CASE("test case 2 [test 95]", "[test 95]") {
@@ -43,10 +44,11 @@ TEST_CASE("test case 2 [test 95]", "[test 95]") {
             {3, 1,  No, No, 2,  No, No},
             {3, 2,  No, 1,  No, No, No},
     };
-    auto three = sol95.generateTrees(3);
+    const auto three = sol95.generateTrees(3);
     CHECK(three.size() == 5);
     for (int32_t i{0}; i < 5; ++i) {
         CHECK(TreeNode::judge_equal(three[i], result[i]));
     }
+    const TreeNodeLink link1{three};
 }
 }

@@ -24,20 +24,25 @@
     */
 
 #pragma once
-#ifndef LEETCODE_SOURCE_LEETCODE_95_H
-#define LEETCODE_SOURCE_LEETCODE_95_H
+#ifndef LEETCODE_CPP_SOURCE_LEETCODE_95_H
+#define LEETCODE_CPP_SOURCE_LEETCODE_95_H
 
 #include <vector>
 #include <algorithm>
 
 #ifdef __LOCAL__
+
 #include "TreeNode.h"
+
 #endif
 namespace Solution95 {
-
+using namespace TREENODE;
 using std::vector;
 
 class Solution95 {
+#ifndef __LOCAL__
+    static size_t alloc_delete_count{0};
+#endif
 public:
     vector<TreeNode *> generateTrees(int n) {
         if (n == 0) {
@@ -54,8 +59,10 @@ public:
         }
         vector<TreeNode *> will_return;
         for (int i = left; i <= right; i++) {
-            for (auto const &j : generateTrees_rec(left, i - 1)) {
-                for (auto const &k : generateTrees_rec(i + 1, right)) {
+            const auto temp = generateTrees_rec(left, i - 1);
+            for (auto const &j : temp) {
+                const auto temp2 = generateTrees_rec(i + 1, right);
+                for (auto const &k : temp2) {
                     will_return.push_back(new TreeNode(i, j, k));
                     //will_return.emplace_back(i,j,k);
                 }
@@ -63,6 +70,10 @@ public:
         }
         return will_return;
     }
+    ~Solution95() {
+        assert(alloc_delete_count==0);
+    }
 };
+
 }
 #endif  //LEETCODE_CPP_SOURCE_LEETCODE_95_H

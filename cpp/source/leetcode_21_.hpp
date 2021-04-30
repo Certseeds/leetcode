@@ -6,8 +6,8 @@
  * @Organization: SUSTech
  * @Author: nanoseeds
  * @Date: 2020-01-17 13:18:46
- * @LastEditors  : nanoseeds
- * @LastEditTime : 2020-02-06 17:16:50
+ * @LastEditors: nanoseeds
+ * @LastEditTime: 2021-04-30 12:16:04
  */
 #include <vector>
 #include <string>
@@ -28,8 +28,12 @@ by splicing together the nodes of the first two lists.
 */
 namespace Solution21 {
 using namespace std;
+using namespace LISTNODE;
 
 class Solution21 {
+#ifndef __LOCAL__
+    static size_t alloc_delete_count{0};
+#endif
 public:
     ListNode *mergeTwoLists(ListNode *l1, ListNode *l2) {
         if (l1 == nullptr) {
@@ -77,6 +81,9 @@ public:
         for (auto &i : vec2) {
             delete i;
         }
+    }
+    ~Solution21(){
+        assert(alloc_delete_count==0);
     }
 };
 }

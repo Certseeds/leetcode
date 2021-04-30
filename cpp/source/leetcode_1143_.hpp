@@ -22,8 +22,8 @@
     along with this program.  If not, see <https://www.gnu.org/licenses/>.
     */
 #pragma once
-#ifndef LEETCODE_SOURCE_LEETCODE_1143_H
-#define LEETCODE_SOURCE_LEETCODE_1143_H
+#ifndef LEETCODE_CPP_SOURCE_LEETCODE_1143_H
+#define LEETCODE_CPP_SOURCE_LEETCODE_1143_H
 
 #include <string>
 #include <vector>

@@ -1,7 +1,8 @@
 #pragma once
-#ifndef _ListNode_H_
-#define _ListNode_H_
+#ifndef LEETCODE_CPP_INCLUDES_LISTNODE_H
+#define LEETCODE_CPP_INCLUDES_LISTNODE_H
 
+#include <utility>
 #include <vector>
 /*
  * @Github: https://github.com/Certseeds
@@ -11,33 +12,56 @@
  * @LastEditors  : nanoseeds
  * @LastEditTime : 2020-02-06 09:30:22
  */
+namespace LISTNODE {
 using std::vector;
 static constexpr const int32_t No_list = -100000;
+static size_t alloc_delete_count{0};
 
 struct ListNode {
     int32_t val;
     ListNode *next;
 
-    explicit ListNode(int32_t x);
+    ListNode(int32_t v, ListNode *n) : val(v), next(n) {
+        alloc_delete_count++;
+    }
 
-    ListNode(const ListNode &obj);
+    explicit ListNode(int32_t x) : ListNode(x, nullptr) {};
 
-    ~ListNode();
+    ListNode(const ListNode &obj) : ListNode(obj.val, obj.next) {};
+
+    ~ListNode() {
+        this->val = 0;
+        this->next = nullptr;
+        alloc_delete_count--;
+    }
 
     static vector<ListNode *> numToList(vector<int32_t> nums);
+
+    static vector<ListNode *> numToList(std::initializer_list<int32_t> nums);
 };
 
-ListNode::ListNode(int32_t x) : val(x), next(nullptr) {
-}
+class ListNodeLink {
+public:
+    vector<ListNode *> list{};
 
-ListNode::ListNode(const ListNode &obj) : val(obj.val), next(obj.next) {
-}
+    ListNodeLink(std::initializer_list<int32_t> list_) : list(ListNode::numToList(list_)) {
+    }
 
-ListNode::~ListNode() {
-    this->val = 0;
-    this->next = nullptr;
-}
+    ListNodeLink(vector<ListNode *> list_) : list(std::move(list_)) {}
 
+    virtual ~ListNodeLink() {
+        for (auto &i:list) {
+            delete i;
+        }
+    }
+
+    ListNode *operator[](size_t i) {
+        if (i >= list.size()) {
+            return nullptr;
+        }
+        return list[i];
+    }
+};
 vector<ListNode *> ListNode::numToList(vector<int32_t> nums) {
     vector<ListNode *> will_return(nums.size(), nullptr);
     for (size_t i = 0; i < nums.size(); i++) {
@@ -49,4 +73,8 @@ vector<ListNode *> ListNode::numToList(vector<int32_t> nums) {
     return will_return;
 }
 
-#endif
+vector<ListNode *> ListNode::numToList(std::initializer_list<int32_t> nums) {
+    return ListNode::numToList(vector<int32_t>{nums});
+}
+}
+#endif //LEETCODE_CPP_INCLUDES_LISTNODE_H
